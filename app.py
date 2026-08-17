@@ -89,9 +89,9 @@ LANG_PACK = {
         ),
         "framework_notice": (
             "💡 **Specialist SEO, AIO & GEO Framework Active:**\n"
-            "Live Ahrefs API v3 integration active for Domain Overview &"
-            " Keywords Explorer with tiered KD filtering (<20 prioritized, max"
-            " 50)."
+            "Live Ahrefs API v3 integration active (Domain Rating + Metrics +"
+            " Keywords Explorer) with tiered KD filtering (<20 prioritized,"
+            " max 50)."
         ),
         "demo_kw_notice": (
             "ℹ️ **Free Mode Active:** Utilizing Google PageSpeed Insights"
@@ -130,8 +130,8 @@ LANG_PACK = {
             " `sk-...`). Recommended: `gpt-4o`.\n- **Anthropic Claude:** Get at"
             " [console.anthropic.com](https://console.anthropic.com) (Format:"
             " `sk-ant-...`). Recommended: `claude-3-5-sonnet`.\n- **Ahrefs v3 /"
-            " SEMrush Enterprise (Optional):** Live Domain Rating, Technical"
-            " metrics, and Keywords Explorer metrics."
+            " SEMrush Enterprise (Optional):** Live Domain Rating, Referring"
+            " Domains, Organic Traffic, and Keywords Explorer metrics."
         ),
         "guide_step2_title": "2. Injected Specialist AI Frameworks",
         "guide_step2_content": (
@@ -205,8 +205,8 @@ LANG_PACK = {
         ),
         "framework_notice": (
             "💡 **Specialist SEO, AIO & GEO Framework Active:**\n"
-            "Integrasi live Ahrefs API v3 aktif untuk Domain Overview &"
-            " Keywords Explorer. Keyword disaring otomatis dengan prioritas"
+            "Integrasi live Ahrefs API v3 aktif (Domain Rating + Metrics +"
+            " Keywords Explorer). Keyword disaring otomatis dengan prioritas"
             " **KD < 20 (Quick Wins)**, toleransi **KD 20–50**, dan membuang"
             " KD > 50."
         ),
@@ -248,7 +248,8 @@ LANG_PACK = {
             " Dapatkan di [console.anthropic.com](https://console.anthropic.com)"
             " (Format: `sk-ant-...`). Rekomendasi: `claude-3-5-sonnet`.\n-"
             " **Ahrefs v3 / SEMrush Enterprise (Opsional):** Membuka data"
-            " Domain Rating live dan metrik Keywords Explorer live."
+            " Domain Rating live, Referring Domains, Traffic organik, dan"
+            " metrik Keywords Explorer."
         ),
         "guide_step2_title": "2. Framework & AI Skills yang Terpasang",
         "guide_step2_content": (
@@ -718,59 +719,59 @@ def fetch_domain_authority_metrics(
   )
   today_date = datetime.date.today().strftime("%Y-%m-%d")
 
-  # 1. LIVE AHREFS API V3 (Domain Overview Endpoint with Explicit Select)
+  # 1. LIVE AHREFS API V3 (Dual Endpoint: domain-rating + metrics)
   if ahrefs_k and ahrefs_k.strip():
+    ah_headers = {
+        "Authorization": f"Bearer {ahrefs_k.strip()}",
+        "Accept": "application/json",
+    }
+    dr_val = 0
+    ref_domains = 0
+    org_traffic = 0
+    org_keywords = 0
+    api_success = False
+
     try:
-      ah_url = (
-          "https://api.ahrefs.com/v3/site-explorer/overview?"
-          f"target={clean_dom}&mode=subdomains&date={today_date}&select=domain_rating,refdomains,org_traffic,org_keywords"
+      # Step A: Domain Rating & Referring Domains
+      dr_url = (
+          "https://api.ahrefs.com/v3/site-explorer/domain-rating?"
+          f"target={clean_dom}&date={today_date}"
       )
-      ah_headers = {
-          "Authorization": f"Bearer {ahrefs_k.strip()}",
-          "Accept": "application/json",
-      }
-      res = requests.get(ah_url, headers=ah_headers, timeout=12)
-      if res.status_code == 200:
-        data = res.json()
-        metrics = data.get("metrics", {})
-        dr_val = metrics.get("domain_rating", 0)
-        dr_formatted = (
-            int(dr_val)
-            if float(dr_val).is_integer()
-            else round(float(dr_val), 1)
+      res_dr = requests.get(dr_url, headers=ah_headers, timeout=10)
+      if res_dr.status_code == 200:
+        dr_data = res_dr.json().get("domain_rating", {})
+        raw_dr = dr_data.get("domain_rating", 0)
+        dr_val = (
+            int(raw_dr)
+            if float(raw_dr).is_integer()
+            else round(float(raw_dr), 1)
         )
+        ref_domains = int(dr_data.get("refdomains", 0))
+        api_success = True
+
+      # Step B: Live Organic Search Traffic & Keywords Count
+      metrics_url = (
+          "https://api.ahrefs.com/v3/site-explorer/metrics?"
+          f"target={clean_dom}&mode=subdomains&date={today_date}"
+      )
+      res_met = requests.get(metrics_url, headers=ah_headers, timeout=10)
+      if res_met.status_code == 200:
+        met_data = res_met.json().get("metrics", {})
+        org_traffic = int(met_data.get("org_traffic", 0))
+        org_keywords = int(met_data.get("org_keywords", 0))
+        if not ref_domains:
+          ref_domains = int(met_data.get("refdomains", 0))
+        api_success = True
+
+      if api_success:
         return {
             "domain": clean_dom,
-            "domain_rating": dr_formatted,
-            "referring_domains": int(metrics.get("refdomains", 0)),
-            "organic_traffic": int(metrics.get("org_traffic", 0)),
-            "organic_keywords": int(metrics.get("org_keywords", 0)),
+            "domain_rating": dr_val,
+            "referring_domains": ref_domains,
+            "organic_traffic": org_traffic,
+            "organic_keywords": org_keywords,
             "source": "Ahrefs API v3 (Live Connected)",
         }
-      else:
-        # Try fallback to domain-rating specific endpoint in v3
-        dr_alt_url = (
-            "https://api.ahrefs.com/v3/site-explorer/domain-rating?"
-            f"target={clean_dom}&date={today_date}"
-        )
-        res_alt = requests.get(dr_alt_url, headers=ah_headers, timeout=10)
-        if res_alt.status_code == 200:
-          data_alt = res_alt.json()
-          dr_val = data_alt.get("domain_rating", {}).get("domain_rating", 0)
-          return {
-              "domain": clean_dom,
-              "domain_rating": round(float(dr_val), 1),
-              "referring_domains": int(
-                  data_alt.get("domain_rating", {}).get("refdomains", 0)
-              ),
-              "organic_traffic": 0,
-              "organic_keywords": 0,
-              "source": "Ahrefs API v3 (DR Live)",
-          }
-        st.sidebar.warning(
-            f"Ahrefs Overview ({clean_dom}): Status {res.status_code} -"
-            f" {res.text[:100]}"
-        )
     except Exception as e:
       st.sidebar.warning(f"Ahrefs Connection ({clean_dom}): {str(e)}")
 
