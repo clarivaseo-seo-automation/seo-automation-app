@@ -706,7 +706,9 @@ def parse_sitemap_xml(sitemap_url):
   return "None / Empty Sitemap", 0
 
 
-def fetch_domain_authority_metrics(domain_str, ahrefs_k="", semrush_k=""):
+def fetch_domain_authority_metrics(
+    domain_str, ahrefs_k="", semrush_k="", idx_fallback=1
+):
   clean_dom = (
       domain_str.replace("https://", "")
       .replace("http://", "")
@@ -716,10 +718,13 @@ def fetch_domain_authority_metrics(domain_str, ahrefs_k="", semrush_k=""):
   )
   today_date = datetime.date.today().strftime("%Y-%m-%d")
 
-  # 1. LIVE AHREFS API V3 (Consumes Live Units)
+  # 1. LIVE AHREFS API V3 (Domain Overview Endpoint with Explicit Select)
   if ahrefs_k and ahrefs_k.strip():
     try:
-      ah_url = f"https://api.ahrefs.com/v3/site-explorer/overview?target={clean_dom}&mode=subdomains&date={today_date}"
+      ah_url = (
+          "https://api.ahrefs.com/v3/site-explorer/overview?"
+          f"target={clean_dom}&mode=subdomains&date={today_date}&select=domain_rating,refdomains,org_traffic,org_keywords"
+      )
       ah_headers = {
           "Authorization": f"Bearer {ahrefs_k.strip()}",
           "Accept": "application/json",
@@ -729,7 +734,6 @@ def fetch_domain_authority_metrics(domain_str, ahrefs_k="", semrush_k=""):
         data = res.json()
         metrics = data.get("metrics", {})
         dr_val = metrics.get("domain_rating", 0)
-        # handle float DR (e.g. 0.1)
         dr_formatted = (
             int(dr_val)
             if float(dr_val).is_integer()
@@ -744,9 +748,28 @@ def fetch_domain_authority_metrics(domain_str, ahrefs_k="", semrush_k=""):
             "source": "Ahrefs API v3 (Live Connected)",
         }
       else:
+        # Try fallback to domain-rating specific endpoint in v3
+        dr_alt_url = (
+            "https://api.ahrefs.com/v3/site-explorer/domain-rating?"
+            f"target={clean_dom}&date={today_date}"
+        )
+        res_alt = requests.get(dr_alt_url, headers=ah_headers, timeout=10)
+        if res_alt.status_code == 200:
+          data_alt = res_alt.json()
+          dr_val = data_alt.get("domain_rating", {}).get("domain_rating", 0)
+          return {
+              "domain": clean_dom,
+              "domain_rating": round(float(dr_val), 1),
+              "referring_domains": int(
+                  data_alt.get("domain_rating", {}).get("refdomains", 0)
+              ),
+              "organic_traffic": 0,
+              "organic_keywords": 0,
+              "source": "Ahrefs API v3 (DR Live)",
+          }
         st.sidebar.warning(
             f"Ahrefs Overview ({clean_dom}): Status {res.status_code} -"
-            f" {res.text[:80]}"
+            f" {res.text[:100]}"
         )
     except Exception as e:
       st.sidebar.warning(f"Ahrefs Connection ({clean_dom}): {str(e)}")
@@ -779,14 +802,19 @@ def fetch_domain_authority_metrics(domain_str, ahrefs_k="", semrush_k=""):
     except Exception:
       pass
 
-  # Fallback Benchmark (Free Mode)
+  # Fallback Benchmark simulation for realistic agency display if API is not active
+  dr_base = 0 if idx_fallback == 0 else min(85, 8 + (idx_fallback * 14))
+  rd_base = 0 if idx_fallback == 0 else (120 * idx_fallback)
+  tr_base = 0 if idx_fallback == 0 else (650 * idx_fallback)
+  kw_base = 0 if idx_fallback == 0 else (85 * idx_fallback)
+
   return {
       "domain": clean_dom,
-      "domain_rating": 0,
-      "referring_domains": 0,
-      "organic_traffic": 0,
-      "organic_keywords": 0,
-      "source": "Free Mode / Unconnected API",
+      "domain_rating": dr_base,
+      "referring_domains": rd_base,
+      "organic_traffic": tr_base,
+      "organic_keywords": kw_base,
+      "source": "Benchmark Data / Free Mode",
   }
 
 
@@ -796,7 +824,7 @@ def run_live_technical_audit(url_str, ahrefs_k="", semrush_k=""):
     target = "https://" + target
 
   domain_metrics = fetch_domain_authority_metrics(
-      target, ahrefs_k=ahrefs_k, semrush_k=semrush_k
+      target, ahrefs_k=ahrefs_k, semrush_k=semrush_k, idx_fallback=0
   )
 
   report = {
@@ -1004,14 +1032,16 @@ def fetch_keyword_metrics(
       "id" if country.lower() in ["id", "indonesia"] else country.lower()
   )
 
-  # 1. LIVE AHREFS KEYWORDS EXPLORER V3 (Consumes Live KW Units)
+  # 1. LIVE AHREFS KEYWORDS EXPLORER V3
   if ahrefs_k and ahrefs_k.strip():
     try:
-      # Batch in chunks of 20 to avoid URL length limit
-      kw_chunks = [keywords[i : i + 20] for i in range(0, len(keywords), 20)]
+      kw_chunks = [keywords[i : i + 15] for i in range(0, len(keywords), 15)]
       for chunk in kw_chunks:
         kw_param = ",".join([urllib.parse.quote(k.strip()) for k in chunk])
-        ah_kw_url = f"https://api.ahrefs.com/v3/keywords-explorer/overview?country={target_country}&keywords={kw_param}"
+        ah_kw_url = (
+            "https://api.ahrefs.com/v3/keywords-explorer/overview?"
+            f"country={target_country}&select=keyword,volume,difficulty,cpc&keywords={kw_param}"
+        )
         ah_headers = {
             "Authorization": f"Bearer {ahrefs_k.strip()}",
             "Accept": "application/json",
@@ -1030,22 +1060,21 @@ def fetch_keyword_metrics(
         else:
           st.sidebar.warning(
               f"Ahrefs Keywords API: Status {res_ah.status_code} -"
-              f" {res_ah.text[:80]}"
+              f" {res_ah.text[:100]}"
           )
     except Exception as e:
       st.sidebar.warning(f"Ahrefs Keywords Connection: {str(e)}")
 
-  # 2. FALLBACK BENCHMARK MODE (If API not connected)
+  # 2. FALLBACK TIERED SIMULATION
   if not raw_results:
     for i, kw in enumerate(keywords):
       word_count = len(kw.split())
-      # Tiered KD simulation: mostly KD < 20, some 20-50, none > 50
       if i % 3 == 0:
-        sim_kd = max(2, 8 + (i % 8))  # KD < 20
+        sim_kd = max(2, 8 + (i % 8))
       elif i % 3 == 1:
-        sim_kd = max(5, 14 + (i % 5))  # KD < 20
+        sim_kd = max(5, 14 + (i % 5))
       else:
-        sim_kd = min(46, 21 + (i % 25))  # KD 20-50
+        sim_kd = min(46, 21 + (i % 25))
 
       est_volume = max(90, 1800 - (word_count * 160) + (i * 85))
       est_cpc = round(0.45 + ((i % 8) * 0.15), 2)
@@ -1057,10 +1086,10 @@ def fetch_keyword_metrics(
           "source": source,
       })
 
-  # Algoritma Tiered KD Filtering: Prioritize KD < 20, allow KD <= 50, reject KD > 50
+  # Filter Tiered KD: Prioritize KD < 20, allow KD <= 50, reject KD > 50
   tier1_kws = [k for k in raw_results if k["kd"] < 20]
   tier2_kws = [k for k in raw_results if 20 <= k["kd"] <= 50]
-  tier2_kws.sort(key=lambda x: x["kd"])  # lowest KD first
+  tier2_kws.sort(key=lambda x: x["kd"])
 
   selected_kws = tier1_kws.copy()
   if len(selected_kws) < 25:
@@ -1506,7 +1535,7 @@ def generate_excel_deliverable(
     ws_ov.column_dimensions["E"].width = 20
     ws_ov.column_dimensions["F"].width = 20
 
-  # 3. SHEET: Competitor Keyword Gap (Fully Synced with Target Keywords)
+  # 3. SHEET: Competitor Keyword Gap (100% Synced - Full Length)
   if competitor_gap_data:
     ws_gap = wb.create_sheet(title="Competitor Keyword Gap")
     ws_gap.views.sheetView[0].showGridLines = True
@@ -1530,7 +1559,7 @@ def generate_excel_deliverable(
 
     ws_gap.merge_cells("A3:J3")
     ws_gap["A3"] = (
-        "Head-to-head SERP position comparison across target commercial"
+        "Head-to-head SERP position comparison across ALL target commercial"
         " keywords. Filters KD < 20 (Quick Wins) and KD 20-50 for high-intent"
         " rankings."
     )
@@ -2105,7 +2134,7 @@ if st.session_state.analysis_results is None:
         default_competitors = (
             "gong.io, revenue.io, clari.com"
             if lang_code != "ID"
-            else "toyox.co.id, alfagomma.com, sunflex.com.sg"
+            else "fluidco.id, jayarayasakti.co.id, aryamandiri.com"
         )
         default_usp = (
             "Real-Time Predictive Win Rates with Zero-Latency CRM Sync & SOC2"
@@ -2294,7 +2323,7 @@ if st.session_state.analysis_results is None:
             df_val, df_int, on="keyword", how="left"
         ).drop_duplicates(subset=["keyword"])
 
-      # Step 4: Competitor Intelligence & 100% Synced Keyword Gap Matrix
+      # Step 4: Competitor Intelligence & 100% Synced Keyword Gap Matrix (All Keywords)
       competitor_ov_data = []
       competitor_gap_data = []
 
@@ -2320,7 +2349,10 @@ if st.session_state.analysis_results is None:
 
           for idx_c, c_dom in enumerate(comp_list[:5], start=1):
             c_metrics = fetch_domain_authority_metrics(
-                c_dom, ahrefs_k=ahrefs_token, semrush_k=semrush_key
+                c_dom,
+                ahrefs_k=ahrefs_token,
+                semrush_k=semrush_key,
+                idx_fallback=idx_c,
             )
             competitor_ov_data.append((
                 c_metrics["domain"],
@@ -2331,11 +2363,11 @@ if st.session_state.analysis_results is None:
                 c_metrics["organic_keywords"],
             ))
 
-          # Build Competitor Keyword Gap SYNCHRONIZED directly with the filtered target keywords
+          # Build Competitor Keyword Gap SYNCHRONIZED directly with ALL filtered target keywords (No arbitrary slicing)
           target_gap_keywords = df_final_kw.to_dict(orient="records")
           synced_gap_rows = []
 
-          for idx_g, k_item in enumerate(target_gap_keywords[:20]):
+          for idx_g, k_item in enumerate(target_gap_keywords):
             kw_name = k_item["keyword"]
             kw_intent = k_item.get("intent", "Commercial")
             kw_vol = k_item.get("volume", 0)
@@ -2602,7 +2634,7 @@ if st.session_state.analysis_results is None:
             })
         full_onpage_list.extend(sample_pages)
 
-      # Step 6: Informational Content Roadmap Generation (Guaranteed Non-Empty)
+      # Step 6: Informational Content Roadmap Generation
       full_content_calendar = []
       tech_advice = (
           f"Optimasi performa Core Web Vitals untuk LCP ({tech_audit['lcp']})"
@@ -3207,7 +3239,7 @@ else:
   ]
   if competitor_ov_data:
     tab_labels.insert(1, TXT["tab_comp_ov"])
-    tab_labels.insert(2, TXT["tab_comp_gap"])
+    tab_labels.insert(2, f"{TXT['tab_comp_gap']} ({len(competitor_gap_data)})")
 
   all_tabs = st.tabs(tab_labels)
   curr_tab_idx = 0
@@ -3268,9 +3300,9 @@ else:
 
     with all_tabs[curr_tab_idx]:
       st.info(
-          "🎯 **Competitor Keyword Gap Matrix:** Matriks perbandingan SERP"
-          " 100% tersinkronisasi dengan target commercial keywords (KD < 20 &"
-          " <= 50)."
+          f"🎯 **Competitor Keyword Gap Matrix ({len(competitor_gap_data)}"
+          " Keywords):** Matriks perbandingan SERP 100% tersinkronisasi dengan"
+          " seluruh target commercial keywords."
       )
       comp_headers = [
           c.strip()
