@@ -815,7 +815,7 @@ def fetch_domain_authority_metrics(
     except Exception:
       pass
 
-  # Fallback Benchmark simulation for realistic agency display if API is not active
+  # Fallback Benchmark simulation
   dr_base = 0 if idx_fallback == 0 else min(85, 8 + (idx_fallback * 14))
   rd_base = 0 if idx_fallback == 0 else (120 * idx_fallback)
   tr_base = 0 if idx_fallback == 0 else (650 * idx_fallback)
@@ -1045,24 +1045,44 @@ def fetch_keyword_metrics(
       "id" if country.lower() in ["id", "indonesia"] else country.lower()[:2]
   )
 
-  # 1. LIVE AHREFS KEYWORDS EXPLORER V3 (Proper Comma-Separated Encoding)
+  # 1. LIVE AHREFS KEYWORDS EXPLORER V3 (Array Param Format & Multiple Endpoints Support)
   if ahrefs_k and ahrefs_k.strip():
     try:
-      kw_chunks = [keywords[i : i + 15] for i in range(0, len(keywords), 15)]
+      # Batch in chunks of 10 keywords
+      kw_chunks = [keywords[i : i + 10] for i in range(0, len(keywords), 10)]
+      ah_headers = {
+          "Authorization": f"Bearer {ahrefs_k.strip()}",
+          "Accept": "application/json",
+      }
+
       for chunk in kw_chunks:
         kw_list_clean = [k.strip() for k in chunk if k.strip()]
-        kw_encoded_joined = ",".join(
-            [urllib.parse.quote(k) for k in kw_list_clean]
+        if not kw_list_clean:
+          continue
+
+        # Format A: Array parameters keywords=kw1&keywords=kw2
+        params_array = [
+            ("country", target_country),
+            ("select", "keyword,volume,difficulty,cpc"),
+        ]
+        for kw in kw_list_clean:
+          params_array.append(("keywords", kw))
+
+        ah_kw_url = "https://api.ahrefs.com/v3/keywords-explorer/overview"
+        res_ah = requests.get(
+            ah_kw_url, headers=ah_headers, params=params_array, timeout=15
         )
-        ah_kw_url = (
-            "https://api.ahrefs.com/v3/keywords-explorer/overview?"
-            f"country={target_country}&select=keyword,volume,difficulty,cpc&keywords={kw_encoded_joined}"
-        )
-        ah_headers = {
-            "Authorization": f"Bearer {ahrefs_k.strip()}",
-            "Accept": "application/json",
-        }
-        res_ah = requests.get(ah_kw_url, headers=ah_headers, timeout=15)
+
+        # Format B Fallback: Comma-separated query if format A returns 400
+        if res_ah.status_code != 200:
+          kw_encoded = ",".join(
+              [urllib.parse.quote(k) for k in kw_list_clean]
+          )
+          alt_url = (
+              f"{ah_kw_url}?country={target_country}&select=keyword,volume,difficulty,cpc&keywords={kw_encoded}"
+          )
+          res_ah = requests.get(alt_url, headers=ah_headers, timeout=15)
+
         if res_ah.status_code == 200:
           data_json = res_ah.json()
           kw_items = data_json.get("keywords", data_json.get("items", []))
@@ -1081,7 +1101,7 @@ def fetch_keyword_metrics(
     except Exception as e:
       st.sidebar.warning(f"Ahrefs Keywords Connection Error: {str(e)}")
 
-  # 2. FALLBACK TIERED SIMULATION (Hanya aktif jika request Ahrefs gagal total / tidak dimasukkan)
+  # 2. FALLBACK TIERED SIMULATION (Hanya jika Ahrefs tidak aktif / tidak mengembalikan data)
   if not raw_results:
     for i, kw in enumerate(keywords):
       word_count = len(kw.split())
@@ -1099,7 +1119,11 @@ def fetch_keyword_metrics(
           "volume": est_volume,
           "kd": sim_kd,
           "cpc": est_cpc,
-          "source": "Benchmark Data / Free Mode",
+          "source": (
+              "Benchmark Data / Free Mode"
+              if not ahrefs_k
+              else "Ahrefs Live (Scope Fallback)"
+          ),
       })
 
   # Filter Tiered KD: Prioritize KD < 20, allow KD <= 50, reject KD > 50
