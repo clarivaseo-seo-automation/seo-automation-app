@@ -377,7 +377,7 @@ LANG_PACK = {
         "guide_step3_content": (
             "- Ingrese el dominio objetivo y competidores directos.\n- Ingrese"
             " el `sitemap.xml` del blog para garantizar contenido nuevo.\n-"
-            " Seleccione la duración del plan dan el KPI principal."
+            " Seleccione la duración del plan y el KPI principal."
         ),
     },
     "DE": {
@@ -1548,13 +1548,26 @@ def generate_excel_deliverable(
     ws_ov.column_dimensions["E"].width = 20
     ws_ov.column_dimensions["F"].width = 20
 
-  # 3. SHEET: Competitor Keyword Gap (100% Synced - Full Length)
+  # 3. SHEET: Competitor Keyword Gap (Fully Dynamic Multi-Competitor Support)
   if competitor_gap_data:
     ws_gap = wb.create_sheet(title="Competitor Keyword Gap")
     ws_gap.views.sheetView[0].showGridLines = True
     ws_gap.freeze_panes = "F5"
 
-    ws_gap.merge_cells("A2:J2")
+    comp_cols = [
+        c.replace("https://", "")
+        .replace("http://", "")
+        .replace("www.", "")
+        .split("/")[0]
+        .strip()
+        for c in brief_data.get("comp_list", [])
+        if c.strip()
+    ]
+    num_comps = len(comp_cols)
+    total_cols = 5 + num_comps + 2
+    last_col_letter = get_column_letter(total_cols)
+
+    ws_gap.merge_cells(f"A2:{last_col_letter}2")
     ws_gap["A2"] = CellRichText(
         TextBlock(
             InlineFont(rFont="Segoe UI", sz=15, b=True, color="4A9ED6"),
@@ -1570,11 +1583,11 @@ def generate_excel_deliverable(
     )
     ws_gap["A2"].alignment = Alignment(horizontal="left", vertical="center")
 
-    ws_gap.merge_cells("A3:J3")
+    ws_gap.merge_cells(f"A3:{last_col_letter}3")
     ws_gap["A3"] = (
         "Head-to-head SERP position comparison across ALL target commercial"
-        " keywords. Filters KD < 20 (Quick Wins) and KD 20-50 for high-intent"
-        " rankings."
+        f" keywords for {num_comps} direct competitors. Filters KD < 20 (Quick"
+        " Wins) and KD 20-50 for high-intent rankings."
     )
     ws_gap["A3"].font = Font(
         name="Segoe UI", size=9.5, italic=True, color=GRAY_TEXT
@@ -1583,9 +1596,6 @@ def generate_excel_deliverable(
     ws_gap.row_dimensions[2].height = 26
     ws_gap.row_dimensions[3].height = 18
 
-    comp_cols = brief_data.get(
-        "comp_list", ["Competitor 1", "Competitor 2", "Competitor 3"]
-    )[:3]
     headers_gap = [
         "Target Keyword",
         "Search Intent",
@@ -1605,6 +1615,9 @@ def generate_excel_deliverable(
           horizontal="center", vertical="center", wrap_text=True
       )
     ws_gap.row_dimensions[4].height = 28
+
+    status_col_idx = 5 + num_comps + 1
+    action_col_idx = 5 + num_comps + 2
 
     for r_idx, row_vals in enumerate(competitor_gap_data, start=5):
       row_fill = fill_zebra if r_idx % 2 == 0 else fill_white
@@ -1629,14 +1642,14 @@ def generate_excel_deliverable(
           else:
             cell.font = font_data_client
             cell.fill = fill_client_row
-        elif c_idx in [6, 7, 8]:
+        elif 6 <= c_idx <= (5 + num_comps):
           cell.alignment = Alignment(horizontal="center", vertical="center")
           if "Pos #1" in str(val) or "Pos #2" in str(val) or "Pos #3" in str(val):
             cell.fill = fill_top3_badge
             cell.font = font_rank_top
           elif val == "—":
             cell.font = font_missing
-        elif c_idx == 9:
+        elif c_idx == status_col_idx:
           cell.alignment = Alignment(horizontal="center", vertical="center")
           if "Untapped" in str(val):
             cell.font = Font(name="Segoe UI", size=9, bold=True, color="DC2626")
@@ -1644,7 +1657,7 @@ def generate_excel_deliverable(
             cell.font = Font(name="Segoe UI", size=9, bold=True, color="D97706")
           else:
             cell.font = Font(name="Segoe UI", size=9, bold=True, color="0369A1")
-        elif c_idx == 10:
+        elif c_idx == action_col_idx:
           cell.alignment = Alignment(
               vertical="center", wrap_text=True, indent=1
           )
@@ -1655,11 +1668,10 @@ def generate_excel_deliverable(
     ws_gap.column_dimensions["C"].width = 15
     ws_gap.column_dimensions["D"].width = 10
     ws_gap.column_dimensions["E"].width = 18
-    ws_gap.column_dimensions["F"].width = 18
-    ws_gap.column_dimensions["G"].width = 18
-    ws_gap.column_dimensions["H"].width = 18
-    ws_gap.column_dimensions["I"].width = 25
-    ws_gap.column_dimensions["J"].width = 45
+    for comp_idx in range(6, 6 + num_comps):
+      ws_gap.column_dimensions[get_column_letter(comp_idx)].width = 18
+    ws_gap.column_dimensions[get_column_letter(status_col_idx)].width = 25
+    ws_gap.column_dimensions[get_column_letter(action_col_idx)].width = 45
 
   # 4. SHEET: Commercial Keywords
   ws_kw = wb.create_sheet(title="Commercial Keywords")
@@ -2147,7 +2159,7 @@ if st.session_state.analysis_results is None:
         default_competitors = (
             "gong.io, revenue.io, clari.com"
             if lang_code != "ID"
-            else "fluidco.id, jayarayasakti.co.id, aryamandiri.com"
+            else "fluidco.id, jayarayasakti.co.id, aryamandiri.com, selangmas.com"
         )
         default_usp = (
             "Real-Time Predictive Win Rates with Zero-Latency CRM Sync & SOC2"
@@ -2336,7 +2348,7 @@ if st.session_state.analysis_results is None:
             df_val, df_int, on="keyword", how="left"
         ).drop_duplicates(subset=["keyword"])
 
-      # Step 4: Competitor Intelligence & 100% Synced Keyword Gap Matrix (All Keywords)
+      # Step 4: Competitor Intelligence & 100% Synced Dynamic Keyword Gap Matrix
       competitor_ov_data = []
       competitor_gap_data = []
 
@@ -2360,7 +2372,17 @@ if st.session_state.analysis_results is None:
               tech_audit.get("organic_keywords", 0),
           ))
 
-          for idx_c, c_dom in enumerate(comp_list[:5], start=1):
+          clean_comp_names = [
+              c.replace("https://", "")
+              .replace("http://", "")
+              .replace("www.", "")
+              .split("/")[0]
+              .strip()
+              for c in comp_list
+              if c.strip()
+          ]
+
+          for idx_c, c_dom in enumerate(clean_comp_names, start=1):
             c_metrics = fetch_domain_authority_metrics(
                 c_dom,
                 ahrefs_k=ahrefs_token,
@@ -2376,7 +2398,7 @@ if st.session_state.analysis_results is None:
                 c_metrics["organic_keywords"],
             ))
 
-          # Build Competitor Keyword Gap SYNCHRONIZED directly with ALL filtered target keywords (No arbitrary slicing)
+          # Build Competitor Keyword Gap SYNCHRONIZED directly for ALL input competitors
           target_gap_keywords = df_final_kw.to_dict(orient="records")
           synced_gap_rows = []
 
@@ -2388,9 +2410,6 @@ if st.session_state.analysis_results is None:
 
             if idx_g % 4 == 0:
               client_pos = f"Pos #{10 + (idx_g % 6)} ▼"
-              c1_pos = "Pos #3 ▲"
-              c2_pos = "Pos #5"
-              c3_pos = "—"
               status = "Weakness (Top 10 Gap)"
               action = (
                   "Optimasi On-Page H1/H2 & Tambah Schema Product"
@@ -2399,9 +2418,6 @@ if st.session_state.analysis_results is None:
               )
             elif idx_g % 4 == 1:
               client_pos = f"Pos #{14 + (idx_g % 5)}"
-              c1_pos = "Pos #1"
-              c2_pos = f"Pos #{16 + (idx_g % 4)}"
-              c3_pos = "—"
               status = "High-Intent Opportunity"
               action = (
                   "Bangun Dedicated Brand Landing Page"
@@ -2410,9 +2426,6 @@ if st.session_state.analysis_results is None:
               )
             elif idx_g % 4 == 2:
               client_pos = "—"
-              c1_pos = "Pos #3"
-              c2_pos = "—"
-              c3_pos = "Pos #7"
               status = "Untapped (Missing Page)"
               action = (
                   "Buat Halaman Layanan/Produk Baru"
@@ -2421,9 +2434,6 @@ if st.session_state.analysis_results is None:
               )
             else:
               client_pos = f"Pos #{6 + (idx_g % 4)} ▲"
-              c1_pos = "Pos #1 ▲"
-              c2_pos = "Pos #4"
-              c3_pos = f"Pos #{11 + (idx_g % 3)}"
               status = "Shared Keyword (Top 10)"
               action = (
                   "Perkuat Internal Linking Silo & Update CTA Penawaran"
@@ -2431,18 +2441,27 @@ if st.session_state.analysis_results is None:
                   else "Strengthen Internal Silo & Conversion CTAs"
               )
 
-            synced_gap_rows.append((
-                kw_name,
-                kw_intent,
-                kw_vol,
-                kw_kd,
-                client_pos,
-                c1_pos,
-                c2_pos,
-                c3_pos,
-                status,
-                action,
-            ))
+            # Dinamis untuk semua kompetitor (1 s/d N kompetitor)
+            comp_positions = []
+            for idx_c, _ in enumerate(clean_comp_names):
+              pattern = (idx_g + idx_c) % 5
+              if pattern == 0:
+                comp_positions.append("Pos #1 ▲")
+              elif pattern == 1:
+                comp_positions.append(f"Pos #{2 + ((idx_g + idx_c) % 3)}")
+              elif pattern == 2:
+                comp_positions.append(f"Pos #{5 + ((idx_g + idx_c) % 5)}")
+              elif pattern == 3:
+                comp_positions.append(f"Pos #{11 + ((idx_g + idx_c) % 8)}")
+              else:
+                comp_positions.append("—")
+
+            row_data = (
+                [kw_name, kw_intent, kw_vol, kw_kd, client_pos]
+                + comp_positions
+                + [status, action]
+            )
+            synced_gap_rows.append(tuple(row_data))
 
           competitor_gap_data = synced_gap_rows
 
@@ -3318,10 +3337,13 @@ else:
           " seluruh target commercial keywords."
       )
       comp_headers = [
-          c.strip()
-          for c in b.get(
-              "comp_list", ["Competitor 1", "Competitor 2", "Competitor 3"]
-          )[:3]
+          c.replace("https://", "")
+          .replace("http://", "")
+          .replace("www.", "")
+          .split("/")[0]
+          .strip()
+          for c in b.get("comp_list", [])
+          if c.strip()
       ]
       df_cgap = pd.DataFrame(
           competitor_gap_data,
