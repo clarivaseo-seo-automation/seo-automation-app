@@ -1045,25 +1045,24 @@ def fetch_keyword_metrics(
       "id" if country.lower() in ["id", "indonesia"] else country.lower()[:2]
   )
 
-  # 1. LIVE AHREFS KEYWORDS EXPLORER V3 (Using query params & select)
+  # 1. LIVE AHREFS KEYWORDS EXPLORER V3 (Proper Comma-Separated Encoding)
   if ahrefs_k and ahrefs_k.strip():
     try:
       kw_chunks = [keywords[i : i + 15] for i in range(0, len(keywords), 15)]
       for chunk in kw_chunks:
-        kw_string = ",".join([k.strip() for k in chunk if k.strip()])
-        ah_kw_url = "https://api.ahrefs.com/v3/keywords-explorer/overview"
-        params = {
-            "country": target_country,
-            "select": "keyword,volume,difficulty,cpc",
-            "keywords": kw_string,
-        }
+        kw_list_clean = [k.strip() for k in chunk if k.strip()]
+        kw_encoded_joined = ",".join(
+            [urllib.parse.quote(k) for k in kw_list_clean]
+        )
+        ah_kw_url = (
+            "https://api.ahrefs.com/v3/keywords-explorer/overview?"
+            f"country={target_country}&select=keyword,volume,difficulty,cpc&keywords={kw_encoded_joined}"
+        )
         ah_headers = {
             "Authorization": f"Bearer {ahrefs_k.strip()}",
             "Accept": "application/json",
         }
-        res_ah = requests.get(
-            ah_kw_url, headers=ah_headers, params=params, timeout=15
-        )
+        res_ah = requests.get(ah_kw_url, headers=ah_headers, timeout=15)
         if res_ah.status_code == 200:
           data_json = res_ah.json()
           kw_items = data_json.get("keywords", data_json.get("items", []))
@@ -1073,16 +1072,16 @@ def fetch_keyword_metrics(
                 "volume": int(k_item.get("volume", 0)),
                 "kd": int(k_item.get("difficulty", 0)),
                 "cpc": float(k_item.get("cpc", 0.0)),
-                "source": "Ahrefs Keywords Explorer (Live Connected)",
+                "source": "Ahrefs Keywords Explorer (Live API)",
             })
         else:
           st.sidebar.warning(
               f"Ahrefs Keywords API ({res_ah.status_code}): {res_ah.text[:120]}"
           )
     except Exception as e:
-      st.sidebar.warning(f"Ahrefs Keywords Connection: {str(e)}")
+      st.sidebar.warning(f"Ahrefs Keywords Connection Error: {str(e)}")
 
-  # 2. FALLBACK TIERED SIMULATION
+  # 2. FALLBACK TIERED SIMULATION (Hanya aktif jika request Ahrefs gagal total / tidak dimasukkan)
   if not raw_results:
     for i, kw in enumerate(keywords):
       word_count = len(kw.split())
@@ -1677,7 +1676,7 @@ def generate_excel_deliverable(
     ws_gap.column_dimensions[get_column_letter(status_col_idx)].width = 25
     ws_gap.column_dimensions[get_column_letter(action_col_idx)].width = 45
 
-  # 4. SHEET: Commercial Keywords
+  # 4. SHEET: Commercial Keywords (With Source Column)
   ws_kw = wb.create_sheet(title="Commercial Keywords")
   ws_kw.views.sheetView[0].showGridLines = True
   ws_kw.freeze_panes = "A2"
@@ -1690,6 +1689,7 @@ def generate_excel_deliverable(
       "KD",
       "Est. CPC ($)",
       "Assigned Landing Page Role",
+      "Data Source",
   ]
   for col_idx, h in enumerate(kw_headers, start=1):
     cell = ws_kw.cell(row=1, column=col_idx, value=h)
@@ -1715,6 +1715,7 @@ def generate_excel_deliverable(
         getattr(row, "kd", 0),
         getattr(row, "cpc", 0.0),
         role,
+        getattr(row, "source", "Ahrefs API v3"),
     ]
 
     for c_idx, val in enumerate(row_vals, start=1):
@@ -1736,8 +1737,11 @@ def generate_excel_deliverable(
       elif c_idx == 6:
         cell.alignment = Alignment(horizontal="right", vertical="center")
         cell.number_format = "$#,##0.00"
+      elif c_idx == 7:
+        cell.alignment = Alignment(horizontal="center", vertical="center")
       else:
         cell.alignment = Alignment(horizontal="center", vertical="center")
+        cell.font = Font(name="Segoe UI", size=9, italic=True, color="475569")
     ws_kw.row_dimensions[r_idx].height = 22
 
   ws_kw.column_dimensions["A"].width = 38
@@ -1747,6 +1751,7 @@ def generate_excel_deliverable(
   ws_kw.column_dimensions["E"].width = 12
   ws_kw.column_dimensions["F"].width = 14
   ws_kw.column_dimensions["G"].width = 28
+  ws_kw.column_dimensions["H"].width = 32
 
   # 5. SHEET: On-Page Architecture
   ws_op = wb.create_sheet(title="On-Page Architecture")
@@ -2445,7 +2450,7 @@ if st.session_state.analysis_results is None:
                   else "Strengthen Internal Silo & Conversion CTAs"
               )
 
-            # Dinamis untuk semua kompetitor (1 s/d N kompetitor)
+            # Dinamis untuk semua kompetitor
             comp_positions = []
             for idx_c, _ in enumerate(clean_comp_names):
               pattern = (idx_g + idx_c) % 5
