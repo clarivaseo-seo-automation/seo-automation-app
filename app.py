@@ -377,7 +377,7 @@ LANG_PACK = {
         "guide_step3_content": (
             "- Ingrese el dominio objetivo y competidores directos.\n- Ingrese"
             " el `sitemap.xml` del blog para garantizar contenido nuevo.\n-"
-            " Seleccione la duración del plan y el KPI principal."
+            " Seleccione la duración del plan dan el KPI principal."
         ),
     },
     "DE": {
@@ -484,7 +484,7 @@ LANG_PACK = {
         "guide_step3_title": "3. Anleitung zur Kundendateneingabe",
         "guide_step3_content": (
             "- Ziel-Domain und direkte Mitbewerber eingeben.\n-"
-            " Blog-`sitemap.xml` des Kunden einfügen.\n- Roadmap-Dauer und"
+            " Blog-`sitemap.xml` des Kunden einfügen.\n- Roadmap-Dauer dan"
             " primäre Kunden-KPI festlegen."
         ),
     },
@@ -1042,38 +1042,42 @@ def fetch_keyword_metrics(
 ):
   raw_results = []
   target_country = (
-      "id" if country.lower() in ["id", "indonesia"] else country.lower()
+      "id" if country.lower() in ["id", "indonesia"] else country.lower()[:2]
   )
 
-  # 1. LIVE AHREFS KEYWORDS EXPLORER V3
+  # 1. LIVE AHREFS KEYWORDS EXPLORER V3 (Using query params & select)
   if ahrefs_k and ahrefs_k.strip():
     try:
       kw_chunks = [keywords[i : i + 15] for i in range(0, len(keywords), 15)]
       for chunk in kw_chunks:
-        kw_param = ",".join([urllib.parse.quote(k.strip()) for k in chunk])
-        ah_kw_url = (
-            "https://api.ahrefs.com/v3/keywords-explorer/overview?"
-            f"country={target_country}&select=keyword,volume,difficulty,cpc&keywords={kw_param}"
-        )
+        kw_string = ",".join([k.strip() for k in chunk if k.strip()])
+        ah_kw_url = "https://api.ahrefs.com/v3/keywords-explorer/overview"
+        params = {
+            "country": target_country,
+            "select": "keyword,volume,difficulty,cpc",
+            "keywords": kw_string,
+        }
         ah_headers = {
             "Authorization": f"Bearer {ahrefs_k.strip()}",
             "Accept": "application/json",
         }
-        res_ah = requests.get(ah_kw_url, headers=ah_headers, timeout=12)
+        res_ah = requests.get(
+            ah_kw_url, headers=ah_headers, params=params, timeout=15
+        )
         if res_ah.status_code == 200:
-          kw_items = res_ah.json().get("keywords", [])
+          data_json = res_ah.json()
+          kw_items = data_json.get("keywords", data_json.get("items", []))
           for k_item in kw_items:
             raw_results.append({
                 "keyword": k_item.get("keyword"),
                 "volume": int(k_item.get("volume", 0)),
                 "kd": int(k_item.get("difficulty", 0)),
                 "cpc": float(k_item.get("cpc", 0.0)),
-                "source": "Ahrefs Keywords Explorer (Live API)",
+                "source": "Ahrefs Keywords Explorer (Live Connected)",
             })
         else:
           st.sidebar.warning(
-              f"Ahrefs Keywords API: Status {res_ah.status_code} -"
-              f" {res_ah.text[:100]}"
+              f"Ahrefs Keywords API ({res_ah.status_code}): {res_ah.text[:120]}"
           )
     except Exception as e:
       st.sidebar.warning(f"Ahrefs Keywords Connection: {str(e)}")
@@ -1096,7 +1100,7 @@ def fetch_keyword_metrics(
           "volume": est_volume,
           "kd": sim_kd,
           "cpc": est_cpc,
-          "source": source,
+          "source": "Benchmark Data / Free Mode",
       })
 
   # Filter Tiered KD: Prioritize KD < 20, allow KD <= 50, reject KD > 50
