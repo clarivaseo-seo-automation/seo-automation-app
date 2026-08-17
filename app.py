@@ -89,9 +89,9 @@ LANG_PACK = {
         ),
         "framework_notice": (
             "💡 **Specialist SEO, AIO & GEO Framework Active:**\n"
-            "Live Ahrefs API v3 integration active (Domain Rating + Metrics +"
-            " Keywords Explorer) with tiered KD filtering (<20 prioritized,"
-            " max 50)."
+            "Live Ahrefs API v3 integration active (Domain Rating +"
+            " Backlinks-Stats + Metrics + Keywords Explorer) with tiered KD"
+            " filtering (<20 prioritized, max 50)."
         ),
         "demo_kw_notice": (
             "ℹ️ **Free Mode Active:** Utilizing Google PageSpeed Insights"
@@ -205,10 +205,10 @@ LANG_PACK = {
         ),
         "framework_notice": (
             "💡 **Specialist SEO, AIO & GEO Framework Active:**\n"
-            "Integrasi live Ahrefs API v3 aktif (Domain Rating + Metrics +"
-            " Keywords Explorer). Keyword disaring otomatis dengan prioritas"
-            " **KD < 20 (Quick Wins)**, toleransi **KD 20–50**, dan membuang"
-            " KD > 50."
+            "Integrasi live Ahrefs API v3 aktif (Domain Rating + Backlinks"
+            " Stats + Metrics + Keywords Explorer). Keyword disaring otomatis"
+            " dengan prioritas **KD < 20 (Quick Wins)**, toleransi **KD"
+            " 20–50**, dan membuang KD > 50."
         ),
         "demo_kw_notice": (
             "ℹ️ **Mode Gratis Aktif:** Menggunakan Google PageSpeed Insights"
@@ -377,7 +377,7 @@ LANG_PACK = {
         "guide_step3_content": (
             "- Ingrese el dominio objetivo y competidores directos.\n- Ingrese"
             " el `sitemap.xml` del blog para garantizar contenido nuevo.\n-"
-            " Seleccione la duración del plan y el KPI principal."
+            " Seleccione la duración del plan dan el KPI principal."
         ),
     },
     "DE": {
@@ -719,7 +719,7 @@ def fetch_domain_authority_metrics(
   )
   today_date = datetime.date.today().strftime("%Y-%m-%d")
 
-  # 1. LIVE AHREFS API V3 (Dual Endpoint: domain-rating + metrics)
+  # 1. LIVE AHREFS API V3 (Dual Endpoint: domain-rating + metrics + backlinks-stats)
   if ahrefs_k and ahrefs_k.strip():
     ah_headers = {
         "Authorization": f"Bearer {ahrefs_k.strip()}",
@@ -732,7 +732,7 @@ def fetch_domain_authority_metrics(
     api_success = False
 
     try:
-      # Step A: Domain Rating & Referring Domains
+      # Step A: Domain Rating (DR)
       dr_url = (
           "https://api.ahrefs.com/v3/site-explorer/domain-rating?"
           f"target={clean_dom}&date={today_date}"
@@ -746,10 +746,24 @@ def fetch_domain_authority_metrics(
             if float(raw_dr).is_integer()
             else round(float(raw_dr), 1)
         )
-        ref_domains = int(dr_data.get("refdomains", 0))
         api_success = True
 
-      # Step B: Live Organic Search Traffic & Keywords Count
+      # Step B: Live Referring Domains via Backlinks-Stats
+      bl_url = (
+          "https://api.ahrefs.com/v3/site-explorer/backlinks-stats?"
+          f"target={clean_dom}&mode=subdomains&date={today_date}"
+      )
+      res_bl = requests.get(bl_url, headers=ah_headers, timeout=10)
+      if res_bl.status_code == 200:
+        bl_metrics = res_bl.json().get("metrics", {})
+        ref_domains = int(
+            bl_metrics.get(
+                "live_refdomains", bl_metrics.get("refdomains", 0)
+            )
+        )
+        api_success = True
+
+      # Step C: Live Organic Search Traffic & Keywords Count
       metrics_url = (
           "https://api.ahrefs.com/v3/site-explorer/metrics?"
           f"target={clean_dom}&mode=subdomains&date={today_date}"
@@ -759,8 +773,6 @@ def fetch_domain_authority_metrics(
         met_data = res_met.json().get("metrics", {})
         org_traffic = int(met_data.get("org_traffic", 0))
         org_keywords = int(met_data.get("org_keywords", 0))
-        if not ref_domains:
-          ref_domains = int(met_data.get("refdomains", 0))
         api_success = True
 
       if api_success:
