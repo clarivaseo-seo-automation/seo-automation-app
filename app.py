@@ -89,9 +89,8 @@ LANG_PACK = {
         ),
         "framework_notice": (
             "💡 **Specialist SEO, AIO & GEO Framework Active:**\n"
-            "Live Ahrefs API v3 integration active (Domain Rating +"
-            " Backlinks-Stats + Metrics + Keywords Explorer) with tiered KD"
-            " filtering (<20 prioritized, max 50)."
+            "Concise 2–3 word commercial keywords with live Ahrefs API v3"
+            " integration (Search Volume >= 10, KD < 20 prioritized, max 50)."
         ),
         "demo_kw_notice": (
             "ℹ️ **Free Mode Active:** Utilizing Google PageSpeed Insights"
@@ -138,10 +137,10 @@ LANG_PACK = {
             "- **Commercial vs Informational Siloing:** 25-35 Target keywords"
             " are exclusively reserved for Homepage & Commercial Service Pages,"
             " while Blog Content uses distinct Informational clusters.\n-"
-            " **Tiered KD Prioritization:** Prioritizes KD < 20 (Quick Wins),"
-            " allows KD 20-50 for high-intent queries, rejects KD > 50.\n-"
-            " **AIO & GEO Optimization:** Structured 40–60 word passage"
-            " definitions and entity signals for ChatGPT Search & Perplexity."
+            " **Concise 2-3 Word Keywords:** Avoids zero-volume fluff by"
+            " targeting realistic buyer search queries.\n- **Tiered KD"
+            " Prioritization:** Prioritizes KD < 20 (Quick Wins), allows KD"
+            " 20-50 for high-intent queries, rejects KD > 50."
         ),
         "guide_step3_title": "3. Client Data Intake Instructions",
         "guide_step3_content": (
@@ -205,10 +204,9 @@ LANG_PACK = {
         ),
         "framework_notice": (
             "💡 **Specialist SEO, AIO & GEO Framework Active:**\n"
-            "Integrasi live Ahrefs API v3 aktif (Domain Rating + Backlinks"
-            " Stats + Metrics + Keywords Explorer). Keyword disaring otomatis"
-            " dengan prioritas **KD < 20 (Quick Wins)**, toleransi **KD"
-            " 20–50**, dan membuang KD > 50."
+            "Riset kata kunci 2–3 kata padat intent komersial terhubung live"
+            " dengan Ahrefs API v3 (Search Volume >= 10, prioritas **KD < 20"
+            " (Quick Wins)**, toleransi **KD 20–50**, membuang KD > 50)."
         ),
         "demo_kw_notice": (
             "ℹ️ **Mode Gratis Aktif:** Menggunakan Google PageSpeed Insights"
@@ -256,10 +254,10 @@ LANG_PACK = {
             "- **Pemisahan Komersial vs Informasional:** 25-35 Keyword riset"
             " digunakan 100% untuk halaman jualan (Home & Services), sedangkan"
             " blog menggunakan klaster informasional terpisah.\n-"
-            " **Penyaringan KD Bertingkat:** Memprioritaskan KD < 20, menerima"
-            " KD 20-50, mengeliminasi KD > 50.\n- **AIO & GEO Ready:** Memuat"
-            " definition snippet 40-60 kata dan entity signal untuk AI"
-            " citation."
+            " **Format 2-3 Kata Padat:** Menghindari frasa berlebihan agar"
+            " mendapatkan angka volume riil di Ahrefs.\n- **Penyaringan KD"
+            " Bertingkat:** Memprioritaskan KD < 20, menerima KD 20-50,"
+            " mengeliminasi KD > 50."
         ),
         "guide_step3_title": "3. Cara Mengisi Data Klien",
         "guide_step3_content": (
@@ -322,8 +320,8 @@ LANG_PACK = {
         ),
         "framework_notice": (
             "💡 **Framework Especializado SEO, AIO y GEO Activo:**\n"
-            "Integración de Ahrefs API v3 activa con filtro KD (<20"
-            " prioritario, máx 50)."
+            "Keywords concisas de 2-3 palabras con Ahrefs API v3 (Volumen"
+            " >= 10, KD < 20 prioritario, máx 50)."
         ),
         "demo_kw_notice": (
             "ℹ️ **Modo Gratuito Activo:** Utilizando Google PageSpeed Insights"
@@ -432,8 +430,8 @@ LANG_PACK = {
         ),
         "framework_notice": (
             "💡 **Spezialisiertes SEO, AIO & GEO Framework Aktiv:**\n"
-            "Ahrefs API v3 Live-Integration mit KD-Filter (<20 priorisiert, max"
-            " 50)."
+            "Präzise 2-3 Wörter Keywords mit Live Ahrefs API v3 (Suchvolumen"
+            " >= 10, KD < 20 priorisiert, max 50)."
         ),
         "demo_kw_notice": (
             "ℹ️ **Kostenloser Modus Aktiv:** Verwendet Google PageSpeed"
@@ -1056,7 +1054,7 @@ def fetch_keyword_metrics(
       }
 
       for chunk in kw_chunks:
-        kw_list_clean = [k.strip() for k in chunk if k.strip()]
+        kw_list_clean = [k.strip().lower() for k in chunk if k.strip()]
         if not kw_list_clean:
           continue
 
@@ -1087,11 +1085,14 @@ def fetch_keyword_metrics(
           data_json = res_ah.json()
           kw_items = data_json.get("keywords", data_json.get("items", []))
           for k_item in kw_items:
+            vol_val = int(k_item.get("volume", 0))
+            kd_val = int(k_item.get("difficulty", 0))
+            cpc_val = float(k_item.get("cpc", 0.0))
             raw_results.append({
                 "keyword": k_item.get("keyword"),
-                "volume": int(k_item.get("volume", 0)),
-                "kd": int(k_item.get("difficulty", 0)),
-                "cpc": float(k_item.get("cpc", 0.0)),
+                "volume": vol_val,
+                "kd": kd_val,
+                "cpc": cpc_val,
                 "source": "Ahrefs Keywords Explorer (Live API)",
             })
         else:
@@ -1106,13 +1107,13 @@ def fetch_keyword_metrics(
     for i, kw in enumerate(keywords):
       word_count = len(kw.split())
       if i % 3 == 0:
-        sim_kd = max(2, 8 + (i % 8))
+        sim_kd = max(2, 6 + (i % 8))
       elif i % 3 == 1:
-        sim_kd = max(5, 14 + (i % 5))
+        sim_kd = max(4, 12 + (i % 6))
       else:
-        sim_kd = min(46, 21 + (i % 25))
+        sim_kd = min(42, 18 + (i % 22))
 
-      est_volume = max(90, 1800 - (word_count * 160) + (i * 85))
+      est_volume = max(20, 950 - (word_count * 120) + (i * 65))
       est_cpc = round(0.45 + ((i % 8) * 0.15), 2)
       raw_results.append({
           "keyword": kw,
@@ -1126,15 +1127,24 @@ def fetch_keyword_metrics(
           ),
       })
 
-  # Filter Tiered KD: Prioritize KD < 20, allow KD <= 50, reject KD > 50
-  tier1_kws = [k for k in raw_results if k["kd"] < 20]
-  tier2_kws = [k for k in raw_results if 20 <= k["kd"] <= 50]
+  # Filter Tiered KD: Prioritize KD < 20 (Quick Wins), allow KD <= 50, reject KD > 50
+  # Filter Volume: Memperbolehkan volume >= 10 untuk B2B keywords
+  tier1_kws = [k for k in raw_results if k["kd"] < 20 and k["volume"] >= 10]
+  tier2_kws = [
+      k for k in raw_results if 20 <= k["kd"] <= 50 and k["volume"] >= 10
+  ]
   tier2_kws.sort(key=lambda x: x["kd"])
 
   selected_kws = tier1_kws.copy()
   if len(selected_kws) < 25:
     needed = 35 - len(selected_kws)
     selected_kws.extend(tier2_kws[:needed])
+
+  # Jika kuota volume >= 10 masih kurang, ambil sisa keyword yang tersedia
+  if len(selected_kws) < 20:
+    for k in raw_results:
+      if k not in selected_kws and k["kd"] <= 50:
+        selected_kws.append(k)
 
   if not selected_kws:
     selected_kws = raw_results[:30]
@@ -2181,8 +2191,8 @@ if st.session_state.analysis_results is None:
 
       with c2:
         default_products = (
-            "Automated Pipeline Forecasting, Deal Execution Workflows, Rep"
-            " Activity Coaching, CRM Data Auto-Sync, Revenue Leakage Detection"
+            "Pipeline Forecasting, Deal Execution, Activity Coaching, CRM"
+            " Auto-Sync, Revenue Leakage"
             if lang_code != "ID"
             else (
                 "Selang Hidrolik Industri, Industrial Hose, Jasa Crimping"
@@ -2277,10 +2287,10 @@ if st.session_state.analysis_results is None:
             website_url, ahrefs_k=ahrefs_token, semrush_k=semrush_key
         )
 
-      # Step 2: Commercial Keywords Discovery
+      # Step 2: Commercial Keywords Discovery (Strict 2-3 Word Commercial Phrases)
       with st.spinner(
-          "2/6 Discovering Commercial Keyword Pool in"
-          f" {app_lang.upper()} (Targeting KD < 20 & max 50)..."
+          "2/6 Discovering Concise 2–3 Word Commercial Keywords in"
+          f" {app_lang.upper()} (Targeting High-Intent Buyer Terms)..."
       ):
         prompt_step1 = f"""
                 You are a Lead SEO Keyword Strategist. Output MUST be strictly in {app_lang.upper()}.
@@ -2289,10 +2299,15 @@ if st.session_state.analysis_results is None:
                 Offerings: {brief_data['products']}
                 Primary KPI: {client_kpi_str}
                 
-                TASK: Generate 35 to 50 specific high-intent COMMERCIAL and TRANSACTIONAL search terms.
-                Focus on low-competition long-tail buyer phrases (distributor, supplier, jual, harga, katalog, spesifikasi, enterprise, platform, tools).
-                Language: Strictly write all keywords in {app_lang.upper()}.
-                Use clean search queries (2-5 words). DO NOT write long sentences.
+                CRITICAL INSTRUCTION:
+                Generate 40 to 50 CONCISE, HIGH-VOLUME 2-TO-3 WORD commercial and transactional search queries.
+                DO NOT generate long phrases (no 4+ words).
+                DO NOT repeat duplicated words like "supplier distributor selang".
+                Keep queries lowercase, natural, and realistic as searched in Google {target_geo}.
+                
+                Examples of ideal 2-3 word structure:
+                - "distributor selang hidrolik", "jual selang hidrolik", "harga selang hidrolik", "toko selang industri", "crimping selang hidrolik", "fitting selang hidrolik", "selang kompresor pabrik", "selang industri toyox"
+                - "enterprise crm software", "sales forecasting platform", "revenue analytics tools", "b2b pipeline software"
                 
                 RETURN STRICT JSON ONLY:
                 {{
@@ -2310,40 +2325,36 @@ if st.session_state.analysis_results is None:
           if len(raw_kws) < 15:
             raise Exception("Insufficient keywords returned")
         except Exception:
-          clean_niche = brief_data["niche"].split("&")[0].strip()
+          clean_niche = brief_data["niche"].split("&")[0].strip().lower()
           clean_prods = [
-              p.strip()
+              p.strip().lower()
               for p in core_offerings.split(",")
-              if len(p.strip().split()) <= 4
+              if len(p.strip().split()) <= 3
           ]
           if lang_code == "ID":
             base_terms = [
                 f"distributor {clean_niche}",
                 f"jual {clean_niche}",
                 f"harga {clean_niche}",
-                f"supplier {clean_niche} indonesia",
-                f"toko {clean_niche} terdekat",
+                f"supplier {clean_niche}",
+                f"toko {clean_niche}",
                 f"pabrik {clean_niche}",
                 f"katalog {clean_niche}",
                 f"spesifikasi {clean_niche}",
             ]
             for p in clean_prods[:8]:
-              base_terms.extend([
-                  f"jual {p}",
-                  f"distributor {p}",
-                  f"harga {p}",
-                  f"supplier {p}",
-              ])
+              base_terms.extend(
+                  [f"jual {p}", f"distributor {p}", f"harga {p}", f"supplier {p}"]
+              )
           else:
             base_terms = [
-                f"best {clean_niche} software",
+                f"best {clean_niche}",
                 f"{clean_niche} platform",
                 f"{clean_niche} tools",
-                f"enterprise {clean_niche} solutions",
-                f"{clean_niche} vendor",
+                f"enterprise {clean_niche}",
                 f"{clean_niche} pricing",
-                f"automated {clean_niche} system",
-                f"{clean_niche} providers",
+                f"automated {clean_niche}",
+                f"{clean_niche} software",
             ]
             for p in clean_prods[:8]:
               base_terms.extend(
@@ -2351,12 +2362,19 @@ if st.session_state.analysis_results is None:
               )
 
           raw_kws = [{
-              "keyword": k,
+              "keyword": k.lower().strip(),
               "intent": "Commercial",
               "funnel": "MOFU",
           } for k in list(set(base_terms))[:40]]
 
-        kw_list = [k["keyword"] if isinstance(k, dict) else k for k in raw_kws]
+        # Ensure all keywords are lowercase and cleaned
+        clean_kw_list = []
+        for k in raw_kws:
+          kw_str = (
+              k.get("keyword", "") if isinstance(k, dict) else str(k)
+          ).strip().lower()
+          if kw_str and len(kw_str.split()) <= 4:
+            clean_kw_list.append(kw_str)
 
       # Step 3: Tiered Keyword Filtering (Live Ahrefs / Simulation)
       with st.spinner(
@@ -2365,7 +2383,7 @@ if st.session_state.analysis_results is None:
       ):
         geo_country = "id" if "Indonesia" in target_geo else "us"
         df_val = fetch_keyword_metrics(
-            kw_list,
+            clean_kw_list,
             country=geo_country,
             source=keyword_source,
             ahrefs_k=ahrefs_token,
@@ -3396,9 +3414,9 @@ else:
   # TAB: Commercial Keywords
   with all_tabs[curr_tab_idx]:
     st.info(
-        "🎯 **Landing Page Exclusive:** 25-35 Keyword komersial ini disaring"
-        " otomatis dengan prioritas **KD < 20 (Quick Wins)** dan **KD 20–50**"
-        " untuk halaman jualan (Home & Services)."
+        "🎯 **Landing Page Exclusive:** 25-35 Keyword komersial ringkas (2-3"
+        " kata) disaring otomatis dengan prioritas **KD < 20 (Quick Wins)** dan"
+        " **KD 20–50** untuk halaman jualan (Home & Services)."
     )
     st.dataframe(df_final_kw, use_container_width=True)
   curr_tab_idx += 1
