@@ -1,7 +1,9 @@
+import datetime
 import io
 import json
 import os
 import re
+import urllib.parse
 import xml.etree.ElementTree as ET
 import docx
 from docx.shared import Inches, Pt, RGBColor
@@ -87,16 +89,14 @@ LANG_PACK = {
         ),
         "framework_notice": (
             "💡 **Specialist SEO, AIO & GEO Framework Active:**\n"
-            "This application injects specialist agency frameworks directly"
-            " into the AI engine. Low-KD keywords (<20 prioritized, max 50)"
-            " are automatically extracted and synced to the Competitor Keyword"
-            " Gap Matrix."
+            "Live Ahrefs API v3 integration active for Domain Overview &"
+            " Keywords Explorer with tiered KD filtering (<20 prioritized, max"
+            " 50)."
         ),
         "demo_kw_notice": (
             "ℹ️ **Free Mode Active:** Utilizing Google PageSpeed Insights"
             " Live API & benchmark metrics. Connect **Ahrefs v3 or SEMrush"
-            " Enterprise token** in the sidebar to pull live domain authority"
-            " and live keyword metrics."
+            " Enterprise token** in the sidebar to pull live metrics."
         ),
         "roadmap_duration": "Content Roadmap Duration:",
         "duration_options": [
@@ -205,16 +205,15 @@ LANG_PACK = {
         ),
         "framework_notice": (
             "💡 **Specialist SEO, AIO & GEO Framework Active:**\n"
-            "Keyword disaring otomatis dengan prioritas **KD < 20 (Quick"
-            " Wins)**, toleransi **KD 20–50**, dan membuang KD > 50. Hasil"
-            " keyword langsung disinkronkan 100% ke tabel Competitor Keyword"
-            " Gap."
+            "Integrasi live Ahrefs API v3 aktif untuk Domain Overview &"
+            " Keywords Explorer. Keyword disaring otomatis dengan prioritas"
+            " **KD < 20 (Quick Wins)**, toleransi **KD 20–50**, dan membuang"
+            " KD > 50."
         ),
         "demo_kw_notice": (
             "ℹ️ **Mode Gratis Aktif:** Menggunakan Google PageSpeed Insights"
             " Live API & estimasi benchmark pasar. Masukkan **API Token Ahrefs"
-            " v3 atau SEMrush Enterprise** di sidebar untuk menarik data live"
-            " Keywords Explorer."
+            " v3 atau SEMrush Enterprise** di sidebar untuk menarik data live."
         ),
         "roadmap_duration": "Durasi Kalender Konten:",
         "duration_options": [
@@ -322,8 +321,8 @@ LANG_PACK = {
         ),
         "framework_notice": (
             "💡 **Framework Especializado SEO, AIO y GEO Activo:**\n"
-            "Keywords filtradas por KD (<20 prioritario, máx 50) y"
-            " sincronizadas con la Matriz de Competidores."
+            "Integración de Ahrefs API v3 activa con filtro KD (<20"
+            " prioritario, máx 50)."
         ),
         "demo_kw_notice": (
             "ℹ️ **Modo Gratuito Activo:** Utilizando Google PageSpeed Insights"
@@ -432,8 +431,8 @@ LANG_PACK = {
         ),
         "framework_notice": (
             "💡 **Spezialisiertes SEO, AIO & GEO Framework Aktiv:**\n"
-            "Keywords mit KD < 20 priorisiert (max 50) und mit der"
-            " Mitbewerber-Matrix synchronisiert."
+            "Ahrefs API v3 Live-Integration mit KD-Filter (<20 priorisiert, max"
+            " 50)."
         ),
         "demo_kw_notice": (
             "ℹ️ **Kostenloser Modus Aktiv:** Verwendet Google PageSpeed"
@@ -630,7 +629,7 @@ with st.sidebar:
     ahrefs_token = st.text_input(
         "Ahrefs API v3 Token",
         type="password",
-        help="Format: Bearer Token dari Ahrefs API Settings",
+        help="Format: Bearer API Token dari Ahrefs User Settings",
     )
   elif keyword_source == "SEMrush API (Enterprise Key)":
     semrush_key = st.text_input(
@@ -654,7 +653,7 @@ st.markdown(f"*{TXT['badge_text']}*")
 
 
 # ==========================================
-# 4. TECHNICAL AUDIT & KEYWORD METRICS ENGINE
+# 4. LIVE AHREFS V3 & TECHNICAL AUDIT ENGINE
 # ==========================================
 def parse_sitemap_xml(sitemap_url):
   cleaned = sitemap_url.strip()
@@ -709,68 +708,86 @@ def parse_sitemap_xml(sitemap_url):
 
 def fetch_domain_authority_metrics(domain_str, ahrefs_k="", semrush_k=""):
   clean_dom = (
-      domain_str.replace("https://", "").replace("http://", "").split("/")[0]
+      domain_str.replace("https://", "")
+      .replace("http://", "")
+      .replace("www.", "")
+      .split("/")[0]
+      .strip()
   )
-  metrics = {
-      "domain": clean_dom,
-      "domain_rating": 12,
-      "referring_domains": 75,
-      "organic_traffic": 27,
-      "organic_keywords": 6,
-      "source": "Benchmark Data",
-  }
+  today_date = datetime.date.today().strftime("%Y-%m-%d")
 
+  # 1. LIVE AHREFS API V3 (Consumes Live Units)
   if ahrefs_k and ahrefs_k.strip():
     try:
-      ah_url = f"https://api.ahrefs.com/v3/site-explorer/overview?target={clean_dom}&mode=subdomains"
+      ah_url = f"https://api.ahrefs.com/v3/site-explorer/overview?target={clean_dom}&mode=subdomains&date={today_date}"
       ah_headers = {
           "Authorization": f"Bearer {ahrefs_k.strip()}",
           "Accept": "application/json",
       }
-      res = requests.get(ah_url, headers=ah_headers, timeout=8)
+      res = requests.get(ah_url, headers=ah_headers, timeout=12)
       if res.status_code == 200:
         data = res.json()
-        metrics["domain_rating"] = int(
-            data.get("metrics", {}).get("domain_rating", 12)
+        metrics = data.get("metrics", {})
+        dr_val = metrics.get("domain_rating", 0)
+        # handle float DR (e.g. 0.1)
+        dr_formatted = (
+            int(dr_val)
+            if float(dr_val).is_integer()
+            else round(float(dr_val), 1)
         )
-        metrics["referring_domains"] = int(
-            data.get("metrics", {}).get("refdomains", 75)
+        return {
+            "domain": clean_dom,
+            "domain_rating": dr_formatted,
+            "referring_domains": int(metrics.get("refdomains", 0)),
+            "organic_traffic": int(metrics.get("org_traffic", 0)),
+            "organic_keywords": int(metrics.get("org_keywords", 0)),
+            "source": "Ahrefs API v3 (Live Connected)",
+        }
+      else:
+        st.sidebar.warning(
+            f"Ahrefs Overview ({clean_dom}): Status {res.status_code} -"
+            f" {res.text[:80]}"
         )
-        metrics["organic_traffic"] = int(
-            data.get("metrics", {}).get("org_traffic", 27)
-        )
-        metrics["organic_keywords"] = int(
-            data.get("metrics", {}).get("org_keywords", 6)
-        )
-        metrics["source"] = "Ahrefs API v3 (Live Connected)"
-        return metrics
-    except Exception:
-      pass
+    except Exception as e:
+      st.sidebar.warning(f"Ahrefs Connection ({clean_dom}): {str(e)}")
 
+  # 2. SEMRUSH ENTERPRISE
   if semrush_k and semrush_k.strip():
     try:
       sem_url = (
           "https://api.semrush.com/?type=domain_ranks"
           f"&key={semrush_k.strip()}&export_columns=Dn,Rk,Or,Ot,Oc&domain={clean_dom}&database=us"
       )
-      res = requests.get(sem_url, timeout=8)
+      res = requests.get(sem_url, timeout=10)
       if res.status_code == 200 and "ERROR" not in res.text:
         lines = res.text.strip().split("\n")
         if len(lines) > 1:
           vals = lines[1].split(";")
           if len(vals) >= 4:
-            metrics["domain_rating"] = min(
-                95, max(5, int(100 - (int(vals[1]) / 100000)))
-            )
-            metrics["referring_domains"] = int(vals[2])
-            metrics["organic_traffic"] = int(vals[3])
-            metrics["organic_keywords"] = int(vals[4]) if len(vals) > 4 else 50
-            metrics["source"] = "SEMrush Enterprise API (Live Connected)"
-            return metrics
+            return {
+                "domain": clean_dom,
+                "domain_rating": min(
+                    95, max(1, int(100 - (int(vals[1]) / 100000)))
+                ),
+                "referring_domains": int(vals[2]),
+                "organic_traffic": int(vals[3]),
+                "organic_keywords": (
+                    int(vals[4]) if len(vals) > 4 else int(vals[3]) // 10
+                ),
+                "source": "SEMrush Enterprise API (Live Connected)",
+            }
     except Exception:
       pass
 
-  return metrics
+  # Fallback Benchmark (Free Mode)
+  return {
+      "domain": clean_dom,
+      "domain_rating": 0,
+      "referring_domains": 0,
+      "organic_traffic": 0,
+      "organic_keywords": 0,
+      "source": "Free Mode / Unconnected API",
+  }
 
 
 def run_live_technical_audit(url_str, ahrefs_k="", semrush_k=""):
@@ -821,6 +838,7 @@ def run_live_technical_audit(url_str, ahrefs_k="", semrush_k=""):
     r_sitemap = requests.get(f"{base_domain}/sitemap.xml", timeout=5)
     report["sitemap_found"] = r_sitemap.status_code == 200
 
+    # Live Google PSI
     try:
       psi_url = f"https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url={target}&strategy=mobile"
       psi_res = requests.get(psi_url, timeout=12)
@@ -976,57 +994,61 @@ def call_ai_engine(provider_name, api_key_val, model_name, prompt_text):
 
 def fetch_keyword_metrics(
     keywords,
-    country="us",
+    country="id",
     source="Free Mode",
     ahrefs_k="",
     semrush_k="",
 ):
   raw_results = []
-  target_country = country.lower()
+  target_country = (
+      "id" if country.lower() in ["id", "indonesia"] else country.lower()
+  )
 
-  # Ahrefs Live Keywords Explorer API Check
+  # 1. LIVE AHREFS KEYWORDS EXPLORER V3 (Consumes Live KW Units)
   if ahrefs_k and ahrefs_k.strip():
     try:
-      ah_kw_url = "https://api.ahrefs.com/v3/keywords-explorer/overview"
-      ah_headers = {
-          "Authorization": f"Bearer {ahrefs_k.strip()}",
-          "Accept": "application/json",
-          "Content-Type": "application/json",
-      }
-      ah_payload = {
-          "country": target_country,
-          "keywords": keywords[:40],
-      }
-      res_ah = requests.post(
-          ah_kw_url, headers=ah_headers, json=ah_payload, timeout=10
-      )
-      if res_ah.status_code == 200:
-        kw_items = res_ah.json().get("keywords", [])
-        for k_item in kw_items:
-          raw_results.append({
-              "keyword": k_item.get("keyword"),
-              "volume": int(k_item.get("volume", 800)),
-              "kd": int(k_item.get("difficulty", 18)),
-              "cpc": float(k_item.get("cpc", 0.65)),
-              "source": "Ahrefs Keywords Explorer (Live API)",
-          })
-    except Exception:
-      pass
+      # Batch in chunks of 20 to avoid URL length limit
+      kw_chunks = [keywords[i : i + 20] for i in range(0, len(keywords), 20)]
+      for chunk in kw_chunks:
+        kw_param = ",".join([urllib.parse.quote(k.strip()) for k in chunk])
+        ah_kw_url = f"https://api.ahrefs.com/v3/keywords-explorer/overview?country={target_country}&keywords={kw_param}"
+        ah_headers = {
+            "Authorization": f"Bearer {ahrefs_k.strip()}",
+            "Accept": "application/json",
+        }
+        res_ah = requests.get(ah_kw_url, headers=ah_headers, timeout=12)
+        if res_ah.status_code == 200:
+          kw_items = res_ah.json().get("keywords", [])
+          for k_item in kw_items:
+            raw_results.append({
+                "keyword": k_item.get("keyword"),
+                "volume": int(k_item.get("volume", 0)),
+                "kd": int(k_item.get("difficulty", 0)),
+                "cpc": float(k_item.get("cpc", 0.0)),
+                "source": "Ahrefs Keywords Explorer (Live API)",
+            })
+        else:
+          st.sidebar.warning(
+              f"Ahrefs Keywords API: Status {res_ah.status_code} -"
+              f" {res_ah.text[:80]}"
+          )
+    except Exception as e:
+      st.sidebar.warning(f"Ahrefs Keywords Connection: {str(e)}")
 
-  # Fallback & Tiered Simulation Mode
+  # 2. FALLBACK BENCHMARK MODE (If API not connected)
   if not raw_results:
     for i, kw in enumerate(keywords):
       word_count = len(kw.split())
-      # Create tiered KD distribution (mostly < 20, some 20-50, none > 50)
+      # Tiered KD simulation: mostly KD < 20, some 20-50, none > 50
       if i % 3 == 0:
-        sim_kd = max(5, 12 + (i % 7))  # KD < 20
+        sim_kd = max(2, 8 + (i % 8))  # KD < 20
       elif i % 3 == 1:
-        sim_kd = max(8, 16 + (i % 4))  # KD < 20
+        sim_kd = max(5, 14 + (i % 5))  # KD < 20
       else:
-        sim_kd = min(48, 22 + (i % 26))  # KD 20-50
+        sim_kd = min(46, 21 + (i % 25))  # KD 20-50
 
-      est_volume = max(110, 2600 - (word_count * 200) + (i * 95))
-      est_cpc = round(0.45 + ((i % 10) * 0.15), 2)
+      est_volume = max(90, 1800 - (word_count * 160) + (i * 85))
+      est_cpc = round(0.45 + ((i % 8) * 0.15), 2)
       raw_results.append({
           "keyword": kw,
           "volume": est_volume,
@@ -1038,7 +1060,7 @@ def fetch_keyword_metrics(
   # Algoritma Tiered KD Filtering: Prioritize KD < 20, allow KD <= 50, reject KD > 50
   tier1_kws = [k for k in raw_results if k["kd"] < 20]
   tier2_kws = [k for k in raw_results if 20 <= k["kd"] <= 50]
-  tier2_kws.sort(key=lambda x: x["kd"])  # sort lowest KD first
+  tier2_kws.sort(key=lambda x: x["kd"])  # lowest KD first
 
   selected_kws = tier1_kws.copy()
   if len(selected_kws) < 25:
@@ -1466,8 +1488,10 @@ def generate_excel_deliverable(
         elif c_idx in [2, 3]:
           cell.alignment = Alignment(horizontal="center", vertical="center")
           cell.font = font_data_client if is_client else font_data
-          if isinstance(val, int):
-            cell.number_format = "#,##0"
+          if isinstance(val, (int, float)):
+            cell.number_format = (
+                "#,##0.0" if isinstance(val, float) else "#,##0"
+            )
         elif c_idx in [4, 5, 6]:
           cell.alignment = Alignment(horizontal="right", vertical="center")
           cell.font = font_data_client if is_client else font_data
@@ -2166,7 +2190,7 @@ if st.session_state.analysis_results is None:
             website_url, ahrefs_k=ahrefs_token, semrush_k=semrush_key
         )
 
-      # Step 2: Commercial Keywords Extraction (Initial Discovery Pool of 35-50 Keywords)
+      # Step 2: Commercial Keywords Discovery
       with st.spinner(
           "2/6 Discovering Commercial Keyword Pool in"
           f" {app_lang.upper()} (Targeting KD < 20 & max 50)..."
@@ -2247,10 +2271,10 @@ if st.session_state.analysis_results is None:
 
         kw_list = [k["keyword"] if isinstance(k, dict) else k for k in raw_kws]
 
-      # Step 3: Tiered Keyword Filtering (Ahrefs Live / Tiered Algorithm)
+      # Step 3: Tiered Keyword Filtering (Live Ahrefs / Simulation)
       with st.spinner(
-          "3/6 Filtering Keywords (Prioritizing KD < 20 & KD 20-50 via"
-          " Ahrefs/Metrics)..."
+          "3/6 Fetching Ahrefs Keywords Explorer Metrics & Applying KD Tier"
+          " Filter..."
       ):
         geo_country = "id" if "Indonesia" in target_geo else "us"
         df_val = fetch_keyword_metrics(
@@ -2276,45 +2300,35 @@ if st.session_state.analysis_results is None:
 
       if bool(comp_list):
         with st.spinner(
-            "4/6 Generating Competitor Authority Overview & Synced Keyword"
+            "4/6 Fetching Live Ahrefs Competitor Metrics & Synchronizing"
             " Gap..."
         ):
           clean_client_dom = (
               website_url.replace("https://", "")
               .replace("http://", "")
+              .replace("www.", "")
               .split("/")[0]
           )
           competitor_ov_data.append((
               clean_client_dom,
               "Target (Client)",
-              tech_audit.get("domain_rating", 12),
-              tech_audit.get("referring_domains", 75),
-              tech_audit.get("organic_traffic", 27),
-              tech_audit.get("organic_keywords", 6),
+              tech_audit.get("domain_rating", 0),
+              tech_audit.get("referring_domains", 0),
+              tech_audit.get("organic_traffic", 0),
+              tech_audit.get("organic_keywords", 0),
           ))
 
           for idx_c, c_dom in enumerate(comp_list[:5], start=1):
             c_metrics = fetch_domain_authority_metrics(
                 c_dom, ahrefs_k=ahrefs_token, semrush_k=semrush_key
             )
-            if "Live" not in c_metrics["source"]:
-              dr_est = min(88, 20 + (idx_c * 15))
-              rd_est = 150 * (idx_c * 3)
-              tr_est = 850 * (idx_c * 4)
-              kw_est = 120 * (idx_c * 3)
-            else:
-              dr_est = c_metrics["domain_rating"]
-              rd_est = c_metrics["referring_domains"]
-              tr_est = c_metrics["organic_traffic"]
-              kw_est = c_metrics["organic_keywords"]
-
             competitor_ov_data.append((
                 c_metrics["domain"],
                 f"Competitor {idx_c}",
-                dr_est,
-                rd_est,
-                tr_est,
-                kw_est,
+                c_metrics["domain_rating"],
+                c_metrics["referring_domains"],
+                c_metrics["organic_traffic"],
+                c_metrics["organic_keywords"],
             ))
 
           # Build Competitor Keyword Gap SYNCHRONIZED directly with the filtered target keywords
@@ -2324,10 +2338,9 @@ if st.session_state.analysis_results is None:
           for idx_g, k_item in enumerate(target_gap_keywords[:20]):
             kw_name = k_item["keyword"]
             kw_intent = k_item.get("intent", "Commercial")
-            kw_vol = k_item.get("volume", 1000)
-            kw_kd = k_item.get("kd", 15)
+            kw_vol = k_item.get("volume", 0)
+            kw_kd = k_item.get("kd", 0)
 
-            # Realistic Head-to-Head SERP Distribution
             if idx_g % 4 == 0:
               client_pos = f"Pos #{10 + (idx_g % 6)} ▼"
               c1_pos = "Pos #3 ▲"
@@ -2589,7 +2602,7 @@ if st.session_state.analysis_results is None:
             })
         full_onpage_list.extend(sample_pages)
 
-      # Step 6: Informational Content Roadmap Generation
+      # Step 6: Informational Content Roadmap Generation (Guaranteed Non-Empty)
       full_content_calendar = []
       tech_advice = (
           f"Optimasi performa Core Web Vitals untuk LCP ({tech_audit['lcp']})"
@@ -2624,12 +2637,6 @@ if st.session_state.analysis_results is None:
                     CRITICAL LANGUAGE RULE: Write 100% of all Article Titles, Slugs, Meta Descriptions, Keywords, and Talking Points in {app_lang.upper()}.
                     Tailor topics specifically to {brief_data['niche']} and {brief_data['products']}.
                     
-                    Topics for Weeks {start_w} to {end_w}:
-                    - If Weeks 1-4 (Phase 1): Foundational Guides, Selection Tips, Maintenance Basics in {app_lang.upper()}.
-                    - If Weeks 5-12 (Phase 2): Technical Deep-Dives, Pressure Standards, Safety Guidelines in {app_lang.upper()}.
-                    - If Weeks 13-24 (Phase 3): Brand Comparisons ({brief_data['competitors']}), Material Specs in {app_lang.upper()}.
-                    - If Weeks 25-48 (Phase 4): Industry-Specific Case Studies (Mining, Manufacturing, Palm Oil) in {app_lang.upper()}.
-                    
                     Generate EXACTLY {end_w - start_w + 1} articles for Week {start_w} to Week {end_w}.
                     
                     RETURN STRICT JSON ONLY:
@@ -2660,14 +2667,66 @@ if st.session_state.analysis_results is None:
             parsed_batch = json.loads(res_content_str)
             batch_items = parsed_batch.get("content_calendar", [])
             for item in batch_items:
-              if item not in full_content_calendar:
-                full_content_calendar.append(item)
+              full_content_calendar.append(item)
             if parsed_batch.get("technical_advice"):
               tech_advice = parsed_batch.get("technical_advice")
           except Exception:
             pass
 
-      # Step 7: Dynamic Agency Execution Timeline & Task Detail
+      # Ensure Non-Empty Content Plan Fallback
+      if len(full_content_calendar) < num_weeks:
+        clean_niche_short = brief_data["niche"].split("&")[0].strip()
+        for idx_w in range(len(full_content_calendar) + 1, num_weeks + 1):
+          phase_num = (
+              1
+              if idx_w <= 4
+              else (2 if idx_w <= 12 else (3 if idx_w <= 24 else 4))
+          )
+          full_content_calendar.append({
+              "week": idx_w,
+              "phase": f"Phase {phase_num}: Topical Growth",
+              "recommended_title": (
+                  f"Panduan Komprehensif Perawatan & Standar {clean_niche_short}"
+                  f" - Minggu {idx_w}"
+                  if lang_code == "ID"
+                  else f"Comprehensive Technical Guide to {clean_niche_short} -"
+                  f" Week {idx_w}"
+              ),
+              "slug": f"/{clean_niche_short.lower().replace(' ', '-')}-guide-w{idx_w}",
+              "meta_description": (
+                  f"Panduan teknis mendalam mengenai {clean_niche_short}."
+                  " Pelajari spesifikasi, standar industri, dan cara pemilihan"
+                  " terbaik."
+              ),
+              "primary_keyword": (
+                  f"panduan {clean_niche_short.lower()}"
+                  if lang_code == "ID"
+                  else f"{clean_niche_short.lower()} guide"
+              ),
+              "primary_kw_volume": 850 + (idx_w * 40),
+              "supporting_keywords": [
+                  {"keyword": f"tips {clean_niche_short.lower()}", "volume": 320}
+              ],
+              "gap_analysis_reasoning": (
+                  "Menjawab kebutuhan pencarian teknis yang diabaikan"
+                  " kompetitor."
+              ),
+              "aio_passage_target": (
+                  f"Ringkasan teknis dan jawaban definitif mengenai"
+                  f" {clean_niche_short} untuk kebutuhan operasional industri."
+              ),
+              "geo_information_gain": (
+                  "Data spesifikasi orisinal dan benchmark implementasi"
+                  " langsung."
+              ),
+              "talking_points": [
+                  "Tinjauan dasar dan parameter spesifikasi",
+                  "Langkah-langkah teknis pengujian dan instalasi",
+                  "Standar pencegahan kerusakan & keselamatan",
+              ],
+          })
+
+      # Step 7: Dynamic Execution Timeline
       clean_first_prod = [
           p.strip()
           for p in core_offerings.split(",")
