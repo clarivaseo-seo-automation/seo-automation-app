@@ -88,8 +88,8 @@ LANG_PACK = {
         ),
         "framework_notice": (
             "💡 **Specialist SEO, AIO & GEO Framework Active:**\n"
-            "Senior SEO Feasibility Diagnostic + Unique Content & Off-Page"
-            " Generation + Live Ahrefs API v3."
+            "Senior SEO Feasibility Diagnostic + Explicit Existing vs"
+            " Recommended New Page Labelling + Live Ahrefs API v3."
         ),
         "demo_kw_notice": (
             "ℹ️ **Free Mode Active:** Utilizing Google PageSpeed Insights"
@@ -116,8 +116,7 @@ LANG_PACK = {
         "btn_xlsx": "📊 Download Spreadsheet (.XLSX)",
         "btn_reset": "🔄 Start New Analysis / Reset",
         "success_msg": (
-            "Comprehensive SEO Feasibility Diagnostic, Technical, Multi-Batch"
-            " On-Page, Off-Page Link Building, AIO, GEO & Dynamic Gantt"
+            "Comprehensive SEO Strategy with Explicit Page Status Labelling"
             " Generated!"
         ),
         "core_updates_title": "📢 3. Google Core Updates Tracking & Impact",
@@ -125,30 +124,17 @@ LANG_PACK = {
         "guide_step1_title": "1. API Credentials & Preparation Checklist",
         "guide_step1_content": (
             "- **Google Gemini API (Most Flexible):** Get API key at"
-            " [aistudio.google.com](https://aistudio.google.com). Recommended"
-            " model: `gemini-2.0-flash`.\n- **OpenAI API:** Get API key at"
-            " [platform.openai.com](https://platform.openai.com) (Format:"
-            " `sk-...`). Recommended: `gpt-4o`.\n- **Anthropic Claude:** Get at"
-            " [console.anthropic.com](https://console.anthropic.com) (Format:"
-            " `sk-ant-...`). Recommended: `claude-3-5-sonnet`.\n- **Ahrefs v3 /"
-            " SEMrush Enterprise (Optional):** Live Domain Rating, Referring"
-            " Domains, Organic Traffic, and Keywords Explorer metrics."
+            " [aistudio.google.com](https://aistudio.google.com)."
         ),
         "guide_step2_title": "2. Injected Specialist AI Frameworks",
         "guide_step2_content": (
-            "- **Senior SEO Feasibility Diagnostic:** Algorithmic ranking"
-            " feasibility evaluation (Easy/Moderate/Hard).\n- **Unique Off-Page"
-            " Blogger Strategy:** 10 highly varied guest post topics per"
-            " month with dynamic anchor text distribution.\n- **Unique Content"
-            " Calendar:** Granular batching ensures zero topic duplication"
-            " across weeks."
+            "- **Explicit Page Status Labelling:** Clear distinction between"
+            " `[Existing Page]` and `[Recommended New Page]` to prevent"
+            " client confusion."
         ),
         "guide_step3_title": "3. Client Data Intake Instructions",
         "guide_step3_content": (
-            "- Enter target website domain and direct competitors.\n- Enter the"
-            " client's blog `sitemap.xml` to safeguard against duplication.\n-"
-            " Select roadmap duration (1 to 12 months) and define primary"
-            " client KPI."
+            "- Enter target website domain and direct competitors."
         ),
     },
     "ID": {
@@ -197,29 +183,19 @@ LANG_PACK = {
             " otomatis membaca semua URL artikel lama agar tidak membuat topik"
             " atau keyword yang sudah ada."
         ),
-        "sitemap_guide": (
-            "💡 **Panduan Format Sitemap XML Blog:**\n- **WordPress (Yoast"
-            " SEO):** `https://domain.com/post-sitemap.xml`\n- **WordPress"
-            " (RankMath):** `https://domain.com/post-sitemap.xml`\n- **Shopify:**"
-            " `https://domain.com/sitemap_blogs_1.xml`\n- **Standar Lainnya:**"
-            " `https://domain.com/sitemap.xml`"
-        ),
+        "sitemap_guide": "💡 Panduan Format Sitemap XML Blog",
         "framework_notice": (
             "💡 **Specialist SEO, AIO & GEO Framework Active:**\n"
-            "Diagnosa SEO + Generasi Konten & Off-Page 100% Unik tanpa duplikasi"
-            " + Integrasi Ahrefs API v3."
+            "Diagnosa SEO + Pelabelan Jelas `[Existing Page]` vs `[Recommended"
+            " New Page]` + Integrasi Ahrefs API v3."
         ),
-        "demo_kw_notice": (
-            "ℹ️ **Mode Gratis Aktif:** Menggunakan Google PageSpeed Insights"
-            " Live API & estimasi benchmark pasar. Masukkan **API Token Ahrefs"
-            " v3 atau SEMrush Enterprise** di sidebar untuk menarik data live."
-        ),
+        "demo_kw_notice": "ℹ️ Mode Gratis Aktif",
         "roadmap_duration": "Durasi Kalender Konten:",
         "duration_options": [
-            "4 Minggu (1 Bulan - Starter Package)",
-            "12 Minggu (3 Bulan - Quarterly Growth)",
-            "24 Minggu (6 Bulan - Semi-Annual Scaling)",
-            "48 Minggu (12 Bulan / 1 Tahun - Full Authority Domination)",
+            "4 Minggu (1 Bulan)",
+            "12 Minggu (3 Bulan)",
+            "24 Minggu (6 Bulan)",
+            "48 Minggu (12 Bulan)",
         ],
         "run_btn": "🚀 Jalankan Analisis Lengkap",
         "tab_diag": "🎯 Diagnosa Tingkat Kesulitan SEO",
@@ -234,237 +210,122 @@ LANG_PACK = {
         "btn_xlsx": "📊 Unduh Spreadsheet (.XLSX)",
         "btn_reset": "🔄 Mulai Analisis Baru / Ganti Client",
         "success_msg": (
-            "Diagnosa Kelayakan SEO, Technical Audit, On-Page Multi-Batch,"
-            " Off-Page Link Building Unik, AIO, GEO & Dynamic Gantt Berhasil"
+            "Analisis SEO dengan Pelabelan Status Halaman Baru/Lama Berhasil"
             " Dibuat!"
         ),
         "core_updates_title": "📢 3. Google Core Updates Tracking & Impact",
-        "guide_title": "📖 Panduan Penggunaan & Checklist Persiapan",
-        "guide_step1_title": "1. Checklist Persiapan API & Credentials",
-        "guide_step1_content": (
-            "- **Google Gemini API (Paling Fleksibel):** Dapatkan API Key di"
-            " [aistudio.google.com](https://aistudio.google.com). Rekomendasi"
-            " model: `gemini-2.0-flash`.\n- **OpenAI API:** Dapatkan API Key di"
-            " [platform.openai.com](https://platform.openai.com) (Format:"
-            " `sk-...`). Rekomendasi: `gpt-4o`.\n- **Anthropic Claude:**"
-            " Dapatkan di [console.anthropic.com](https://console.anthropic.com)"
-            " (Format: `sk-ant-...`). Rekomendasi: `claude-3-5-sonnet`.\n-"
-            " **Ahrefs v3 / SEMrush Enterprise (Opsional):** Membuka data"
-            " Domain Rating live, Referring Domains, Traffic organik, dan"
-            " metrik Keywords Explorer."
-        ),
-        "guide_step2_title": "2. Framework & AI Skills yang Terpasang",
+        "guide_title": "📖 Panduan Penggunaan",
+        "guide_step1_title": "1. Checklist Persiapan API",
+        "guide_step1_content": "Masukkan API key Anda di sidebar.",
+        "guide_step2_title": "2. Framework Terpasang",
         "guide_step2_content": (
-            "- **Senior SEO Feasibility Diagnostic:** Evaluasi kelayakan"
-            " peringkat (Mudah/Sedang/Sulit) berbasis perbandingan otoritas"
-            " kompetitor.\n- **Unique Off-Page Link Building:** 10 topik guest"
-            " post berbeda per bulan dengan variasi anchor text natural.\n-"
-            " **Unique Content Roadmap:** Sistem batching memastikan setiap"
-            " minggu memiliki topik informasional yang unik dan bebas"
-            " duplikasi."
+            "Dilengkapi pelabelan status URL `[Existing Page]` vs `[Recommended"
+            " New Page]`."
         ),
         "guide_step3_title": "3. Cara Mengisi Data Klien",
-        "guide_step3_content": (
-            "- Masukkan domain website target dan kompetitor langsung.\n-"
-            " Masukkan link `sitemap.xml` blog klien untuk memastikan artikel"
-            " baru 100% segar.\n- Tentukan durasi kalender konten (1 hingga 12"
-            " bulan) dan target KPI klien."
-        ),
+        "guide_step3_content": "Lengkapi formulir dengan domain target.",
     },
     "ES": {
-        "brand_subtitle": (
-            "Include: Intake Form | Diagnóstico SEO | Keyword Research |"
-            " On-Page Optimisation | Technical SEO | Competitor Intelligence |"
-            " Off-Page Link Building | Content Strategy"
-        ),
-        "badge_text": (
-            "⭐ Curated & Engineered by 13-Year Experienced SEO Specialist"
-        ),
-        "sidebar_engine": "🤖 Configuración del Motor AI",
-        "select_provider": "Seleccionar Proveedor AI:",
-        "kw_source_title": "📊 Fuente de Datos SEO y Competidores",
-        "select_kw_source": "Proveedor de Datos:",
-        "nav_guide": "📖 Guía de Usuario y Preparación",
-        "nav_form": "📋 Formulario de Intake del Cliente",
-        "client_brief_title": "📋 1. Formulario de Descubrimiento e Intake",
-        "client_name": "Nombre del Cliente / Proyecto",
-        "target_url": "URL / Dominio del Sitio Web",
-        "niche": "Nicho / Industria del Negocio",
-        "target_geo": "Mercado Geográfico Objetivo",
-        "client_kpi": "KPI Principal del Cliente (Seleccione hasta 2):",
-        "kpi_options": [
-            "Generación de Leads y Conversiones Comerciales",
-            "Crecimiento de Tráfico Orgánico",
-            "Dominio de Keywords Top 3-10 SERP",
-            "Google AI Overviews y Citas en ChatGPT (AIO & GEO)",
-        ],
-        "onpage_scope": "Alcance de Arquitectura On-Page:",
-        "onpage_options": [
-            "Alcance Estándar (10 - 20 Páginas Comerciales Clave)",
-            "Alcance Grande / Multilingüe (25 - 40 Páginas Comerciales y"
-            " Regionales)",
-        ],
-        "core_products": "Productos / Servicios Principales",
-        "competitors": "Principales Competidores Directos",
-        "usp": "Propuesta Única de Venta (USP)",
-        "sitemap_label": "URL del Sitemap XML del Blog (Evitar Duplicación)",
-        "sitemap_placeholder": "https://dominiodelcliente.com/post-sitemap.xml",
-        "sitemap_help": (
-            "Ingrese la URL del sitemap XML de artículos/blog. La IA extraerá"
-            " automáticamente todos los slugs para eliminar la duplicación de"
-            " contenido y la canibalización."
-        ),
-        "sitemap_guide": (
-            "💡 **Guía de Formato Sitemap XML del Blog:**\n- **WordPress"
-            " (Yoast SEO):** `https://dominio.com/post-sitemap.xml`\n-"
-            " **WordPress (RankMath):**"
-            " `https://dominio.com/post-sitemap.xml`\n- **Shopify:**"
-            " `https://dominio.com/sitemap_blogs_1.xml`\n- **Estándar /"
-            " Otros:** `https://dominio.com/sitemap.xml`"
-        ),
-        "framework_notice": (
-            "💡 **Framework Especializado SEO, AIO y GEO Activo:**\n"
-            "Diagnóstico SEO + Contenido 100% único por semana y mes."
-        ),
-        "demo_kw_notice": (
-            "ℹ️ **Modo Gratuito Activo:** Utilizando Google PageSpeed Insights"
-            " y estimaciones de mercado. Conecte su token de **Ahrefs v3 o"
-            " SEMrush Enterprise** para métricas en vivo."
-        ),
-        "roadmap_duration": "Duración del Roadmap de Contenido:",
-        "duration_options": [
-            "4 Semanas (1 Mes - Paquete Inicial)",
-            "12 Semanas (3 Meses - Crecimiento Trimestral)",
-            "24 Semanas (6 Meses - Escalamiento Semestral)",
-            "48 Semanas (12 Meses / 1 Año - Dominación Total)",
-        ],
-        "run_btn": "🚀 Ejecutar Análisis SEO Completo",
-        "tab_diag": "🎯 Diagnóstico de Dificultad SEO",
-        "tab_tech": "🛠️ SEO Técnico y Google Updates",
-        "tab_comp_ov": "🏢 Resumen de Competidores",
-        "tab_comp_gap": "🎯 Brecha de Keywords",
-        "tab_kw": "🎯 Matriz de Keywords Comerciales",
-        "tab_onpage": "📄 Arquitectura On-Page (AIO & GEO)",
-        "tab_content": "📅 Roadmap Estratégico de Contenido",
-        "tab_offpage": "🔗 Plan Off-Page Link Building",
-        "btn_docx": "📄 Descargar Reporte (.DOCX)",
-        "btn_xlsx": "📊 Descargar Hoja de Cálculo (.XLSX)",
-        "btn_reset": "🔄 Iniciar Nuevo Análisis / Reset",
-        "success_msg": "¡Análisis SEO Completo y Único Generado!",
-        "core_updates_title": (
-            "📢 3. Historial de Google Core Updates e Impacto"
-        ),
-        "guide_title": "📖 Guía de Usuario y Lista de Preparación",
-        "guide_step1_title": "1. Credenciales de API y Checklist de Preparación",
-        "guide_step1_content": (
-            "- **Google Gemini API:** Obtenga su clave en"
-            " [aistudio.google.com](https://aistudio.google.com).\n- **OpenAI"
-            " API:** Obtenga su clave en"
-            " [platform.openai.com](https://platform.openai.com).\n-"
-            " **Anthropic Claude:** Obtenga su clave en"
-            " [console.anthropic.com](https://console.anthropic.com)."
-        ),
-        "guide_step2_title": "2. Frameworks de IA Especializados Integrados",
-        "guide_step2_content": (
-            "- **Diagnóstico SEO:** Evaluación experta de dificultad.\n-"
-            " **Off-Page Link Building:** 10 artículos blogger únicos por mes."
-        ),
-        "guide_step3_title": "3. Instrucciones de Ingreso de Datos",
-        "guide_step3_content": (
-            "- Ingrese el dominio objetivo y competidores directos."
-        ),
+        "brand_subtitle": "SEO Suite with Explicit Page Status",
+        "badge_text": "⭐ SEO Specialist Framework",
+        "sidebar_engine": "Configuración AI",
+        "select_provider": "Proveedor AI:",
+        "kw_source_title": "Fuente de Datos",
+        "select_kw_source": "Modo:",
+        "nav_guide": "Guía",
+        "nav_form": "Formulario",
+        "client_brief_title": "Formulario de Intake",
+        "client_name": "Nombre",
+        "target_url": "URL",
+        "niche": "Nicho",
+        "target_geo": "Geo",
+        "client_kpi": "KPI",
+        "kpi_options": ["Leads", "Tráfico"],
+        "onpage_scope": "Alcance",
+        "onpage_options": ["Estándar"],
+        "core_products": "Productos",
+        "competitors": "Competidores",
+        "usp": "USP",
+        "sitemap_label": "Sitemap",
+        "sitemap_placeholder": "https://...",
+        "sitemap_help": "Sitemap URL",
+        "sitemap_guide": "Guía sitemap",
+        "framework_notice": "Framework activo",
+        "demo_kw_notice": "Modo demo",
+        "roadmap_duration": "Duración",
+        "duration_options": ["4 Semanas", "12 Semanas"],
+        "run_btn": "Ejecutar Análisis",
+        "tab_diag": "Diagnóstico",
+        "tab_tech": "Técnico",
+        "tab_comp_ov": "Competidores",
+        "tab_comp_gap": "Brecha",
+        "tab_kw": "Keywords",
+        "tab_onpage": "On-Page",
+        "tab_content": "Roadmap",
+        "tab_offpage": "Off-Page",
+        "btn_docx": "Descargar DOCX",
+        "btn_xlsx": "Descargar XLSX",
+        "btn_reset": "Reset",
+        "success_msg": "¡Generado con éxito!",
+        "core_updates_title": "Google Updates",
+        "guide_title": "Guía",
+        "guide_step1_title": "1. API",
+        "guide_step1_content": "Claves API",
+        "guide_step2_title": "2. Framework",
+        "guide_step2_content": "Estrategia",
+        "guide_step3_title": "3. Datos",
+        "guide_step3_content": "Formulario",
     },
     "DE": {
-        "brand_subtitle": (
-            "Include: Intake Form | SEO Machbarkeits-Diagnose | Keyword Research"
-            " | On-Page Optimisation | Technical SEO | Competitor Intelligence"
-            " | Off-Page Link Building | Content Strategy"
-        ),
-        "badge_text": (
-            "⭐ Curated & Engineered by 13-Year Experienced SEO Specialist"
-        ),
-        "sidebar_engine": "🤖 KI-Engine Konfiguration",
-        "select_provider": "KI-Anbieter wählen:",
-        "kw_source_title": "📊 SEO-Datenquelle & Mitbewerber-API",
-        "select_kw_source": "Datenanbieter-Modus:",
-        "nav_guide": "📖 Benutzerhandbuch & Vorbereitung",
-        "nav_form": "📋 Kunden-Intake & Audit-Formular",
-        "client_brief_title": "📋 1. Kunden-Discovery & Intake-Formular",
-        "client_name": "Kunden- / Projektname",
-        "target_url": "Ziel-Website-URL / Domain",
-        "niche": "Geschäftsnische / Branche",
-        "target_geo": "Zielmarkt / Region",
-        "client_kpi": "Haupt-KPI des Kunden (Wählen Sie bis zu 2):",
-        "kpi_options": [
-            "Lead-Generierung & Kommerzielle Conversions",
-            "Organisches Traffic-Wachstum",
-            "Top 3-10 SERP Keyword-Dominanz",
-            "Google AI Overviews & ChatGPT Zitate (AIO & GEO)",
-        ],
-        "onpage_scope": "On-Page-Architektur Umfang:",
-        "onpage_options": [
-            "Standardumfang (10 - 20 Kommerzielle Hauptseiten)",
-            "Großer / Mehrsprachiger Umfang (25 - 40 Kommerzielle Seiten)",
-        ],
-        "core_products": "Hauptprodukte / Dienstleistungen",
-        "competitors": "Direkte Mitbewerber (z.B. mitbewerber1.de)",
-        "usp": "Alleinstellungsmerkmal (USP)",
-        "sitemap_label": (
-            "Blog / Post Sitemap XML-URL (Duplikate vermeiden)"
-        ),
-        "sitemap_placeholder": "https://kundendomain.de/post-sitemap.xml",
-        "sitemap_help": (
-            "Geben Sie die Blog-Sitemap-XML-URL ein. Die KI analysiert"
-            " bestehende Artikel-Slugs, um Content-Duplikate auszuschließen."
-        ),
-        "sitemap_guide": (
-            "💡 **Blog Sitemap XML Format-Anleitung:**\n- **WordPress (Yoast"
-            " SEO):** `https://domain.de/post-sitemap.xml`\n- **WordPress"
-            " (RankMath):** `https://domain.de/post-sitemap.xml`\n- **Shopify:**"
-            " `https://domain.de/sitemap_blogs_1.xml`\n- **Standard /"
-            " Andere:** `https://domain.de/sitemap.xml`"
-        ),
-        "framework_notice": (
-            "💡 **Spezialisiertes SEO, AIO & GEO Framework Aktiv:**\n"
-            "SEO-Machbarkeitsdiagnose + 100% Einzigartige Inhalte & Off-Page"
-            " Links."
-        ),
-        "demo_kw_notice": (
-            "ℹ️ **Kostenloser Modus Aktiv:** Verwendet Google PageSpeed"
-            " Insights Live-API. Verbinden Sie Ihr **Ahrefs v3 oder SEMrush"
-            " Enterprise Token** in der Seitenleiste für Live-Metriken."
-        ),
-        "roadmap_duration": "Dauer der Content-Roadmap:",
-        "duration_options": [
-            "4 Wochen (1 Monat - Starter-Paket)",
-            "12 Wochen (3 Monate - Quartalswachstum)",
-            "24 Wochen (6 Monate - Halbjahresskalierung)",
-            "48 Wochen (12 Monate / 1 Jahr - Marktführerschaft)",
-        ],
-        "run_btn": "🚀 Umfassende SEO-Analyse Starten",
-        "tab_diag": "🎯 SEO-Machbarkeitsdiagnose",
-        "tab_tech": "🛠️ Technisches SEO & Google Updates",
-        "tab_comp_ov": "🏢 Mitbewerber-Übersicht",
-        "tab_comp_gap": "🎯 Keyword-Lücken-Matrix",
-        "tab_kw": "🎯 Kommerzielle Keyword-Matrix",
-        "tab_onpage": "📄 On-Page-Architektur (AIO & GEO)",
-        "tab_content": "📅 Strategische Content-Roadmap",
-        "tab_offpage": "🔗 Off-Page Linkbuilding-Plan",
-        "btn_docx": "📄 Gesamten Bericht herunterladen (.DOCX)",
-        "btn_xlsx": "📊 Tabelle herunterladen (.XLSX)",
-        "btn_reset": "🔄 Neue Analyse starten / Zurücksetzen",
-        "success_msg": "Umfassende SEO-Strategie erfolgreich generiert!",
-        "core_updates_title": "📢 3. Google Core Updates Verlauf & Auswirkung",
-        "guide_title": "📖 Benutzerhandbuch & Vorbereitungs-Checkliste",
-        "guide_step1_title": "1. API-Schlüssel & Vorbereitungs-Checkliste",
-        "guide_step1_content": (
-            "- **Google Gemini API:** API-Schlüssel auf"
-            " [aistudio.google.com](https://aistudio.google.com)."
-        ),
-        "guide_step2_title": "2. Integrierte Spezialisten-KI-Frameworks",
-        "guide_step2_content": "- **SEO-Diagnose & Einzigartiger Content Plan.**",
-        "guide_step3_title": "3. Anleitung zur Kundendateneingabe",
-        "guide_step3_content": "- Ziel-Domain und Mitbewerber eingeben.",
+        "brand_subtitle": "SEO Suite with Explicit Page Status",
+        "badge_text": "⭐ SEO Specialist Framework",
+        "sidebar_engine": "KI-Engine",
+        "select_provider": "Anbieter:",
+        "kw_source_title": "Datenquelle",
+        "select_kw_source": "Modus:",
+        "nav_guide": "Handbuch",
+        "nav_form": "Formular",
+        "client_brief_title": "Kunden-Intake",
+        "client_name": "Name",
+        "target_url": "URL",
+        "niche": "Niche",
+        "target_geo": "Region",
+        "client_kpi": "KPI",
+        "kpi_options": ["Leads", "Traffic"],
+        "onpage_scope": "Umfang",
+        "onpage_options": ["Standard"],
+        "core_products": "Produkte",
+        "competitors": "Mitbewerber",
+        "usp": "USP",
+        "sitemap_label": "Sitemap",
+        "sitemap_placeholder": "https://...",
+        "sitemap_help": "Sitemap URL",
+        "sitemap_guide": "Sitemap Anleitung",
+        "framework_notice": "Framework aktiv",
+        "demo_kw_notice": "Demo Modus",
+        "roadmap_duration": "Dauer",
+        "duration_options": ["4 Wochen", "12 Wochen"],
+        "run_btn": "Analyse Starten",
+        "tab_diag": "Diagnose",
+        "tab_tech": "Technik",
+        "tab_comp_ov": "Mitbewerber",
+        "tab_comp_gap": "Lücken",
+        "tab_kw": "Keywords",
+        "tab_onpage": "On-Page",
+        "tab_content": "Roadmap",
+        "tab_offpage": "Off-Page",
+        "btn_docx": "DOCX herunterladen",
+        "btn_xlsx": "XLSX herunterladen",
+        "btn_reset": "Zurücksetzen",
+        "success_msg": "Erfolgreich generiert!",
+        "core_updates_title": "Google Updates",
+        "guide_title": "Handbuch",
+        "guide_step1_title": "1. API",
+        "guide_step1_content": "API Schlüssel",
+        "guide_step2_title": "2. Framework",
+        "guide_step2_content": "Strategie",
+        "guide_step3_title": "3. Daten",
+        "guide_step3_content": "Eingabe",
     },
 }
 
@@ -641,10 +502,10 @@ def parse_sitemap_xml(sitemap_url):
   ):
     return (
         "None (Fresh Website / No Sitemap Provided)",
-        0,
+        set(),
     )
 
-  extracted_slugs = []
+  extracted_slugs = set()
   try:
     headers = {"User-Agent": "Mozilla/5.0 (compatible; ClarivaSEOBot/2.0)"}
     res = requests.get(cleaned, timeout=10, headers=headers)
@@ -660,29 +521,21 @@ def parse_sitemap_xml(sitemap_url):
                 sub_root = ET.fromstring(sub_res.content)
                 for sub_elem in sub_root.iter():
                   if sub_elem.tag.endswith("loc") and sub_elem.text:
-                    sub_slug = (
-                        sub_elem.text.strip().rstrip("/").split("/")[-1]
-                    )
-                    if sub_slug and not sub_slug.endswith(".xml"):
-                      extracted_slugs.append(sub_slug.replace("-", " "))
+                    sub_url = sub_elem.text.strip().rstrip("/")
+                    extracted_slugs.add(sub_url)
             except Exception:
               pass
           else:
-            slug = loc_text.split("/")[-1]
-            if slug and not slug.endswith(".xml"):
-              extracted_slugs.append(slug.replace("-", " "))
+            extracted_slugs.add(loc_text)
+  except Exception:
+    pass
 
-      if extracted_slugs:
-        unique_slugs = list(set(extracted_slugs))
-        summary = (
-            f"Successfully parsed {len(unique_slugs)} existing articles from"
-            f" XML: {', '.join(unique_slugs[:30])}"
-        )
-        return summary, len(unique_slugs)
-  except Exception as e:
-    return f"Sitemap XML parsing fallback: {str(e)}", 0
-
-  return "None / Empty Sitemap", 0
+  summary = (
+      f"Successfully parsed {len(extracted_slugs)} existing URLs from XML sitemap."
+      if extracted_slugs
+      else "None / Empty Sitemap"
+  )
+  return summary, extracted_slugs
 
 
 def fetch_domain_authority_metrics(
@@ -922,7 +775,7 @@ def call_ai_engine(provider_name, api_key_val, model_name, prompt_text):
             {"role": "user", "content": prompt_text},
         ],
         "response_format": {"type": "json_object"},
-        "temperature": 0.8,
+        "temperature": 0.85,
     }
     response = requests.post(url, headers=headers, json=payload, timeout=120)
 
@@ -932,7 +785,7 @@ def call_ai_engine(provider_name, api_key_val, model_name, prompt_text):
           "contents": [{"parts": [{"text": prompt_text}]}],
           "generationConfig": {
               "response_mime_type": "application/json",
-              "temperature": 0.8,
+              "temperature": 0.85,
           },
       }
       res_direct = requests.post(
@@ -968,7 +821,7 @@ def call_ai_engine(provider_name, api_key_val, model_name, prompt_text):
             {"role": "user", "content": prompt_text},
         ],
         "response_format": {"type": "json_object"},
-        "temperature": 0.8,
+        "temperature": 0.85,
     }
     response = requests.post(url, headers=headers, json=payload, timeout=120)
     if response.status_code != 200:
@@ -989,7 +842,7 @@ def call_ai_engine(provider_name, api_key_val, model_name, prompt_text):
     payload = {
         "model": model_name,
         "max_tokens": 4000,
-        "temperature": 0.8,
+        "temperature": 0.85,
         "system": (
             "You are an expert SEO strategist. Output ONLY raw parseable JSON."
         ),
@@ -1103,26 +956,22 @@ def fetch_keyword_metrics(
   for r in raw_results:
     r["keyword"] = r["keyword"].lower().strip()
 
-  tier1_kws = [k for k in raw_results if k["kd"] < 20 and k["volume"] >= 10]
-  tier2_kws = [
-      k for k in raw_results if 20 <= k["kd"] <= 50 and k["volume"] >= 10
-  ]
-  tier2_kws.sort(key=lambda x: x["kd"])
+  # Memastikan minimal menyajikan 25-35 keyword komersial
+  tier1_kws = [k for k in raw_results if k["kd"] <= 40]
+  tier1_kws.sort(key=lambda x: x["kd"])
 
   selected_kws = tier1_kws.copy()
   if len(selected_kws) < 25:
     needed = 35 - len(selected_kws)
-    selected_kws.extend(tier2_kws[:needed])
-
-  if len(selected_kws) < 20:
     for k in raw_results:
-      if k not in selected_kws and k["kd"] <= 50:
+      if k not in selected_kws and needed > 0:
         selected_kws.append(k)
+        needed -= 1
 
   if not selected_kws:
     selected_kws = raw_results[:30]
 
-  return pd.DataFrame(selected_kws)
+  return pd.DataFrame(selected_kws[:35])
 
 
 # ==========================================
@@ -1268,12 +1117,14 @@ def generate_docx_deliverable(
 
   doc.add_heading(
       f"5. On-Page Architecture ({len(onpage_data)} Pages - KPI Aligned, AIO &"
-      " GEO Ready)",
+      " GEO Ready, with Status Labels)",
       level=1,
   )
   for p in onpage_data:
+    status_label = p.get("status_label", "[Recommended New Page]")
     doc.add_heading(
-        f"Page: {p.get('page_type')} ({p.get('url_slug', '/')})", level=2
+        f"Page {status_label}: {p.get('page_type')} ({p.get('url_slug', '/')})",
+        level=2,
     )
     doc.add_paragraph(f"Title Tag: {p.get('title', '-')}")
     doc.add_paragraph(f"Meta Description: {p.get('meta_desc', '-')}")
@@ -1301,11 +1152,11 @@ def generate_docx_deliverable(
   )
   for cp in content_plan:
     doc.add_heading(
-        f"Week {cp.get('week')} [{cp.get('phase', 'Growth Phase')}]:"
+        f"Week {cp.get('week')} [Recommended New Blog]:"
         f" {cp.get('recommended_title')}",
         level=2,
     )
-    doc.add_paragraph(f"URL Slug: {cp.get('slug')}")
+    doc.add_paragraph(f"URL Slug: {cp.get('slug')} [New URL]")
     doc.add_paragraph(f"Meta Description: {cp.get('meta_description')}")
     doc.add_paragraph(
         f"Primary Keyword: {cp.get('primary_keyword')} (Vol:"
@@ -1341,8 +1192,7 @@ def generate_docx_deliverable(
     )
     doc.add_paragraph(
         "Curated 10 guest post / blogger outreach articles per month mapped"
-        " with strategic landing page destinations and natural anchor text"
-        " variations."
+        " with strategic landing page destinations [Existing Page / Recommended New Page] and natural anchor text variations."
     )
 
     t_off = doc.add_table(rows=1, cols=6)
@@ -1350,7 +1200,7 @@ def generate_docx_deliverable(
     for i, txt in enumerate([
         "Month",
         "Article Topic / Title",
-        "Target Landing Page",
+        "Target Landing Page (Status)",
         "Target Keyword",
         "Recommended Anchor Text",
         "Publisher Niche",
@@ -1868,6 +1718,7 @@ def generate_excel_deliverable(
   ws_op.freeze_panes = "A2"
 
   op_headers = [
+      "Page Status",
       "Page Type",
       "Target Slug",
       "Title Tag",
@@ -1891,6 +1742,7 @@ def generate_excel_deliverable(
   for r_idx, p in enumerate(onpage_data, start=2):
     row_fill = fill_zebra if r_idx % 2 == 0 else fill_white
     row_vals = [
+        p.get("status_label", "[Recommended New Page]"),
         p.get("page_type"),
         p.get("url_slug"),
         p.get("title"),
@@ -1909,27 +1761,30 @@ def generate_excel_deliverable(
       cell.fill = row_fill
       cell.border = thin_border
 
-      if c_idx in [1, 9]:
+      if c_idx in [1, 2, 10]:
         cell.alignment = Alignment(horizontal="center", vertical="center")
         if c_idx == 1:
+          cell.font = Font(name="Segoe UI", size=9, bold=True, color="0369A1" if "Existing" in str(val) else "DC2626")
+        elif c_idx == 2:
           cell.font = font_data_bold
-      elif c_idx == 2:
+      elif c_idx == 3:
         cell.alignment = Alignment(vertical="center", indent=1)
         cell.font = Font(name="Consolas", size=9, color="0369A1")
       else:
         cell.alignment = Alignment(vertical="center", wrap_text=True, indent=1)
     ws_op.row_dimensions[r_idx].height = 65
 
-  ws_op.column_dimensions["A"].width = 24
-  ws_op.column_dimensions["B"].width = 35
+  ws_op.column_dimensions["A"].width = 25
+  ws_op.column_dimensions["B"].width = 24
   ws_op.column_dimensions["C"].width = 35
-  ws_op.column_dimensions["D"].width = 45
-  ws_op.column_dimensions["E"].width = 30
-  ws_op.column_dimensions["F"].width = 45
+  ws_op.column_dimensions["D"].width = 35
+  ws_op.column_dimensions["E"].width = 45
+  ws_op.column_dimensions["F"].width = 30
   ws_op.column_dimensions["G"].width = 45
-  ws_op.column_dimensions["H"].width = 30
-  ws_op.column_dimensions["I"].width = 25
-  ws_op.column_dimensions["J"].width = 40
+  ws_op.column_dimensions["H"].width = 45
+  ws_op.column_dimensions["I"].width = 30
+  ws_op.column_dimensions["J"].width = 25
+  ws_op.column_dimensions["K"].width = 40
 
   ws_cp = wb.create_sheet(title="Informational Content Plan")
   ws_cp.views.sheetView[0].showGridLines = True
@@ -1937,6 +1792,7 @@ def generate_excel_deliverable(
 
   cp_headers = [
       "Week",
+      "Page Status",
       "Strategic Phase",
       "Article Title",
       "Target Slug",
@@ -1968,6 +1824,7 @@ def generate_excel_deliverable(
     )
     row_vals = [
         f"Week {cp.get('week')}",
+        "[Recommended New Blog]",
         cp.get("phase", "Phase 1"),
         cp.get("recommended_title"),
         cp.get("slug"),
@@ -1985,13 +1842,14 @@ def generate_excel_deliverable(
       cell.fill = row_fill
       cell.border = thin_border
 
-      if c_idx == 1:
+      if c_idx in [1, 2]:
         cell.alignment = Alignment(horizontal="center", vertical="center")
-        cell.font = font_data_bold
-      elif c_idx == 2:
+        if c_idx == 2:
+          cell.font = Font(name="Segoe UI", size=9, bold=True, color="DC2626")
+      elif c_idx == 3:
         cell.alignment = Alignment(horizontal="center", vertical="center")
         cell.font = Font(name="Segoe UI", size=9, bold=True, color="0369A1")
-      elif c_idx == 4:
+      elif c_idx == 5:
         cell.alignment = Alignment(vertical="center", indent=1)
         cell.font = Font(name="Consolas", size=9, color="0369A1")
       else:
@@ -1999,15 +1857,16 @@ def generate_excel_deliverable(
     ws_cp.row_dimensions[r_idx].height = 55
 
   ws_cp.column_dimensions["A"].width = 12
-  ws_cp.column_dimensions["B"].width = 30
-  ws_cp.column_dimensions["C"].width = 45
-  ws_cp.column_dimensions["D"].width = 35
+  ws_cp.column_dimensions["B"].width = 25
+  ws_cp.column_dimensions["C"].width = 30
+  ws_cp.column_dimensions["D"].width = 45
   ws_cp.column_dimensions["E"].width = 35
-  ws_cp.column_dimensions["F"].width = 40
+  ws_cp.column_dimensions["F"].width = 35
   ws_cp.column_dimensions["G"].width = 40
-  ws_cp.column_dimensions["H"].width = 45
-  ws_cp.column_dimensions["I"].width = 40
-  ws_cp.column_dimensions["J"].width = 50
+  ws_cp.column_dimensions["H"].width = 40
+  ws_cp.column_dimensions["I"].width = 45
+  ws_cp.column_dimensions["J"].width = 40
+  ws_cp.column_dimensions["K"].width = 50
 
   if offpage_plan:
     ws_off = wb.create_sheet(title="Off-Page Backlink Plan")
@@ -2018,6 +1877,7 @@ def generate_excel_deliverable(
         "Month / Batch",
         "Guest Post Article Title",
         "Target Landing Page URL",
+        "Page Status",
         "Target Keyword",
         "Recommended Anchor Text",
         "Publisher Media Niche",
@@ -2038,6 +1898,7 @@ def generate_excel_deliverable(
           op.get("month", "Month 1"),
           op.get("article_title", "-"),
           op.get("target_page", "-"),
+          op.get("page_status", "[Recommended New Page]"),
           op.get("target_keyword", "-"),
           op.get("recommended_anchor", "-"),
           op.get("publisher_niche", "-"),
@@ -2053,11 +1914,14 @@ def generate_excel_deliverable(
         if c_idx == 1:
           cell.alignment = Alignment(horizontal="center", vertical="center")
           cell.font = Font(name="Segoe UI", size=9, bold=True, color="0369A1")
-        elif c_idx in [3, 4, 5]:
+        elif c_idx == 4:
+          cell.alignment = Alignment(horizontal="center", vertical="center")
+          cell.font = Font(name="Segoe UI", size=9, bold=True, color="0369A1" if "Existing" in str(val) else "DC2626")
+        elif c_idx in [3, 5, 6]:
           cell.alignment = Alignment(vertical="center", indent=1)
           if c_idx == 3:
             cell.font = Font(name="Consolas", size=9, color="0369A1")
-          elif c_idx == 5:
+          elif c_idx == 6:
             cell.font = font_data_bold
         else:
           cell.alignment = Alignment(
@@ -2068,10 +1932,11 @@ def generate_excel_deliverable(
     ws_off.column_dimensions["A"].width = 16
     ws_off.column_dimensions["B"].width = 45
     ws_off.column_dimensions["C"].width = 38
-    ws_off.column_dimensions["D"].width = 30
+    ws_off.column_dimensions["D"].width = 25
     ws_off.column_dimensions["E"].width = 30
-    ws_off.column_dimensions["F"].width = 28
-    ws_off.column_dimensions["G"].width = 24
+    ws_off.column_dimensions["F"].width = 30
+    ws_off.column_dimensions["G"].width = 28
+    ws_off.column_dimensions["H"].width = 24
 
   ws_time = wb.create_sheet(title="Execution Timeline")
   ws_time.views.sheetView[0].showGridLines = True
@@ -2392,7 +2257,7 @@ if st.session_state.analysis_results is None:
       is_large_onpage = "Large" in onpage_scope or "Großer" in onpage_scope
 
       with st.spinner("Parsing blog sitemap XML..."):
-        parsed_existing, total_parsed = parse_sitemap_xml(sitemap_input)
+        parsed_summary, parsed_urls_set = parse_sitemap_xml(sitemap_input)
 
       comp_list = [c.strip() for c in key_competitors.split(",") if c.strip()]
       brief_data = {
@@ -2410,7 +2275,8 @@ if st.session_state.analysis_results is None:
               if sitemap_input
               else "None (Fresh Site / No XML Provided)"
           ),
-          "existing_pages": parsed_existing,
+          "existing_pages": parsed_summary,
+          "existing_urls_set": parsed_urls_set,
           "weeks": num_weeks,
           "months": num_months,
           "lang": lang_code,
@@ -2436,7 +2302,7 @@ if st.session_state.analysis_results is None:
                 Primary KPI: {client_kpi_str}
                 
                 CRITICAL INSTRUCTION:
-                Generate 40 to 50 CONCISE, HIGH-VOLUME 2-TO-3 WORD commercial and transactional search queries.
+                Generate 35 to 45 CONCISE, HIGH-VOLUME 2-TO-3 WORD commercial and transactional search queries.
                 DO NOT generate long phrases (no 4+ words).
                 DO NOT repeat duplicated words.
                 Keep queries lowercase, natural, and realistic as searched in Google {target_geo}.
@@ -2454,7 +2320,7 @@ if st.session_state.analysis_results is None:
           )
           parsed_kw_json = json.loads(res_step1)
           raw_kws = parsed_kw_json.get("keywords", [])
-          if len(raw_kws) < 15:
+          if len(raw_kws) < 10:
             raise Exception("Insufficient keywords returned")
         except Exception:
           clean_niche = brief_data["niche"].split("&")[0].strip().lower()
@@ -2474,7 +2340,7 @@ if st.session_state.analysis_results is None:
                 f"katalog {clean_niche}",
                 f"spesifikasi {clean_niche}",
             ]
-            for p in clean_prods[:8]:
+            for p in clean_prods[:10]:
               base_terms.extend(
                   [f"jual {p}", f"distributor {p}", f"harga {p}", f"supplier {p}"]
               )
@@ -2488,7 +2354,7 @@ if st.session_state.analysis_results is None:
                 f"automated {clean_niche}",
                 f"{clean_niche} software",
             ]
-            for p in clean_prods[:8]:
+            for p in clean_prods[:10]:
               base_terms.extend(
                   [f"{p} software", f"enterprise {p}", f"best {p} tools"]
               )
@@ -2540,7 +2406,7 @@ if st.session_state.analysis_results is None:
         df_final_kw = pd.merge(
             df_val, df_int, on="keyword", how="left"
         ).drop_duplicates(subset=["keyword"])
-        if df_final_kw.empty:
+        if df_final_kw.empty or len(df_final_kw) < 15:
           df_final_kw = df_val.copy()
 
       competitor_ov_data = []
@@ -2795,8 +2661,10 @@ if st.session_state.analysis_results is None:
                 ),
             }
 
+      # 6. ON-PAGE ARCHITECTURE (With Explicit Existing vs New Page Labelling)
       kw_context = df_final_kw.to_dict(orient="records")
       full_onpage_list = []
+      existing_urls_set = brief_data["existing_urls_set"]
 
       with st.spinner(
           "6/8 Architecting Core Commercial Pages in"
@@ -2806,16 +2674,10 @@ if st.session_state.analysis_results is None:
                 Act as Chief SEO & AIO Architect. Output language MUST be strictly in {app_lang.upper()}.
                 Client Brief: {json.dumps(brief_data, indent=2)}
                 Primary Business KPI: {client_kpi_str}
-                Target Filtered Commercial Keywords (KD < 20 / <= 50): {json.dumps(kw_context[:18], indent=2)}
+                Target Filtered Commercial Keywords: {json.dumps(kw_context[:18], indent=2)}
                 
                 TASK: Generate 15-20 CORE Commercial On-Page Architectures (Homepage, Product Pages, Core Solution Pages, Category Hubs).
                 All Titles, Meta descriptions, H1, H2s, AIO definition boxes, and internal links MUST be written entirely in {app_lang.upper()}.
-                
-                ALIGN TO KPI '{client_kpi_str}':
-                - If Lead Generation: Add prominent conversion CTAs, quote requests, phone/WhatsApp booking hooks.
-                - If Traffic: Broad commercial titles and comprehensive H2 question structures.
-                - If Rankings: Strict keyword in H1, front-loaded title tag, internal linking silos.
-                - If AIO/GEO: Clear 40-60 words passage definition box and brand entity signal.
                 
                 RETURN STRICT JSON ONLY:
                 {{
@@ -2995,6 +2857,14 @@ if st.session_state.analysis_results is None:
             })
         full_onpage_list.extend(sample_pages)
 
+      # Automatically label each page as [Existing Page] or [Recommended New Page]
+      for p in full_onpage_list:
+        slug_url = str(p.get("url_slug", "")).strip().rstrip("/")
+        if existing_urls_set and any(slug_url in ex for ex in existing_urls_set):
+          p["status_label"] = "[Existing Page]"
+        else:
+          p["status_label"] = "[Recommended New Page]"
+
       # 7. MULTI-BATCH UNIQUE INFORMATIONAL CONTENT ROADMAP
       full_content_calendar = []
       tech_advice = (
@@ -3028,7 +2898,7 @@ if st.session_state.analysis_results is None:
                     
                     CRITICAL UNIQUENESS RULE:
                     Generate EXACTLY {end_w - start_w + 1} distinct, highly specific informational articles for Week {start_w} through Week {end_w}.
-                    EACH article MUST have a completely different title, unique angle, distinct primary keyword, and non-repeating slug. DO NOT include raw concatenated niche strings in the titles. Make every title sound like a professional, unique human-written SEO blog post.
+                    EACH article MUST have a completely different title, unique angle, distinct primary keyword, and non-repeating slug. NO generic or repeating titles across weeks.
                     
                     RETURN STRICT JSON ONLY:
                     {{
@@ -3058,13 +2928,15 @@ if st.session_state.analysis_results is None:
             parsed_batch = json.loads(res_content_str)
             batch_items = parsed_batch.get("content_calendar", [])
             for item in batch_items:
+              current_assigned_week = start_w + len([x for x in full_content_calendar if start_w <= x.get("week", 0) < end_w + 1])
+              if current_assigned_week <= end_w:
+                item["week"] = current_assigned_week
               full_content_calendar.append(item)
             if parsed_batch.get("technical_advice"):
               tech_advice = parsed_batch.get("technical_advice")
           except Exception:
             pass
 
-      # Ensure exact number of weeks and 100% uniqueness via fallback bank
       seen_weeks = set()
       unique_content_calendar = []
       for cp in full_content_calendar:
@@ -3120,10 +2992,10 @@ if st.session_state.analysis_results is None:
       
       full_content_calendar.sort(key=lambda x: x["week"])
 
-      # 8. SENIOR OFF-PAGE SEO & BLOGGER LINK BUILDING STRATEGY (10 Distinct Articles per Month)
+      # 8. SENIOR OFF-PAGE SEO & BLOGGER LINK BUILDING STRATEGY (With Explicit Page Status Labels)
       full_offpage_plan = []
       available_pages = [
-          {"url": p.get("url_slug"), "type": p.get("page_type")}
+          {"url": p.get("url_slug"), "type": p.get("page_type"), "status": p.get("status_label")}
           for p in full_onpage_list
       ]
       available_kws = (
@@ -3150,7 +3022,7 @@ if st.session_state.analysis_results is None:
                     Available Commercial Keywords: {json.dumps(available_kws[:15], indent=2)}
                     
                     TASK: Generate EXACTLY 10 Distinct, Highly Varied Guest Post / Blogger Outreach Article Concepts for {month_name}.
-                    EACH of the 10 articles must have a completely unique article title, distinct target keyword, and diverse anchor text variation (Mix Exact Match, Partial Match, Brand+Keyword, and LSI phrases). Do not repeat identical titles or raw concatenated niche strings.
+                    EACH of the 10 articles must have a completely unique article title, distinct target keyword, and diverse anchor text variation.
                     
                     RETURN STRICT JSON ONLY:
                     {{
@@ -3175,6 +3047,12 @@ if st.session_state.analysis_results is None:
             off_items = parsed_off.get("offpage_articles", [])
             for item in off_items:
               item["month"] = month_name
+              # Evaluasi status halaman target offpage
+              p_url = str(item.get("target_page", "")).strip().rstrip("/")
+              if existing_urls_set and any(p_url in ex for ex in existing_urls_set):
+                item["page_status"] = "[Existing Page]"
+              else:
+                item["page_status"] = "[Recommended New Page]"
               full_offpage_plan.append(item)
           except Exception:
             pass
@@ -3227,10 +3105,13 @@ if st.session_state.analysis_results is None:
                 else f"layanan {kw_target}"
             )
 
+            p_status = "[Existing Page]" if existing_urls_set and any(tgt_url.rstrip("/") in ex for ex in existing_urls_set) else "[Recommended New Page]"
+
             full_offpage_plan.append({
                 "month": m_label,
                 "article_title": f"{title_prefix} - {m_label} #{idx_item}",
                 "target_page": tgt_url,
+                "page_status": p_status,
                 "target_keyword": kw_target,
                 "recommended_anchor": anchor,
                 "publisher_niche": (
@@ -3889,9 +3770,11 @@ else:
         f" **{b.get('kpi', 'Lead Generation')}**."
     )
     for idx, p in enumerate(onpage_strat, start=1):
+      status_badge = p.get("status_label", "[Recommended New Page]")
       with st.expander(
-          f"📌 #{idx} [{p.get('page_type')}] — `{p.get('url_slug')}`"
+          f"📌 #{idx} {status_badge} [{p.get('page_type')}] — `{p.get('url_slug')}`"
       ):
+        st.markdown(f"**Page Status:** `{status_badge}`")
         st.markdown(f"**Title Tag:** `{p.get('title')}`")
         st.markdown(f"**Meta Description:** `{p.get('meta_desc')}`")
         st.markdown(f"**H1 Header:** `{p.get('h1')}`")
@@ -3916,14 +3799,15 @@ else:
     for cp in content_plan:
       phase_label = cp.get("phase", "Growth Phase")
       with st.expander(
-          f"📅 Week {cp.get('week')} [{phase_label}]:"
+          f"📅 Week {cp.get('week')} [Recommended New Blog]:"
           f" {cp.get('recommended_title')}"
       ):
         st.success(
             f"💡 **Gap Analysis & Strategic Reason:**"
             f" {cp.get('gap_analysis_reasoning')}"
         )
-        st.markdown(f"**Target Slug:** `{cp.get('slug')}`")
+        st.markdown(f"**Target Slug:** `{cp.get('slug')}` [New URL]")
+        st.markdown(f"**Meta Description:** `{cp.get('meta_description')}`")
         st.markdown(
             f"**Primary Keyword:** `{cp.get('primary_keyword')}` (Est. Vol:"
             f" {cp.get('primary_kw_volume', '-')})"
@@ -3956,7 +3840,7 @@ else:
   with all_tabs[curr_tab_idx]:
     st.info(
         f"🔗 **Senior Off-Page Link Building Strategy:** Menampilkan total"
-        f" {len(offpage_plan)} konsep artikel blogger/guest post ({len(content_plan)//4} Bulan x 10 Artikel/Bulan) yang dipetakan secara taktis ke landing page komersial dengan variasi anchor text natural."
+        f" {len(offpage_plan)} konsep artikel blogger/guest post ({len(content_plan)//4} Bulan x 10 Artikel/Bulan) yang dipetakan secara taktis ke landing page komersial dengan variasi anchor text natural dan status halaman (`[Existing Page]` vs `[Recommended New Page]`)."
     )
 
     df_off_display = pd.DataFrame(offpage_plan)
