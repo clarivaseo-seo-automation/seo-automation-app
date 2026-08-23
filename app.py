@@ -335,7 +335,7 @@ LANG_PACK = {
         "duration_options": [
             "4 Semanas (1 Mes - Paquete Inicial)",
             "12 Semanas (3 Meses - Crecimiento Trimestral)",
-            "24 Semanas (6 Semes - Escalamiento Semestral)",
+            "24 Semanas (6 Meses - Escalamiento Semestral)",
             "48 Semanas (12 Meses / 1 Año - Dominación Total)",
         ],
         "run_btn": "🚀 Ejecutar Análisis SEO Completo",
@@ -922,7 +922,7 @@ def call_ai_engine(provider_name, api_key_val, model_name, prompt_text):
             {"role": "user", "content": prompt_text},
         ],
         "response_format": {"type": "json_object"},
-        "temperature": 0.7,
+        "temperature": 0.8,
     }
     response = requests.post(url, headers=headers, json=payload, timeout=120)
 
@@ -932,7 +932,7 @@ def call_ai_engine(provider_name, api_key_val, model_name, prompt_text):
           "contents": [{"parts": [{"text": prompt_text}]}],
           "generationConfig": {
               "response_mime_type": "application/json",
-              "temperature": 0.7,
+              "temperature": 0.8,
           },
       }
       res_direct = requests.post(
@@ -968,7 +968,7 @@ def call_ai_engine(provider_name, api_key_val, model_name, prompt_text):
             {"role": "user", "content": prompt_text},
         ],
         "response_format": {"type": "json_object"},
-        "temperature": 0.7,
+        "temperature": 0.8,
     }
     response = requests.post(url, headers=headers, json=payload, timeout=120)
     if response.status_code != 200:
@@ -989,7 +989,7 @@ def call_ai_engine(provider_name, api_key_val, model_name, prompt_text):
     payload = {
         "model": model_name,
         "max_tokens": 4000,
-        "temperature": 0.7,
+        "temperature": 0.8,
         "system": (
             "You are an expert SEO strategist. Output ONLY raw parseable JSON."
         ),
@@ -1065,7 +1065,7 @@ def fetch_keyword_metrics(
               cpc_val = float(raw_cpc) if raw_cpc is not None else 0.0
 
               raw_results.append({
-                  "keyword": k_item.get("keyword", "unknown"),
+                  "keyword": str(k_item.get("keyword", "unknown")).lower().strip(),
                   "volume": vol_val,
                   "kd": kd_val,
                   "cpc": cpc_val,
@@ -1089,7 +1089,7 @@ def fetch_keyword_metrics(
       est_volume = max(20, 950 - (word_count * 120) + (i * 65))
       est_cpc = round(0.45 + ((i % 8) * 0.15), 2)
       raw_results.append({
-          "keyword": kw,
+          "keyword": str(kw).lower().strip(),
           "volume": est_volume,
           "kd": sim_kd,
           "cpc": est_cpc,
@@ -1099,6 +1099,10 @@ def fetch_keyword_metrics(
               else "Ahrefs Live (Scope Fallback)"
           ),
       })
+
+  # Case-insensitive filtering & merging preparation
+  for r in raw_results:
+    r["keyword"] = r["keyword"].lower().strip()
 
   tier1_kws = [k for k in raw_results if k["kd"] < 20 and k["volume"] >= 10]
   tier2_kws = [
@@ -2516,15 +2520,30 @@ if st.session_state.analysis_results is None:
             ahrefs_k=ahrefs_token,
             semrush_k=semrush_key,
         )
+        # Pastikan kolom keyword di df_int dan df_val sama-sama lowercase untuk merge yang sempurna
         df_int = pd.DataFrame([
-            k
-            if isinstance(k, dict)
-            else {"keyword": k, "intent": "Commercial", "funnel": "MOFU"}
+            {
+                "keyword": str(
+                    k.get("keyword", "")
+                    if isinstance(k, dict)
+                    else str(k)
+                )
+                .lower()
+                .strip(),
+                "intent": k.get("intent", "Commercial")
+                if isinstance(k, dict)
+                else "Commercial",
+                "funnel": k.get("funnel", "MOFU")
+                if isinstance(k, dict)
+                else "MOFU",
+            }
             for k in raw_kws
         ])
         df_final_kw = pd.merge(
             df_val, df_int, on="keyword", how="left"
         ).drop_duplicates(subset=["keyword"])
+        if df_final_kw.empty:
+          df_final_kw = df_val.copy()
 
       competitor_ov_data = []
       competitor_gap_data = []
@@ -3042,31 +3061,39 @@ if st.session_state.analysis_results is None:
             parsed_batch = json.loads(res_content_str)
             batch_items = parsed_batch.get("content_calendar", [])
             for item in batch_items:
-              # Pastikan week disesuaikan dengan iterasi batch jika AI mengembalikan week statis
-              item["week"] = start_w + len([x for x in full_content_calendar if x.get("week", 0) >= start_w])
+              # Tetapkan minggu secara berurutan sesuai batch
+              current_assigned_week = start_w + len([x for x in full_content_calendar if start_w <= x.get("week", 0) < end_w + 1])
+              if current_assigned_week <= end_w:
+                item["week"] = current_assigned_week
               full_content_calendar.append(item)
             if parsed_batch.get("technical_advice"):
               tech_advice = parsed_batch.get("technical_advice")
           except Exception:
             pass
 
-      # Dynamic Fallback Unik jika item kurang
+      # Pastikan jumlah content calendar persis num_weeks dan unik
+      seen_weeks = set()
+      unique_content_calendar = []
+      for cp in full_content_calendar:
+        w_num = cp.get("week")
+        if w_num not in seen_weeks and w_num <= num_weeks:
+          seen_weeks.add(w_num)
+          unique_content_calendar.append(cp)
+      
+      full_content_calendar = unique_content_calendar
+
       if len(full_content_calendar) < num_weeks:
         clean_niche_short = brief_data["niche"].split("&")[0].strip()
-        existing_weeks = [x.get("week") for x in full_content_calendar]
         topics_bank = [
             "Panduan Teknis Pemeliharaan", "Standar Keamanan Operasional", "Studi Kasus Efisiensi Biaya",
             "Analisis Perbandingan Material", "Tips Pemecahan Masalah Umum", "Inovasi Teknologi Terbaru",
             "Strategi Pengadaan Industri", "Audit Kualitas & Sertifikasi", "Manajemen Risiko Kerusakan",
-            "Optimasi Kinerja Jangka Panjang", "10 Kesalahan Fatal Penggunaan", "Regulasi & Kepatuhan Standar"
+            "Optimasi Kinerja Jangka Panjang", "10 Kesalahan Fatal Penggunaan", "Regulasi & Kepatuhan Standar",
+            "Metode Pengujian Tekanan", "Pemilihan Spesifikasi yang Tepat", "Studi Kelayakan Investasi Alat"
         ]
         for idx_w in range(1, num_weeks + 1):
-          if idx_w not in existing_weeks:
-            phase_num = (
-                1
-                if idx_w <= 4
-                else (2 if idx_w <= 12 else (3 if idx_w <= 24 else 4))
-            )
+          if idx_w not in [x.get("week") for x in full_content_calendar]:
+            phase_num = 1 if idx_w <= 4 else (2 if idx_w <= 12 else (3 if idx_w <= 24 else 4))
             topic_title = f"{topics_bank[(idx_w-1) % len(topics_bank)]} {clean_niche_short} Sesi {idx_w}"
             full_content_calendar.append({
                 "week": idx_w,
@@ -3075,14 +3102,14 @@ if st.session_state.analysis_results is None:
                 "slug": f"/{clean_niche_short.lower().replace(' ', '-')}-topic-{idx_w}",
                 "meta_description": f"Pembahasan mendalam mengenai {topic_title.lower()} untuk meningkatkan produktivitas industri.",
                 "primary_keyword": f"tips {clean_niche_short.lower()} {idx_w}",
-                "primary_kw_volume": 500 + (idx_w * 40),
+                "primary_kw_volume": 500 + (idx_w * 35),
                 "supporting_keywords": [{"keyword": f"panduan {clean_niche_short.lower()} {idx_w}", "volume": 200}],
-                "gap_analysis_reasoning": "Menjawab topik spesifik yang sering dicari praktisi industri.",
+                "gap_analysis_reasoning": "Menjawab detail teknis spesifik yang belum dibahas kompetitor.",
                 "aio_passage_target": f"Ringkasan esensial terkait {topic_title.lower()} standar industri.",
                 "geo_information_gain": "Data benchmark operasional empiris.",
                 "talking_points": ["Pengantar parameter utama", "Langkah implementasi praktis", "Evaluasi hasil berkala"]
             })
-        full_content_calendar.sort(key=lambda x: x["week"])
+      full_content_calendar.sort(key=lambda x: x["week"])
 
       # 8. SENIOR OFF-PAGE SEO & BLOGGER LINK BUILDING STRATEGY (10 Distinct Articles per Month)
       full_offpage_plan = []
@@ -3157,7 +3184,10 @@ if st.session_state.analysis_results is None:
             "Standar Kualitas dan Keamanan Sektor Komersial", "Strategi Pengadaan dan Manajemen Logistik",
             "Transformasi Digital untuk Keunggulan Kompetitif", "Memilih Mitra Vendor Terbaik di Indonesia",
             "Analisis Tren Pasar dan Peluang Ekspansi", "Praktik Terbaik Pemeliharaan Aset Perusahaan",
-            "Solusi Terintegrasi untuk Kebutuhan Korporat", "Membangun Infrastruktur Bisnis yang Tangguh"
+            "Solusi Terintegrasi untuk Kebutuhan Korporat", "Membangun Infrastruktur Bisnis yang Tangguh",
+            "Tips Efektif Pengelolaan Operasional", "Panduan Lengkap Pemilihan Produk Industri",
+            "Mengenal Lebih Dekat Standar Mutu Global", "Strategi Marketing B2B Paling Efektif",
+            "Meningkatkan ROI Perusahaan Melalui Sistem Otomasi"
         ]
 
         for cur_m in range(1, num_months + 1):
@@ -3171,7 +3201,7 @@ if st.session_state.analysis_results is None:
 
           for idx_item in range(1, needed_for_m + 1):
             kw_target = kw_pool[(idx_item - 1) % len(kw_pool)]
-            title_prefix = offpage_titles_bank[(idx_item - 1) % len(offpage_titles_bank)]
+            title_prefix = offpage_titles_bank[(idx_item + cur_m) % len(offpage_titles_bank)]
             tgt_url = (
                 f"{domain_clean}/"
                 if idx_item % 3 == 0
