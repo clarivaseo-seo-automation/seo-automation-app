@@ -40,7 +40,7 @@ LANG_PACK = {
         "brand_subtitle": (
             "Include: Intake Form | SEO Feasibility Diagnostic | Commercial"
             " Keywords | Technical Audit | Competitor Intelligence | Content"
-            " Strategy | Dynamic Gantt"
+            " Strategy | Off-Page Link Building | Dynamic Gantt"
         ),
         "badge_text": (
             "⭐ Curated & Engineered by 13-Year Experienced SEO Specialist"
@@ -88,9 +88,9 @@ LANG_PACK = {
         ),
         "framework_notice": (
             "💡 **Specialist SEO, AIO & GEO Framework Active:**\n"
-            "Senior SEO Feasibility Diagnostic + Concise 2–3 word commercial"
-            " keywords with live Ahrefs API v3 integration (Search Volume >= 10,"
-            " KD < 20 prioritized, max 50)."
+            "Senior SEO Feasibility Diagnostic + 2–3 Word Keywords + Dynamic"
+            " Off-Page Blogger Strategy (10 articles/month) + Live Ahrefs API"
+            " v3."
         ),
         "demo_kw_notice": (
             "ℹ️ **Free Mode Active:** Utilizing Google PageSpeed Insights"
@@ -112,12 +112,14 @@ LANG_PACK = {
         "tab_kw": "🎯 Commercial Keywords Matrix",
         "tab_onpage": "📄 On-Page Architecture (AIO & GEO)",
         "tab_content": "📅 Strategic Content Roadmap",
+        "tab_offpage": "🔗 Off-Page Link Building Plan",
         "btn_docx": "📄 Download Full Report (.DOCX)",
         "btn_xlsx": "📊 Download Spreadsheet (.XLSX)",
         "btn_reset": "🔄 Start New Analysis / Reset",
         "success_msg": (
             "Comprehensive SEO Feasibility Diagnostic, Technical, Multi-Batch"
-            " On-Page, AIO, GEO & Dynamic Gantt Generated!"
+            " On-Page, Off-Page Link Building, AIO, GEO & Dynamic Gantt"
+            " Generated!"
         ),
         "core_updates_title": "📢 3. Google Core Updates Tracking & Impact",
         "guide_title": "📖 User Guide & Preparation Checklist",
@@ -135,14 +137,12 @@ LANG_PACK = {
         ),
         "guide_step2_title": "2. Injected Specialist AI Frameworks",
         "guide_step2_content": (
-            "- **Senior SEO Feasibility Diagnostic:** Algorithmic evaluation of"
-            " ranking feasibility (Easy/Moderate/Hard) based on competitor DR"
-            " gap, KD spread, and site health.\n- **Commercial vs Informational"
-            " Siloing:** 25-35 Target keywords are exclusively reserved for"
-            " Homepage & Commercial Service Pages, while Blog Content uses"
-            " distinct Informational clusters.\n- **Concise 2-3 Word"
-            " Keywords:** Targets high-intent buyer terms with realistic search"
-            " volume."
+            "- **Senior SEO Feasibility Diagnostic:** Algorithmic ranking"
+            " feasibility evaluation (Easy/Moderate/Hard).\n- **Off-Page"
+            " Blogger Link Strategy:** 10 curated guest post topics per month"
+            " mapped to commercial landing pages with natural anchor"
+            " variations.\n- **Commercial vs Informational Siloing:** 25-35"
+            " Target keywords exclusively reserved for conversion pages."
         ),
         "guide_step3_title": "3. Client Data Intake Instructions",
         "guide_step3_content": (
@@ -156,7 +156,8 @@ LANG_PACK = {
         "brand_subtitle": (
             "Include: Intake Form | Diagnosa Tingkat Kesulitan SEO | Keyword"
             " Research Komersial | Technical SEO vs Google Core Updates |"
-            " Competitor Intelligence | Content Strategy | Dynamic Gantt"
+            " Competitor Intelligence | Content Strategy | Off-Page Link"
+            " Building | Dynamic Gantt"
         ),
         "badge_text": (
             "⭐ Curated & Engineered by 13-Year Experienced SEO Specialist"
@@ -206,9 +207,9 @@ LANG_PACK = {
         ),
         "framework_notice": (
             "💡 **Specialist SEO, AIO & GEO Framework Active:**\n"
-            "Senior SEO Feasibility Diagnostic (Mudah/Sedang/Sulit) + Riset kata"
-            " kunci 2–3 kata terhubung live Ahrefs API v3 (Search Volume >= 10,"
-            " prioritas **KD < 20 (Quick Wins)**, toleransi **KD 20–50**)."
+            "Senior SEO Feasibility Diagnostic (Mudah/Sedang/Sulit) + Keyword"
+            " Komersial 2-3 Kata + Strategi Off-Page Link Building (10 artikel"
+            " blogger/bulan) + Integrasi Ahrefs API v3."
         ),
         "demo_kw_notice": (
             "ℹ️ **Mode Gratis Aktif:** Menggunakan Google PageSpeed Insights"
@@ -230,12 +231,13 @@ LANG_PACK = {
         "tab_kw": "🎯 Matriks Keywords Komersial",
         "tab_onpage": "📄 Arsitektur On-Page (AIO & GEO)",
         "tab_content": "📅 Roadmap Konten Informasional",
+        "tab_offpage": "🔗 Strategi Off-Page Link Building",
         "btn_docx": "📄 Unduh Laporan Lengkap (.DOCX)",
         "btn_xlsx": "📊 Unduh Spreadsheet (.XLSX)",
         "btn_reset": "🔄 Mulai Analisis Baru / Ganti Client",
         "success_msg": (
-            "Diagnosa Kelayakan SEO, Technical Audit, On-Page Multi-Batch, AIO,"
-            " GEO & Dynamic Gantt Berhasil Dibuat!"
+            "Diagnosa Kelayakan SEO, Technical Audit, On-Page Multi-Batch,"
+            " Off-Page Link Building, AIO, GEO & Dynamic Gantt Berhasil Dibuat!"
         ),
         "core_updates_title": "📢 3. Google Core Updates Tracking & Impact",
         "guide_title": "📖 Panduan Penggunaan & Checklist Persiapan",
@@ -254,13 +256,13 @@ LANG_PACK = {
         ),
         "guide_step2_title": "2. Framework & AI Skills yang Terpasang",
         "guide_step2_content": (
-            "- **Senior SEO Feasibility Diagnostic:** Penilaian kelayakan"
+            "- **Senior SEO Feasibility Diagnostic:** Evaluasi kelayakan"
             " peringkat (Mudah/Sedang/Sulit) berbasis perbandingan otoritas"
-            " riil kompetitor, sebaran KD, dan Core Web Vitals.\n- **Pemisahan"
-            " Komersial vs Informasional:** 25-35 Keyword riset digunakan 100%"
-            " untuk halaman jualan, sedangkan blog menggunakan klaster"
-            " informasional terpisah.\n- **Format 2-3 Kata Padat:** Menghindari"
-            " frasa berlebihan agar mendapatkan angka volume riil di Ahrefs."
+            " kompetitor.\n- **Off-Page Link Building Plan:** Perencanaan 10"
+            " artikel blogger/guest post per bulan yang diselaraskan dengan"
+            " landing page komersial dan anchor text natural.\n- **Pemisahan"
+            " Komersial vs Informasional:** 25-35 Keyword komersial murni untuk"
+            " halaman jualan."
         ),
         "guide_step3_title": "3. Cara Mengisi Data Klien",
         "guide_step3_content": (
@@ -272,9 +274,9 @@ LANG_PACK = {
     },
     "ES": {
         "brand_subtitle": (
-            "Incluye: Intake Form | Diagnóstico de Dificultad SEO | Keyword"
-            " Research | On-Page Optimisation | Technical SEO | Competitor"
-            " Intelligence | Content Strategy"
+            "Incluye: Intake Form | Diagnóstico SEO | Keyword Research |"
+            " On-Page Optimisation | Technical SEO | Competitor Intelligence |"
+            " Off-Page Link Building | Content Strategy"
         ),
         "badge_text": (
             "⭐ Curated & Engineered by 13-Year Experienced SEO Specialist"
@@ -323,8 +325,8 @@ LANG_PACK = {
         ),
         "framework_notice": (
             "💡 **Framework Especializado SEO, AIO y GEO Activo:**\n"
-            "Diagnóstico de dificultad SEO + Keywords concisas de 2-3 palabras"
-            " con Ahrefs API v3 (Volumen >= 10, KD < 20 prioritario, máx 50)."
+            "Diagnóstico de dificultad SEO + Keywords de 2-3 palabras +"
+            " Estrategia Off-Page Link Building (10 artículos blogger/mes)."
         ),
         "demo_kw_notice": (
             "ℹ️ **Modo Gratuito Activo:** Utilizando Google PageSpeed Insights"
@@ -346,12 +348,13 @@ LANG_PACK = {
         "tab_kw": "🎯 Matriz de Keywords Comerciales",
         "tab_onpage": "📄 Arquitectura On-Page (AIO & GEO)",
         "tab_content": "📅 Roadmap Estratégico de Contenido",
+        "tab_offpage": "🔗 Plan Off-Page Link Building",
         "btn_docx": "📄 Descargar Reporte (.DOCX)",
         "btn_xlsx": "📊 Descargar Hoja de Cálculo (.XLSX)",
         "btn_reset": "🔄 Iniciar Nuevo Análisis / Reset",
         "success_msg": (
-            "¡Diagnóstico de Viabilidad SEO, Técnica, On-Page Multi-Batch, AIO y"
-            " GEO Generada!"
+            "¡Diagnóstico de Viabilidad SEO, Técnica, On-Page Multi-Batch,"
+            " Off-Page, AIO y GEO Generada!"
         ),
         "core_updates_title": (
             "📢 3. Historial de Google Core Updates e Impacto"
@@ -371,9 +374,9 @@ LANG_PACK = {
         "guide_step2_title": "2. Frameworks de IA Especializados Integrados",
         "guide_step2_content": (
             "- **Diagnóstico de Dificultad SEO:** Evaluación experta de"
-            " viabilidad (Fácil/Medio/Difícil).\n- **Separación Comercial vs"
-            " Informacional:** Las 25-35 keywords se usan para páginas de"
-            " servicios; el blog utiliza clusters informacionales separados."
+            " viabilidad (Fácil/Medio/Difícil).\n- **Estrategia Off-Page Link"
+            " Building:** 10 artículos blogger por mes con distribución"
+            " balanceada de anchor text."
         ),
         "guide_step3_title": "3. Instrucciones de Ingreso de Datos",
         "guide_step3_content": (
@@ -386,7 +389,7 @@ LANG_PACK = {
         "brand_subtitle": (
             "Include: Intake Form | SEO Machbarkeits-Diagnose | Keyword Research"
             " | On-Page Optimisation | Technical SEO | Competitor Intelligence"
-            " | Content Strategy"
+            " | Off-Page Link Building | Content Strategy"
         ),
         "badge_text": (
             "⭐ Curated & Engineered by 13-Year Experienced SEO Specialist"
@@ -434,8 +437,8 @@ LANG_PACK = {
         ),
         "framework_notice": (
             "💡 **Spezialisiertes SEO, AIO & GEO Framework Aktiv:**\n"
-            "SEO-Machbarkeitsdiagnose + Präzise 2-3 Wörter Keywords mit Live"
-            " Ahrefs API v3 (Suchvolumen >= 10, KD < 20 priorisiert, max 50)."
+            "SEO-Machbarkeitsdiagnose + 2-3 Wörter Keywords + Off-Page Link"
+            " Building (10 Blogger-Artikel/Monat) + Live Ahrefs API v3."
         ),
         "demo_kw_notice": (
             "ℹ️ **Kostenloser Modus Aktiv:** Verwendet Google PageSpeed"
@@ -457,12 +460,14 @@ LANG_PACK = {
         "tab_kw": "🎯 Kommerzielle Keyword-Matrix",
         "tab_onpage": "📄 On-Page-Architektur (AIO & GEO)",
         "tab_content": "📅 Strategische Content-Roadmap",
+        "tab_offpage": "🔗 Off-Page Linkbuilding-Plan",
         "btn_docx": "📄 Gesamten Bericht herunterladen (.DOCX)",
         "btn_xlsx": "📊 Tabelle herunterladen (.XLSX)",
         "btn_reset": "🔄 Neue Analyse starten / Zurücksetzen",
         "success_msg": (
             "Umfassende SEO-Machbarkeitsdiagnose, Technik-, Multi-Batch"
-            " On-Page-, AIO- & GEO-Strategie erfolgreich generiert!"
+            " On-Page-, Off-Page Linkbuilding-, AIO- & GEO-Strategie erfolgreich"
+            " generiert!"
         ),
         "core_updates_title": "📢 3. Google Core Updates Verlauf & Auswirkung",
         "guide_title": "📖 Benutzerhandbuch & Vorbereitungs-Checkliste",
@@ -480,9 +485,9 @@ LANG_PACK = {
         "guide_step2_title": "2. Integrierte Spezialisten-KI-Frameworks",
         "guide_step2_content": (
             "- **SEO-Machbarkeitsdiagnose:** Senior SEO Einstufung"
-            " (Leicht/Mittel/Schwer).\n- **Trennung Kommerziell vs"
-            " Informativ:** 25-35 Keywords für Landing Pages; der Blog nutzt"
-            " getrennte informative Themencluster."
+            " (Leicht/Mittel/Schwer).\n- **Off-Page Linkbuilding-Plan:** 10"
+            " Blogger-Gastbeiträge pro Monat mit ausgewogenen"
+            " Ankertext-Variationen."
         ),
         "guide_step3_title": "3. Anleitung zur Kundendateneingabe",
         "guide_step3_content": (
@@ -1048,7 +1053,7 @@ def fetch_keyword_metrics(
       "id" if country.lower() in ["id", "indonesia"] else country.lower()[:2]
   )
 
-  # 1. LIVE AHREFS KEYWORDS EXPLORER V3 (Array Param Format & Multiple Endpoints Support)
+  # 1. LIVE AHREFS KEYWORDS EXPLORER V3
   if ahrefs_k and ahrefs_k.strip():
     try:
       kw_chunks = [keywords[i : i + 10] for i in range(0, len(keywords), 10)]
@@ -1159,6 +1164,7 @@ def generate_docx_deliverable(
     kw_df,
     onpage_data,
     content_plan,
+    offpage_plan,
     tech_data,
     timeline_tasks,
     competitor_ov_data,
@@ -1200,7 +1206,7 @@ def generate_docx_deliverable(
       " 13-Year Experienced SEO Specialist Framework\n"
   ).italic = True
 
-  # Executive Feasibility Diagnostic
+  # 1. Executive Feasibility Diagnostic
   if seo_diagnostic:
     doc.add_heading(
         "1. Executive SEO Feasibility & Difficulty Diagnostic", level=1
@@ -1254,7 +1260,7 @@ def generate_docx_deliverable(
       f"Robots.txt & Sitemap: {'Detected' if tech_data['robots_txt_found'] and tech_data['sitemap_found'] else 'Needs Optimization'}"
   )
 
-  # 3. Competitor Intelligence (If Active)
+  # 3. Competitor Intelligence
   if competitor_ov_data:
     doc.add_heading("3. Competitor Intelligence & Authority Benchmark", level=1)
     t_cov = doc.add_table(rows=1, cols=6)
@@ -1365,6 +1371,40 @@ def generate_docx_deliverable(
     for tp in cp.get("talking_points", []):
       doc.add_paragraph(f"• {tp}")
 
+  # 7. Strategic Off-Page SEO & Blogger Outreach Roadmap
+  if offpage_plan:
+    num_months = len(content_plan) // 4
+    doc.add_heading(
+        f"7. Strategic Off-Page SEO & Blogger Outreach Roadmap ({len(offpage_plan)} Guest Posts / {num_months} Months)",
+        level=1,
+    )
+    doc.add_paragraph(
+        "Curated 10 guest post / blogger outreach articles per month mapped"
+        " with strategic landing page destinations and natural anchor text"
+        " variations."
+    )
+
+    t_off = doc.add_table(rows=1, cols=6)
+    t_off.style = "Light Shading Accent 1"
+    for i, txt in enumerate([
+        "Month",
+        "Article Topic / Title",
+        "Target Landing Page",
+        "Target Keyword",
+        "Recommended Anchor Text",
+        "Publisher Niche",
+    ]):
+      t_off.rows[0].cells[i].text = txt
+
+    for op in offpage_plan:
+      r = t_off.add_row().cells
+      r[0].text = str(op.get("month", "Month 1"))
+      r[1].text = str(op.get("article_title", "-"))
+      r[2].text = str(op.get("target_page", "-"))
+      r[3].text = str(op.get("target_keyword", "-"))
+      r[4].text = str(op.get("recommended_anchor", "-"))
+      r[5].text = str(op.get("publisher_niche", "-"))
+
   bio = io.BytesIO()
   doc.save(bio)
   bio.seek(0)
@@ -1376,6 +1416,7 @@ def generate_excel_deliverable(
     kw_df,
     onpage_data,
     content_plan,
+    offpage_plan,
     tech_data,
     timeline_tasks,
     competitor_ov_data,
@@ -1507,6 +1548,11 @@ def generate_excel_deliverable(
           "Roadmap Duration",
           f"{len(content_plan)} Weeks ({len(content_plan)//4} Months)",
       ),
+      (
+          "Off-Page Link Building Scope",
+          f"{len(offpage_plan)} Guest Posts ({len(content_plan)//4} Months x 10"
+          " Articles)",
+      ),
       ("Sitemap XML Parsed", brief_data["sitemap_url"]),
       (
           "Performance & Health Score",
@@ -1573,7 +1619,7 @@ def generate_excel_deliverable(
   ws_sum.column_dimensions["A"].width = 36
   ws_sum.column_dimensions["B"].width = 75
 
-  # 2. SHEET: Competitor Overview (If Available)
+  # 2. SHEET: Competitor Overview
   if competitor_ov_data:
     ws_ov = wb.create_sheet(title="Competitor Overview")
     ws_ov.views.sheetView[0].showGridLines = True
@@ -1659,7 +1705,7 @@ def generate_excel_deliverable(
     ws_ov.column_dimensions["E"].width = 20
     ws_ov.column_dimensions["F"].width = 20
 
-  # 3. SHEET: Competitor Keyword Gap (Fully Dynamic Multi-Competitor Support)
+  # 3. SHEET: Competitor Keyword Gap
   if competitor_gap_data:
     ws_gap = wb.create_sheet(title="Competitor Keyword Gap")
     ws_gap.views.sheetView[0].showGridLines = True
@@ -2009,7 +2055,72 @@ def generate_excel_deliverable(
   ws_cp.column_dimensions["I"].width = 40
   ws_cp.column_dimensions["J"].width = 50
 
-  # 7. SHEET: Execution Timeline
+  # 7. SHEET: Off-Page Backlink Plan
+  if offpage_plan:
+    ws_off = wb.create_sheet(title="Off-Page Backlink Plan")
+    ws_off.views.sheetView[0].showGridLines = True
+    ws_off.freeze_panes = "A2"
+
+    off_headers = [
+        "Month / Batch",
+        "Guest Post Article Title",
+        "Target Landing Page URL",
+        "Target Keyword",
+        "Recommended Anchor Text",
+        "Publisher Media Niche",
+        "Link Tier / Context",
+    ]
+    for col_idx, h in enumerate(off_headers, start=1):
+      cell = ws_off.cell(row=1, column=col_idx, value=h)
+      cell.font = font_header
+      cell.fill = fill_header
+      cell.alignment = Alignment(
+          horizontal="center", vertical="center", wrap_text=True
+      )
+    ws_off.row_dimensions[1].height = 28
+
+    for r_idx, op in enumerate(offpage_plan, start=2):
+      row_fill = fill_zebra if r_idx % 2 == 0 else fill_white
+      row_vals = [
+          op.get("month", "Month 1"),
+          op.get("article_title", "-"),
+          op.get("target_page", "-"),
+          op.get("target_keyword", "-"),
+          op.get("recommended_anchor", "-"),
+          op.get("publisher_niche", "-"),
+          op.get("link_context", "Editorial Contextual"),
+      ]
+
+      for c_idx, val in enumerate(row_vals, start=1):
+        cell = ws_off.cell(row=r_idx, column=c_idx, value=val)
+        cell.font = font_data
+        cell.fill = row_fill
+        cell.border = thin_border
+
+        if c_idx == 1:
+          cell.alignment = Alignment(horizontal="center", vertical="center")
+          cell.font = Font(name="Segoe UI", size=9, bold=True, color="0369A1")
+        elif c_idx in [3, 4, 5]:
+          cell.alignment = Alignment(vertical="center", indent=1)
+          if c_idx == 3:
+            cell.font = Font(name="Consolas", size=9, color="0369A1")
+          elif c_idx == 5:
+            cell.font = font_data_bold
+        else:
+          cell.alignment = Alignment(
+              vertical="center", wrap_text=True, indent=1
+          )
+      ws_off.row_dimensions[r_idx].height = 28
+
+    ws_off.column_dimensions["A"].width = 16
+    ws_off.column_dimensions["B"].width = 45
+    ws_off.column_dimensions["C"].width = 38
+    ws_off.column_dimensions["D"].width = 30
+    ws_off.column_dimensions["E"].width = 30
+    ws_off.column_dimensions["F"].width = 28
+    ws_off.column_dimensions["G"].width = 24
+
+  # 8. SHEET: Execution Timeline
   ws_time = wb.create_sheet(title="Execution Timeline")
   ws_time.views.sheetView[0].showGridLines = True
   ws_time.freeze_panes = "I2"
@@ -2116,7 +2227,7 @@ def generate_excel_deliverable(
     col_letter = get_column_letter(col_idx)
     ws_time.column_dimensions[col_letter].width = 6.5
 
-  # 8. SHEET: Task Detail & Execution Notes
+  # 9. SHEET: Task Detail & Execution Notes
   ws_detail = wb.create_sheet(title="Task Detail")
   ws_detail.views.sheetView[0].showGridLines = True
   ws_detail.freeze_panes = "A2"
@@ -2326,6 +2437,7 @@ if st.session_state.analysis_results is None:
           TXT["duration_options"][3]: 48,
       }
       num_weeks = duration_map.get(roadmap_duration, 12)
+      num_months = num_weeks // 4
       is_large_onpage = "Large" in onpage_scope or "Großer" in onpage_scope
 
       with st.spinner("Parsing blog sitemap XML..."):
@@ -2349,13 +2461,14 @@ if st.session_state.analysis_results is None:
           ),
           "existing_pages": parsed_existing,
           "weeks": num_weeks,
+          "months": num_months,
           "lang": lang_code,
           "is_large_onpage": is_large_onpage,
       }
 
       # Step 1: Live Technical Audit & Ahrefs v3 / SEMrush / PSI Integration
       with st.spinner(
-          "1/7 Running Live Technical Audit & Domain Performance Check..."
+          "1/8 Running Live Technical Audit & Domain Performance Check..."
       ):
         tech_audit = run_live_technical_audit(
             website_url, ahrefs_k=ahrefs_token, semrush_k=semrush_key
@@ -2363,7 +2476,7 @@ if st.session_state.analysis_results is None:
 
       # Step 2: Commercial Keywords Discovery
       with st.spinner(
-          "2/7 Discovering Concise 2–3 Word Commercial Keywords in"
+          "2/8 Discovering Concise 2–3 Word Commercial Keywords in"
           f" {app_lang.upper()}..."
       ):
         prompt_step1 = f"""
@@ -2445,9 +2558,9 @@ if st.session_state.analysis_results is None:
           if kw_str and len(kw_str.split()) <= 4:
             clean_kw_list.append(kw_str)
 
-      # Step 3: Tiered Keyword Filtering (Live Ahrefs / Simulation)
+      # Step 3: Tiered Keyword Filtering
       with st.spinner(
-          "3/7 Fetching Ahrefs Keywords Explorer Metrics & Applying KD Tier"
+          "3/8 Fetching Ahrefs Keywords Explorer Metrics & Applying KD Tier"
           " Filter..."
       ):
         geo_country = "id" if "Indonesia" in target_geo else "us"
@@ -2474,7 +2587,7 @@ if st.session_state.analysis_results is None:
 
       if bool(comp_list):
         with st.spinner(
-            "4/7 Fetching Live Ahrefs Competitor Metrics & Synchronizing"
+            "4/8 Fetching Live Ahrefs Competitor Metrics & Synchronizing"
             " Gap..."
         ):
           clean_client_dom = (
@@ -2583,9 +2696,9 @@ if st.session_state.analysis_results is None:
 
           competitor_gap_data = synced_gap_rows
 
-      # Step 5: Senior SEO Feasibility & Difficulty Diagnostic Engine
+      # Step 5: Senior SEO Feasibility Diagnostic Engine
       with st.spinner(
-          "5/7 Synthesizing Senior SEO Feasibility & Ranking Difficulty"
+          "5/8 Synthesizing Senior SEO Feasibility & Ranking Difficulty"
           f" Diagnostic in {app_lang.upper()}..."
       ):
         client_dr = tech_audit.get("domain_rating", 0)
@@ -2615,10 +2728,10 @@ if st.session_state.analysis_results is None:
                 Classify project difficulty into EXACTLY ONE: "EASY", "MODERATE", or "HARD".
                 Provide estimated time to impact (e.g. "1 - 3 Months (Quick Wins)", "3 - 6 Months", or "6 - 12 Months").
                 Provide a deep, authoritative, professional rationale across 4 dimensions:
-                1. Authority Gap Analysis (comparing client DR/backlinks vs direct competitors)
+                1. Authority Gap Analysis
                 2. Keyword & SERP Competitiveness Landscape
                 3. Technical & Content Foundation Assessment
-                4. Primary Leverage Points (What 2-3 specific moves will produce the fastest ranking/conversion wins)
+                4. Primary Leverage Points
                 
                 RETURN STRICT JSON ONLY:
                 {{
@@ -2637,7 +2750,6 @@ if st.session_state.analysis_results is None:
           )
           seo_diagnostic = json.loads(res_diag)
         except Exception:
-          # Rule-based Algorithmic Fallback
           if avg_comp_dr <= 15 and avg_kd <= 18:
             calc_diff = "EASY"
             calc_time = (
@@ -2723,12 +2835,12 @@ if st.session_state.analysis_results is None:
                 ),
             }
 
-      # Step 6: Multi-Batch On-Page Architecture Generation (KPI Aligned)
+      # Step 6: Multi-Batch On-Page Architecture Generation
       kw_context = df_final_kw.to_dict(orient="records")
       full_onpage_list = []
 
       with st.spinner(
-          "6/7 Architecting Core Commercial Pages in"
+          "6/8 Architecting Core Commercial Pages in"
           f" {app_lang.upper()} aligned with KPI: '{client_kpi_str}'..."
       ):
         prompt_onpage_b1 = f"""
@@ -2944,7 +3056,7 @@ if st.session_state.analysis_results is None:
         end_w = min(num_weeks, (b_idx + 1) * batch_size)
 
         with st.spinner(
-            "7/7 Architecting Informational Content Roadmap in"
+            "7/8 Architecting Informational Content Roadmap in"
             f" {app_lang.upper()} (Weeks {start_w} to {end_w} of"
             f" {num_weeks})..."
         ):
@@ -3047,400 +3159,335 @@ if st.session_state.analysis_results is None:
               ],
           })
 
-      # Dynamic Execution Timeline
-      clean_first_prod = [
-          p.strip()
-          for p in core_offerings.split(",")
-          if len(p.strip().split()) <= 4
+      # Step 8: Senior Off-Page SEO & Blogger Link Building Strategy (10 Articles per Month)
+      full_offpage_plan = []
+      available_pages = [
+          {"url": p.get("url_slug"), "type": p.get("page_type")}
+          for p in full_onpage_list
       ]
-      first_prod_str = (
-          clean_first_prod[0] if clean_first_prod else brief_data["niche"]
-      )
+      available_kws = df_final_kw["keyword"].tolist() if not df_final_kw.empty else [brief_data["niche"]]
 
-      if lang_code == "ID":
-        dynamic_tasks = [
-            {
-                "id": 1,
-                "task": (
-                    f"Perbaikan Core Web Vitals (LCP {tech_audit['lcp']}, INP"
-                    f" {tech_audit['inp']}) pada {brief_data['url']}"
+      with st.spinner(
+          "8/8 Engineering Senior Off-Page Link Building & Blogger Outreach"
+          f" Plan ({num_months * 10} Articles across {num_months} Months)..."
+      ):
+        for m_idx in range(1, num_months + 1):
+          month_name = (
+              f"Bulan {m_idx}" if lang_code == "ID" else f"Month {m_idx}"
+          )
+          prompt_offpage_month = f"""
+                    You are a Senior Off-Page SEO & Link Building Architect. Output MUST be strictly in {app_lang.upper()}.
+                    Client: {brief_data['client']} ({brief_data['url']})
+                    Niche: {brief_data['niche']}
+                    Primary KPI: {client_kpi_str}
+                    Month: {month_name}
+                    Available Landing Pages: {json.dumps(available_pages[:10], indent=2)}
+                    Available Commercial Keywords: {json.dumps(available_kws[:15], indent=2)}
+                    
+                    TASK: Generate EXACTLY 10 Strategic Guest Post / Blogger Outreach Article Concepts for {month_name}.
+                    
+                    SENIOR SEO LINK BUILDING POLICY:
+                    - In Month 1: 4 links to Homepage (Brand/Entity Anchor), 6 links to Core Commercial Service/Product pages.
+                    - In Month 2+: 7 links to Commercial Landing Pages (Keyword Gap targets), 2 links to Informational Blog Pillars, 1 to Homepage.
+                    - Recommended Anchor Text: Mix Exact Match, Partial Match, Brand+Keyword, and Natural LSI phrases.
+                    - All Article Titles and Publisher Niches must be written in {app_lang.upper()}.
+                    
+                    RETURN STRICT JSON ONLY:
+                    {{
+                        "offpage_articles": [
+                            {{
+                                "month": "{month_name}",
+                                "article_title": "Judul Artikel Blogger / Guest Post Berkualitas dalam {app_lang.upper()}",
+                                "target_page": "URL Landing Page yang dituju (misal: https://.../produk/... atau Homepage)",
+                                "target_keyword": "keyword yang ingin dinaikkan peringkatnya",
+                                "recommended_anchor": "Variasi teks jangkar spesifik (misal: [Nama Brand] Distributor, Jual Selang Hidrolik, dll)",
+                                "publisher_niche": "Kategori Blog/Media Penerbit (misal: Portal Bisnis Manufaktur / Blog Teknologi & Konstruksi)",
+                                "link_context": "Editorial In-Content Contextual"
+                            }}
+                        ]
+                    }}
+                    """
+          try:
+            res_off_str = call_ai_engine(
+                provider, api_key, model_choice, prompt_offpage_month
+            )
+            parsed_off = json.loads(res_off_str)
+            off_items = parsed_off.get("offpage_articles", [])
+            for item in off_items:
+              full_offpage_plan.append(item)
+          except Exception:
+            pass
+
+      # Fallback Generator jika kuota 10 artikel per bulan belum terpenuhi
+      expected_offpage_count = num_months * 10
+      if len(full_offpage_plan) < expected_offpage_count:
+        domain_clean = brief_data["url"].rstrip("/")
+        clean_niche_short = brief_data["niche"].split("&")[0].strip()
+        kw_pool = (
+            available_kws
+            if available_kws
+            else [f"distributor {clean_niche_short}", f"jual {clean_niche_short}"]
+        )
+
+        for cur_m in range(1, num_months + 1):
+          m_label = (
+              f"Bulan {cur_m}" if lang_code == "ID" else f"Month {cur_m}"
+          )
+          curr_month_items = [
+              x for x in full_offpage_plan if x.get("month") == m_label
+          ]
+          needed_for_m = 10 - len(curr_month_items)
+
+          for idx_item in range(1, needed_for_m + 1):
+            kw_target = kw_pool[(idx_item - 1) % len(kw_pool)]
+            if idx_item in [1, 2, 8] and cur_m == 1:
+              tgt_url = f"{domain_clean}/"
+              anchor = (
+                  f"{brief_data['client']}"
+                  if idx_item == 1
+                  else f"{brief_data['client']} {kw_target}"
+              )
+            else:
+              tgt_slug = (
+                  f"{domain_clean}/produk/{kw_target.replace(' ', '-')}"
+              )
+              anchor = (
+                  f"layanan {kw_target}"
+                  if lang_code == "ID"
+                  else f"{kw_target} solutions"
+              )
+              tgt_url = (
+                  available_pages[idx_item % len(available_pages)]["url"]
+                  if available_pages
+                  else tgt_slug
+              )
+
+            full_offpage_plan.append({
+                "month": m_label,
+                "article_title": (
+                    f"Peluang Efisiensi Industri & Standar Kualitas"
+                    f" {clean_niche_short} Modern - Part {idx_item}"
+                    if lang_code == "ID"
+                    else f"Industrial Efficiency & Standards in Modern"
+                    f" {clean_niche_short} - Part {idx_item}"
                 ),
-                "phase": "P1 — Fix",
-                "phase_group": (
-                    "BULAN 1 — PERBAIKAN TEKNIKAL & ON-PAGE | Minggu 1–4 |"
-                    " Target: Kesehatan Website & Optimasi Baseline untuk"
-                    f" '{client_kpi_str}'"
+                "target_page": tgt_url,
+                "target_keyword": kw_target,
+                "recommended_anchor": anchor,
+                "publisher_niche": (
+                    "Portal Berita Bisnis & Industri Manufaktur"
+                    if lang_code == "ID"
+                    else "B2B Manufacturing & Industrial Media"
                 ),
-                "category": "Fix",
-                "impact": "● High",
-                "effort": "◇ Med",
-                "owner": "Tim Tech/Dev",
-                "status": "Not Started",
-                "weeks_active": [1],
-                "week_range_str": "Wk 1",
-                "what_to_do": (
-                    f"1. Tunda eksekusi JavaScript non-kritis untuk menurunkan"
-                    f" INP dari {tech_audit['inp']} ke <200ms.\n2. Kompres"
-                    f" gambar hero dan optimalkan font untuk LCP"
-                    f" ({tech_audit['lcp']}).\n3. Periksa robots.txt dan"
-                    " daftarkan sitemap XML bersih ke Google Search Console."
-                ),
-                "success_criteria": (
-                    "Skor Google PageSpeed Mobile mencapai >= 90; 0 error"
-                    f" perayapan pada {brief_data['url']}."
-                ),
-            },
-            {
-                "id": 2,
-                "task": (
-                    "Penerapan Metadata & Struktur H1/H2 pada Homepage &"
-                    " Halaman Produk Komersial Utama"
-                ),
-                "phase": "P1 — Fix",
-                "phase_group": (
-                    "BULAN 1 — PERBAIKAN TEKNIKAL & ON-PAGE | Minggu 1–4 |"
-                    " Target: Kesehatan Website & Optimasi Baseline untuk"
-                    f" '{client_kpi_str}'"
-                ),
-                "category": "Fix",
-                "impact": "● High",
-                "effort": "◆ Low",
-                "owner": "SEO Specialist",
-                "status": "Not Started",
-                "weeks_active": [2],
-                "week_range_str": "Wk 2",
-                "what_to_do": (
-                    "1. Perbarui Title Tag (50-60 karakter) dan Meta"
-                    " Description (130-155 karakter) di seluruh halaman"
-                    " produk komersial.\n2. Pastikan setiap halaman hanya"
-                    " memiliki 1 tag H1 yang memuat kata kunci komersial"
-                    " utama.\n3. Susun sub-heading H2/H3 untuk menjawab"
-                    " kebutuhan pembeli industri."
-                ),
-                "success_criteria": (
-                    "Seluruh halaman komersial terindeks sempurna dengan"
-                    " keyword intent komersial yang tepat."
-                ),
-            },
-            {
-                "id": 3,
-                "task": (
-                    "Injeksi AIO Passage Snippets (40-60 Kata) & Pemasangan"
-                    " Schema Markup"
-                ),
-                "phase": "P1 — Fix",
-                "phase_group": (
-                    "BULAN 1 — PERBAIKAN TEKNIKAL & ON-PAGE | Minggu 1–4 |"
-                    " Target: Kesehatan Website & Optimasi Baseline untuk"
-                    f" '{client_kpi_str}'"
-                ),
-                "category": "Optimize",
-                "impact": "● High",
-                "effort": "◆ Low",
-                "owner": "SEO/Web Dev",
-                "status": "Not Started",
-                "weeks_active": [3],
-                "week_range_str": "Wk 3",
-                "what_to_do": (
-                    "1. Pasang kotak definisi ringkas 40-60 kata di bagian"
-                    " atas halaman produk untuk memicu snapshot Google AI"
-                    " Overviews.\n2. Pasang Schema JSON-LD (Organization,"
-                    " Product, Service, FAQPage).\n3. Validasi dengan Google"
-                    " Rich Results Test."
-                ),
-                "success_criteria": (
-                    "100% halaman komersial lolos uji Rich Results tanpa"
-                    " error schema."
-                ),
-            },
-            {
-                "id": 4,
-                "task": (
-                    "Pembangunan Conversion Layer (CTA WhatsApp/Formulir) &"
-                    " Silo Internal Linking Hub-and-Spoke"
-                ),
-                "phase": "P1 — Fix",
-                "phase_group": (
-                    "BULAN 1 — PERBAIKAN TEKNIKAL & ON-PAGE | Minggu 1–4 |"
-                    " Target: Kesehatan Website & Optimasi Baseline untuk"
-                    f" '{client_kpi_str}'"
-                ),
-                "category": "Optimize",
-                "impact": "● High",
-                "effort": "◆ Low",
-                "owner": "CRO/SEO",
-                "status": "Not Started",
-                "weeks_active": [4],
-                "week_range_str": "Wk 4",
-                "what_to_do": (
-                    "1. Pasang tombol CTA penawaran harga & WhatsApp yang"
-                    f" jelas sesuai KPI '{client_kpi_str}'.\n2. Bangun tautan"
-                    " internal dari kategori utama ke halaman produk"
-                    " spesifik.\n3. Perbaiki tautan rusak (broken links) dan"
-                    " redirect chains."
-                ),
-                "success_criteria": (
-                    "Funnel konversi aktif sempurna; tidak ada halaman"
-                    " komersial yang berstatus orphan page."
-                ),
-            },
-            {
-                "id": 5,
-                "task": (
-                    "Peluncuran Klaster Artikel Blog Batch 1 & Inisiasi Link"
-                    " Acquisition Off-Page"
-                ),
-                "phase": "P2 — Launch",
-                "phase_group": (
-                    "BULAN 2 — PRODUKSI KONTEN & OFF-PAGE FOUNDATIONS |"
-                    " Minggu 5–8 | Target: Penerbitan Klaster Topik &"
-                    " Penguatan Otoritas"
-                ),
-                "category": "New",
-                "impact": "● High",
-                "effort": "◇ Med",
-                "owner": "Tim Konten",
-                "status": "Not Started",
-                "weeks_active": [5, 6, 7, 8],
-                "week_range_str": "Wk 5–8",
-                "what_to_do": (
-                    "1. Terbitkan 1 artikel informasional mendalam per minggu"
-                    " dari Roadmap Konten.\n2. Tautkan setiap artikel blog ke"
-                    f" halaman produk komersial {first_prod_str}.\n3. Mulai"
-                    " strategi outreach untuk mendapatkan 3-5 backlink"
-                    " industri bereputasi tinggi."
-                ),
-                "success_criteria": (
-                    "4 artikel blog baru terbit dan terindeks; backlink"
-                    " eksternal pertama mulai mengalir ke halaman komersial."
-                ),
-            },
-            {
-                "id": 6,
-                "task": (
-                    "Publikasi Artikel Panduan Spesifikasi, Komparasi Merek"
-                    f" ({brief_data['competitors']}) & Penetrasi Pasar"
-                ),
-                "phase": "P3 — Grow",
-                "phase_group": (
-                    f"BULAN 3–{num_weeks//4} — EKSPANSI OTORITAS &"
-                    f" SKALABILITAS | Minggu 9–{num_weeks} | Target: Dominasi"
-                    f" SERP Industri untuk '{client_kpi_str}'"
-                ),
-                "category": "New",
-                "impact": "● High",
-                "effort": "◇ Med",
-                "owner": "Tim Konten & SEO",
-                "status": "Not Started",
-                "weeks_active": list(range(9, num_weeks + 1)),
-                "week_range_str": f"Wk 9–{num_weeks}",
-                "what_to_do": (
-                    "1. Terbitkan artikel komparasi merek, panduan tekanan"
-                    " kerja, dan studi kasus industri secara konsisten setiap"
-                    " minggu.\n2. Perbarui artikel lama dengan data teknis"
-                    " terbaru.\n3. Pertahankan internal linking terarah dari"
-                    " artikel blog ke halaman penawaran produk."
-                ),
-                "success_criteria": (
-                    f"Seluruh {num_weeks} artikel aktif terindeks dan"
-                    " memberikan progres kenaikan nyata terhadap"
-                    f" {client_kpi_str}."
-                ),
-            },
-        ]
-      else:
-        dynamic_tasks = [
-            {
-                "id": 1,
-                "task": (
-                    f"Resolve Core Web Vitals (LCP {tech_audit['lcp']}, INP"
-                    f" {tech_audit['inp']}) on {brief_data['url']}"
-                ),
-                "phase": "P1 — Fix",
-                "phase_group": (
-                    "MONTH 1 — TECHNICAL & ON-PAGE OPTIMISATION | Weeks 1–4 |"
-                    " Goal: Site Health & Baseline Optimization for"
-                    f" '{client_kpi_str}'"
-                ),
-                "category": "Fix",
-                "impact": "● High",
-                "effort": "◇ Med",
-                "owner": "Tech/Dev",
-                "status": "Not Started",
-                "weeks_active": [1],
-                "week_range_str": "Wk 1",
-                "what_to_do": (
-                    f"1. Defer non-critical JavaScript to reduce INP from"
-                    f" {tech_audit['inp']} to <200ms.\n2. Compress hero"
-                    f" assets and preload fonts for LCP ({tech_audit['lcp']}).\n3."
-                    " Audit robots.txt directives and submit clean XML sitemap"
-                    " to Google Search Console."
-                ),
-                "success_criteria": (
-                    "PageSpeed Mobile Score reaches >= 90; 0 crawl errors on"
-                    f" {brief_data['url']}."
-                ),
-            },
-            {
-                "id": 2,
-                "task": (
-                    "Deploy Metadata & H1/H2 Structure on Homepage & Core"
-                    " Commercial Services"
-                ),
-                "phase": "P1 — Fix",
-                "phase_group": (
-                    "MONTH 1 — TECHNICAL & ON-PAGE OPTIMISATION | Weeks 1–4 |"
-                    " Goal: Site Health & Baseline Optimization for"
-                    f" '{client_kpi_str}'"
-                ),
-                "category": "Fix",
-                "impact": "● High",
-                "effort": "◆ Low",
-                "owner": "SEO Lead",
-                "status": "Not Started",
-                "weeks_active": [2],
-                "week_range_str": "Wk 2",
-                "what_to_do": (
-                    "1. Update Title Tags (50-60 chars) and Meta Descriptions"
-                    " (130-155 chars) across all commercial pages.\n2. Ensure"
-                    " single H1 tag matching commercial keyword intent.\n3."
-                    " Structure H2/H3 subheadings to directly answer buyer"
-                    " queries."
-                ),
-                "success_criteria": (
-                    "All commercial landing pages fully updated and validated"
-                    " against search intent."
-                ),
-            },
-            {
-                "id": 3,
-                "task": (
-                    "Inject AIO Passage Snippets (40-60 words) & Deploy Schema"
-                    " Markup"
-                ),
-                "phase": "P1 — Fix",
-                "phase_group": (
-                    "MONTH 1 — TECHNICAL & ON-PAGE OPTIMISATION | Weeks 1–4 |"
-                    " Goal: Site Health & Baseline Optimization for"
-                    f" '{client_kpi_str}'"
-                ),
-                "category": "Optimize",
-                "impact": "● High",
-                "effort": "◆ Low",
-                "owner": "SEO/Dev",
-                "status": "Not Started",
-                "weeks_active": [3],
-                "week_range_str": "Wk 3",
-                "what_to_do": (
-                    "1. Place concise 40-60 word definition boxes above the"
-                    " fold on key product pages.\n2. Implement Organization,"
-                    " Product/Service, and FAQPage Schema JSON-LD.\n3. Test"
-                    " with Google Rich Results Test tool."
-                ),
-                "success_criteria": (
-                    "100% of commercial landing pages pass Rich Results Test"
-                    " without Schema warnings."
-                ),
-            },
-            {
-                "id": 4,
-                "task": (
-                    "Build Conversion Layer (CTAs) & Hub-and-Spoke Internal"
-                    " Linking Silos"
-                ),
-                "phase": "P1 — Fix",
-                "phase_group": (
-                    "MONTH 1 — TECHNICAL & ON-PAGE OPTIMISATION | Weeks 1–4 |"
-                    " Goal: Site Health & Baseline Optimization for"
-                    f" '{client_kpi_str}'"
-                ),
-                "category": "Optimize",
-                "impact": "● High",
-                "effort": "◆ Low",
-                "owner": "CRO/SEO",
-                "status": "Not Started",
-                "weeks_active": [4],
-                "week_range_str": "Wk 4",
-                "what_to_do": (
-                    f"1. Integrate prominent demo/conversion CTAs aligned with"
-                    f" {client_kpi_str}.\n2. Map internal link anchors from"
-                    " category hubs to core commercial pages.\n3. Eliminate"
-                    " broken links and redirect chains."
-                ),
-                "success_criteria": (
-                    "Clear conversion funnel active; zero orphan commercial"
-                    " pages."
-                ),
-            },
-            {
-                "id": 5,
-                "task": (
-                    "Launch Informational Blog Cluster Batch 1 & Initiate"
-                    " Off-Page SEO"
-                ),
-                "phase": "P2 — Launch",
-                "phase_group": (
-                    "MONTH 2 — CONTENT PRODUCTION & OFF-PAGE FOUNDATIONS |"
-                    " Weeks 5–8 | Goal: Topic Cluster Deployment & Authority"
-                    " Building"
-                ),
-                "category": "New",
-                "impact": "● High",
-                "effort": "◇ Med",
-                "owner": "Content Team",
-                "status": "Not Started",
-                "weeks_active": [5, 6, 7, 8],
-                "week_range_str": "Wk 5–8",
-                "what_to_do": (
-                    "1. Produce and publish 1 high-gain informational article"
-                    " per week from the Content Roadmap.\n2. Contextually link"
-                    f" each article to the commercial {first_prod_str} landing"
-                    " page.\n3. Initiate outreach for 3-5 high-DR industry"
-                    " backlinks pointing to commercial pillars."
-                ),
-                "success_criteria": (
-                    "4 new informational articles live and indexed; first"
-                    " external editorial backlinks secured."
-                ),
-            },
-            {
-                "id": 6,
-                "task": (
-                    "Publish High-Intent Problem Solving Content & Competitor"
-                    f" Comparisons ({brief_data['competitors']})"
-                ),
-                "phase": "P3 — Grow",
-                "phase_group": (
-                    f"MONTHS 3–{num_weeks//4} — AUTHORITY SCALING &"
-                    f" EXPANSION | Weeks 9–{num_weeks} | Goal: Dominate"
-                    f" Industry SERPs for '{client_kpi_str}'"
-                ),
-                "category": "New",
-                "impact": "● High",
-                "effort": "◇ Med",
-                "owner": "Content/SEO",
-                "status": "Not Started",
-                "weeks_active": list(range(9, num_weeks + 1)),
-                "week_range_str": f"Wk 9–{num_weeks}",
-                "what_to_do": (
-                    "1. Publish weekly comparison guides, technical"
-                    " troubleshooting, and industry case studies.\n2. Refresh"
-                    " older content with new stats and updated dates.\n3."
-                    " Maintain continuous internal linking from new blog"
-                    " posts to commercial conversion pages."
-                ),
-                "success_criteria": (
-                    f"All {num_weeks} articles live, indexed, and driving"
-                    " compounding progress toward {client_kpi_str}."
-                ),
-            },
-        ]
+                "link_context": "Editorial In-Content Contextual",
+            })
+
+      # Dynamic Execution Timeline
+      dynamic_tasks = [
+          {
+              "id": 1,
+              "task": (
+                  f"Perbaikan Core Web Vitals (LCP {tech_audit['lcp']}, INP"
+                  f" {tech_audit['inp']}) pada {brief_data['url']}"
+                  if lang_code == "ID"
+                  else f"Resolve Core Web Vitals (LCP {tech_audit['lcp']}, INP"
+                  f" {tech_audit['inp']}) on {brief_data['url']}"
+              ),
+              "phase": "P1 — Fix",
+              "phase_group": (
+                  "BULAN 1 — PERBAIKAN TEKNIKAL & ON-PAGE | Minggu 1–4"
+                  if lang_code == "ID"
+                  else "MONTH 1 — TECHNICAL & ON-PAGE OPTIMISATION | Weeks 1–4"
+              ),
+              "category": "Fix",
+              "impact": "● High",
+              "effort": "◇ Med",
+              "owner": "Tim Tech/Dev" if lang_code == "ID" else "Tech/Dev",
+              "status": "Not Started",
+              "weeks_active": [1],
+              "week_range_str": "Wk 1",
+              "what_to_do": (
+                  f"1. Tunda JavaScript non-kritis untuk INP ({tech_audit['inp']}).\n2. Optimalkan hero asset untuk LCP ({tech_audit['lcp']})."
+                  if lang_code == "ID"
+                  else f"1. Defer non-critical JS for INP ({tech_audit['inp']}).\n2. Optimize hero assets for LCP ({tech_audit['lcp']})."
+              ),
+              "success_criteria": (
+                  "Skor Google PageSpeed Mobile >= 90; 0 crawl errors."
+                  if lang_code == "ID"
+                  else "Google PageSpeed Mobile Score >= 90; 0 crawl errors."
+              ),
+          },
+          {
+              "id": 2,
+              "task": (
+                  "Penerapan Metadata & Struktur H1/H2 pada Homepage & Landing"
+                  " Pages"
+                  if lang_code == "ID"
+                  else "Deploy Metadata & H1/H2 Structure on Homepage & Core"
+                  " Pages"
+              ),
+              "phase": "P1 — Fix",
+              "phase_group": (
+                  "BULAN 1 — PERBAIKAN TEKNIKAL & ON-PAGE | Minggu 1–4"
+                  if lang_code == "ID"
+                  else "MONTH 1 — TECHNICAL & ON-PAGE OPTIMISATION | Weeks 1–4"
+              ),
+              "category": "Fix",
+              "impact": "● High",
+              "effort": "◆ Low",
+              "owner": "SEO Specialist" if lang_code == "ID" else "SEO Lead",
+              "status": "Not Started",
+              "weeks_active": [2],
+              "week_range_str": "Wk 2",
+              "what_to_do": (
+                  "1. Update Title Tag (50-60 karakter) dan Meta Description (130-155 karakter).\n2. Pasang single H1 tag komersial."
+                  if lang_code == "ID"
+                  else "1. Update Title Tags (50-60 chars) and Meta Descriptions (130-155 chars).\n2. Ensure single commercial H1 tag."
+              ),
+              "success_criteria": (
+                  "Semua halaman komersial terindeks sesuai keyword intent."
+                  if lang_code == "ID"
+                  else "All commercial pages fully validated against intent."
+              ),
+          },
+          {
+              "id": 3,
+              "task": (
+                  "Injeksi AIO Passage Snippets (40-60 Kata) & Pemasangan"
+                  " Schema Markup"
+                  if lang_code == "ID"
+                  else "Inject AIO Passage Snippets (40-60 words) & Deploy"
+                  " Schema"
+              ),
+              "phase": "P1 — Fix",
+              "phase_group": (
+                  "BULAN 1 — PERBAIKAN TEKNIKAL & ON-PAGE | Minggu 1–4"
+                  if lang_code == "ID"
+                  else "MONTH 1 — TECHNICAL & ON-PAGE OPTIMISATION | Weeks 1–4"
+              ),
+              "category": "Optimize",
+              "impact": "● High",
+              "effort": "◆ Low",
+              "owner": "SEO/Web Dev",
+              "status": "Not Started",
+              "weeks_active": [3],
+              "week_range_str": "Wk 3",
+              "what_to_do": (
+                  "1. Pasang kotak definisi ringkas 40-60 kata.\n2. Pasang Schema JSON-LD (Product, Organization, FAQ)."
+                  if lang_code == "ID"
+                  else "1. Place concise 40-60 word definition boxes.\n2. Deploy Schema JSON-LD (Product, Organization, FAQ)."
+              ),
+              "success_criteria": (
+                  "100% halaman komersial lolos uji Rich Results Test."
+                  if lang_code == "ID"
+                  else "100% of commercial pages pass Rich Results Test."
+              ),
+          },
+          {
+              "id": 4,
+              "task": (
+                  "Pembangunan Conversion Layer & Silo Internal Linking"
+                  if lang_code == "ID"
+                  else "Build Conversion Layer & Hub-and-Spoke Internal Silos"
+              ),
+              "phase": "P1 — Fix",
+              "phase_group": (
+                  "BULAN 1 — PERBAIKAN TEKNIKAL & ON-PAGE | Minggu 1–4"
+                  if lang_code == "ID"
+                  else "MONTH 1 — TECHNICAL & ON-PAGE OPTIMISATION | Weeks 1–4"
+              ),
+              "category": "Optimize",
+              "impact": "● High",
+              "effort": "◆ Low",
+              "owner": "CRO/SEO",
+              "status": "Not Started",
+              "weeks_active": [4],
+              "week_range_str": "Wk 4",
+              "what_to_do": (
+                  f"1. Pasang CTA penawaran harga sesuai KPI '{client_kpi_str}'.\n2. Bangun internal linking dari kategori ke produk."
+                  if lang_code == "ID"
+                  else f"1. Integrate conversion CTAs aligned with '{client_kpi_str}'.\n2. Map internal link anchors to commercial pages."
+              ),
+              "success_criteria": (
+                  "Funnel konversi aktif sempurna; 0 orphan pages."
+                  if lang_code == "ID"
+                  else "Conversion funnel active; 0 orphan pages."
+              ),
+          },
+          {
+              "id": 5,
+              "task": (
+                  "Eksekusi Batch 1 Off-Page Blogger Links (10 Artikel) &"
+                  " Peluncuran Blog Utama"
+                  if lang_code == "ID"
+                  else "Execute Month 1 Off-Page Blogger Links (10 Articles) &"
+                  " Main Blog Cluster"
+              ),
+              "phase": "P2 — Launch",
+              "phase_group": (
+                  "BULAN 2 — PRODUKSI KONTEN & OFF-PAGE FOUNDATIONS |"
+                  " Minggu 5–8"
+                  if lang_code == "ID"
+                  else "MONTH 2 — CONTENT PRODUCTION & OFF-PAGE FOUNDATIONS |"
+                  " Weeks 5–8"
+              ),
+              "category": "New",
+              "impact": "● High",
+              "effort": "◇ Med",
+              "owner": "Tim Konten & Outreach" if lang_code == "ID" else "Content & Outreach Team",
+              "status": "Not Started",
+              "weeks_active": [5, 6, 7, 8],
+              "week_range_str": "Wk 5–8",
+              "what_to_do": (
+                  "1. Distribusikan 10 artikel blogger/guest post Bulan 1 sesuai rekomendasi target URL dan anchor text.\n2. Terbitkan 1 artikel blog utama per minggu."
+                  if lang_code == "ID"
+                  else "1. Publish 10 Month 1 blogger guest posts mapped to recommended target URLs.\n2. Publish 1 main site informational article per week."
+              ),
+              "success_criteria": (
+                  "10 backlink blogger Bulan 1 aktif dan mulai terindeks."
+                  if lang_code == "ID"
+                  else "10 Month 1 blogger backlinks live and indexing."
+              ),
+          },
+          {
+              "id": 6,
+              "task": (
+                  f"Eksekusi Link Building Lanjutan ({num_months} Bulan) & Penetrasi SERP Kompetitif"
+                  if lang_code == "ID"
+                  else f"Execute Multi-Month Link Building ({num_months} Months) & Authority Expansion"
+              ),
+              "phase": "P3 — Grow",
+              "phase_group": (
+                  f"BULAN 3–{num_months} — EKSPANSI OTORITAS & SKALABILITAS | Minggu 9–{num_weeks}"
+                  if lang_code == "ID"
+                  else f"MONTHS 3–{num_months} — AUTHORITY SCALING & EXPANSION | Weeks 9–{num_weeks}"
+              ),
+              "category": "New",
+              "impact": "● High",
+              "effort": "◇ Med",
+              "owner": "SEO & Content Lead",
+              "status": "Not Started",
+              "weeks_active": list(range(9, num_weeks + 1)),
+              "week_range_str": f"Wk 9–{num_weeks}",
+              "what_to_do": (
+                  f"1. Publikasikan 10 artikel blogger/guest post per bulan secara konsisten (Total: {len(full_offpage_plan)} artikel).\n2. Pantau peningkatan pergerakan ranking pada kata kunci target."
+                  if lang_code == "ID"
+                  else f"1. Consistently publish 10 blogger outreach articles per month (Total: {len(full_offpage_plan)} articles).\n2. Monitor SERP rank improvements across target pages."
+              ),
+              "success_criteria": (
+                  f"Seluruh {len(full_offpage_plan)} artikel blogger live dan memperkuat pencapaian KPI '{client_kpi_str}'."
+                  if lang_code == "ID"
+                  else f"All {len(full_offpage_plan)} blogger outreach links active and accelerating KPI '{client_kpi_str}'."
+              ),
+          },
+      ]
 
       st.session_state.analysis_results = {
           "tech_audit": tech_audit,
           "final_kw": df_final_kw,
           "onpage": full_onpage_list,
           "content": full_content_calendar,
+          "offpage": full_offpage_plan,
           "timeline_tasks": dynamic_tasks,
           "competitor_ov": competitor_ov_data,
           "competitor_gap": competitor_gap_data,
@@ -3462,6 +3509,7 @@ else:
   df_final_kw = res["final_kw"]
   onpage_strat = res["onpage"]
   content_plan = res["content"]
+  offpage_plan = res.get("offpage", [])
   timeline_tasks = res["timeline_tasks"]
   competitor_ov_data = res["competitor_ov"]
   competitor_gap_data = res["competitor_gap"]
@@ -3538,6 +3586,7 @@ else:
       df_final_kw,
       onpage_strat,
       content_plan,
+      offpage_plan,
       tech_data=tech_audit,
       timeline_tasks=timeline_tasks,
       competitor_ov_data=competitor_ov_data,
@@ -3551,6 +3600,7 @@ else:
       df_final_kw,
       onpage_strat,
       content_plan,
+      offpage_plan,
       tech_data=tech_audit,
       timeline_tasks=timeline_tasks,
       competitor_ov_data=competitor_ov_data,
@@ -3588,6 +3638,7 @@ else:
       f"{TXT['tab_kw']} ({len(df_final_kw)})",
       f"{TXT['tab_onpage']} ({len(onpage_strat)} Pages)",
       f"{TXT['tab_content']} ({len(content_plan)} Weeks)",
+      f"{TXT['tab_offpage']} ({len(offpage_plan)} Guest Posts)",
   ]
   if competitor_ov_data:
     tab_labels.insert(1, TXT["tab_comp_ov"])
@@ -3761,3 +3812,17 @@ else:
         st.markdown("**Talking Points / Section Outlines:**")
         for tp in cp.get("talking_points", []):
           st.markdown(f"- {tp}")
+  curr_tab_idx += 1
+
+  # TAB: Off-Page SEO & Link Building Plan
+  with all_tabs[curr_tab_idx]:
+    st.info(
+        f"🔗 **Senior Off-Page Link Building Strategy:** Menampilkan total"
+        f" {len(offpage_plan)} konsep artikel blogger/guest post ({len(content_plan)//4} Bulan x 10 Artikel/Bulan) yang dipetakan secara taktis ke landing page komersial dengan variasi anchor text natural."
+    )
+
+    df_off_display = pd.DataFrame(offpage_plan)
+    if not df_off_display.empty:
+      st.dataframe(df_off_display, use_container_width=True)
+    else:
+      st.write("No off-page items generated.")
