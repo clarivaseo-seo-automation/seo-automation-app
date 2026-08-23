@@ -256,11 +256,12 @@ LANG_PACK = {
         "guide_step2_title": "2. Framework & AI Skills yang Terpasang",
         "guide_step2_content": (
             "- **Senior SEO Feasibility Diagnostic:** Evaluasi kelayakan"
-            " peringkat (Mudah/Sedang/Sulit).\n- **Unique Off-Page Link"
-            " Building:** 10 topik guest post berbeda per bulan dengan"
-            " variasi anchor text natural.\n- **Unique Content Roadmap:**"
-            " Sistem batching memastikan setiap minggu memiliki topik"
-            " informasional yang unik dan bebas duplikasi."
+            " peringkat (Mudah/Sedang/Sulit) berbasis perbandingan otoritas"
+            " kompetitor.\n- **Unique Off-Page Link Building:** 10 topik guest"
+            " post berbeda per bulan dengan variasi anchor text natural.\n-"
+            " **Unique Content Roadmap:** Sistem batching memastikan setiap"
+            " minggu memiliki topik informasional yang unik dan bebas"
+            " duplikasi."
         ),
         "guide_step3_title": "3. Cara Mengisi Data Klien",
         "guide_step3_content": (
@@ -334,7 +335,7 @@ LANG_PACK = {
         "duration_options": [
             "4 Semanas (1 Mes - Paquete Inicial)",
             "12 Semanas (3 Meses - Crecimiento Trimestral)",
-            "24 Semanas (6 Meses - Escalamiento Semestral)",
+            "24 Semanas (6 Semes - Escalamiento Semestral)",
             "48 Semanas (12 Meses / 1 Año - Dominación Total)",
         ],
         "run_btn": "🚀 Ejecutar Análisis SEO Completo",
@@ -921,7 +922,7 @@ def call_ai_engine(provider_name, api_key_val, model_name, prompt_text):
             {"role": "user", "content": prompt_text},
         ],
         "response_format": {"type": "json_object"},
-        "temperature": 0.4,
+        "temperature": 0.7,
     }
     response = requests.post(url, headers=headers, json=payload, timeout=120)
 
@@ -931,7 +932,7 @@ def call_ai_engine(provider_name, api_key_val, model_name, prompt_text):
           "contents": [{"parts": [{"text": prompt_text}]}],
           "generationConfig": {
               "response_mime_type": "application/json",
-              "temperature": 0.4,
+              "temperature": 0.7,
           },
       }
       res_direct = requests.post(
@@ -967,7 +968,7 @@ def call_ai_engine(provider_name, api_key_val, model_name, prompt_text):
             {"role": "user", "content": prompt_text},
         ],
         "response_format": {"type": "json_object"},
-        "temperature": 0.4,
+        "temperature": 0.7,
     }
     response = requests.post(url, headers=headers, json=payload, timeout=120)
     if response.status_code != 200:
@@ -988,7 +989,7 @@ def call_ai_engine(provider_name, api_key_val, model_name, prompt_text):
     payload = {
         "model": model_name,
         "max_tokens": 4000,
-        "temperature": 0.4,
+        "temperature": 0.7,
         "system": (
             "You are an expert SEO strategist. Output ONLY raw parseable JSON."
         ),
@@ -2977,7 +2978,7 @@ if st.session_state.analysis_results is None:
             })
         full_onpage_list.extend(sample_pages)
 
-      # 7. MULTI-BATCH UNIQUE INFORMATIONAL CONTENT ROADMAP (Granular 4-Week Batches)
+      # 7. MULTI-BATCH UNIQUE INFORMATIONAL CONTENT ROADMAP (Strict Uniqueness per Batch)
       full_content_calendar = []
       tech_advice = (
           f"Optimasi performa Core Web Vitals untuk LCP ({tech_audit['lcp']})"
@@ -3041,16 +3042,24 @@ if st.session_state.analysis_results is None:
             parsed_batch = json.loads(res_content_str)
             batch_items = parsed_batch.get("content_calendar", [])
             for item in batch_items:
+              # Pastikan week disesuaikan dengan iterasi batch jika AI mengembalikan week statis
+              item["week"] = start_w + len([x for x in full_content_calendar if x.get("week", 0) >= start_w])
               full_content_calendar.append(item)
             if parsed_batch.get("technical_advice"):
               tech_advice = parsed_batch.get("technical_advice")
           except Exception:
             pass
 
-      # Fallback jika jumlah content plan belum pas
+      # Dynamic Fallback Unik jika item kurang
       if len(full_content_calendar) < num_weeks:
         clean_niche_short = brief_data["niche"].split("&")[0].strip()
         existing_weeks = [x.get("week") for x in full_content_calendar]
+        topics_bank = [
+            "Panduan Teknis Pemeliharaan", "Standar Keamanan Operasional", "Studi Kasus Efisiensi Biaya",
+            "Analisis Perbandingan Material", "Tips Pemecahan Masalah Umum", "Inovasi Teknologi Terbaru",
+            "Strategi Pengadaan Industri", "Audit Kualitas & Sertifikasi", "Manajemen Risiko Kerusakan",
+            "Optimasi Kinerja Jangka Panjang", "10 Kesalahan Fatal Penggunaan", "Regulasi & Kepatuhan Standar"
+        ]
         for idx_w in range(1, num_weeks + 1):
           if idx_w not in existing_weeks:
             phase_num = (
@@ -3058,53 +3067,24 @@ if st.session_state.analysis_results is None:
                 if idx_w <= 4
                 else (2 if idx_w <= 12 else (3 if idx_w <= 24 else 4))
             )
+            topic_title = f"{topics_bank[(idx_w-1) % len(topics_bank)]} {clean_niche_short} Sesi {idx_w}"
             full_content_calendar.append({
                 "week": idx_w,
                 "phase": f"Phase {phase_num}: Topical Growth",
-                "recommended_title": (
-                    f"Analisis Mendalam & Studi Kasus {clean_niche_short} -"
-                    f" Bagian {idx_w}"
-                    if lang_code == "ID"
-                    else f"In-Depth Analysis & Case Study of"
-                    f" {clean_niche_short} - Part {idx_w}"
-                ),
-                "slug": f"/{clean_niche_short.lower().replace(' ', '-')}-analysis-part{idx_w}",
-                "meta_description": (
-                    f"Kajian komprehensif mengenai aspek teknis dan operasional"
-                    f" {clean_niche_short} untuk kebutuhan efisiensi bisnis."
-                ),
-                "primary_keyword": (
-                    f"analisis {clean_niche_short.lower()} part {idx_w}"
-                    if lang_code == "ID"
-                    else f"{clean_niche_short.lower()} analysis part {idx_w}"
-                ),
-                "primary_kw_volume": 600 + (idx_w * 35),
-                "supporting_keywords": [
-                    {
-                        "keyword": f"tips {clean_niche_short.lower()} {idx_w}",
-                        "volume": 250,
-                    }
-                ],
-                "gap_analysis_reasoning": (
-                    "Menjawab detail teknis spesifik yang belum dibahas"
-                    " kompetitor."
-                ),
-                "aio_passage_target": (
-                    f"Penjelasan terstruktur mengenai parameter dan standar"
-                    f" operasional {clean_niche_short}."
-                ),
-                "geo_information_gain": (
-                    "Data metrik benchmark operasional industri nyata."
-                ),
-                "talking_points": [
-                    "Tinjauan komparatif parameter teknis",
-                    "Studi kasus implementasi di lapangan",
-                    "Rekomendasi langkah mitigasi kendala",
-                ],
+                "recommended_title": topic_title,
+                "slug": f"/{clean_niche_short.lower().replace(' ', '-')}-topic-{idx_w}",
+                "meta_description": f"Pembahasan mendalam mengenai {topic_title.lower()} untuk meningkatkan produktivitas industri.",
+                "primary_keyword": f"tips {clean_niche_short.lower()} {idx_w}",
+                "primary_kw_volume": 500 + (idx_w * 40),
+                "supporting_keywords": [{"keyword": f"panduan {clean_niche_short.lower()} {idx_w}", "volume": 200}],
+                "gap_analysis_reasoning": "Menjawab topik spesifik yang sering dicari praktisi industri.",
+                "aio_passage_target": f"Ringkasan esensial terkait {topic_title.lower()} standar industri.",
+                "geo_information_gain": "Data benchmark operasional empiris.",
+                "talking_points": ["Pengantar parameter utama", "Langkah implementasi praktis", "Evaluasi hasil berkala"]
             })
         full_content_calendar.sort(key=lambda x: x["week"])
 
-      # 8. SENIOR OFF-PAGE SEO & BLOGGER LINK BUILDING STRATEGY (Month-by-Month Granular Batching)
+      # 8. SENIOR OFF-PAGE SEO & BLOGGER LINK BUILDING STRATEGY (10 Distinct Articles per Month)
       full_offpage_plan = []
       available_pages = [
           {"url": p.get("url_slug"), "type": p.get("page_type")}
@@ -3158,6 +3138,7 @@ if st.session_state.analysis_results is None:
             parsed_off = json.loads(res_off_str)
             off_items = parsed_off.get("offpage_articles", [])
             for item in off_items:
+              item["month"] = month_name
               full_offpage_plan.append(item)
           except Exception:
             pass
@@ -3171,6 +3152,13 @@ if st.session_state.analysis_results is None:
             if available_kws
             else [f"distributor {clean_niche_short}", f"jual {clean_niche_short}"]
         )
+        offpage_titles_bank = [
+            "Inovasi Efisiensi Bisnis dan Teknologi", "Meningkatkan Produktivitas Melalui Solusi Modern",
+            "Standar Kualitas dan Keamanan Sektor Komersial", "Strategi Pengadaan dan Manajemen Logistik",
+            "Transformasi Digital untuk Keunggulan Kompetitif", "Memilih Mitra Vendor Terbaik di Indonesia",
+            "Analisis Tren Pasar dan Peluang Ekspansi", "Praktik Terbaik Pemeliharaan Aset Perusahaan",
+            "Solusi Terintegrasi untuk Kebutuhan Korporat", "Membangun Infrastruktur Bisnis yang Tangguh"
+        ]
 
         for cur_m in range(1, num_months + 1):
           m_label = (
@@ -3183,26 +3171,21 @@ if st.session_state.analysis_results is None:
 
           for idx_item in range(1, needed_for_m + 1):
             kw_target = kw_pool[(idx_item - 1) % len(kw_pool)]
+            title_prefix = offpage_titles_bank[(idx_item - 1) % len(offpage_titles_bank)]
             tgt_url = (
                 f"{domain_clean}/"
                 if idx_item % 3 == 0
-                else f"{domain_clean}/produk/{kw_target.replace('ফরম', '-')}"
+                else f"{domain_clean}/produk/{kw_target.replace(' ', '-')}"
             )
             anchor = (
-                f"panduan {kw_target}"
+                f"{brief_data['client']} {kw_target}"
                 if idx_item % 2 == 0
-                else f"jual {kw_target}"
+                else f"layanan {kw_target}"
             )
 
             full_offpage_plan.append({
                 "month": m_label,
-                "article_title": (
-                    f"Strategi Optimalisasi & Standar Operasional"
-                    f" {clean_niche_short} - Edisi {m_label} #{idx_item}"
-                    if lang_code == "ID"
-                    else f"Optimization Strategy & Operational Standards for"
-                    f" {clean_niche_short} - {m_label} #{idx_item}"
-                ),
+                "article_title": f"{title_prefix} {clean_niche_short} - {m_label} #{idx_item}",
                 "target_page": tgt_url,
                 "target_keyword": kw_target,
                 "recommended_anchor": anchor,
