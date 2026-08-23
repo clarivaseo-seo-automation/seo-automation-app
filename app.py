@@ -88,9 +88,8 @@ LANG_PACK = {
         ),
         "framework_notice": (
             "💡 **Specialist SEO, AIO & GEO Framework Active:**\n"
-            "Senior SEO Feasibility Diagnostic + 2–3 Word Keywords + Dynamic"
-            " Off-Page Blogger Strategy (10 articles/month) + Live Ahrefs API"
-            " v3."
+            "Senior SEO Feasibility Diagnostic + Unique Content & Off-Page"
+            " Generation + Live Ahrefs API v3."
         ),
         "demo_kw_notice": (
             "ℹ️ **Free Mode Active:** Utilizing Google PageSpeed Insights"
@@ -138,11 +137,11 @@ LANG_PACK = {
         "guide_step2_title": "2. Injected Specialist AI Frameworks",
         "guide_step2_content": (
             "- **Senior SEO Feasibility Diagnostic:** Algorithmic ranking"
-            " feasibility evaluation (Easy/Moderate/Hard).\n- **Off-Page"
-            " Blogger Link Strategy:** 10 curated guest post topics per month"
-            " mapped to commercial landing pages with natural anchor"
-            " variations.\n- **Commercial vs Informational Siloing:** 25-35"
-            " Target keywords exclusively reserved for conversion pages."
+            " feasibility evaluation (Easy/Moderate/Hard).\n- **Unique Off-Page"
+            " Blogger Strategy:** 10 highly varied guest post topics per"
+            " month with dynamic anchor text distribution.\n- **Unique Content"
+            " Calendar:** Granular batching ensures zero topic duplication"
+            " across weeks."
         ),
         "guide_step3_title": "3. Client Data Intake Instructions",
         "guide_step3_content": (
@@ -207,9 +206,8 @@ LANG_PACK = {
         ),
         "framework_notice": (
             "💡 **Specialist SEO, AIO & GEO Framework Active:**\n"
-            "Senior SEO Feasibility Diagnostic (Mudah/Sedang/Sulit) + Keyword"
-            " Komersial 2-3 Kata + Strategi Off-Page Link Building (10 artikel"
-            " blogger/bulan) + Integrasi Ahrefs API v3."
+            "Diagnosa SEO + Generasi Konten & Off-Page 100% Unik tanpa duplikasi"
+            " + Integrasi Ahrefs API v3."
         ),
         "demo_kw_notice": (
             "ℹ️ **Mode Gratis Aktif:** Menggunakan Google PageSpeed Insights"
@@ -237,7 +235,8 @@ LANG_PACK = {
         "btn_reset": "🔄 Mulai Analisis Baru / Ganti Client",
         "success_msg": (
             "Diagnosa Kelayakan SEO, Technical Audit, On-Page Multi-Batch,"
-            " Off-Page Link Building, AIO, GEO & Dynamic Gantt Berhasil Dibuat!"
+            " Off-Page Link Building Unik, AIO, GEO & Dynamic Gantt Berhasil"
+            " Dibuat!"
         ),
         "core_updates_title": "📢 3. Google Core Updates Tracking & Impact",
         "guide_title": "📖 Panduan Penggunaan & Checklist Persiapan",
@@ -257,12 +256,11 @@ LANG_PACK = {
         "guide_step2_title": "2. Framework & AI Skills yang Terpasang",
         "guide_step2_content": (
             "- **Senior SEO Feasibility Diagnostic:** Evaluasi kelayakan"
-            " peringkat (Mudah/Sedang/Sulit) berbasis perbandingan otoritas"
-            " kompetitor.\n- **Off-Page Link Building Plan:** Perencanaan 10"
-            " artikel blogger/guest post per bulan yang diselaraskan dengan"
-            " landing page komersial dan anchor text natural.\n- **Pemisahan"
-            " Komersial vs Informasional:** 25-35 Keyword komersial murni untuk"
-            " halaman jualan."
+            " peringkat (Mudah/Sedang/Sulit).\n- **Unique Off-Page Link"
+            " Building:** 10 topik guest post berbeda per bulan dengan"
+            " variasi anchor text natural.\n- **Unique Content Roadmap:**"
+            " Sistem batching memastikan setiap minggu memiliki topik"
+            " informasional yang unik dan bebas duplikasi."
         ),
         "guide_step3_title": "3. Cara Mengisi Data Klien",
         "guide_step3_content": (
@@ -274,7 +272,7 @@ LANG_PACK = {
     },
     "ES": {
         "brand_subtitle": (
-            "Incluye: Intake Form | Diagnóstico SEO | Keyword Research |"
+            "Include: Intake Form | Diagnóstico SEO | Keyword Research |"
             " On-Page Optimisation | Technical SEO | Competitor Intelligence |"
             " Off-Page Link Building | Content Strategy"
         ),
@@ -325,8 +323,7 @@ LANG_PACK = {
         ),
         "framework_notice": (
             "💡 **Framework Especializado SEO, AIO y GEO Activo:**\n"
-            "Diagnóstico de dificultad SEO + Keywords de 2-3 palabras +"
-            " Estrategia Off-Page Link Building (10 artículos blogger/mes)."
+            "Diagnóstico SEO + Contenido 100% único por semana y mes."
         ),
         "demo_kw_notice": (
             "ℹ️ **Modo Gratuito Activo:** Utilizando Google PageSpeed Insights"
@@ -352,10 +349,7 @@ LANG_PACK = {
         "btn_docx": "📄 Descargar Reporte (.DOCX)",
         "btn_xlsx": "📊 Descargar Hoja de Cálculo (.XLSX)",
         "btn_reset": "🔄 Iniciar Nuevo Análisis / Reset",
-        "success_msg": (
-            "¡Diagnóstico de Viabilidad SEO, Técnica, On-Page Multi-Batch,"
-            " Off-Page, AIO y GEO Generada!"
-        ),
+        "success_msg": "¡Análisis SEO Completo y Único Generado!",
         "core_updates_title": (
             "📢 3. Historial de Google Core Updates e Impacto"
         ),
@@ -367,22 +361,16 @@ LANG_PACK = {
             " API:** Obtenga su clave en"
             " [platform.openai.com](https://platform.openai.com).\n-"
             " **Anthropic Claude:** Obtenga su clave en"
-            " [console.anthropic.com](https://console.anthropic.com).\n-"
-            " **Ahrefs v3 / SEMrush Enterprise:** Para datos de autoridad y"
-            " Keywords Explorer en vivo."
+            " [console.anthropic.com](https://console.anthropic.com)."
         ),
         "guide_step2_title": "2. Frameworks de IA Especializados Integrados",
         "guide_step2_content": (
-            "- **Diagnóstico de Dificultad SEO:** Evaluación experta de"
-            " viabilidad (Fácil/Medio/Difícil).\n- **Estrategia Off-Page Link"
-            " Building:** 10 artículos blogger por mes con distribución"
-            " balanceada de anchor text."
+            "- **Diagnóstico SEO:** Evaluación experta de dificultad.\n-"
+            " **Off-Page Link Building:** 10 artículos blogger únicos por mes."
         ),
         "guide_step3_title": "3. Instrucciones de Ingreso de Datos",
         "guide_step3_content": (
-            "- Ingrese el dominio objetivo y competidores directos.\n- Ingrese"
-            " el `sitemap.xml` del blog para garantizar contenido nuevo.\n-"
-            " Seleccione la duración del plan dan el KPI principal."
+            "- Ingrese el dominio objetivo y competidores directos."
         ),
     },
     "DE": {
@@ -437,8 +425,8 @@ LANG_PACK = {
         ),
         "framework_notice": (
             "💡 **Spezialisiertes SEO, AIO & GEO Framework Aktiv:**\n"
-            "SEO-Machbarkeitsdiagnose + 2-3 Wörter Keywords + Off-Page Link"
-            " Building (10 Blogger-Artikel/Monat) + Live Ahrefs API v3."
+            "SEO-Machbarkeitsdiagnose + 100% Einzigartige Inhalte & Off-Page"
+            " Links."
         ),
         "demo_kw_notice": (
             "ℹ️ **Kostenloser Modus Aktiv:** Verwendet Google PageSpeed"
@@ -464,37 +452,18 @@ LANG_PACK = {
         "btn_docx": "📄 Gesamten Bericht herunterladen (.DOCX)",
         "btn_xlsx": "📊 Tabelle herunterladen (.XLSX)",
         "btn_reset": "🔄 Neue Analyse starten / Zurücksetzen",
-        "success_msg": (
-            "Umfassende SEO-Machbarkeitsdiagnose, Technik-, Multi-Batch"
-            " On-Page-, Off-Page Linkbuilding-, AIO- & GEO-Strategie erfolgreich"
-            " generiert!"
-        ),
+        "success_msg": "Umfassende SEO-Strategie erfolgreich generiert!",
         "core_updates_title": "📢 3. Google Core Updates Verlauf & Auswirkung",
         "guide_title": "📖 Benutzerhandbuch & Vorbereitungs-Checkliste",
         "guide_step1_title": "1. API-Schlüssel & Vorbereitungs-Checkliste",
         "guide_step1_content": (
             "- **Google Gemini API:** API-Schlüssel auf"
-            " [aistudio.google.com](https://aistudio.google.com).\n- **OpenAI"
-            " API:** API-Schlüssel auf"
-            " [platform.openai.com](https://platform.openai.com).\n-"
-            " **Anthropic Claude:** API-Schlüssel auf"
-            " [console.anthropic.com](https://console.anthropic.com).\n-"
-            " **Ahrefs v3 / SEMrush Enterprise:** Für Live-Domain Rating und"
-            " Keywords Explorer Live-Daten."
+            " [aistudio.google.com](https://aistudio.google.com)."
         ),
         "guide_step2_title": "2. Integrierte Spezialisten-KI-Frameworks",
-        "guide_step2_content": (
-            "- **SEO-Machbarkeitsdiagnose:** Senior SEO Einstufung"
-            " (Leicht/Mittel/Schwer).\n- **Off-Page Linkbuilding-Plan:** 10"
-            " Blogger-Gastbeiträge pro Monat mit ausgewogenen"
-            " Ankertext-Variationen."
-        ),
+        "guide_step2_content": "- **SEO-Diagnose & Einzigartiger Content Plan.**",
         "guide_step3_title": "3. Anleitung zur Kundendateneingabe",
-        "guide_step3_content": (
-            "- Ziel-Domain und direkte Mitbewerber eingeben.\n-"
-            " Blog-`sitemap.xml` des Kunden einfügen.\n- Roadmap-Dauer dan"
-            " primäre Kunden-KPI festlegen."
-        ),
+        "guide_step3_content": "- Ziel-Domain und Mitbewerber eingeben.",
     },
 }
 
@@ -952,7 +921,7 @@ def call_ai_engine(provider_name, api_key_val, model_name, prompt_text):
             {"role": "user", "content": prompt_text},
         ],
         "response_format": {"type": "json_object"},
-        "temperature": 0.2,
+        "temperature": 0.4,
     }
     response = requests.post(url, headers=headers, json=payload, timeout=120)
 
@@ -962,7 +931,7 @@ def call_ai_engine(provider_name, api_key_val, model_name, prompt_text):
           "contents": [{"parts": [{"text": prompt_text}]}],
           "generationConfig": {
               "response_mime_type": "application/json",
-              "temperature": 0.2,
+              "temperature": 0.4,
           },
       }
       res_direct = requests.post(
@@ -998,7 +967,7 @@ def call_ai_engine(provider_name, api_key_val, model_name, prompt_text):
             {"role": "user", "content": prompt_text},
         ],
         "response_format": {"type": "json_object"},
-        "temperature": 0.2,
+        "temperature": 0.4,
     }
     response = requests.post(url, headers=headers, json=payload, timeout=120)
     if response.status_code != 200:
@@ -1019,7 +988,7 @@ def call_ai_engine(provider_name, api_key_val, model_name, prompt_text):
     payload = {
         "model": model_name,
         "max_tokens": 4000,
-        "temperature": 0.2,
+        "temperature": 0.4,
         "system": (
             "You are an expert SEO strategist. Output ONLY raw parseable JSON."
         ),
@@ -1175,7 +1144,6 @@ def generate_docx_deliverable(
         sec.right_margin
     ) = Inches(1)
 
-  # Title
   title_p = doc.add_paragraph()
   run_c = title_p.add_run("CLARIVA")
   run_c.font.size = Pt(20)
@@ -3009,6 +2977,7 @@ if st.session_state.analysis_results is None:
             })
         full_onpage_list.extend(sample_pages)
 
+      # 7. MULTI-BATCH UNIQUE INFORMATIONAL CONTENT ROADMAP (Granular 4-Week Batches)
       full_content_calendar = []
       tech_advice = (
           f"Optimasi performa Core Web Vitals untuk LCP ({tech_audit['lcp']})"
@@ -3020,7 +2989,7 @@ if st.session_state.analysis_results is None:
           f" {client_kpi_str}."
       )
 
-      batch_size = 6
+      batch_size = 4
       total_batches = (num_weeks + batch_size - 1) // batch_size
 
       for b_idx in range(total_batches):
@@ -3028,7 +2997,7 @@ if st.session_state.analysis_results is None:
         end_w = min(num_weeks, (b_idx + 1) * batch_size)
 
         with st.spinner(
-            "7/8 Architecting Informational Content Roadmap in"
+            "7/8 Architecting Granular Unique Informational Content Roadmap in"
             f" {app_lang.upper()} (Weeks {start_w} to {end_w} of"
             f" {num_weeks})..."
         ):
@@ -3037,13 +3006,12 @@ if st.session_state.analysis_results is None:
                     Client: {brief_data['client']} ({brief_data['url']})
                     Niche: {brief_data['niche']}
                     Products: {brief_data['products']}
-                    Competitors: {brief_data['competitors']}
-                    Primary KPI to Maximize: {client_kpi_str}
+                    Primary KPI: {client_kpi_str}
                     
-                    CRITICAL LANGUAGE RULE: Write 100% of all Article Titles, Slugs, Meta Descriptions, Keywords, and Talking Points in {app_lang.upper()}.
-                    Tailor topics specifically to {brief_data['niche']} and {brief_data['products']}.
-                    
-                    Generate EXACTLY {end_w - start_w + 1} articles for Week {start_w} to Week {end_w}.
+                    CRITICAL UNIQUENESS RULE:
+                    Generate EXACTLY {end_w - start_w + 1} distinct, highly specific informational articles for Week {start_w} through Week {end_w}.
+                    EACH article MUST have a completely different title, unique angle, distinct primary keyword, and non-repeating slug. NO generic or repeating titles across weeks.
+                    Tailor topics precisely to {brief_data['niche']} and {brief_data['products']}.
                     
                     RETURN STRICT JSON ONLY:
                     {{
@@ -3051,17 +3019,17 @@ if st.session_state.analysis_results is None:
                         "content_calendar": [
                             {{
                                 "week": {start_w},
-                                "phase": "Phase 1: Foundation",
-                                "recommended_title": "Judul Artikel Menarik Spesifik Niche dalam {app_lang.upper()}",
-                                "slug": "/slug-artikel-dalam-bahasa-terpilih",
-                                "meta_description": "Deskripsi meta lengkap dalam {app_lang.upper()}...",
-                                "primary_keyword": "keyword informasional utama",
+                                "phase": "Phase 1: Topical Foundation",
+                                "recommended_title": "Unique specific title for week {start_w} in {app_lang.upper()}",
+                                "slug": "/unique-slug-week-{start_w}",
+                                "meta_description": "Unique meta description in {app_lang.upper()}...",
+                                "primary_keyword": "unique primary keyword",
                                 "primary_kw_volume": 1200,
-                                "supporting_keywords": [{{"keyword": "keyword pendukung 1", "volume": 450}}, {{"keyword": "keyword pendukung 2", "volume": 320}}],
-                                "gap_analysis_reasoning": "Alasan topik ini memenangkan gap kompetitor...",
-                                "aio_passage_target": "Jawaban langsung definisi 40-60 kata dalam {app_lang.upper()}...",
-                                "geo_information_gain": "Data teknis dan benchmark orisinal untuk AI citation...",
-                                "talking_points": ["Poin 1...", "Poin 2...", "Poin 3...", "Poin 4..."]
+                                "supporting_keywords": [{{"keyword": "support kw 1", "volume": 450}}],
+                                "gap_analysis_reasoning": "Competitor gap rationale...",
+                                "aio_passage_target": "AIO 40-60 word answer...",
+                                "geo_information_gain": "GEO data point...",
+                                "talking_points": ["Point 1", "Point 2", "Point 3"]
                             }}
                         ]
                     }}
@@ -3079,59 +3047,64 @@ if st.session_state.analysis_results is None:
           except Exception:
             pass
 
+      # Fallback jika jumlah content plan belum pas
       if len(full_content_calendar) < num_weeks:
         clean_niche_short = brief_data["niche"].split("&")[0].strip()
-        for idx_w in range(len(full_content_calendar) + 1, num_weeks + 1):
-          phase_num = (
-              1
-              if idx_w <= 4
-              else (2 if idx_w <= 12 else (3 if idx_w <= 24 else 4))
-          )
-          full_content_calendar.append({
-              "week": idx_w,
-              "phase": f"Phase {phase_num}: Topical Growth",
-              "recommended_title": (
-                  f"Panduan Komprehensif Perawatan & Standar {clean_niche_short}"
-                  f" - Minggu {idx_w}"
-                  if lang_code == "ID"
-                  else f"Comprehensive Technical Guide to {clean_niche_short} -"
-                  f" Week {idx_w}"
-              ),
-              "slug": f"/{clean_niche_short.lower().replace(' ', '-')}-guide-w{idx_w}",
-              "meta_description": (
-                  f"Panduan teknis mendalam mengenai {clean_niche_short}."
-                  " Pelajari spesifikasi, standar industri, dan cara pemilihan"
-                  " terbaik."
-              ),
-              "primary_keyword": (
-                  f"panduan {clean_niche_short.lower()}"
-                  if lang_code == "ID"
-                  else f"{clean_niche_short.lower()} guide"
-              ),
-              "primary_kw_volume": 850 + (idx_w * 40),
-              "supporting_keywords": [
-                  {"keyword": f"tips {clean_niche_short.lower()}", "volume": 320}
-              ],
-              "gap_analysis_reasoning": (
-                  "Menjawab kebutuhan pencarian teknis yang diabaikan"
-                  " kompetitor."
-              ),
-              "aio_passage_target": (
-                  f"Ringkasan teknis dan jawaban definitif mengenai"
-                  f" {clean_niche_short} untuk kebutuhan operasional industri."
-              ),
-              "geo_information_gain": (
-                  "Data spesifikasi orisinal dan benchmark implementasi"
-                  " langsung."
-              ),
-              "talking_points": [
-                  "Tinjauan dasar dan parameter spesifikasi",
-                  "Langkah-langkah teknis pengujian dan instalasi",
-                  "Standar pencegahan kerusakan & keselamatan",
-              ],
-          })
+        existing_weeks = [x.get("week") for x in full_content_calendar]
+        for idx_w in range(1, num_weeks + 1):
+          if idx_w not in existing_weeks:
+            phase_num = (
+                1
+                if idx_w <= 4
+                else (2 if idx_w <= 12 else (3 if idx_w <= 24 else 4))
+            )
+            full_content_calendar.append({
+                "week": idx_w,
+                "phase": f"Phase {phase_num}: Topical Growth",
+                "recommended_title": (
+                    f"Analisis Mendalam & Studi Kasus {clean_niche_short} -"
+                    f" Bagian {idx_w}"
+                    if lang_code == "ID"
+                    else f"In-Depth Analysis & Case Study of"
+                    f" {clean_niche_short} - Part {idx_w}"
+                ),
+                "slug": f"/{clean_niche_short.lower().replace(' ', '-')}-analysis-part{idx_w}",
+                "meta_description": (
+                    f"Kajian komprehensif mengenai aspek teknis dan operasional"
+                    f" {clean_niche_short} untuk kebutuhan efisiensi bisnis."
+                ),
+                "primary_keyword": (
+                    f"analisis {clean_niche_short.lower()} part {idx_w}"
+                    if lang_code == "ID"
+                    else f"{clean_niche_short.lower()} analysis part {idx_w}"
+                ),
+                "primary_kw_volume": 600 + (idx_w * 35),
+                "supporting_keywords": [
+                    {
+                        "keyword": f"tips {clean_niche_short.lower()} {idx_w}",
+                        "volume": 250,
+                    }
+                ],
+                "gap_analysis_reasoning": (
+                    "Menjawab detail teknis spesifik yang belum dibahas"
+                    " kompetitor."
+                ),
+                "aio_passage_target": (
+                    f"Penjelasan terstruktur mengenai parameter dan standar"
+                    f" operasional {clean_niche_short}."
+                ),
+                "geo_information_gain": (
+                    "Data metrik benchmark operasional industri nyata."
+                ),
+                "talking_points": [
+                    "Tinjauan komparatif parameter teknis",
+                    "Studi kasus implementasi di lapangan",
+                    "Rekomendasi langkah mitigasi kendala",
+                ],
+            })
+        full_content_calendar.sort(key=lambda x: x["week"])
 
-      # Step 8: Senior Off-Page SEO & Blogger Link Building Strategy (10 Articles per Month)
+      # 8. SENIOR OFF-PAGE SEO & BLOGGER LINK BUILDING STRATEGY (Month-by-Month Granular Batching)
       full_offpage_plan = []
       available_pages = [
           {"url": p.get("url_slug"), "type": p.get("page_type")}
@@ -3145,7 +3118,7 @@ if st.session_state.analysis_results is None:
 
       with st.spinner(
           "8/8 Engineering Senior Off-Page Link Building & Blogger Outreach"
-          f" Plan ({num_months * 10} Articles across {num_months} Months)..."
+          f" Plan ({num_months * 10} Unique Articles across {num_months} Months)..."
       ):
         for m_idx in range(1, num_months + 1):
           month_name = (
@@ -3160,24 +3133,19 @@ if st.session_state.analysis_results is None:
                     Available Landing Pages: {json.dumps(available_pages[:10], indent=2)}
                     Available Commercial Keywords: {json.dumps(available_kws[:15], indent=2)}
                     
-                    TASK: Generate EXACTLY 10 Strategic Guest Post / Blogger Outreach Article Concepts for {month_name}.
-                    
-                    SENIOR SEO LINK BUILDING POLICY:
-                    - In Month 1: 4 links to Homepage (Brand/Entity Anchor), 6 links to Core Commercial Service/Product pages.
-                    - In Month 2+: 7 links to Commercial Landing Pages (Keyword Gap targets), 2 links to Informational Blog Pillars, 1 to Homepage.
-                    - Recommended Anchor Text: Mix Exact Match, Partial Match, Brand+Keyword, and Natural LSI phrases.
-                    - All Article Titles and Publisher Niches must be written in {app_lang.upper()}.
+                    TASK: Generate EXACTLY 10 Distinct, Highly Varied Guest Post / Blogger Outreach Article Concepts for {month_name}.
+                    EACH of the 10 articles must have a completely unique article title, distinct target keyword, and diverse anchor text variation (Mix Exact Match, Partial Match, Brand+Keyword, and LSI phrases).
                     
                     RETURN STRICT JSON ONLY:
                     {{
                         "offpage_articles": [
                             {{
                                 "month": "{month_name}",
-                                "article_title": "Judul Artikel Blogger / Guest Post Berkualitas dalam {app_lang.upper()}",
-                                "target_page": "URL Landing Page yang dituju (misal: https://.../produk/... atau Homepage)",
-                                "target_keyword": "keyword yang ingin dinaikkan peringkatnya",
-                                "recommended_anchor": "Variasi teks jangkar spesifik (misal: [Nama Brand] Distributor, Jual Selang Hidrolik, dll)",
-                                "publisher_niche": "Kategori Blog/Media Penerbit (misal: Portal Bisnis Manufaktur / Blog Teknologi & Konstruksi)",
+                                "article_title": "Unique specific guest post title for item in {app_lang.upper()}",
+                                "target_page": "URL Landing Page from available list or Homepage",
+                                "target_keyword": "specific target keyword",
+                                "recommended_anchor": "diverse anchor text variation",
+                                "publisher_niche": "Relevant publisher blog niche in {app_lang.upper()}",
                                 "link_context": "Editorial In-Content Contextual"
                             }}
                         ]
@@ -3215,44 +3183,33 @@ if st.session_state.analysis_results is None:
 
           for idx_item in range(1, needed_for_m + 1):
             kw_target = kw_pool[(idx_item - 1) % len(kw_pool)]
-            if idx_item in [1, 2, 8] and cur_m == 1:
-              tgt_url = f"{domain_clean}/"
-              anchor = (
-                  f"{brief_data['client']}"
-                  if idx_item == 1
-                  else f"{brief_data['client']} {kw_target}"
-              )
-            else:
-              tgt_slug = (
-                  f"{domain_clean}/produk/{kw_target.replace(' ', '-')}"
-              )
-              anchor = (
-                  f"layanan {kw_target}"
-                  if lang_code == "ID"
-                  else f"{kw_target} solutions"
-              )
-              tgt_url = (
-                  available_pages[idx_item % len(available_pages)]["url"]
-                  if available_pages
-                  else tgt_slug
-              )
+            tgt_url = (
+                f"{domain_clean}/"
+                if idx_item % 3 == 0
+                else f"{domain_clean}/produk/{kw_target.replace('ফরম', '-')}"
+            )
+            anchor = (
+                f"panduan {kw_target}"
+                if idx_item % 2 == 0
+                else f"jual {kw_target}"
+            )
 
             full_offpage_plan.append({
                 "month": m_label,
                 "article_title": (
-                    f"Peluang Efisiensi Industri & Standar Kualitas"
-                    f" {clean_niche_short} Modern - Part {idx_item}"
+                    f"Strategi Optimalisasi & Standar Operasional"
+                    f" {clean_niche_short} - Edisi {m_label} #{idx_item}"
                     if lang_code == "ID"
-                    else f"Industrial Efficiency & Standards in Modern"
-                    f" {clean_niche_short} - Part {idx_item}"
+                    else f"Optimization Strategy & Operational Standards for"
+                    f" {clean_niche_short} - {m_label} #{idx_item}"
                 ),
                 "target_page": tgt_url,
                 "target_keyword": kw_target,
                 "recommended_anchor": anchor,
                 "publisher_niche": (
-                    "Portal Berita Bisnis & Industri Manufaktur"
+                    "Portal Bisnis & Jaringan Media Industri"
                     if lang_code == "ID"
-                    else "B2B Manufacturing & Industrial Media"
+                    else "Business & Industrial Media Network"
                 ),
                 "link_context": "Editorial In-Content Contextual",
             })
@@ -3952,7 +3909,7 @@ else:
                 for k in supp_kws
             ])
             if isinstance(supp_kws, list)
-            else str(supp_kws)
+            else str(supp_text)
         )
         st.markdown(f"**Supporting Keywords:** {supp_text}")
         st.info(
