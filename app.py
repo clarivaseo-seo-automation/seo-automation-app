@@ -1100,7 +1100,6 @@ def fetch_keyword_metrics(
           ),
       })
 
-  # Case-insensitive filtering & merging preparation
   for r in raw_results:
     r["keyword"] = r["keyword"].lower().strip()
 
@@ -2520,7 +2519,6 @@ if st.session_state.analysis_results is None:
             ahrefs_k=ahrefs_token,
             semrush_k=semrush_key,
         )
-        # Pastikan kolom keyword di df_int dan df_val sama-sama lowercase untuk merge yang sempurna
         df_int = pd.DataFrame([
             {
                 "keyword": str(
@@ -2997,7 +2995,7 @@ if st.session_state.analysis_results is None:
             })
         full_onpage_list.extend(sample_pages)
 
-      # 7. MULTI-BATCH UNIQUE INFORMATIONAL CONTENT ROADMAP (Strict Uniqueness per Batch)
+      # 7. MULTI-BATCH UNIQUE INFORMATIONAL CONTENT ROADMAP
       full_content_calendar = []
       tech_advice = (
           f"Optimasi performa Core Web Vitals untuk LCP ({tech_audit['lcp']})"
@@ -3030,8 +3028,7 @@ if st.session_state.analysis_results is None:
                     
                     CRITICAL UNIQUENESS RULE:
                     Generate EXACTLY {end_w - start_w + 1} distinct, highly specific informational articles for Week {start_w} through Week {end_w}.
-                    EACH article MUST have a completely different title, unique angle, distinct primary keyword, and non-repeating slug. NO generic or repeating titles across weeks.
-                    Tailor topics precisely to {brief_data['niche']} and {brief_data['products']}.
+                    EACH article MUST have a completely different title, unique angle, distinct primary keyword, and non-repeating slug. DO NOT include raw concatenated niche strings in the titles. Make every title sound like a professional, unique human-written SEO blog post.
                     
                     RETURN STRICT JSON ONLY:
                     {{
@@ -3040,7 +3037,7 @@ if st.session_state.analysis_results is None:
                             {{
                                 "week": {start_w},
                                 "phase": "Phase 1: Topical Foundation",
-                                "recommended_title": "Unique specific title for week {start_w} in {app_lang.upper()}",
+                                "recommended_title": "Unique professional blog title in {app_lang.upper()}",
                                 "slug": "/unique-slug-week-{start_w}",
                                 "meta_description": "Unique meta description in {app_lang.upper()}...",
                                 "primary_keyword": "unique primary keyword",
@@ -3061,22 +3058,18 @@ if st.session_state.analysis_results is None:
             parsed_batch = json.loads(res_content_str)
             batch_items = parsed_batch.get("content_calendar", [])
             for item in batch_items:
-              # Tetapkan minggu secara berurutan sesuai batch
-              current_assigned_week = start_w + len([x for x in full_content_calendar if start_w <= x.get("week", 0) < end_w + 1])
-              if current_assigned_week <= end_w:
-                item["week"] = current_assigned_week
               full_content_calendar.append(item)
             if parsed_batch.get("technical_advice"):
               tech_advice = parsed_batch.get("technical_advice")
           except Exception:
             pass
 
-      # Pastikan jumlah content calendar persis num_weeks dan unik
+      # Ensure exact number of weeks and 100% uniqueness via fallback bank
       seen_weeks = set()
       unique_content_calendar = []
       for cp in full_content_calendar:
         w_num = cp.get("week")
-        if w_num not in seen_weeks and w_num <= num_weeks:
+        if w_num and w_num not in seen_weeks and w_num <= num_weeks:
           seen_weeks.add(w_num)
           unique_content_calendar.append(cp)
       
@@ -3084,31 +3077,47 @@ if st.session_state.analysis_results is None:
 
       if len(full_content_calendar) < num_weeks:
         clean_niche_short = brief_data["niche"].split("&")[0].strip()
-        topics_bank = [
-            "Panduan Teknis Pemeliharaan", "Standar Keamanan Operasional", "Studi Kasus Efisiensi Biaya",
-            "Analisis Perbandingan Material", "Tips Pemecahan Masalah Umum", "Inovasi Teknologi Terbaru",
-            "Strategi Pengadaan Industri", "Audit Kualitas & Sertifikasi", "Manajemen Risiko Kerusakan",
-            "Optimasi Kinerja Jangka Panjang", "10 Kesalahan Fatal Penggunaan", "Regulasi & Kepatuhan Standar",
-            "Metode Pengujian Tekanan", "Pemilihan Spesifikasi yang Tepat", "Studi Kelayakan Investasi Alat"
+        topics_bank_id = [
+            "Strategi Efektif Mengelola Operasional", "Panduan Lengkap Pemilihan Material Terbaik",
+            "Mengenal Standar Mutu dan Sertifikasi Global", "Analisis Biaya dan Efisiensi Jangka Panjang",
+            "Tips Praktis Pemeliharaan dan Perawatan Berkala", "Inovasi Teknologi Terkini di Sektor Industri",
+            "Langkah Mitigasi Risiko dan Kerusakan Dini", "Peningkatan Produktivitas Melalui Sistem Otomasi",
+            "Memilih Vendor dan Mitra Bisnis yang Kredibel", "Studi Kelayakan Investasi Peralatan Pendukung",
+            "Standar Keselamatan Kerja dan Kepatuhan Hukum", "Optimalisasi Rantai Pasok untuk Korporasi",
+            "Membangun Keunggulan Kompetitif di Pasar Lokal", "Evaluasi Kinerja Sistem Terintegrasi",
+            "Solusi Tantangan Teknis Kompleks di Lapangan"
         ]
+        topics_bank_en = [
+            "Effective Operational Management Strategies", "Complete Guide to Selecting Premium Materials",
+            "Understanding Global Quality Standards & Certifications", "Cost Analysis and Long-Term Efficiency",
+            "Practical Tips for Regular Maintenance", "Latest Technological Innovations in Industry",
+            "Early Risk Mitigation & Damage Prevention", "Boosting Productivity Through Automation",
+            "Choosing Reliable Vendors and Business Partners", "Equipment Investment Feasibility Study",
+            "Workplace Safety Standards & Regulatory Compliance", "Supply Chain Optimization for Corporations",
+            "Building Competitive Advantage in Local Markets", "Evaluating Integrated System Performance",
+            "Solutions for Complex Technical Field Challenges"
+        ]
+        bank = topics_bank_id if lang_code == "ID" else topics_bank_en
+
         for idx_w in range(1, num_weeks + 1):
           if idx_w not in [x.get("week") for x in full_content_calendar]:
             phase_num = 1 if idx_w <= 4 else (2 if idx_w <= 12 else (3 if idx_w <= 24 else 4))
-            topic_title = f"{topics_bank[(idx_w-1) % len(topics_bank)]} {clean_niche_short} Sesi {idx_w}"
+            topic_title = f"{bank[(idx_w - 1) % len(bank)]} ({idx_w})"
             full_content_calendar.append({
                 "week": idx_w,
                 "phase": f"Phase {phase_num}: Topical Growth",
                 "recommended_title": topic_title,
                 "slug": f"/{clean_niche_short.lower().replace(' ', '-')}-topic-{idx_w}",
-                "meta_description": f"Pembahasan mendalam mengenai {topic_title.lower()} untuk meningkatkan produktivitas industri.",
+                "meta_description": f"Pembahasan komprehensif mengenai {topic_title.lower()} untuk mendukung pertumbuhan bisnis.",
                 "primary_keyword": f"tips {clean_niche_short.lower()} {idx_w}",
-                "primary_kw_volume": 500 + (idx_w * 35),
-                "supporting_keywords": [{"keyword": f"panduan {clean_niche_short.lower()} {idx_w}", "volume": 200}],
-                "gap_analysis_reasoning": "Menjawab detail teknis spesifik yang belum dibahas kompetitor.",
-                "aio_passage_target": f"Ringkasan esensial terkait {topic_title.lower()} standar industri.",
+                "primary_kw_volume": 450 + (idx_w * 30),
+                "supporting_keywords": [{"keyword": f"panduan {clean_niche_short.lower()} {idx_w}", "volume": 180}],
+                "gap_analysis_reasoning": "Menjawab kebutuhan informasi mendalam praktisi industri.",
+                "aio_passage_target": f"Ringkasan esensial terkait {topic_title.lower()}.",
                 "geo_information_gain": "Data benchmark operasional empiris.",
                 "talking_points": ["Pengantar parameter utama", "Langkah implementasi praktis", "Evaluasi hasil berkala"]
             })
+      
       full_content_calendar.sort(key=lambda x: x["week"])
 
       # 8. SENIOR OFF-PAGE SEO & BLOGGER LINK BUILDING STRATEGY (10 Distinct Articles per Month)
@@ -3141,7 +3150,7 @@ if st.session_state.analysis_results is None:
                     Available Commercial Keywords: {json.dumps(available_kws[:15], indent=2)}
                     
                     TASK: Generate EXACTLY 10 Distinct, Highly Varied Guest Post / Blogger Outreach Article Concepts for {month_name}.
-                    EACH of the 10 articles must have a completely unique article title, distinct target keyword, and diverse anchor text variation (Mix Exact Match, Partial Match, Brand+Keyword, and LSI phrases).
+                    EACH of the 10 articles must have a completely unique article title, distinct target keyword, and diverse anchor text variation (Mix Exact Match, Partial Match, Brand+Keyword, and LSI phrases). Do not repeat identical titles or raw concatenated niche strings.
                     
                     RETURN STRICT JSON ONLY:
                     {{
@@ -3179,16 +3188,21 @@ if st.session_state.analysis_results is None:
             if available_kws
             else [f"distributor {clean_niche_short}", f"jual {clean_niche_short}"]
         )
-        offpage_titles_bank = [
-            "Inovasi Efisiensi Bisnis dan Teknologi", "Meningkatkan Produktivitas Melalui Solusi Modern",
-            "Standar Kualitas dan Keamanan Sektor Komersial", "Strategi Pengadaan dan Manajemen Logistik",
-            "Transformasi Digital untuk Keunggulan Kompetitif", "Memilih Mitra Vendor Terbaik di Indonesia",
-            "Analisis Tren Pasar dan Peluang Ekspansi", "Praktik Terbaik Pemeliharaan Aset Perusahaan",
-            "Solusi Terintegrasi untuk Kebutuhan Korporat", "Membangun Infrastruktur Bisnis yang Tangguh",
-            "Tips Efektif Pengelolaan Operasional", "Panduan Lengkap Pemilihan Produk Industri",
-            "Mengenal Lebih Dekat Standar Mutu Global", "Strategi Marketing B2B Paling Efektif",
-            "Meningkatkan ROI Perusahaan Melalui Sistem Otomasi"
+        offpage_titles_id = [
+            "Transformasi Digital untuk Bisnis Modern", "Meningkatkan ROI Melalui Strategi Efisien",
+            "Standar Mutu dan Kualitas Layanan Korporat", "Optimalisasi Rantai Pasok dan Logistik",
+            "Tips Memilih Mitra Vendor Profesional", "Analisis Peluang Pasar dan Ekspansi Usaha",
+            "Membangun Reputasi Brand yang Kuat", "Praktik Terbaik Manajemen Operasional",
+            "Solusi Terintegrasi Kebutuhan Industri", "Strategi Pemasaran B2B Berkelanjutan"
         ]
+        offpage_titles_en = [
+            "Digital Transformation for Modern Business", "Maximizing ROI Through Efficient Strategies",
+            "Quality Standards and Corporate Service Excellence", "Supply Chain and Logistics Optimization",
+            "Tips for Choosing Professional Vendor Partners", "Market Opportunity Analysis and Business Expansion",
+            "Building a Strong Brand Reputation", "Best Practices in Operational Management",
+            "Integrated Solutions for Industrial Needs", "Sustainable B2B Marketing Strategies"
+        ]
+        off_bank = offpage_titles_id if lang_code == "ID" else offpage_titles_en
 
         for cur_m in range(1, num_months + 1):
           m_label = (
@@ -3201,7 +3215,7 @@ if st.session_state.analysis_results is None:
 
           for idx_item in range(1, needed_for_m + 1):
             kw_target = kw_pool[(idx_item - 1) % len(kw_pool)]
-            title_prefix = offpage_titles_bank[(idx_item + cur_m) % len(offpage_titles_bank)]
+            title_prefix = off_bank[(idx_item + cur_m) % len(off_bank)]
             tgt_url = (
                 f"{domain_clean}/"
                 if idx_item % 3 == 0
@@ -3215,7 +3229,7 @@ if st.session_state.analysis_results is None:
 
             full_offpage_plan.append({
                 "month": m_label,
-                "article_title": f"{title_prefix} {clean_niche_short} - {m_label} #{idx_item}",
+                "article_title": f"{title_prefix} - {m_label} #{idx_item}",
                 "target_page": tgt_url,
                 "target_keyword": kw_target,
                 "recommended_anchor": anchor,
