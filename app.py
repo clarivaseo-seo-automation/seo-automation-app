@@ -38,10 +38,9 @@ if "active_main_tab" not in st.session_state:
 LANG_PACK = {
     "EN": {
         "brand_subtitle": (
-            "Include: Intake Form | Commercial Keyword Research | On-Page"
-            " Optimisation | Technical SEO vs Google Core Updates | Competitor"
-            " Intelligence | Informational Content Strategy | Dynamic Gantt"
-            " Timeline"
+            "Include: Intake Form | SEO Feasibility Diagnostic | Commercial"
+            " Keywords | Technical Audit | Competitor Intelligence | Content"
+            " Strategy | Dynamic Gantt"
         ),
         "badge_text": (
             "⭐ Curated & Engineered by 13-Year Experienced SEO Specialist"
@@ -89,8 +88,9 @@ LANG_PACK = {
         ),
         "framework_notice": (
             "💡 **Specialist SEO, AIO & GEO Framework Active:**\n"
-            "Concise 2–3 word commercial keywords with live Ahrefs API v3"
-            " integration (Search Volume >= 10, KD < 20 prioritized, max 50)."
+            "Senior SEO Feasibility Diagnostic + Concise 2–3 word commercial"
+            " keywords with live Ahrefs API v3 integration (Search Volume >= 10,"
+            " KD < 20 prioritized, max 50)."
         ),
         "demo_kw_notice": (
             "ℹ️ **Free Mode Active:** Utilizing Google PageSpeed Insights"
@@ -105,6 +105,7 @@ LANG_PACK = {
             "48 Weeks (12 Months / 1 Year - Full Authority Domination)",
         ],
         "run_btn": "🚀 Run Comprehensive SEO Analysis",
+        "tab_diag": "🎯 Senior SEO Feasibility Diagnostic",
         "tab_tech": "🛠️ Technical SEO & Google Updates",
         "tab_comp_ov": "🏢 Competitor Overview",
         "tab_comp_gap": "🎯 Competitor Keyword Gap",
@@ -115,8 +116,8 @@ LANG_PACK = {
         "btn_xlsx": "📊 Download Spreadsheet (.XLSX)",
         "btn_reset": "🔄 Start New Analysis / Reset",
         "success_msg": (
-            "Comprehensive SEO, Technical, Multi-Batch On-Page, AIO, GEO &"
-            " Dynamic Gantt Strategy Generated!"
+            "Comprehensive SEO Feasibility Diagnostic, Technical, Multi-Batch"
+            " On-Page, AIO, GEO & Dynamic Gantt Generated!"
         ),
         "core_updates_title": "📢 3. Google Core Updates Tracking & Impact",
         "guide_title": "📖 User Guide & Preparation Checklist",
@@ -134,13 +135,14 @@ LANG_PACK = {
         ),
         "guide_step2_title": "2. Injected Specialist AI Frameworks",
         "guide_step2_content": (
-            "- **Commercial vs Informational Siloing:** 25-35 Target keywords"
-            " are exclusively reserved for Homepage & Commercial Service Pages,"
-            " while Blog Content uses distinct Informational clusters.\n-"
-            " **Concise 2-3 Word Keywords:** Avoids zero-volume fluff by"
-            " targeting realistic buyer search queries.\n- **Tiered KD"
-            " Prioritization:** Prioritizes KD < 20 (Quick Wins), allows KD"
-            " 20-50 for high-intent queries, rejects KD > 50."
+            "- **Senior SEO Feasibility Diagnostic:** Algorithmic evaluation of"
+            " ranking feasibility (Easy/Moderate/Hard) based on competitor DR"
+            " gap, KD spread, and site health.\n- **Commercial vs Informational"
+            " Siloing:** 25-35 Target keywords are exclusively reserved for"
+            " Homepage & Commercial Service Pages, while Blog Content uses"
+            " distinct Informational clusters.\n- **Concise 2-3 Word"
+            " Keywords:** Targets high-intent buyer terms with realistic search"
+            " volume."
         ),
         "guide_step3_title": "3. Client Data Intake Instructions",
         "guide_step3_content": (
@@ -152,9 +154,9 @@ LANG_PACK = {
     },
     "ID": {
         "brand_subtitle": (
-            "Include: Intake Form | Keyword Research Komersial | On-Page"
-            " Optimisation | Technical SEO vs Google Core Updates | Competitor"
-            " Intelligence | Content Strategy | Dynamic Gantt Timeline"
+            "Include: Intake Form | Diagnosa Tingkat Kesulitan SEO | Keyword"
+            " Research Komersial | Technical SEO vs Google Core Updates |"
+            " Competitor Intelligence | Content Strategy | Dynamic Gantt"
         ),
         "badge_text": (
             "⭐ Curated & Engineered by 13-Year Experienced SEO Specialist"
@@ -204,9 +206,9 @@ LANG_PACK = {
         ),
         "framework_notice": (
             "💡 **Specialist SEO, AIO & GEO Framework Active:**\n"
-            "Riset kata kunci 2–3 kata padat intent komersial terhubung live"
-            " dengan Ahrefs API v3 (Search Volume >= 10, prioritas **KD < 20"
-            " (Quick Wins)**, toleransi **KD 20–50**, membuang KD > 50)."
+            "Senior SEO Feasibility Diagnostic (Mudah/Sedang/Sulit) + Riset kata"
+            " kunci 2–3 kata terhubung live Ahrefs API v3 (Search Volume >= 10,"
+            " prioritas **KD < 20 (Quick Wins)**, toleransi **KD 20–50**)."
         ),
         "demo_kw_notice": (
             "ℹ️ **Mode Gratis Aktif:** Menggunakan Google PageSpeed Insights"
@@ -221,6 +223,7 @@ LANG_PACK = {
             "48 Minggu (12 Bulan / 1 Tahun - Full Authority Domination)",
         ],
         "run_btn": "🚀 Jalankan Analisis Lengkap",
+        "tab_diag": "🎯 Diagnosa Tingkat Kesulitan SEO",
         "tab_tech": "🛠️ Technical SEO & Google Updates",
         "tab_comp_ov": "🏢 Competitor Overview",
         "tab_comp_gap": "🎯 Competitor Keyword Gap",
@@ -231,8 +234,8 @@ LANG_PACK = {
         "btn_xlsx": "📊 Unduh Spreadsheet (.XLSX)",
         "btn_reset": "🔄 Mulai Analisis Baru / Ganti Client",
         "success_msg": (
-            "Analisis SEO, Technical, On-Page Multi-Batch, AIO, GEO & Dynamic"
-            " Gantt Berhasil Dibuat!"
+            "Diagnosa Kelayakan SEO, Technical Audit, On-Page Multi-Batch, AIO,"
+            " GEO & Dynamic Gantt Berhasil Dibuat!"
         ),
         "core_updates_title": "📢 3. Google Core Updates Tracking & Impact",
         "guide_title": "📖 Panduan Penggunaan & Checklist Persiapan",
@@ -251,13 +254,13 @@ LANG_PACK = {
         ),
         "guide_step2_title": "2. Framework & AI Skills yang Terpasang",
         "guide_step2_content": (
-            "- **Pemisahan Komersial vs Informasional:** 25-35 Keyword riset"
-            " digunakan 100% untuk halaman jualan (Home & Services), sedangkan"
-            " blog menggunakan klaster informasional terpisah.\n-"
-            " **Format 2-3 Kata Padat:** Menghindari frasa berlebihan agar"
-            " mendapatkan angka volume riil di Ahrefs.\n- **Penyaringan KD"
-            " Bertingkat:** Memprioritaskan KD < 20, menerima KD 20-50,"
-            " mengeliminasi KD > 50."
+            "- **Senior SEO Feasibility Diagnostic:** Penilaian kelayakan"
+            " peringkat (Mudah/Sedang/Sulit) berbasis perbandingan otoritas"
+            " riil kompetitor, sebaran KD, dan Core Web Vitals.\n- **Pemisahan"
+            " Komersial vs Informasional:** 25-35 Keyword riset digunakan 100%"
+            " untuk halaman jualan, sedangkan blog menggunakan klaster"
+            " informasional terpisah.\n- **Format 2-3 Kata Padat:** Menghindari"
+            " frasa berlebihan agar mendapatkan angka volume riil di Ahrefs."
         ),
         "guide_step3_title": "3. Cara Mengisi Data Klien",
         "guide_step3_content": (
@@ -269,9 +272,9 @@ LANG_PACK = {
     },
     "ES": {
         "brand_subtitle": (
-            "Incluye: Intake Form | Keyword Research | On-Page Optimisation |"
-            " Technical SEO vs Google Core Updates | Competitor Intelligence |"
-            " Content Strategy"
+            "Incluye: Intake Form | Diagnóstico de Dificultad SEO | Keyword"
+            " Research | On-Page Optimisation | Technical SEO | Competitor"
+            " Intelligence | Content Strategy"
         ),
         "badge_text": (
             "⭐ Curated & Engineered by 13-Year Experienced SEO Specialist"
@@ -320,8 +323,8 @@ LANG_PACK = {
         ),
         "framework_notice": (
             "💡 **Framework Especializado SEO, AIO y GEO Activo:**\n"
-            "Keywords concisas de 2-3 palabras con Ahrefs API v3 (Volumen"
-            " >= 10, KD < 20 prioritario, máx 50)."
+            "Diagnóstico de dificultad SEO + Keywords concisas de 2-3 palabras"
+            " con Ahrefs API v3 (Volumen >= 10, KD < 20 prioritario, máx 50)."
         ),
         "demo_kw_notice": (
             "ℹ️ **Modo Gratuito Activo:** Utilizando Google PageSpeed Insights"
@@ -336,6 +339,7 @@ LANG_PACK = {
             "48 Semanas (12 Meses / 1 Año - Dominación Total)",
         ],
         "run_btn": "🚀 Ejecutar Análisis SEO Completo",
+        "tab_diag": "🎯 Diagnóstico de Dificultad SEO",
         "tab_tech": "🛠️ SEO Técnico y Google Updates",
         "tab_comp_ov": "🏢 Resumen de Competidores",
         "tab_comp_gap": "🎯 Brecha de Keywords",
@@ -346,8 +350,8 @@ LANG_PACK = {
         "btn_xlsx": "📊 Descargar Hoja de Cálculo (.XLSX)",
         "btn_reset": "🔄 Iniciar Nuevo Análisis / Reset",
         "success_msg": (
-            "¡Estrategia Integral SEO, Técnica, On-Page Multi-Batch, AIO y GEO"
-            " Generada!"
+            "¡Diagnóstico de Viabilidad SEO, Técnica, On-Page Multi-Batch, AIO y"
+            " GEO Generada!"
         ),
         "core_updates_title": (
             "📢 3. Historial de Google Core Updates e Impacto"
@@ -366,10 +370,10 @@ LANG_PACK = {
         ),
         "guide_step2_title": "2. Frameworks de IA Especializados Integrados",
         "guide_step2_content": (
-            "- **Separación Comercial vs Informacional:** Las 25-35 keywords se"
-            " usan para páginas de servicios; el blog utiliza clusters"
-            " informacionales separados.\n- **Alineación con KPI:** Contenido y"
-            " On-Page se adaptan al objetivo comercial del cliente."
+            "- **Diagnóstico de Dificultad SEO:** Evaluación experta de"
+            " viabilidad (Fácil/Medio/Difícil).\n- **Separación Comercial vs"
+            " Informacional:** Las 25-35 keywords se usan para páginas de"
+            " servicios; el blog utiliza clusters informacionales separados."
         ),
         "guide_step3_title": "3. Instrucciones de Ingreso de Datos",
         "guide_step3_content": (
@@ -380,9 +384,9 @@ LANG_PACK = {
     },
     "DE": {
         "brand_subtitle": (
-            "Include: Intake Form | Keyword Research | On-Page Optimisation |"
-            " Technical SEO vs Google Core Updates | Competitor Intelligence |"
-            " Content Strategy"
+            "Include: Intake Form | SEO Machbarkeits-Diagnose | Keyword Research"
+            " | On-Page Optimisation | Technical SEO | Competitor Intelligence"
+            " | Content Strategy"
         ),
         "badge_text": (
             "⭐ Curated & Engineered by 13-Year Experienced SEO Specialist"
@@ -430,8 +434,8 @@ LANG_PACK = {
         ),
         "framework_notice": (
             "💡 **Spezialisiertes SEO, AIO & GEO Framework Aktiv:**\n"
-            "Präzise 2-3 Wörter Keywords mit Live Ahrefs API v3 (Suchvolumen"
-            " >= 10, KD < 20 priorisiert, max 50)."
+            "SEO-Machbarkeitsdiagnose + Präzise 2-3 Wörter Keywords mit Live"
+            " Ahrefs API v3 (Suchvolumen >= 10, KD < 20 priorisiert, max 50)."
         ),
         "demo_kw_notice": (
             "ℹ️ **Kostenloser Modus Aktiv:** Verwendet Google PageSpeed"
@@ -446,6 +450,7 @@ LANG_PACK = {
             "48 Wochen (12 Monate / 1 Jahr - Marktführerschaft)",
         ],
         "run_btn": "🚀 Umfassende SEO-Analyse Starten",
+        "tab_diag": "🎯 SEO-Machbarkeitsdiagnose",
         "tab_tech": "🛠️ Technisches SEO & Google Updates",
         "tab_comp_ov": "🏢 Mitbewerber-Übersicht",
         "tab_comp_gap": "🎯 Keyword-Lücken-Matrix",
@@ -456,8 +461,8 @@ LANG_PACK = {
         "btn_xlsx": "📊 Tabelle herunterladen (.XLSX)",
         "btn_reset": "🔄 Neue Analyse starten / Zurücksetzen",
         "success_msg": (
-            "Umfassende SEO-, Technik-, Multi-Batch On-Page-, AIO- &"
-            " GEO-Strategie erfolgreich generiert!"
+            "Umfassende SEO-Machbarkeitsdiagnose, Technik-, Multi-Batch"
+            " On-Page-, AIO- & GEO-Strategie erfolgreich generiert!"
         ),
         "core_updates_title": "📢 3. Google Core Updates Verlauf & Auswirkung",
         "guide_title": "📖 Benutzerhandbuch & Vorbereitungs-Checkliste",
@@ -474,10 +479,10 @@ LANG_PACK = {
         ),
         "guide_step2_title": "2. Integrierte Spezialisten-KI-Frameworks",
         "guide_step2_content": (
-            "- **Trennung Kommerziell vs Informativ:** 25-35 Keywords für"
-            " Landing Pages; der Blog nutzt getrennte informative"
-            " Themencluster.\n- **KPI-Ausrichtung:** Inhalte passen sich direkt"
-            " dem gewählten Kunden-Ziel an."
+            "- **SEO-Machbarkeitsdiagnose:** Senior SEO Einstufung"
+            " (Leicht/Mittel/Schwer).\n- **Trennung Kommerziell vs"
+            " Informativ:** 25-35 Keywords für Landing Pages; der Blog nutzt"
+            " getrennte informative Themencluster."
         ),
         "guide_step3_title": "3. Anleitung zur Kundendateneingabe",
         "guide_step3_content": (
@@ -1046,7 +1051,6 @@ def fetch_keyword_metrics(
   # 1. LIVE AHREFS KEYWORDS EXPLORER V3 (Array Param Format & Multiple Endpoints Support)
   if ahrefs_k and ahrefs_k.strip():
     try:
-      # Batch in chunks of 10 keywords
       kw_chunks = [keywords[i : i + 10] for i in range(0, len(keywords), 10)]
       ah_headers = {
           "Authorization": f"Bearer {ahrefs_k.strip()}",
@@ -1058,7 +1062,6 @@ def fetch_keyword_metrics(
         if not kw_list_clean:
           continue
 
-        # Format A: Array parameters keywords=kw1&keywords=kw2
         params_array = [
             ("country", target_country),
             ("select", "keyword,volume,difficulty,cpc"),
@@ -1071,7 +1074,6 @@ def fetch_keyword_metrics(
             ah_kw_url, headers=ah_headers, params=params_array, timeout=15
         )
 
-        # Format B Fallback: Comma-separated query if format A returns 400
         if res_ah.status_code != 200:
           kw_encoded = ",".join(
               [urllib.parse.quote(k) for k in kw_list_clean]
@@ -1102,7 +1104,7 @@ def fetch_keyword_metrics(
     except Exception as e:
       st.sidebar.warning(f"Ahrefs Keywords Connection Error: {str(e)}")
 
-  # 2. FALLBACK TIERED SIMULATION (Hanya jika Ahrefs tidak aktif / tidak mengembalikan data)
+  # 2. FALLBACK TIERED SIMULATION
   if not raw_results:
     for i, kw in enumerate(keywords):
       word_count = len(kw.split())
@@ -1127,8 +1129,6 @@ def fetch_keyword_metrics(
           ),
       })
 
-  # Filter Tiered KD: Prioritize KD < 20 (Quick Wins), allow KD <= 50, reject KD > 50
-  # Filter Volume: Memperbolehkan volume >= 10 untuk B2B keywords
   tier1_kws = [k for k in raw_results if k["kd"] < 20 and k["volume"] >= 10]
   tier2_kws = [
       k for k in raw_results if 20 <= k["kd"] <= 50 and k["volume"] >= 10
@@ -1140,7 +1140,6 @@ def fetch_keyword_metrics(
     needed = 35 - len(selected_kws)
     selected_kws.extend(tier2_kws[:needed])
 
-  # Jika kuota volume >= 10 masih kurang, ambil sisa keyword yang tersedia
   if len(selected_kws) < 20:
     for k in raw_results:
       if k not in selected_kws and k["kd"] <= 50:
@@ -1164,6 +1163,7 @@ def generate_docx_deliverable(
     timeline_tasks,
     competitor_ov_data,
     competitor_gap_data,
+    seo_diagnostic,
     active_engine,
     lang,
 ):
@@ -1200,8 +1200,43 @@ def generate_docx_deliverable(
       " 13-Year Experienced SEO Specialist Framework\n"
   ).italic = True
 
-  # 1. Technical Health Check
-  doc.add_heading("1. Technical SEO & Performance Health Check", level=1)
+  # Executive Feasibility Diagnostic
+  if seo_diagnostic:
+    doc.add_heading(
+        "1. Executive SEO Feasibility & Difficulty Diagnostic", level=1
+    )
+    doc.add_paragraph(
+        f"Overall Project Difficulty: {seo_diagnostic.get('difficulty_level', 'MODERATE')}"
+    )
+    doc.add_paragraph(
+        f"Estimated Time-to-Impact:"
+        f" {seo_diagnostic.get('estimated_time_to_impact', '3 - 6 Months')}"
+    )
+    doc.add_paragraph(
+        f"Executive Summary:"
+        f" {seo_diagnostic.get('summary_headline', 'Strategic Assessment')}"
+    )
+
+    doc.add_heading("Detailed Strategic Rationale:", level=2)
+    doc.add_paragraph(
+        f"• Competitive Authority Landscape:"
+        f" {seo_diagnostic.get('authority_rationale', '-')}"
+    )
+    doc.add_paragraph(
+        f"• Keyword Competitiveness & SERP Intent:"
+        f" {seo_diagnostic.get('keyword_rationale', '-')}"
+    )
+    doc.add_paragraph(
+        f"• Technical & Content Foundation:"
+        f" {seo_diagnostic.get('technical_content_rationale', '-')}"
+    )
+    doc.add_paragraph(
+        f"• Primary Leverage Points (Growth Catalysts):"
+        f" {seo_diagnostic.get('leverage_points', '-')}"
+    )
+
+  # 2. Technical Health Check
+  doc.add_heading("2. Technical SEO & Performance Health Check", level=1)
   doc.add_paragraph(f"Target URL: {tech_data['url']}")
   doc.add_paragraph(f"HTTP Status: {tech_data['status_code']}")
   doc.add_paragraph(
@@ -1219,9 +1254,9 @@ def generate_docx_deliverable(
       f"Robots.txt & Sitemap: {'Detected' if tech_data['robots_txt_found'] and tech_data['sitemap_found'] else 'Needs Optimization'}"
   )
 
-  # 2. Competitor Intelligence (If Active)
+  # 3. Competitor Intelligence (If Active)
   if competitor_ov_data:
-    doc.add_heading("2. Competitor Intelligence & Authority Benchmark", level=1)
+    doc.add_heading("3. Competitor Intelligence & Authority Benchmark", level=1)
     t_cov = doc.add_table(rows=1, cols=6)
     t_cov.style = "Light Shading Accent 1"
     for i, txt in enumerate([
@@ -1242,9 +1277,9 @@ def generate_docx_deliverable(
       r[4].text = f"{row[4]:,}" if isinstance(row[4], int) else str(row[4])
       r[5].text = f"{row[5]:,}" if isinstance(row[5], int) else str(row[5])
 
-  # 3. Commercial Keywords
+  # 4. Commercial Keywords
   doc.add_heading(
-      "3. Commercial & Transactional Keywords Matrix (Landing Pages)", level=1
+      "4. Commercial & Transactional Keywords Matrix (Landing Pages)", level=1
   )
   t_kw = doc.add_table(rows=1, cols=6)
   t_kw.style = "Light Shading Accent 1"
@@ -1261,9 +1296,9 @@ def generate_docx_deliverable(
     r[4].text = str(row.get("kd", "-"))
     r[5].text = f"${row.get('cpc', 0):.2f}"
 
-  # 4. On-Page Architecture
+  # 5. On-Page Architecture
   doc.add_heading(
-      f"4. On-Page Architecture ({len(onpage_data)} Pages - KPI Aligned, AIO &"
+      f"5. On-Page Architecture ({len(onpage_data)} Pages - KPI Aligned, AIO &"
       " GEO Ready)",
       level=1,
   )
@@ -1288,10 +1323,10 @@ def generate_docx_deliverable(
         f"Internal Linking Anchor: {p.get('internal_links', '-')}"
     )
 
-  # 5. Multi-Month Content Plan
+  # 6. Multi-Month Content Plan
   doc.add_heading(
       (
-          f"5. Strategic Informational Content Roadmap ({len(content_plan)}"
+          f"6. Strategic Informational Content Roadmap ({len(content_plan)}"
           f" Weeks / {len(content_plan)//4} Months)"
       ),
       level=1,
@@ -1345,6 +1380,7 @@ def generate_excel_deliverable(
     timeline_tasks,
     competitor_ov_data,
     competitor_gap_data,
+    seo_diagnostic,
     active_engine,
     lang,
 ):
@@ -1437,6 +1473,35 @@ def generate_excel_deliverable(
       ("Target Domain", brief_data["url"]),
       ("Business Niche", brief_data["niche"]),
       ("Primary Client KPI", brief_data.get("kpi", "Traffic & Rankings")),
+      (
+          "SEO Feasibility & Difficulty",
+          f"{seo_diagnostic.get('difficulty_level', 'MODERATE')} (Est."
+          f" Time-to-Impact: {seo_diagnostic.get('estimated_time_to_impact', '3 - 6 Months')})",
+      ),
+      (
+          "Specialist Strategic Diagnostic",
+          seo_diagnostic.get(
+              "summary_headline",
+              "Detailed ranking feasibility based on competitor authority &"
+              " keyword profile.",
+          ),
+      ),
+      (
+          "Competitive Authority Analysis",
+          seo_diagnostic.get("authority_rationale", "-"),
+      ),
+      (
+          "Keyword & SERP Landscape",
+          seo_diagnostic.get("keyword_rationale", "-"),
+      ),
+      (
+          "Technical & Content Baseline",
+          seo_diagnostic.get("technical_content_rationale", "-"),
+      ),
+      (
+          "Primary Leverage Points",
+          seo_diagnostic.get("leverage_points", "-"),
+      ),
       ("On-Page Commercial Scope", f"{len(onpage_data)} Pages"),
       (
           "Roadmap Duration",
@@ -1494,7 +1559,16 @@ def generate_excel_deliverable(
     row_fill = fill_zebra if idx % 2 == 0 else fill_white
     c1.fill = row_fill
     c2.fill = row_fill
-    ws_sum.row_dimensions[idx].height = 24
+
+    if "Feasibility" in k:
+      if "EASY" in str(v):
+        c2.font = font_badge_low
+      elif "HARD" in str(v):
+        c2.font = font_badge_high
+      else:
+        c2.font = font_badge_med
+
+    ws_sum.row_dimensions[idx].height = 32 if len(str(v)) > 80 else 24
 
   ws_sum.column_dimensions["A"].width = 36
   ws_sum.column_dimensions["B"].width = 75
@@ -1710,7 +1784,7 @@ def generate_excel_deliverable(
     ws_gap.column_dimensions[get_column_letter(status_col_idx)].width = 25
     ws_gap.column_dimensions[get_column_letter(action_col_idx)].width = 45
 
-  # 4. SHEET: Commercial Keywords (With Source Column)
+  # 4. SHEET: Commercial Keywords
   ws_kw = wb.create_sheet(title="Commercial Keywords")
   ws_kw.views.sheetView[0].showGridLines = True
   ws_kw.freeze_panes = "A2"
@@ -2281,16 +2355,16 @@ if st.session_state.analysis_results is None:
 
       # Step 1: Live Technical Audit & Ahrefs v3 / SEMrush / PSI Integration
       with st.spinner(
-          "1/6 Running Live Technical Audit & Domain Performance Check..."
+          "1/7 Running Live Technical Audit & Domain Performance Check..."
       ):
         tech_audit = run_live_technical_audit(
             website_url, ahrefs_k=ahrefs_token, semrush_k=semrush_key
         )
 
-      # Step 2: Commercial Keywords Discovery (Strict 2-3 Word Commercial Phrases)
+      # Step 2: Commercial Keywords Discovery
       with st.spinner(
-          "2/6 Discovering Concise 2–3 Word Commercial Keywords in"
-          f" {app_lang.upper()} (Targeting High-Intent Buyer Terms)..."
+          "2/7 Discovering Concise 2–3 Word Commercial Keywords in"
+          f" {app_lang.upper()}..."
       ):
         prompt_step1 = f"""
                 You are a Lead SEO Keyword Strategist. Output MUST be strictly in {app_lang.upper()}.
@@ -2302,12 +2376,8 @@ if st.session_state.analysis_results is None:
                 CRITICAL INSTRUCTION:
                 Generate 40 to 50 CONCISE, HIGH-VOLUME 2-TO-3 WORD commercial and transactional search queries.
                 DO NOT generate long phrases (no 4+ words).
-                DO NOT repeat duplicated words like "supplier distributor selang".
+                DO NOT repeat duplicated words.
                 Keep queries lowercase, natural, and realistic as searched in Google {target_geo}.
-                
-                Examples of ideal 2-3 word structure:
-                - "distributor selang hidrolik", "jual selang hidrolik", "harga selang hidrolik", "toko selang industri", "crimping selang hidrolik", "fitting selang hidrolik", "selang kompresor pabrik", "selang industri toyox"
-                - "enterprise crm software", "sales forecasting platform", "revenue analytics tools", "b2b pipeline software"
                 
                 RETURN STRICT JSON ONLY:
                 {{
@@ -2367,7 +2437,6 @@ if st.session_state.analysis_results is None:
               "funnel": "MOFU",
           } for k in list(set(base_terms))[:40]]
 
-        # Ensure all keywords are lowercase and cleaned
         clean_kw_list = []
         for k in raw_kws:
           kw_str = (
@@ -2378,7 +2447,7 @@ if st.session_state.analysis_results is None:
 
       # Step 3: Tiered Keyword Filtering (Live Ahrefs / Simulation)
       with st.spinner(
-          "3/6 Fetching Ahrefs Keywords Explorer Metrics & Applying KD Tier"
+          "3/7 Fetching Ahrefs Keywords Explorer Metrics & Applying KD Tier"
           " Filter..."
       ):
         geo_country = "id" if "Indonesia" in target_geo else "us"
@@ -2405,7 +2474,7 @@ if st.session_state.analysis_results is None:
 
       if bool(comp_list):
         with st.spinner(
-            "4/6 Fetching Live Ahrefs Competitor Metrics & Synchronizing"
+            "4/7 Fetching Live Ahrefs Competitor Metrics & Synchronizing"
             " Gap..."
         ):
           clean_client_dom = (
@@ -2449,7 +2518,6 @@ if st.session_state.analysis_results is None:
                 c_metrics["organic_keywords"],
             ))
 
-          # Build Competitor Keyword Gap SYNCHRONIZED directly for ALL input competitors
           target_gap_keywords = df_final_kw.to_dict(orient="records")
           synced_gap_rows = []
 
@@ -2492,7 +2560,6 @@ if st.session_state.analysis_results is None:
                   else "Strengthen Internal Silo & Conversion CTAs"
               )
 
-            # Dinamis untuk semua kompetitor
             comp_positions = []
             for idx_c, _ in enumerate(clean_comp_names):
               pattern = (idx_g + idx_c) % 5
@@ -2516,12 +2583,152 @@ if st.session_state.analysis_results is None:
 
           competitor_gap_data = synced_gap_rows
 
-      # Step 5: Multi-Batch On-Page Architecture Generation (KPI Aligned)
+      # Step 5: Senior SEO Feasibility & Difficulty Diagnostic Engine
+      with st.spinner(
+          "5/7 Synthesizing Senior SEO Feasibility & Ranking Difficulty"
+          f" Diagnostic in {app_lang.upper()}..."
+      ):
+        client_dr = tech_audit.get("domain_rating", 0)
+        comp_drs = [
+            r[2]
+            for r in competitor_ov_data[1:]
+            if isinstance(r[2], (int, float))
+        ]
+        avg_comp_dr = sum(comp_drs) / len(comp_drs) if comp_drs else 10
+        avg_kd = (
+            df_final_kw["kd"].mean() if not df_final_kw.empty else 15
+        )
+
+        prompt_diag = f"""
+                You are a Lead SEO Consultant with 13+ years of experience conducting an executive SEO Feasibility & Difficulty Assessment.
+                Language MUST be strictly in {app_lang.upper()}.
+                
+                Data Profile:
+                - Client Domain: {brief_data['url']} (DR: {client_dr}, RefDomains: {tech_audit.get('referring_domains', 0)})
+                - Competitor Domains & Metrics: {json.dumps(competitor_ov_data, indent=2)}
+                - Average Competitor DR: {avg_comp_dr:.1f}
+                - Target Commercial Keywords (Total {len(df_final_kw)}, Avg KD: {avg_kd:.1f}): {json.dumps(df_final_kw[['keyword', 'kd', 'volume']].to_dict(orient='records')[:15], indent=2)}
+                - Technical Performance: Score {tech_audit['psi_score']}/100, LCP {tech_audit['lcp']}, INP {tech_audit['inp']}, HTTPS: {tech_audit['https_secure']}
+                - Client Business KPI: {client_kpi_str}
+                
+                TASK:
+                Classify project difficulty into EXACTLY ONE: "EASY", "MODERATE", or "HARD".
+                Provide estimated time to impact (e.g. "1 - 3 Months (Quick Wins)", "3 - 6 Months", or "6 - 12 Months").
+                Provide a deep, authoritative, professional rationale across 4 dimensions:
+                1. Authority Gap Analysis (comparing client DR/backlinks vs direct competitors)
+                2. Keyword & SERP Competitiveness Landscape
+                3. Technical & Content Foundation Assessment
+                4. Primary Leverage Points (What 2-3 specific moves will produce the fastest ranking/conversion wins)
+                
+                RETURN STRICT JSON ONLY:
+                {{
+                    "difficulty_level": "EASY / MODERATE / HARD",
+                    "estimated_time_to_impact": "e.g. 1 - 3 Months / 3 - 6 Months",
+                    "summary_headline": "Concise 1-sentence executive verdict in {app_lang.upper()}",
+                    "authority_rationale": "Deep analysis of authority and backlinks gap in {app_lang.upper()}...",
+                    "keyword_rationale": "Analysis of search intent, KD spread, and SERP dynamics in {app_lang.upper()}...",
+                    "technical_content_rationale": "Evaluation of site speed, CWV, and architecture baseline in {app_lang.upper()}...",
+                    "leverage_points": "Top actionable growth levers that will accelerate results in {app_lang.upper()}..."
+                }}
+                """
+        try:
+          res_diag = call_ai_engine(
+              provider, api_key, model_choice, prompt_diag
+          )
+          seo_diagnostic = json.loads(res_diag)
+        except Exception:
+          # Rule-based Algorithmic Fallback
+          if avg_comp_dr <= 15 and avg_kd <= 18:
+            calc_diff = "EASY"
+            calc_time = (
+                "1 — 3 Bulan (Quick Wins)"
+                if lang_code == "ID"
+                else "1 — 3 Months (Quick Wins)"
+            )
+          elif avg_comp_dr <= 35 or avg_kd <= 30:
+            calc_diff = "MODERATE"
+            calc_time = (
+                "3 — 6 Bulan (Pertumbuhan Terstruktur)"
+                if lang_code == "ID"
+                else "3 — 6 Months (Structured Growth)"
+            )
+          else:
+            calc_diff = "HARD"
+            calc_time = (
+                "6 — 12 Bulan (Skalabilitas Otoritas)"
+                if lang_code == "ID"
+                else "6 — 12 Months (Authority Scaling)"
+            )
+
+          if lang_code == "ID":
+            seo_diagnostic = {
+                "difficulty_level": calc_diff,
+                "estimated_time_to_impact": calc_time,
+                "summary_headline": (
+                    f"Proyek ini berkategori {calc_diff} dengan peluang besar"
+                    " merebut posisi Top 3-10 SERP melalui perbaikan On-Page"
+                    " dan klaster topik terarah."
+                ),
+                "authority_rationale": (
+                    f"Otoritas klien (DR {client_dr}) berbanding rata-rata"
+                    f" kompetitor (DR {avg_comp_dr:.1f}). Gap otoritas ini"
+                    " dapat ditutup dengan cepat melalui perolehan backlink"
+                    " kontekstual industri."
+                ),
+                "keyword_rationale": (
+                    f"Kata kunci komersial 2-3 kata memiliki rata-rata KD"
+                    f" {avg_kd:.1f}. Banyak celah intent komersial yang belum"
+                    " dioptimasi secara spesifik oleh kompetitor."
+                ),
+                "technical_content_rationale": (
+                    f"Skor teknikal {tech_audit['psi_score']}/100 memberikan"
+                    " pondasi yang stabil untuk perayapan dan pengindeksan"
+                    " mesin pencari."
+                ),
+                "leverage_points": (
+                    "1. Luncurkan Halaman Layanan/Produk baru untuk keyword"
+                    " komersial utama.\n2. Injeksi AIO snippet (40-60 kata) dan"
+                    " Product Schema.\n3. Bangun internal linking silo"
+                    " hub-and-spoke dari blog ke halaman produk."
+                ),
+            }
+          else:
+            seo_diagnostic = {
+                "difficulty_level": calc_diff,
+                "estimated_time_to_impact": calc_time,
+                "summary_headline": (
+                    f"This project is classified as {calc_diff} difficulty with"
+                    " high potential for Top 3-10 SERP wins via structured"
+                    " On-Page architecture."
+                ),
+                "authority_rationale": (
+                    f"Client authority (DR {client_dr}) vs average competitor"
+                    f" (DR {avg_comp_dr:.1f}). Authority gap can be bridged"
+                    " through targeted topical authority."
+                ),
+                "keyword_rationale": (
+                    f"Target commercial keywords hold an average KD of"
+                    f" {avg_kd:.1f}, presenting clear buyer-intent"
+                    " opportunities."
+                ),
+                "technical_content_rationale": (
+                    f"Technical score of {tech_audit['psi_score']}/100"
+                    " provides a healthy baseline for crawlability."
+                ),
+                "leverage_points": (
+                    "1. Deploy dedicated commercial landing pages for missing"
+                    " terms.\n2. Inject 40-60 word AIO definition snippets and"
+                    " Schema.\n3. Implement hub-and-spoke internal linking"
+                    " silos."
+                ),
+            }
+
+      # Step 6: Multi-Batch On-Page Architecture Generation (KPI Aligned)
       kw_context = df_final_kw.to_dict(orient="records")
       full_onpage_list = []
 
       with st.spinner(
-          "5/6 Architecting Core Commercial Pages in"
+          "6/7 Architecting Core Commercial Pages in"
           f" {app_lang.upper()} aligned with KPI: '{client_kpi_str}'..."
       ):
         prompt_onpage_b1 = f"""
@@ -2717,7 +2924,7 @@ if st.session_state.analysis_results is None:
             })
         full_onpage_list.extend(sample_pages)
 
-      # Step 6: Informational Content Roadmap Generation
+      # Step 7: Informational Content Roadmap Generation
       full_content_calendar = []
       tech_advice = (
           f"Optimasi performa Core Web Vitals untuk LCP ({tech_audit['lcp']})"
@@ -2737,7 +2944,7 @@ if st.session_state.analysis_results is None:
         end_w = min(num_weeks, (b_idx + 1) * batch_size)
 
         with st.spinner(
-            "6/6 Architecting Informational Content Roadmap in"
+            "7/7 Architecting Informational Content Roadmap in"
             f" {app_lang.upper()} (Weeks {start_w} to {end_w} of"
             f" {num_weeks})..."
         ):
@@ -2788,7 +2995,6 @@ if st.session_state.analysis_results is None:
           except Exception:
             pass
 
-      # Ensure Non-Empty Content Plan Fallback
       if len(full_content_calendar) < num_weeks:
         clean_niche_short = brief_data["niche"].split("&")[0].strip()
         for idx_w in range(len(full_content_calendar) + 1, num_weeks + 1):
@@ -2841,7 +3047,7 @@ if st.session_state.analysis_results is None:
               ],
           })
 
-      # Step 7: Dynamic Execution Timeline
+      # Dynamic Execution Timeline
       clean_first_prod = [
           p.strip()
           for p in core_offerings.split(",")
@@ -3238,6 +3444,7 @@ if st.session_state.analysis_results is None:
           "timeline_tasks": dynamic_tasks,
           "competitor_ov": competitor_ov_data,
           "competitor_gap": competitor_gap_data,
+          "seo_diagnostic": seo_diagnostic,
           "tech_advice": tech_advice,
           "engine_tag": f"{provider} ({model_choice})",
           "total_parsed_xml": total_parsed,
@@ -3258,11 +3465,71 @@ else:
   timeline_tasks = res["timeline_tasks"]
   competitor_ov_data = res["competitor_ov"]
   competitor_gap_data = res["competitor_gap"]
+  seo_diagnostic = res.get("seo_diagnostic", {})
   engine_tag = res["engine_tag"]
   lang = b["lang"]
   TXT = LANG_PACK[lang]
 
   st.success(f"✅ {TXT['success_msg']} ({engine_tag})")
+
+  # EXECUTIVE SEO FEASIBILITY & DIFFICULTY CARD
+  if seo_diagnostic:
+    diff_val = seo_diagnostic.get("difficulty_level", "MODERATE").upper()
+    diff_color = (
+        "🟢"
+        if "EASY" in diff_val
+        else ("🔴" if "HARD" in diff_val else "🟡")
+    )
+    badge_bg = (
+        "#DCFCE7"
+        if "EASY" in diff_val
+        else ("#FEE2E2" if "HARD" in diff_val else "#FEF3C7")
+    )
+    badge_fg = (
+        "#166534"
+        if "EASY" in diff_val
+        else ("#991B1B" if "HARD" in diff_val else "#92400E")
+    )
+
+    st.markdown(
+        f"""
+        <div style="background: white; border: 1px solid #CBD5E1; border-radius: 10px; padding: 20px; margin-bottom: 25px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                <span style="font-size: 18px; font-weight: 800; color: #0F172A; font-family: sans-serif;">
+                    🎯 Senior SEO Feasibility & Ranking Difficulty Diagnostic
+                </span>
+                <span style="background: {badge_bg}; color: {badge_fg}; font-weight: 800; font-size: 14px; padding: 5px 14px; border-radius: 20px; font-family: sans-serif;">
+                    {diff_color} DIFFICULTY: {diff_val}
+                </span>
+            </div>
+            <p style="font-size: 15px; font-weight: 600; color: #0369A1; margin-bottom: 8px;">
+                ⏱️ Estimated Time-to-Impact: {seo_diagnostic.get('estimated_time_to_impact', '3 - 6 Months')}
+            </p>
+            <p style="font-size: 14px; color: #334155; line-height: 1.6; margin-bottom: 15px;">
+                {seo_diagnostic.get('summary_headline', '')}
+            </p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; background: #F8FAFC; padding: 15px; border-radius: 8px;">
+                <div>
+                    <span style="font-size: 13px; font-weight: 700; color: #475569;">🏢 Authority & Backlink Gap:</span>
+                    <p style="font-size: 13.5px; color: #1E293B; margin-top: 4px;">{seo_diagnostic.get('authority_rationale', '-')}</p>
+                </div>
+                <div>
+                    <span style="font-size: 13px; font-weight: 700; color: #475569;">🎯 Keyword & SERP Landscape:</span>
+                    <p style="font-size: 13.5px; color: #1E293B; margin-top: 4px;">{seo_diagnostic.get('keyword_rationale', '-')}</p>
+                </div>
+                <div>
+                    <span style="font-size: 13px; font-weight: 700; color: #475569;">🛠️ Technical & Content Baseline:</span>
+                    <p style="font-size: 13.5px; color: #1E293B; margin-top: 4px;">{seo_diagnostic.get('technical_content_rationale', '-')}</p>
+                </div>
+                <div>
+                    <span style="font-size: 13px; font-weight: 700; color: #475569;">🚀 Key Leverage Points:</span>
+                    <p style="font-size: 13.5px; color: #1E293B; margin-top: 4px; white-space: pre-line;">{seo_diagnostic.get('leverage_points', '-')}</p>
+                </div>
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
   # Action Bar: Download & Reset
   st.subheader("📥 Download Deliverables & Reports")
@@ -3275,6 +3542,7 @@ else:
       timeline_tasks=timeline_tasks,
       competitor_ov_data=competitor_ov_data,
       competitor_gap_data=competitor_gap_data,
+      seo_diagnostic=seo_diagnostic,
       active_engine=engine_tag,
       lang=lang,
   )
@@ -3287,6 +3555,7 @@ else:
       timeline_tasks=timeline_tasks,
       competitor_ov_data=competitor_ov_data,
       competitor_gap_data=competitor_gap_data,
+      seo_diagnostic=seo_diagnostic,
       active_engine=engine_tag,
       lang=lang,
   )
