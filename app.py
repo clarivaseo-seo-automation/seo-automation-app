@@ -2275,7 +2275,7 @@ if st.session_state.analysis_results is None:
               else "None (Fresh Site / No XML Provided)"
           ),
           "existing_pages": parsed_summary,
-          "existing_urls_set": parsed_urls_list, # Diubah jadi list agar JSON serializable
+          "existing_urls_set": parsed_urls_list,
           "weeks": num_weeks,
           "months": num_months,
           "lang": lang_code,
@@ -3519,7 +3519,7 @@ if st.session_state.analysis_results is None:
           "seo_diagnostic": seo_diagnostic,
           "tech_advice": tech_advice,
           "engine_tag": f"{provider} ({model_choice})",
-          "total_parsed_xml": total_parsed,
+          "total_parsed_xml": len(parsed_urls_list),
       }
       st.session_state.client_brief = brief_data
       st.rerun()
