@@ -502,7 +502,7 @@ def parse_sitemap_xml(sitemap_url):
   ):
     return (
         "None (Fresh Website / No Sitemap Provided)",
-        set(),
+        [],
     )
 
   extracted_slugs = set()
@@ -535,7 +535,7 @@ def parse_sitemap_xml(sitemap_url):
       if extracted_slugs
       else "None / Empty Sitemap"
   )
-  return summary, extracted_slugs
+  return summary, list(extracted_slugs)
 
 
 def fetch_domain_authority_metrics(
@@ -956,7 +956,6 @@ def fetch_keyword_metrics(
   for r in raw_results:
     r["keyword"] = r["keyword"].lower().strip()
 
-  # Memastikan minimal menyajikan 25-35 keyword komersial
   tier1_kws = [k for k in raw_results if k["kd"] <= 40]
   tier1_kws.sort(key=lambda x: x["kd"])
 
@@ -2257,7 +2256,7 @@ if st.session_state.analysis_results is None:
       is_large_onpage = "Large" in onpage_scope or "Großer" in onpage_scope
 
       with st.spinner("Parsing blog sitemap XML..."):
-        parsed_summary, parsed_urls_set = parse_sitemap_xml(sitemap_input)
+        parsed_summary, parsed_urls_list = parse_sitemap_xml(sitemap_input)
 
       comp_list = [c.strip() for c in key_competitors.split(",") if c.strip()]
       brief_data = {
@@ -2276,7 +2275,7 @@ if st.session_state.analysis_results is None:
               else "None (Fresh Site / No XML Provided)"
           ),
           "existing_pages": parsed_summary,
-          "existing_urls_set": parsed_urls_set,
+          "existing_urls_set": parsed_urls_list, # Diubah jadi list agar JSON serializable
           "weeks": num_weeks,
           "months": num_months,
           "lang": lang_code,
@@ -2664,7 +2663,7 @@ if st.session_state.analysis_results is None:
       # 6. ON-PAGE ARCHITECTURE (With Explicit Existing vs New Page Labelling)
       kw_context = df_final_kw.to_dict(orient="records")
       full_onpage_list = []
-      existing_urls_set = brief_data["existing_urls_set"]
+      existing_urls_list = brief_data["existing_urls_set"]
 
       with st.spinner(
           "6/8 Architecting Core Commercial Pages in"
@@ -2857,10 +2856,9 @@ if st.session_state.analysis_results is None:
             })
         full_onpage_list.extend(sample_pages)
 
-      # Automatically label each page as [Existing Page] or [Recommended New Page]
       for p in full_onpage_list:
         slug_url = str(p.get("url_slug", "")).strip().rstrip("/")
-        if existing_urls_set and any(slug_url in ex for ex in existing_urls_set):
+        if existing_urls_list and any(slug_url in ex for ex in existing_urls_list):
           p["status_label"] = "[Existing Page]"
         else:
           p["status_label"] = "[Recommended New Page]"
@@ -2992,7 +2990,7 @@ if st.session_state.analysis_results is None:
       
       full_content_calendar.sort(key=lambda x: x["week"])
 
-      # 8. SENIOR OFF-PAGE SEO & BLOGGER LINK BUILDING STRATEGY (With Explicit Page Status Labels)
+      # 8. SENIOR OFF-PAGE SEO & BLOGGER LINK BUILDING STRATEGY
       full_offpage_plan = []
       available_pages = [
           {"url": p.get("url_slug"), "type": p.get("page_type"), "status": p.get("status_label")}
@@ -3047,9 +3045,8 @@ if st.session_state.analysis_results is None:
             off_items = parsed_off.get("offpage_articles", [])
             for item in off_items:
               item["month"] = month_name
-              # Evaluasi status halaman target offpage
               p_url = str(item.get("target_page", "")).strip().rstrip("/")
-              if existing_urls_set and any(p_url in ex for ex in existing_urls_set):
+              if existing_urls_list and any(p_url in ex for ex in existing_urls_list):
                 item["page_status"] = "[Existing Page]"
               else:
                 item["page_status"] = "[Recommended New Page]"
@@ -3105,7 +3102,7 @@ if st.session_state.analysis_results is None:
                 else f"layanan {kw_target}"
             )
 
-            p_status = "[Existing Page]" if existing_urls_set and any(tgt_url.rstrip("/") in ex for ex in existing_urls_set) else "[Recommended New Page]"
+            p_status = "[Existing Page]" if existing_urls_list and any(tgt_url.rstrip("/") in ex for ex in existing_urls_list) else "[Recommended New Page]"
 
             full_offpage_plan.append({
                 "month": m_label,
