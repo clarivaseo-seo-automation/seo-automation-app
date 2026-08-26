@@ -88,8 +88,8 @@ LANG_PACK = {
         ),
         "framework_notice": (
             "💡 **Specialist SEO, AIO & GEO Framework Active:**\n"
-            "Senior SEO Feasibility Diagnostic + Stable Timeout & Live Google"
-            " PSI."
+            "Granular H2/H3 Content Silo + Tuned Timeouts (AI: 120s, Ahrefs: 120s,"
+            " PSI: 30s)."
         ),
         "demo_kw_notice": (
             "ℹ️ **Free Mode Active:** Utilizing Google PageSpeed Insights"
@@ -114,7 +114,9 @@ LANG_PACK = {
         "btn_docx": "📄 Download Full Report (.DOCX)",
         "btn_xlsx": "📊 Download Spreadsheet (.XLSX)",
         "btn_reset": "🔄 Start New Analysis / Reset",
-        "success_msg": "Comprehensive SEO Strategy Generated Successfully!",
+        "success_msg": (
+            "Comprehensive SEO Strategy with Granular Content Silos Generated!"
+        ),
         "core_updates_title": "📢 3. Google Core Updates Tracking & Impact",
         "guide_title": "📖 User Guide & Preparation Checklist",
         "guide_step1_title": "1. API Credentials & Preparation Checklist",
@@ -123,7 +125,10 @@ LANG_PACK = {
             " [aistudio.google.com](https://aistudio.google.com)."
         ),
         "guide_step2_title": "2. Injected Specialist AI Frameworks",
-        "guide_step2_content": "- **Stable Execution Mode:** Standardized stable timeouts.",
+        "guide_step2_content": (
+            "- **Granular Heading Silos:** Detailed H2/H3 talking points for"
+            " authority content."
+        ),
         "guide_step3_title": "3. Client Data Intake Instructions",
         "guide_step3_content": (
             "- Enter target website domain and direct competitors."
@@ -178,7 +183,8 @@ LANG_PACK = {
         "sitemap_guide": "💡 Panduan Format Sitemap XML Blog",
         "framework_notice": (
             "💡 **Specialist SEO, AIO & GEO Framework Active:**\n"
-            "Diagnosa SEO + Stable Timeout Mode + Live Google PSI & Ahrefs v3."
+            "Silabus Konten H2/H3 Granular + Tuned Timeouts (AI: 120s, Ahrefs:"
+            " 120s, PSI: 30s)."
         ),
         "demo_kw_notice": "ℹ️ Mode Gratis Aktif",
         "roadmap_duration": "Durasi Kalender Konten:",
@@ -206,12 +212,12 @@ LANG_PACK = {
         "guide_step1_title": "1. Checklist Persiapan API",
         "guide_step1_content": "Masukkan API key Anda di sidebar.",
         "guide_step2_title": "2. Framework Terpasang",
-        "guide_step2_content": "Mode stabil standar aktif.",
+        "guide_step2_content": "Timeout dioptimalkan untuk kestabilan maksimal.",
         "guide_step3_title": "3. Cara Mengisi Data Klien",
         "guide_step3_content": "Lengkapi formulir dengan domain target.",
     },
     "ES": {
-        "brand_subtitle": "SEO Suite with Stable Mode",
+        "brand_subtitle": "SEO Suite with Granular H2/H3 Content Silos",
         "badge_text": "⭐ SEO Specialist Framework",
         "sidebar_engine": "Configuración AI",
         "select_provider": "Proveedor AI:",
@@ -262,7 +268,7 @@ LANG_PACK = {
         "guide_step3_content": "Formulario",
     },
     "DE": {
-        "brand_subtitle": "SEO Suite with Stable Mode",
+        "brand_subtitle": "SEO Suite with Granular H2/H3 Content Silos",
         "badge_text": "⭐ SEO Specialist Framework",
         "sidebar_engine": "KI-Engine",
         "select_provider": "Anbieter:",
@@ -502,7 +508,7 @@ def parse_sitemap_xml(sitemap_url):
   extracted_slugs = set()
   try:
     headers = {"User-Agent": "Mozilla/5.0 (compatible; ClarivaSEOBot/2.0)"}
-    res = requests.get(cleaned, timeout=10, headers=headers)
+    res = requests.get(cleaned, timeout=15, headers=headers)
     if res.status_code == 200:
       root = ET.fromstring(res.content)
       for elem in root.iter():
@@ -510,7 +516,7 @@ def parse_sitemap_xml(sitemap_url):
           loc_text = elem.text.strip().rstrip("/")
           if loc_text.endswith(".xml") and "post" in loc_text.lower():
             try:
-              sub_res = requests.get(loc_text, timeout=6, headers=headers)
+              sub_res = requests.get(loc_text, timeout=10, headers=headers)
               if sub_res.status_code == 200:
                 sub_root = ET.fromstring(sub_res.content)
                 for sub_elem in sub_root.iter():
@@ -560,7 +566,7 @@ def fetch_domain_authority_metrics(
           "https://api.ahrefs.com/v3/site-explorer/domain-rating?"
           f"target={clean_dom}&date={today_date}"
       )
-      res_dr = requests.get(dr_url, headers=ah_headers, timeout=10)
+      res_dr = requests.get(dr_url, headers=ah_headers, timeout=20)
       if res_dr.status_code == 200:
         dr_data = res_dr.json().get("domain_rating") or {}
         raw_dr = dr_data.get("domain_rating", 0)
@@ -575,7 +581,7 @@ def fetch_domain_authority_metrics(
           "https://api.ahrefs.com/v3/site-explorer/backlinks-stats?"
           f"target={clean_dom}&mode=subdomains&date={today_date}"
       )
-      res_bl = requests.get(bl_url, headers=ah_headers, timeout=10)
+      res_bl = requests.get(bl_url, headers=ah_headers, timeout=20)
       if res_bl.status_code == 200:
         bl_metrics = res_bl.json().get("metrics") or {}
         raw_ref = bl_metrics.get("live_refdomains", bl_metrics.get("refdomains"))
@@ -586,7 +592,7 @@ def fetch_domain_authority_metrics(
           "https://api.ahrefs.com/v3/site-explorer/metrics?"
           f"target={clean_dom}&mode=subdomains&date={today_date}"
       )
-      res_met = requests.get(metrics_url, headers=ah_headers, timeout=10)
+      res_met = requests.get(metrics_url, headers=ah_headers, timeout=20)
       if res_met.status_code == 200:
         met_data = res_met.json().get("metrics") or {}
         raw_tr = met_data.get("org_traffic")
@@ -613,7 +619,7 @@ def fetch_domain_authority_metrics(
           "https://api.semrush.com/?type=domain_ranks"
           f"&key={semrush_k.strip()}&export_columns=Dn,Rk,Or,Ot,Oc&domain={clean_dom}&database=us"
       )
-      res = requests.get(sem_url, timeout=10)
+      res = requests.get(sem_url, timeout=20)
       if res.status_code == 200 and "ERROR" not in res.text:
         lines = res.text.strip().split("\n")
         if len(lines) > 1:
@@ -681,7 +687,7 @@ def run_live_technical_audit(url_str, psi_key="", ahrefs_k="", semrush_k=""):
   try:
     res = requests.get(
         target,
-        timeout=10,
+        timeout=15,
         headers={"User-Agent": "Mozilla/5.0 (compatible; ClarivaSEOBot/2.0)"},
     )
     report["status_code"] = f"{res.status_code} OK"
@@ -690,13 +696,13 @@ def run_live_technical_audit(url_str, psi_key="", ahrefs_k="", semrush_k=""):
     report["response_time_ms"] = elapsed_ms
 
     base_domain = "/".join(target.split("/")[:3])
-    r_robots = requests.get(f"{base_domain}/robots.txt", timeout=5)
+    r_robots = requests.get(f"{base_domain}/robots.txt", timeout=8)
     report["robots_txt_found"] = r_robots.status_code == 200
 
-    r_sitemap = requests.get(f"{base_domain}/sitemap.xml", timeout=5)
+    r_sitemap = requests.get(f"{base_domain}/sitemap.xml", timeout=8)
     report["sitemap_found"] = r_sitemap.status_code == 200
 
-    # Live Google PageSpeed Insights API Call with standard timeout (12s)
+    # Google PSI Timeout set to 30 seconds
     psi_success = False
     if psi_key and psi_key.strip():
       try:
@@ -704,7 +710,7 @@ def run_live_technical_audit(url_str, psi_key="", ahrefs_k="", semrush_k=""):
             "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?"
             f"url={urllib.parse.quote(target)}&strategy=mobile&key={psi_key.strip()}"
         )
-        psi_res = requests.get(psi_url, timeout=12)
+        psi_res = requests.get(psi_url, timeout=30)
         if psi_res.status_code == 200:
           psi_data = psi_res.json()
           cats = psi_data.get("lighthouseResult", {}).get("categories", {})
@@ -757,7 +763,7 @@ def clean_json_string(raw_text):
 
 
 def call_ai_engine(provider_name, api_key_val, model_name, prompt_text):
-  # Standard stable timeout (60 seconds)
+  # AI Engine Timeout set to 120 seconds (2 minutes) for granular H2/H3 planning
   if provider_name == "Google Gemini":
     url = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
     headers = {
@@ -779,7 +785,7 @@ def call_ai_engine(provider_name, api_key_val, model_name, prompt_text):
         "response_format": {"type": "json_object"},
         "temperature": 0.85,
     }
-    response = requests.post(url, headers=headers, json=payload, timeout=60)
+    response = requests.post(url, headers=headers, json=payload, timeout=120)
 
     if response.status_code != 200:
       direct_url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={api_key_val}"
@@ -794,7 +800,7 @@ def call_ai_engine(provider_name, api_key_val, model_name, prompt_text):
           direct_url,
           headers={"Content-Type": "application/json"},
           json=direct_payload,
-          timeout=60,
+          timeout=120,
       )
       if res_direct.status_code != 200:
         raise Exception(f"Gemini API Error: {res_direct.text}")
@@ -825,7 +831,7 @@ def call_ai_engine(provider_name, api_key_val, model_name, prompt_text):
         "response_format": {"type": "json_object"},
         "temperature": 0.85,
     }
-    response = requests.post(url, headers=headers, json=payload, timeout=60)
+    response = requests.post(url, headers=headers, json=payload, timeout=120)
     if response.status_code != 200:
       raise Exception(
           f"OpenAI API Error ({response.status_code}): {response.text}"
@@ -850,7 +856,7 @@ def call_ai_engine(provider_name, api_key_val, model_name, prompt_text):
         ),
         "messages": [{"role": "user", "content": prompt_text}],
     }
-    response = requests.post(url, headers=headers, json=payload, timeout=60)
+    response = requests.post(url, headers=headers, json=payload, timeout=120)
     if response.status_code != 200:
       raise Exception(
           f"Claude API Error ({response.status_code}): {response.text}"
@@ -870,6 +876,7 @@ def fetch_keyword_metrics(
       "id" if country.lower() in ["id", "indonesia"] else country.lower()[:2]
   )
 
+  # Ahrefs Timeout set to 120 seconds (2 minutes)
   if ahrefs_k and ahrefs_k.strip():
     try:
       kw_chunks = [keywords[i : i + 10] for i in range(0, len(keywords), 10)]
@@ -892,7 +899,7 @@ def fetch_keyword_metrics(
 
         ah_kw_url = "https://api.ahrefs.com/v3/keywords-explorer/overview"
         res_ah = requests.get(
-            ah_kw_url, headers=ah_headers, params=params_array, timeout=12
+            ah_kw_url, headers=ah_headers, params=params_array, timeout=120
         )
 
         if res_ah.status_code != 200:
@@ -902,7 +909,7 @@ def fetch_keyword_metrics(
           alt_url = (
               f"{ah_kw_url}?country={target_country}&select=keyword,volume,difficulty,cpc&keywords={kw_encoded}"
           )
-          res_ah = requests.get(alt_url, headers=ah_headers, timeout=12)
+          res_ah = requests.get(alt_url, headers=ah_headers, timeout=120)
 
         if res_ah.status_code == 200:
           data_json = res_ah.json()
@@ -1179,7 +1186,7 @@ def generate_docx_deliverable(
     doc.add_paragraph(
         f"GEO Information Gain: {cp.get('geo_information_gain', '-')}"
     )
-    doc.add_paragraph("Talking Points & Section Outline:")
+    doc.add_paragraph("Granular H2/H3 Talking Points Outline:")
     for tp in cp.get("talking_points", []):
       doc.add_paragraph(f"• {tp}")
 
@@ -1799,7 +1806,7 @@ def generate_excel_deliverable(
       "Gap Analysis Reasoning",
       "AIO Passage Target",
       "GEO Information Gain",
-      "Talking Points / Outline",
+      "Talking Points / Outline (H2/H3)",
   ]
   for col_idx, h in enumerate(cp_headers, start=1):
     cell = ws_cp.cell(row=1, column=col_idx, value=h)
@@ -1864,7 +1871,7 @@ def generate_excel_deliverable(
   ws_cp.column_dimensions["H"].width = 40
   ws_cp.column_dimensions["I"].width = 45
   ws_cp.column_dimensions["J"].width = 40
-  ws_cp.column_dimensions["K"].width = 50
+  ws_cp.column_dimensions["K"].width = 55
 
   if offpage_plan:
     ws_off = wb.create_sheet(title="Off-Page Backlink Plan")
@@ -2646,7 +2653,7 @@ if st.session_state.analysis_results is None:
         else:
           p["status_label"] = "[Recommended New Page]"
 
-      # 7. MULTI-BATCH UNIQUE INFORMATIONAL CONTENT ROADMAP
+      # 7. MULTI-BATCH UNIQUE INFORMATIONAL CONTENT ROADMAP (Granular H2/H3 Silos)
       full_content_calendar = []
       tech_advice = f"Optimize Core Web Vitals for LCP ({tech_audit['lcp']}) and INP ({tech_audit['inp']}). Implement structured schema to support {client_kpi_str}."
 
@@ -2658,7 +2665,7 @@ if st.session_state.analysis_results is None:
         end_w = min(num_weeks, (b_idx + 1) * batch_size)
 
         with st.spinner(
-            "7/8 Architecting Granular Unique Informational Content Roadmap in"
+            "7/8 Architecting Granular Unique Informational Content Roadmap with Detailed H2/H3 Silos in"
             f" {app_lang.upper()} (Weeks {start_w} to {end_w} of"
             f" {num_weeks})..."
         ):
@@ -2669,9 +2676,12 @@ if st.session_state.analysis_results is None:
                     Products: {brief_data['products']}
                     Primary KPI: {client_kpi_str}
                     
-                    CRITICAL UNIQUENESS RULE:
+                    CRITICAL UNIQUENESS & GRANULARITY RULE:
                     Generate EXACTLY {end_w - start_w + 1} distinct, highly specific B2B industrial informational articles for Week {start_w} through Week {end_w}.
                     EACH article MUST have a completely different title, unique angle, distinct primary keyword, and non-repeating slug.
+                    
+                    CRITICAL TALKING POINTS H2/H3 REQUIREMENT:
+                    For each article, provide a GRANULAR, structured list of talking points representing H2 and H3 headings and subheadings (e.g. 1. Intro with sub-bullets, 2. Core Concepts/Definitions, 3. Step-by-Step Mechanism, 4. Key Benefits, 5. Considerations/Regulations, 6. FAQs, 7. Conclusion). Make it specific to the topic, just like a professional expert outline.
                     
                     RETURN STRICT JSON ONLY:
                     {{
@@ -2689,7 +2699,15 @@ if st.session_state.analysis_results is None:
                                 "gap_analysis_reasoning": "Competitor gap rationale...",
                                 "aio_passage_target": "AIO 40-60 word answer...",
                                 "geo_information_gain": "GEO data point...",
-                                "talking_points": ["Point 1", "Point 2", "Point 3"]
+                                "talking_points": [
+                                    "1. Intro: - Background and context - Importance in industry - Core objective",
+                                    "2. Core Definitions: - Terminology overview - Key mechanisms",
+                                    "3. How It Works: - Operational workflow - Step-by-step components",
+                                    "4. Key Benefits: - Efficiency and ROI - Long-term value",
+                                    "5. Important Considerations: - Specifications - Regulatory standards",
+                                    "6. FAQs: - Common industry questions",
+                                    "7. Conclusion: - Summary and best practices"
+                                ]
                             }}
                         ]
                     }}
@@ -2749,7 +2767,15 @@ if st.session_state.analysis_results is None:
                 "gap_analysis_reasoning": "Addressing in-depth industrial technical requirements.",
                 "aio_passage_target": f"Essential summary regarding {topic_title.lower()}.",
                 "geo_information_gain": "Empirical operational benchmark data.",
-                "talking_points": ["Introduction to core parameters", "Practical implementation steps", "Periodic result evaluation"]
+                "talking_points": [
+                    "1. Intro: - Overview of topic - Relevance in sector",
+                    "2. Core Concepts: - Key definitions - Operational parameters",
+                    "3. Implementation Steps: - Workflow process - Best practices",
+                    "4. Advantages: - Cost savings - Performance boost",
+                    "5. Key Factors to Consider: - Technical constraints - Compliance",
+                    "6. FAQs: - Frequently asked questions",
+                    "7. Conclusion: - Final recommendations"
+                ]
             })
       
       full_content_calendar.sort(key=lambda x: x["week"])
@@ -3246,9 +3272,9 @@ else:
 
   with all_tabs[curr_tab_idx]:
     st.info(
-        f"📅 **Informational Roadmap (4-Phase Silo):** Seluruh artikel di bawah"
-        " menggunakan klaster informasional unik yang mendukung kenaikan KPI"
-        f" **{b.get('kpi', 'Lead Generation')}** tanpa kanibalisasi."
+        f"📅 **Informational Roadmap (Granular H2/H3 Silos):** Seluruh artikel di bawah"
+        " menggunakan kerangka silabus heading (H2/H3) yang mendalam untuk mendukung kenaikan KPI"
+        f" **{b.get('kpi', 'Lead Generation')}**."
     )
 
     for cp in content_plan:
@@ -3287,7 +3313,7 @@ else:
             f" {cp.get('geo_information_gain')}"
         )
 
-        st.markdown("**Talking Points / Section Outline:**")
+        st.markdown("**Granular H2/H3 Talking Points Outline:**")
         for tp in cp.get("talking_points", []):
           st.markdown(f"- {tp}")
   curr_tab_idx += 1
