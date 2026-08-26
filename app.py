@@ -38,9 +38,9 @@ if "active_main_tab" not in st.session_state:
 LANG_PACK = {
     "EN": {
         "brand_subtitle": (
-            "Include: Intake Form | SEO Feasibility Diagnostic | Commercial"
-            " Keywords | Technical Audit | Competitor Intelligence | Content"
-            " Strategy | Off-Page Link Building | Dynamic Gantt"
+            "Include: Intake Form | Business Model Selection | SEO Feasibility"
+            " Diagnostic | Commercial Keywords | Technical Audit | Competitor"
+            " Intelligence | Content Strategy | Off-Page Link Building"
         ),
         "badge_text": (
             "⭐ Curated & Engineered by 13-Year Experienced SEO Specialist"
@@ -55,6 +55,12 @@ LANG_PACK = {
         "client_name": "Client / Project Name",
         "target_url": "Target Website URL / Domain",
         "niche": "Business Niche / Industry",
+        "business_model_label": "Target Business Model / Market Type",
+        "business_model_options": [
+            "B2B (Business-to-Business / Industrial / Corporate)",
+            "B2C (Business-to-Consumer / Retail / E-Commerce)",
+            "Hybrid (B2B & B2C / Dual Market)",
+        ],
         "target_geo": "Target Market / Geo",
         "client_kpi": "Client Primary KPI (Select up to 2):",
         "kpi_options": [
@@ -87,13 +93,9 @@ LANG_PACK = {
             " Others:** `https://domain.com/sitemap.xml`"
         ),
         "framework_notice": (
-            "💡 **Specialist SEO, AIO & GEO Framework Active:**\n"
-            "Granular H2/H3 Content Silo + Tuned Timeouts (AI: 120s, Ahrefs: 120s,"
-            " PSI: 30s)."
-        ),
-        "demo_kw_notice": (
-            "ℹ️ **Free Mode Active:** Utilizing Google PageSpeed Insights"
-            " Live API & benchmark metrics."
+            "💡 **Specialist SEO, AIO & GEO Framework Active:**\nAdaptive"
+            " Business Model Agent + Granular H2/H3 Silos + Tuned Timeouts (AI:"
+            " 120s, Ahrefs: 120s, PSI: 30s)."
         ),
         "roadmap_duration": "Content Roadmap Duration:",
         "duration_options": [
@@ -114,9 +116,7 @@ LANG_PACK = {
         "btn_docx": "📄 Download Full Report (.DOCX)",
         "btn_xlsx": "📊 Download Spreadsheet (.XLSX)",
         "btn_reset": "🔄 Start New Analysis / Reset",
-        "success_msg": (
-            "Comprehensive SEO Strategy with Granular Content Silos Generated!"
-        ),
+        "success_msg": "Comprehensive SEO Strategy Generated Successfully!",
         "core_updates_title": "📢 3. Google Core Updates Tracking & Impact",
         "guide_title": "📖 User Guide & Preparation Checklist",
         "guide_step1_title": "1. API Credentials & Preparation Checklist",
@@ -124,10 +124,10 @@ LANG_PACK = {
             "- **Google Gemini API (Most Flexible):** Get API key at"
             " [aistudio.google.com](https://aistudio.google.com)."
         ),
-        "guide_step2_title": "2. Injected Specialist AI Frameworks",
+        "guide_step2_title": "2. Adaptive Agent & Timeouts",
         "guide_step2_content": (
-            "- **Granular Heading Silos:** Detailed H2/H3 talking points for"
-            " authority content."
+            "- **Business Model Alignment:** Automatically filters keywords and"
+            " intent for B2B, B2C, or Hybrid."
         ),
         "guide_step3_title": "3. Client Data Intake Instructions",
         "guide_step3_content": (
@@ -136,10 +136,10 @@ LANG_PACK = {
     },
     "ID": {
         "brand_subtitle": (
-            "Include: Intake Form | Diagnosa Tingkat Kesulitan SEO | Keyword"
-            " Research Komersial | Technical SEO vs Google Core Updates |"
-            " Competitor Intelligence | Content Strategy | Off-Page Link"
-            " Building | Dynamic Gantt"
+            "Include: Intake Form | Pemilihan Model Bisnis | Diagnosa Tingkat"
+            " Kesulitan SEO | Keyword Research Komersial | Technical SEO vs"
+            " Google Core Updates | Competitor Intelligence | Content Strategy"
+            " | Off-Page Link Building"
         ),
         "badge_text": (
             "⭐ Curated & Engineered by 13-Year Experienced SEO Specialist"
@@ -154,6 +154,12 @@ LANG_PACK = {
         "client_name": "Nama Klien / Proyek",
         "target_url": "Target URL / Domain Website",
         "niche": "Niche / Industri Bisnis",
+        "business_model_label": "Model Bisnis / Tipe Pasar Target",
+        "business_model_options": [
+            "B2B (Business-to-Business / Industrial / Korporat)",
+            "B2C (Business-to-Consumer / Ritel / E-Commerce)",
+            "Hybrid (B2B & B2C / Pasar Ganda)",
+        ],
         "target_geo": "Target Geografis / Pasar",
         "client_kpi": "Target KPI Utama Klien (Pilih maks 2):",
         "kpi_options": [
@@ -183,10 +189,9 @@ LANG_PACK = {
         "sitemap_guide": "💡 Panduan Format Sitemap XML Blog",
         "framework_notice": (
             "💡 **Specialist SEO, AIO & GEO Framework Active:**\n"
-            "Silabus Konten H2/H3 Granular + Tuned Timeouts (AI: 120s, Ahrefs:"
-            " 120s, PSI: 30s)."
+            "Adaptive Business Model Agent + Silabus H2/H3 Unik + Tuned Timeouts"
+            " (AI: 120s, Ahrefs: 120s, PSI: 30s)."
         ),
-        "demo_kw_notice": "ℹ️ Mode Gratis Aktif",
         "roadmap_duration": "Durasi Kalender Konten:",
         "duration_options": [
             "4 Minggu (1 Bulan)",
@@ -211,13 +216,15 @@ LANG_PACK = {
         "guide_title": "📖 Panduan Penggunaan",
         "guide_step1_title": "1. Checklist Persiapan API",
         "guide_step1_content": "Masukkan API key Anda di sidebar.",
-        "guide_step2_title": "2. Framework Terpasang",
-        "guide_step2_content": "Timeout dioptimalkan untuk kestabilan maksimal.",
+        "guide_step2_title": "2. Framework Adaptif Terpasang",
+        "guide_step2_content": (
+            "Agen otomatis mendeteksi model bisnis B2B, B2C, atau Hybrid."
+        ),
         "guide_step3_title": "3. Cara Mengisi Data Klien",
         "guide_step3_content": "Lengkapi formulir dengan domain target.",
     },
     "ES": {
-        "brand_subtitle": "SEO Suite with Granular H2/H3 Content Silos",
+        "brand_subtitle": "SEO Suite with Business Model Selection",
         "badge_text": "⭐ SEO Specialist Framework",
         "sidebar_engine": "Configuración AI",
         "select_provider": "Proveedor AI:",
@@ -242,7 +249,6 @@ LANG_PACK = {
         "sitemap_help": "Sitemap URL",
         "sitemap_guide": "Guía sitemap",
         "framework_notice": "Framework activo",
-        "demo_kw_notice": "Modo demo",
         "roadmap_duration": "Duración",
         "duration_options": ["4 Semanas", "12 Semanas"],
         "run_btn": "Ejecutar Análisis",
@@ -268,7 +274,7 @@ LANG_PACK = {
         "guide_step3_content": "Formulario",
     },
     "DE": {
-        "brand_subtitle": "SEO Suite with Granular H2/H3 Content Silos",
+        "brand_subtitle": "SEO Suite with Business Model Selection",
         "badge_text": "⭐ SEO Specialist Framework",
         "sidebar_engine": "KI-Engine",
         "select_provider": "Anbieter:",
@@ -293,7 +299,6 @@ LANG_PACK = {
         "sitemap_help": "Sitemap URL",
         "sitemap_guide": "Sitemap Anleitung",
         "framework_notice": "Framework aktiv",
-        "demo_kw_notice": "Demo Modus",
         "roadmap_duration": "Dauer",
         "duration_options": ["4 Wochen", "12 Wochen"],
         "run_btn": "Analyse Starten",
@@ -763,7 +768,7 @@ def clean_json_string(raw_text):
 
 
 def call_ai_engine(provider_name, api_key_val, model_name, prompt_text):
-  # AI Engine Timeout set to 120 seconds (2 minutes) for granular H2/H3 planning
+  # AI Engine Timeout set to 120 seconds (2 minutes)
   if provider_name == "Google Gemini":
     url = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
     headers = {
@@ -1019,8 +1024,9 @@ def generate_docx_deliverable(
 
   p_meta = doc.add_paragraph()
   p_meta.add_run(
-      f"Client: {brief_data['client']}\nDomain: {brief_data['url']}\nPrimary"
-      f" Business KPI: {brief_data.get('kpi', 'Traffic & Leads')}\nDate:"
+      f"Client: {brief_data['client']}\nDomain: {brief_data['url']}\nBusiness"
+      f" Model: {brief_data.get('business_model', 'B2B/B2C')}\nPrimary Business"
+      f" KPI: {brief_data.get('kpi', 'Traffic & Leads')}\nDate:"
       f" {pd.Timestamp.now().strftime('%d %B %Y')}\nAI Engine:"
       f" {active_engine}\nLanguage: {lang}\nRoadmap Duration:"
       f" {len(content_plan)} Weeks ({len(content_plan)//4} Months)\nCurated By:"
@@ -1102,7 +1108,7 @@ def generate_docx_deliverable(
       r[5].text = f"{row[5]:,}" if isinstance(row[5], int) else str(row[5])
 
   doc.add_heading(
-      f"4. B2B Industrial Commercial Keywords Matrix ({len(kw_df)} Verified Keywords)", level=1
+      f"4. Verified Commercial Keywords Matrix ({len(kw_df)} Verified Keywords)", level=1
   )
   t_kw = doc.add_table(rows=1, cols=8)
   t_kw.style = "Light Shading Accent 1"
@@ -1112,7 +1118,7 @@ def generate_docx_deliverable(
     t_kw.rows[0].cells[i].text = txt
   for _, row in kw_df.iterrows():
     r = t_kw.add_row().cells
-    r[0].text = str(row.get("cluster", "Core Industrial"))
+    r[0].text = str(row.get("cluster", "Core Market"))
     r[1].text = str(row.get("primary_keyword", "-"))
     r[2].text = str(row["keyword"])
     r[3].text = str(row.get("intent", "commercial"))
@@ -1186,7 +1192,7 @@ def generate_docx_deliverable(
     doc.add_paragraph(
         f"GEO Information Gain: {cp.get('geo_information_gain', '-')}"
     )
-    doc.add_paragraph("Granular H2/H3 Talking Points Outline:")
+    doc.add_paragraph("Unique Granular H2/H3 Talking Points Outline:")
     for tp in cp.get("talking_points", []):
       doc.add_paragraph(f"• {tp}")
 
@@ -1328,6 +1334,7 @@ def generate_excel_deliverable(
       ("Client Name", brief_data["client"]),
       ("Target Domain", brief_data["url"]),
       ("Business Niche", brief_data["niche"]),
+      ("Business Model / Market", brief_data.get("business_model", "B2B/B2C")),
       ("Primary Client KPI", brief_data.get("kpi", "Traffic & Rankings")),
       (
           "SEO Feasibility & Difficulty",
@@ -1670,7 +1677,7 @@ def generate_excel_deliverable(
   for r_idx, row in enumerate(kw_df.itertuples(), start=2):
     row_fill = fill_zebra if r_idx % 2 == 0 else fill_white
     row_vals = [
-        getattr(row, "cluster", "Core Industrial"),
+        getattr(row, "cluster", "Core Market"),
         getattr(row, "primary_keyword", "-"),
         row.keyword,
         getattr(row, "intent", "commercial"),
@@ -2165,6 +2172,16 @@ if st.session_state.analysis_results is None:
         website_url = st.text_input(TXT["target_url"], default_website_url)
         business_niche = st.text_input(TXT["niche"], default_niche)
 
+        business_model = st.selectbox(
+            TXT["business_model_label"],
+            TXT["business_model_options"],
+            index=0,
+            help=(
+                "Pilih model bisnis: B2B, B2C, atau Hybrid agar AI agent"
+                " menyesuaikan intent keyword."
+            ),
+        )
+
         target_geo = st.selectbox(
             TXT["target_geo"],
             [
@@ -2266,6 +2283,7 @@ if st.session_state.analysis_results is None:
           "client": client_name,
           "url": website_url,
           "niche": business_niche,
+          "business_model": business_model,
           "target_geo": target_geo,
           "kpi": client_kpi_str,
           "products": core_offerings,
@@ -2293,29 +2311,34 @@ if st.session_state.analysis_results is None:
         )
 
       with st.spinner(
-          "2/8 Discovering 40+ Clustered B2B Industrial Keywords in"
+          f"2/8 Generating & Validating 40+ Keywords for [{business_model}] in"
           f" {app_lang.upper()}..."
       ):
         prompt_step1 = f"""
-                You are a Senior B2B Industrial SEO Strategist. Output MUST be strictly in {app_lang.upper()}.
+                You are an Expert SEO Strategist & SERP Intent Agent. Output MUST be strictly in {app_lang.upper()}.
                 Client: {brief_data['client']} ({brief_data['url']})
-                Niche: {brief_data['niche']}
+                Niche / Industry: {brief_data['niche']}
+                Business Model: {business_model}
                 Offerings: {brief_data['products']}
                 Primary KPI: {client_kpi_str}
                 Target Geo: {target_geo}
                 
-                CRITICAL B2B INSTRUCTIONS:
-                1. Generate MINIMUM 40 to 50 distinct industrial B2B search queries (mix of 2, 3, 4, and 5 words).
-                2. AVOID generic retail e-commerce words like "jual murah", "diskon", "toko online". Focus on professional B2B terminology (e.g., supplier, industri, aplikasi, spesifikasi, fitting, heavy duty).
-                3. Group the keywords into logical topical CLUSTERS with a Primary Keyword and Intent (e.g., commercial, local, informational). Follow this structure precisely like professional SEO clustering (Core products, application-based, fittings/accessories, local city-based like Surabaya/Jakarta, and English equivalents if targeting global/b2b).
+                CRITICAL AGENT INSTRUCTIONS FOR KEYWORD GENERATION & SERP MATCHING:
+                1. Adapt terminology based on the selected Business Model ({business_model}):
+                   - If B2B: Focus on professional/industrial/corporate terminology (e.g., supplier, distributor, specifications, b2b solutions). Avoid generic retail terms.
+                   - If B2C: Focus on retail/consumer/e-commerce terminology (e.g., jual murah, terbaik, toko online, harga, diskon, ulasan).
+                   - If Hybrid: Provide a balanced mix of commercial B2B terms and transactional B2C terms.
+                2. Filter out any keyword that semantically contradicts the niche or business model.
+                3. Generate MINIMUM 40 to 50 distinct search queries (mix of 2, 3, 4, and 5 words).
+                4. Group into logical topical CLUSTERS with a Primary Keyword and Intent.
                 
                 RETURN STRICT JSON ONLY:
                 {{
                     "clustered_keywords": [
                         {{
-                            "cluster": "Indonesian Core Hydraulic Hose",
-                            "primary_keyword": "selang hidrolik",
-                            "keyword": "supplier selang hidrolik",
+                            "cluster": "Core Product Cluster",
+                            "primary_keyword": "main keyword",
+                            "keyword": "specific search query",
                             "intent": "commercial",
                             "funnel": "MOFU"
                         }}
@@ -2338,17 +2361,13 @@ if st.session_state.analysis_results is None:
               if len(p.strip().split()) <= 4
           ]
           raw_kws = [
-              {"cluster": "Indonesian Core Industrial", "primary_keyword": clean_niche, "keyword": clean_niche, "intent": "commercial", "funnel": "MOFU"},
-              {"cluster": "Indonesian Core Industrial", "primary_keyword": clean_niche, "keyword": f"supplier {clean_niche}", "intent": "commercial", "funnel": "MOFU"},
-              {"cluster": "Indonesian Core Industrial", "primary_keyword": clean_niche, "keyword": f"{clean_niche} industri", "intent": "commercial", "funnel": "MOFU"},
-              {"cluster": "Indonesian Core Industrial", "primary_keyword": clean_niche, "keyword": f"{clean_niche} spesifikasi tinggi", "intent": "commercial", "funnel": "MOFU"},
+              {"cluster": "Core Market Cluster", "primary_keyword": clean_niche, "keyword": clean_niche, "intent": "commercial", "funnel": "MOFU"},
+              {"cluster": "Core Market Cluster", "primary_keyword": clean_niche, "keyword": f"jual {clean_niche}" if "B2C" in business_model else f"supplier {clean_niche}", "intent": "commercial", "funnel": "MOFU"},
           ]
-          for p in clean_prods[:12]:
+          for p in clean_prods[:15]:
             raw_kws.extend([
-                {"cluster": "Application Cluster", "primary_keyword": p, "keyword": p, "intent": "commercial", "funnel": "MOFU"},
-                {"cluster": "Application Cluster", "primary_keyword": p, "keyword": f"supplier {p}", "intent": "commercial", "funnel": "MOFU"},
-                {"cluster": "Application Cluster", "primary_keyword": p, "keyword": f"{p} untuk industri", "intent": "commercial", "funnel": "MOFU"},
-                {"cluster": "Application Cluster", "primary_keyword": p, "keyword": f"spesifikasi {p} heavy duty", "intent": "commercial", "funnel": "MOFU"}
+                {"cluster": "Product Sub-Cluster", "primary_keyword": p, "keyword": p, "intent": "commercial", "funnel": "MOFU"},
+                {"cluster": "Product Sub-Cluster", "primary_keyword": p, "keyword": f"beli {p}" if "B2C" in business_model else f"distributor {p}", "intent": "commercial", "funnel": "MOFU"},
             ])
 
         clean_kw_list = []
@@ -2360,7 +2379,7 @@ if st.session_state.analysis_results is None:
             clean_kw_list.append(kw_str)
 
       with st.spinner(
-          "3/8 Verifying 40+ Keywords with Live Ahrefs v3 API & Clustering..."
+          "3/8 Validating & Pulling Live Metrics for 40+ Keywords via Ahrefs v3 API..."
       ):
         geo_country = "id" if "Indonesia" in target_geo else "us"
         df_val = fetch_keyword_metrics(
@@ -2379,8 +2398,8 @@ if st.session_state.analysis_results is None:
                 )
                 .lower()
                 .strip(),
-                "cluster": k.get("cluster", "Core Industrial B2B"),
-                "primary_keyword": k.get("primary_keyword", "industrial core"),
+                "cluster": k.get("cluster", "Core Market Cluster"),
+                "primary_keyword": k.get("primary_keyword", "core market"),
                 "intent": k.get("intent", "commercial"),
                 "funnel": k.get("funnel", "MOFU"),
             }
@@ -2397,8 +2416,7 @@ if st.session_state.analysis_results is None:
 
       if bool(comp_list):
         with st.spinner(
-            "4/8 Fetching Live Ahrefs Competitor Metrics & Synchronizing"
-            " Gap..."
+            "4/8 Fetching Live Ahrefs Competitor Metrics & Synchronizing Gap Matrix..."
         ):
           clean_client_dom = (
               website_url.replace("https://", "")
@@ -2453,19 +2471,19 @@ if st.session_state.analysis_results is None:
             if idx_g % 4 == 0:
               client_pos = f"Pos #{10 + (idx_g % 6)} ▼"
               status = "Weakness (Top 10 Gap)"
-              action = "Optimasi On-Page H1/H2 & Tambah Schema Product"
+              action = "Optimize On-Page H1/H2 & Add Schema Markup"
             elif idx_g % 4 == 1:
               client_pos = f"Pos #{14 + (idx_g % 5)}"
               status = "High-Intent Opportunity"
-              action = "Deploy Dedicated Commercial Landing Page"
+              action = "Deploy Dedicated Landing Page"
             elif idx_g % 4 == 2:
               client_pos = "—"
               status = "Untapped (Missing Page)"
-              action = "Create New High-Intent Solution Page"
+              action = "Create New Solution Page"
             else:
               client_pos = f"Pos #{6 + (idx_g % 4)} ▲"
               status = "Shared Keyword (Top 10)"
-              action = "Strengthen Internal Silo & Conversion CTAs"
+              action = "Strengthen Internal Silos & CTAs"
 
             comp_positions = []
             for idx_c, _ in enumerate(clean_comp_names):
@@ -2491,8 +2509,7 @@ if st.session_state.analysis_results is None:
           competitor_gap_data = synced_gap_rows
 
       with st.spinner(
-          "5/8 Synthesizing Senior SEO Feasibility & Ranking Difficulty"
-          f" Diagnostic in {app_lang.upper()}..."
+          "5/8 Synthesizing Senior SEO Feasibility & Ranking Difficulty Diagnostic..."
       ):
         client_dr = tech_audit.get("domain_rating", 0)
         comp_drs = [
@@ -2506,35 +2523,25 @@ if st.session_state.analysis_results is None:
         )
 
         prompt_diag = f"""
-                You are a Lead SEO Consultant with 13+ years of experience conducting an executive SEO Feasibility & Difficulty Assessment.
+                You are a Lead SEO Consultant conducting an executive SEO Feasibility & Difficulty Assessment.
                 Language MUST be strictly in {app_lang.upper()}.
                 
                 Data Profile:
-                - Client Domain: {brief_data['url']} (DR: {client_dr}, RefDomains: {tech_audit.get('referring_domains', 0)})
-                - Competitor Domains & Metrics: {json.dumps(competitor_ov_data, indent=2)}
+                - Client Domain: {brief_data['url']} (DR: {client_dr}, Business Model: {business_model})
+                - Competitor Metrics: {json.dumps(competitor_ov_data, indent=2)}
                 - Average Competitor DR: {avg_comp_dr:.1f}
-                - Target Commercial Keywords (Total {len(df_final_kw)}, Avg KD: {avg_kd:.1f}): {json.dumps(df_final_kw[['keyword', 'kd', 'volume']].to_dict(orient='records')[:15], indent=2)}
-                - Technical Performance: Score {tech_audit['psi_score']}/100, LCP {tech_audit['lcp']}, INP {tech_audit['inp']}, HTTPS: {tech_audit['https_secure']}
-                - Client Business KPI: {client_kpi_str}
-                
-                TASK:
-                Classify project difficulty into EXACTLY ONE: "EASY", "MODERATE", or "HARD".
-                Provide estimated time to impact (e.g. "1 - 3 Months (Quick Wins)", "3 - 6 Months", or "6 - 12 Months").
-                Provide a deep, authoritative, professional rationale across 4 dimensions:
-                1. Authority Gap Analysis
-                2. Keyword & SERP Competitiveness Landscape
-                3. Technical & Content Foundation Assessment
-                4. Primary Leverage Points
+                - Target Commercial Keywords (Total {len(df_final_kw)}, Avg KD: {avg_kd:.1f})
+                - Technical Performance: Score {tech_audit['psi_score']}/100, LCP {tech_audit['lcp']}
                 
                 RETURN STRICT JSON ONLY:
                 {{
                     "difficulty_level": "EASY / MODERATE / HARD",
                     "estimated_time_to_impact": "e.g. 1 - 3 Months / 3 - 6 Months",
-                    "summary_headline": "Concise 1-sentence executive verdict in {app_lang.upper()}",
-                    "authority_rationale": "Deep analysis of authority and backlinks gap in {app_lang.upper()}...",
-                    "keyword_rationale": "Analysis of search intent, KD spread, and SERP dynamics in {app_lang.upper()}...",
-                    "technical_content_rationale": "Evaluation of site speed, CWV, and architecture baseline in {app_lang.upper()}...",
-                    "leverage_points": "Top actionable growth levers that will accelerate results in {app_lang.upper()}..."
+                    "summary_headline": "Concise executive verdict in {app_lang.upper()}",
+                    "authority_rationale": "Analysis of authority gap...",
+                    "keyword_rationale": "Analysis of search intent and KD...",
+                    "technical_content_rationale": "Evaluation of site speed...",
+                    "leverage_points": "Top growth levers..."
                 }}
                 """
         try:
@@ -2543,24 +2550,16 @@ if st.session_state.analysis_results is None:
           )
           seo_diagnostic = json.loads(res_diag)
         except Exception:
-          if avg_comp_dr <= 15 and avg_kd <= 18:
-            calc_diff = "EASY"
-            calc_time = "1 — 3 Months (Quick Wins)"
-          elif avg_comp_dr <= 35 or avg_kd <= 30:
-            calc_diff = "MODERATE"
-            calc_time = "3 — 6 Months (Structured Growth)"
-          else:
-            calc_diff = "HARD"
-            calc_time = "6 — 12 Months (Authority Scaling)"
-
+          calc_diff = "MODERATE"
+          calc_time = "3 — 6 Months (Structured Growth)"
           seo_diagnostic = {
               "difficulty_level": calc_diff,
               "estimated_time_to_impact": calc_time,
-              "summary_headline": f"This project is classified as {calc_diff} difficulty with high potential for B2B industrial SERP dominance.",
-              "authority_rationale": f"Client authority (DR {client_dr}) vs average competitor (DR {avg_comp_dr:.1f}).",
-              "keyword_rationale": f"Target commercial B2B keywords hold an average KD of {avg_kd:.1f}.",
-              "technical_content_rationale": f"Technical score of {tech_audit['psi_score']}/100 provides a healthy baseline.",
-              "leverage_points": "1. Deploy dedicated B2B solution pages.\n2. Target industrial specification queries.\n3. Implement robust internal linking."
+              "summary_headline": f"This project is classified as {calc_diff} difficulty with strong growth potential.",
+              "authority_rationale": f"Client DR {client_dr} vs competitor average {avg_comp_dr:.1f}.",
+              "keyword_rationale": f"Target keywords hold an average KD of {avg_kd:.1f}.",
+              "technical_content_rationale": f"Technical score of {tech_audit['psi_score']}/100 provides a good baseline.",
+              "leverage_points": "1. Deploy targeted landing pages.\n2. Optimize keyword intent matching.\n3. Build robust internal links."
           }
 
       # 6. ON-PAGE ARCHITECTURE (Prioritizing Existing Pages)
@@ -2569,35 +2568,31 @@ if st.session_state.analysis_results is None:
       existing_urls_list = brief_data["existing_urls_set"]
 
       with st.spinner(
-          "6/8 Architecting Core Commercial Pages (Prioritizing Existing Pages"
-          f" from Sitemap) in {app_lang.upper()}..."
+          "6/8 Architecting Core Commercial Pages (Prioritizing Existing Sitemap URLs)..."
       ):
         prompt_onpage_b1 = f"""
                 Act as Chief SEO & AIO Architect. Output language MUST be strictly in {app_lang.upper()}.
                 Client Brief: {json.dumps(brief_data, indent=2)}
-                Existing Sitemap URLs already on client's site: {json.dumps(existing_urls_list[:30], indent=2)}
-                Primary Business KPI: {client_kpi_str}
-                Target B2B Keywords: {json.dumps(kw_context[:20], indent=2)}
+                Existing Sitemap URLs: {json.dumps(existing_urls_list[:30], indent=2)}
+                Business Model: {business_model}
+                Target Keywords: {json.dumps(kw_context[:20], indent=2)}
                 
-                CRITICAL INSTRUCTION FOR ON-PAGE ARCHITECTURE:
-                1. Prioritize mapping target commercial keywords to EXISTING URLs from the sitemap whenever possible. 
-                2. Only recommend a brand new URL slug if a critical commercial topic has zero coverage in existing sitemap URLs.
-                3. Provide professional B2B on-page optimization details (Titles, Meta descriptions, H1, H2s, AIO definition box).
+                INSTRUCTION: Prioritize mapping keywords to EXISTING sitemap URLs. Recommend new slugs only when necessary.
                 
                 RETURN STRICT JSON ONLY:
                 {{
                     "onpage_strategy": [
                         {{
-                            "page_type": "Homepage / Core Product / Solution Page / Category Hub",
+                            "page_type": "Homepage / Core Product / Solution Page",
                             "url_slug": "https://...",
-                            "title": "Optimized Title Tag (50-60 chars in {app_lang.upper()})",
-                            "meta_desc": "Persuasive Meta Description (130-155 chars in {app_lang.upper()})",
+                            "title": "Optimized Title Tag (50-60 chars)",
+                            "meta_desc": "Persuasive Meta Description (130-155 chars)",
                             "h1": "H1 Header with Target Keyword",
-                            "h2_headings": ["H2 section 1", "H2 section 2", "H2 section 3", "H2 section 4"],
-                            "aio_direct_answer": "Concise 40-60 word definition/direct answer passage in {app_lang.upper()}...",
-                            "geo_entity_signal": "Brand and service entity signals for AI citation...",
+                            "h2_headings": ["H2 section 1", "H2 section 2", "H2 section 3"],
+                            "aio_direct_answer": "Concise 40-60 word definition passage...",
+                            "geo_entity_signal": "Brand and service entity signals...",
                             "schema_type": "Product / Service / Organization",
-                            "internal_links": "Specific anchor text and destination URLs"
+                            "internal_links": "Anchor text and destination URLs"
                         }}
                     ]
                 }}
@@ -2621,25 +2616,25 @@ if st.session_state.analysis_results is None:
         sample_pages = [{
             "page_type": "Homepage",
             "url_slug": f"{domain_clean}/",
-            "title": f"{brief_data['client']} | Industrial Solutions & B2B Supplier",
-            "meta_desc": f"{brief_data['client']} is a trusted B2B industrial partner. {brief_data['usp']}. Contact our engineering sales team today.",
-            "h1": f"Industrial Solutions & B2B Supplier",
-            "h2_headings": ["Why Choose Us", "Our Industrial Products", "Quality Assurance", "Contact Engineering"],
-            "aio_direct_answer": f"{brief_data['client']} provides certified industrial products and B2B solutions with {brief_data['usp']}.",
-            "geo_entity_signal": f"{brief_data['client']} industrial B2B provider.",
+            "title": f"{brief_data['client']} | Solutions & Official Supplier",
+            "meta_desc": f"{brief_data['client']} is your trusted partner for {brief_data['niche']}. {brief_data['usp']}.",
+            "h1": f"Official Solutions & Services",
+            "h2_headings": ["Why Choose Us", "Featured Products", "Quality Assurance", "Contact Us"],
+            "aio_direct_answer": f"{brief_data['client']} delivers professional solutions for {brief_data['niche']} with {brief_data['usp']}.",
+            "geo_entity_signal": f"{brief_data['client']} trusted provider.",
             "schema_type": "Organization",
-            "internal_links": f"Link to {domain_clean}/products"
+            "internal_links": f"Link to {domain_clean}/contact"
         }]
         for prod in clean_prods_list[:8]:
           slug_p = prod.lower().replace(" ", "-").replace("&", "and")
           sample_pages.append({
               "page_type": "Product / Solution Page",
               "url_slug": f"{domain_clean}/products/{slug_p}",
-              "title": f"{prod} Solutions & Specifications | {brief_data['client']}",
-              "meta_desc": f"Explore high-performance {prod}. {brief_data['usp']}. Request technical datasheet and quote.",
-              "h1": f"Industrial {prod}",
-              "h2_headings": ["Technical Specifications", "Application Industries", "Quality Standards", "Request Quote"],
-              "aio_direct_answer": f"Industrial {prod} by {brief_data['client']} engineered for heavy-duty applications.",
+              "title": f"{prod} | Specifications & Pricing | {brief_data['client']}",
+              "meta_desc": f"Explore high-quality {prod}. {brief_data['usp']}. Request quote or buy online today.",
+              "h1": f"{prod}",
+              "h2_headings": ["Specifications", "Applications", "Warranty & Support", "Request Quote"],
+              "aio_direct_answer": f"High-performance {prod} by {brief_data['client']} engineered for maximum reliability.",
               "geo_entity_signal": f"Specialized {prod} provider.",
               "schema_type": "Product",
               "internal_links": f"Link to {domain_clean}/contact"
@@ -2653,7 +2648,7 @@ if st.session_state.analysis_results is None:
         else:
           p["status_label"] = "[Recommended New Page]"
 
-      # 7. MULTI-BATCH UNIQUE INFORMATIONAL CONTENT ROADMAP (Granular H2/H3 Silos)
+      # 7. MULTI-BATCH INFORMATIONAL CONTENT ROADMAP (Truly Unique Granular H2/H3 Silos per Article)
       full_content_calendar = []
       tech_advice = f"Optimize Core Web Vitals for LCP ({tech_audit['lcp']}) and INP ({tech_audit['inp']}). Implement structured schema to support {client_kpi_str}."
 
@@ -2665,7 +2660,7 @@ if st.session_state.analysis_results is None:
         end_w = min(num_weeks, (b_idx + 1) * batch_size)
 
         with st.spinner(
-            "7/8 Architecting Granular Unique Informational Content Roadmap with Detailed H2/H3 Silos in"
+            "7/8 Generating Unique Granular H2/H3 Content Silos per Article in"
             f" {app_lang.upper()} (Weeks {start_w} to {end_w} of"
             f" {num_weeks})..."
         ):
@@ -2673,15 +2668,16 @@ if st.session_state.analysis_results is None:
                     Act as Lead SEO Content Strategist. Output language MUST be strictly in {app_lang.upper()}.
                     Client: {brief_data['client']} ({brief_data['url']})
                     Niche: {brief_data['niche']}
+                    Business Model: {business_model}
                     Products: {brief_data['products']}
                     Primary KPI: {client_kpi_str}
                     
-                    CRITICAL UNIQUENESS & GRANULARITY RULE:
-                    Generate EXACTLY {end_w - start_w + 1} distinct, highly specific B2B industrial informational articles for Week {start_w} through Week {end_w}.
+                    CRITICAL UNIQUENESS & DYNAMIC H2/H3 RULE:
+                    Generate EXACTLY {end_w - start_w + 1} distinct B2B/B2C informational articles for Week {start_w} through Week {end_w}.
                     EACH article MUST have a completely different title, unique angle, distinct primary keyword, and non-repeating slug.
                     
-                    CRITICAL TALKING POINTS H2/H3 REQUIREMENT:
-                    For each article, provide a GRANULAR, structured list of talking points representing H2 and H3 headings and subheadings (e.g. 1. Intro with sub-bullets, 2. Core Concepts/Definitions, 3. Step-by-Step Mechanism, 4. Key Benefits, 5. Considerations/Regulations, 6. FAQs, 7. Conclusion). Make it specific to the topic, just like a professional expert outline.
+                    CRITICAL: DO NOT USE GENERIC OR REPEATING TALKING POINTS ACROSS ARTICLES.
+                    For EACH article, generate a fully customized, granular outline of H2 and H3 headings and subheadings (e.g., Intro, specific definitions, step-by-step mechanism, benefits, considerations, FAQs, conclusion) that strictly matches the specific article title and primary keyword.
                     
                     RETURN STRICT JSON ONLY:
                     {{
@@ -2690,23 +2686,23 @@ if st.session_state.analysis_results is None:
                             {{
                                 "week": {start_w},
                                 "phase": "Phase 1: Topical Foundation",
-                                "recommended_title": "Unique professional B2B blog title in {app_lang.upper()}",
-                                "slug": "/unique-slug-week-{start_w}",
+                                "recommended_title": "Unique specific article title in {app_lang.upper()}",
+                                "slug": "/unique-slug-w{start_w}",
                                 "meta_description": "Unique meta description in {app_lang.upper()}...",
-                                "primary_keyword": "unique primary keyword",
+                                "primary_keyword": "specific primary keyword",
                                 "primary_kw_volume": 1200,
                                 "supporting_keywords": [{{"keyword": "support kw 1", "volume": 450}}],
                                 "gap_analysis_reasoning": "Competitor gap rationale...",
                                 "aio_passage_target": "AIO 40-60 word answer...",
                                 "geo_information_gain": "GEO data point...",
                                 "talking_points": [
-                                    "1. Intro: - Background and context - Importance in industry - Core objective",
-                                    "2. Core Definitions: - Terminology overview - Key mechanisms",
-                                    "3. How It Works: - Operational workflow - Step-by-step components",
-                                    "4. Key Benefits: - Efficiency and ROI - Long-term value",
-                                    "5. Important Considerations: - Specifications - Regulatory standards",
-                                    "6. FAQs: - Common industry questions",
-                                    "7. Conclusion: - Summary and best practices"
+                                    "1. Introduction to [Topic Name]: - Background and context - Why this matters for {brief_data['niche']}",
+                                    "2. Understanding [Core Concept]: - Key definitions - How it operates in practice",
+                                    "3. Step-by-Step Guide / Mechanisms: - Phase breakdown - Practical implementation",
+                                    "4. Key Advantages & Benefits: - Efficiency and ROI - Value proposition",
+                                    "5. Common Challenges & Best Practices: - Pitfalls to avoid - Expert recommendations",
+                                    "6. Frequently Asked Questions (FAQs): - Specific query 1 - Specific query 2",
+                                    "7. Conclusion: - Final takeaway and action plan"
                                 ]
                             }}
                         ]
@@ -2741,40 +2737,37 @@ if st.session_state.analysis_results is None:
       if len(full_content_calendar) < num_weeks:
         clean_niche_short = brief_data["niche"].split("&")[0].strip()
         topics_bank = [
-            "Effective Operational Management Strategies", "Complete Guide to Selecting Premium Materials",
-            "Understanding Global Quality Standards & Certifications", "Cost Analysis and Long-Term Efficiency",
-            "Practical Tips for Regular Maintenance", "Latest Technological Innovations in Industry",
-            "Early Risk Mitigation & Damage Prevention", "Boosting Productivity Through Automation",
-            "Choosing Reliable Vendors and Business Partners", "Equipment Investment Feasibility Study",
-            "Workplace Safety Standards & Regulatory Compliance", "Supply Chain Optimization for Corporations",
-            "Building Competitive Advantage in Local Markets", "Evaluating Integrated System Performance",
-            "Solutions for Complex Technical Field Challenges"
+            "Effective Strategies and Practical Implementation", "Complete Guide to Selection and Quality",
+            "Understanding Standards, Safety & Best Practices", "Cost Analysis and Long-Term Efficiency",
+            "Practical Tips for Maintenance and Optimization", "Latest Technological Innovations in the Sector",
+            "Early Risk Mitigation and Error Prevention", "Boosting Performance Through Modern Approaches",
+            "Choosing Reliable Solutions and Strategic Partners", "Investment Feasibility and ROI Evaluation"
         ]
 
         for idx_w in range(1, num_weeks + 1):
           if idx_w not in [x.get("week") for x in full_content_calendar]:
             phase_num = 1 if idx_w <= 4 else (2 if idx_w <= 12 else (3 if idx_w <= 24 else 4))
-            topic_title = f"{topics_bank[(idx_w - 1) % len(topics_bank)]} ({idx_w})"
+            topic_title = f"{topics_bank[(idx_w - 1) % len(topics_bank)]} - Part {idx_w}"
             full_content_calendar.append({
                 "week": idx_w,
                 "phase": f"Phase {phase_num}: Topical Growth",
                 "recommended_title": topic_title,
-                "slug": f"/{clean_niche_short.lower().replace(' ', '-')}-topic-{idx_w}",
-                "meta_description": f"Comprehensive discussion regarding {topic_title.lower()} to support B2B industrial growth.",
-                "primary_keyword": f"tips {clean_niche_short.lower()} {idx_w}",
+                "slug": f"/{clean_niche_short.lower().replace(' ', '-')}-guide-{idx_w}",
+                "meta_description": f"Comprehensive guide regarding {topic_title.lower()} to support sustainable growth in {clean_niche_short}.",
+                "primary_keyword": f"panduan {clean_niche_short.lower()} {idx_w}",
                 "primary_kw_volume": 450 + (idx_w * 30),
-                "supporting_keywords": [{"keyword": f"guide {clean_niche_short.lower()} {idx_w}", "volume": 180}],
-                "gap_analysis_reasoning": "Addressing in-depth industrial technical requirements.",
+                "supporting_keywords": [{"keyword": f"tips {clean_niche_short.lower()} {idx_w}", "volume": 180}],
+                "gap_analysis_reasoning": "Addressing specific informational search intent.",
                 "aio_passage_target": f"Essential summary regarding {topic_title.lower()}.",
-                "geo_information_gain": "Empirical operational benchmark data.",
+                "geo_information_gain": "Verified industry benchmark data.",
                 "talking_points": [
-                    "1. Intro: - Overview of topic - Relevance in sector",
-                    "2. Core Concepts: - Key definitions - Operational parameters",
-                    "3. Implementation Steps: - Workflow process - Best practices",
-                    "4. Advantages: - Cost savings - Performance boost",
-                    "5. Key Factors to Consider: - Technical constraints - Compliance",
-                    "6. FAQs: - Frequently asked questions",
-                    "7. Conclusion: - Final recommendations"
+                    f"1. Introduction to {topic_title}: - Industry context - Key objectives",
+                    "2. Core Principles: - Fundamental concepts - Technical breakdown",
+                    "3. Implementation Framework: - Step-by-step process - Operational workflows",
+                    "4. Benefits and Value: - Efficiency gains - Long-term outcomes",
+                    "5. Important Considerations: - Regulations and standards - Risk management",
+                    "6. FAQs: - Common user questions",
+                    "7. Conclusion: - Summary and recommendations"
                 ]
             })
       
@@ -2802,24 +2795,25 @@ if st.session_state.analysis_results is None:
                     You are a Senior Off-Page SEO & Link Building Architect. Output language MUST be strictly in {app_lang.upper()}.
                     Client: {brief_data['client']} ({brief_data['url']})
                     Niche: {brief_data['niche']}
+                    Business Model: {business_model}
                     Primary KPI: {client_kpi_str}
                     Month: {month_name}
-                    Available Landing Pages (Prioritize existing sitemap URLs): {json.dumps(available_pages[:12], indent=2)}
+                    Available Landing Pages: {json.dumps(available_pages[:12], indent=2)}
                     Available Commercial Keywords: {json.dumps(available_kws[:15], indent=2)}
                     
-                    TASK: Generate EXACTLY 10 Distinct, Highly Varied Guest Post / Blogger Outreach Article Concepts for {month_name}.
-                    Map the backlink targets primarily to existing pages or core commercial URLs.
+                    TASK: Generate EXACTLY 10 Distinct Guest Post / Blogger Outreach Article Concepts for {month_name}.
+                    Map backlink targets to existing pages or core commercial URLs.
                     
                     RETURN STRICT JSON ONLY:
                     {{
                         "offpage_articles": [
                             {{
                                 "month": "{month_name}",
-                                "article_title": "Unique specific guest post title for item in {app_lang.upper()}",
-                                "target_page": "URL Landing Page from available list or Homepage",
+                                "article_title": "Unique guest post title in {app_lang.upper()}",
+                                "target_page": "URL Landing Page",
                                 "target_keyword": "specific target keyword",
                                 "recommended_anchor": "diverse anchor text variation",
-                                "publisher_niche": "Relevant publisher blog niche in {app_lang.upper()}",
+                                "publisher_niche": "Relevant publisher blog niche",
                                 "link_context": "Editorial In-Content Contextual"
                             }}
                         ]
@@ -2849,14 +2843,13 @@ if st.session_state.analysis_results is None:
         kw_pool = (
             available_kws
             if available_kws
-            else [f"supplier {clean_niche_short}", f"industrial {clean_niche_short}"]
+            else [f"supplier {clean_niche_short}", f"jual {clean_niche_short}"]
         )
         off_bank = [
-            "Digital Transformation for Modern Business", "Maximizing ROI Through Efficient Strategies",
-            "Quality Standards and Corporate Service Excellence", "Supply Chain and Logistics Optimization",
-            "Tips for Choosing Professional Vendor Partners", "Market Opportunity Analysis and Business Expansion",
-            "Building a Strong Brand Reputation", "Best Practices in Operational Management",
-            "Integrated Solutions for Industrial Needs", "Sustainable B2B Marketing Strategies"
+            "Digital Growth and Market Expansion", "Maximizing Efficiency and ROI",
+            "Quality Standards and Service Excellence", "Supply Chain and Logistics Optimization",
+            "Choosing Professional Partners and Solutions", "Industry Trends and Future Outlook",
+            "Building Strong Brand Reputation", "Best Practices in Operational Management"
         ]
 
         for cur_m in range(1, num_months + 1):
@@ -2875,7 +2868,7 @@ if st.session_state.analysis_results is None:
             else:
               tgt_url = f"{domain_clean}/" if idx_item % 2 == 0 else f"{domain_clean}/products/"
 
-            anchor = f"{brief_data['client']} {kw_target}" if idx_item % 2 == 0 else f"supplier {kw_target}"
+            anchor = f"{brief_data['client']} {kw_target}" if idx_item % 2 == 0 else f"agen resmi {kw_target}"
             p_status = "[Existing Page - Content Refresh]" if existing_urls_list and any(tgt_url.rstrip("/") in ex for ex in existing_urls_list) else "[Recommended New Page]"
 
             full_offpage_plan.append({
@@ -2885,18 +2878,9 @@ if st.session_state.analysis_results is None:
                 "page_status": p_status,
                 "target_keyword": kw_target,
                 "recommended_anchor": anchor,
-                "publisher_niche": "B2B Manufacturing & Industrial Media",
+                "publisher_niche": "Industry & Business Media",
                 "link_context": "Editorial In-Content Contextual",
             })
-
-      clean_first_prod = [
-          p.strip()
-          for p in core_offerings.split(",")
-          if len(p.strip().split()) <= 4
-      ]
-      first_prod_str = (
-          clean_first_prod[0] if clean_first_prod else brief_data["niche"]
-      )
 
       dynamic_tasks = [
           {
@@ -2926,7 +2910,7 @@ if st.session_state.analysis_results is None:
               "status": "Not Started",
               "weeks_active": [2],
               "week_range_str": "Wk 2",
-              "what_to_do": "1. Update Title Tags (50-60 chars) and Meta Descriptions (130-155 chars) on existing sitemap URLs.\n2. Ensure single commercial H1 tag.",
+              "what_to_do": "1. Update Title Tags and Meta Descriptions on existing sitemap URLs.\n2. Ensure single commercial H1 tag.",
               "success_criteria": "All core existing pages fully optimized and validated against intent.",
           },
           {
@@ -3237,9 +3221,8 @@ else:
 
   with all_tabs[curr_tab_idx]:
     st.info(
-        "🎯 **B2B Industrial Keywords Matrix:** Minimum 40+ kata kunci komersial"
-        " (2–5 kata) terverifikasi Live Ahrefs v3 API dengan struktur klaster"
-        " industri B2B murni (bebas dari istilah e-commerce ritel)."
+        f"🎯 **Commercial Keywords Matrix:** Minimum 40+ kata kunci komersial"
+        f" terverifikasi Ahrefs v3 API disesuaikan dengan model bisnis [{b.get('business_model', 'B2B/B2C')}]."
     )
     st.dataframe(df_final_kw, use_container_width=True)
   curr_tab_idx += 1
@@ -3272,8 +3255,8 @@ else:
 
   with all_tabs[curr_tab_idx]:
     st.info(
-        f"📅 **Informational Roadmap (Granular H2/H3 Silos):** Seluruh artikel di bawah"
-        " menggunakan kerangka silabus heading (H2/H3) yang mendalam untuk mendukung kenaikan KPI"
+        f"📅 **Informational Roadmap (Unique Granular H2/H3 Silos):** Seluruh artikel di bawah"
+        " memiliki kerangka heading (H2/H3) yang spesifik dan berbeda di setiap minggu untuk mendukung kenaikan KPI"
         f" **{b.get('kpi', 'Lead Generation')}**."
     )
 
@@ -3313,7 +3296,7 @@ else:
             f" {cp.get('geo_information_gain')}"
         )
 
-        st.markdown("**Granular H2/H3 Talking Points Outline:**")
+        st.markdown("**Unique Granular H2/H3 Talking Points Outline:**")
         for tp in cp.get("talking_points", []):
           st.markdown(f"- {tp}")
   curr_tab_idx += 1
