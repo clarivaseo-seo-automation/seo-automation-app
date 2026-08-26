@@ -17,7 +17,7 @@ import requests
 import streamlit as st
 
 # ==========================================
-# 1. UI SETUP & SESSION STATE (FIXED TYPO)
+# 1. UI SETUP & SESSION STATE
 # ==========================================
 st.set_page_config(
     page_title="ClarivaSEO: Complete All-in-One SEO, AIO & GEO Suite",
@@ -88,8 +88,8 @@ LANG_PACK = {
         ),
         "framework_notice": (
             "💡 **Specialist SEO, AIO & GEO Framework Active:**\n"
-            "Senior SEO Feasibility Diagnostic + Extended Timeout Protection +"
-            " Live Google PSI & Ahrefs v3."
+            "Senior SEO Feasibility Diagnostic + Stable Timeout & Live Google"
+            " PSI."
         ),
         "demo_kw_notice": (
             "ℹ️ **Free Mode Active:** Utilizing Google PageSpeed Insights"
@@ -123,10 +123,7 @@ LANG_PACK = {
             " [aistudio.google.com](https://aistudio.google.com)."
         ),
         "guide_step2_title": "2. Injected Specialist AI Frameworks",
-        "guide_step2_content": (
-            "- **Extended Timeout Protection:** Guarantees successful deep"
-            " crawls without timeout errors."
-        ),
+        "guide_step2_content": "- **Stable Execution Mode:** Standardized stable timeouts.",
         "guide_step3_title": "3. Client Data Intake Instructions",
         "guide_step3_content": (
             "- Enter target website domain and direct competitors."
@@ -181,8 +178,7 @@ LANG_PACK = {
         "sitemap_guide": "💡 Panduan Format Sitemap XML Blog",
         "framework_notice": (
             "💡 **Specialist SEO, AIO & GEO Framework Active:**\n"
-            "Diagnosa SEO + Extended Timeout Protection + Live Google PSI &"
-            " Ahrefs v3."
+            "Diagnosa SEO + Stable Timeout Mode + Live Google PSI & Ahrefs v3."
         ),
         "demo_kw_notice": "ℹ️ Mode Gratis Aktif",
         "roadmap_duration": "Durasi Kalender Konten:",
@@ -210,12 +206,12 @@ LANG_PACK = {
         "guide_step1_title": "1. Checklist Persiapan API",
         "guide_step1_content": "Masukkan API key Anda di sidebar.",
         "guide_step2_title": "2. Framework Terpasang",
-        "guide_step2_content": "Timeout diperpanjang hingga 3 menit untuk kestabilan.",
+        "guide_step2_content": "Mode stabil standar aktif.",
         "guide_step3_title": "3. Cara Mengisi Data Klien",
         "guide_step3_content": "Lengkapi formulir dengan domain target.",
     },
     "ES": {
-        "brand_subtitle": "SEO Suite with Extended Timeout",
+        "brand_subtitle": "SEO Suite with Stable Mode",
         "badge_text": "⭐ SEO Specialist Framework",
         "sidebar_engine": "Configuración AI",
         "select_provider": "Proveedor AI:",
@@ -266,7 +262,7 @@ LANG_PACK = {
         "guide_step3_content": "Formulario",
     },
     "DE": {
-        "brand_subtitle": "SEO Suite with Extended Timeout",
+        "brand_subtitle": "SEO Suite with Stable Mode",
         "badge_text": "⭐ SEO Specialist Framework",
         "sidebar_engine": "KI-Engine",
         "select_provider": "Anbieter:",
@@ -506,7 +502,7 @@ def parse_sitemap_xml(sitemap_url):
   extracted_slugs = set()
   try:
     headers = {"User-Agent": "Mozilla/5.0 (compatible; ClarivaSEOBot/2.0)"}
-    res = requests.get(cleaned, timeout=15, headers=headers)
+    res = requests.get(cleaned, timeout=10, headers=headers)
     if res.status_code == 200:
       root = ET.fromstring(res.content)
       for elem in root.iter():
@@ -514,7 +510,7 @@ def parse_sitemap_xml(sitemap_url):
           loc_text = elem.text.strip().rstrip("/")
           if loc_text.endswith(".xml") and "post" in loc_text.lower():
             try:
-              sub_res = requests.get(loc_text, timeout=10, headers=headers)
+              sub_res = requests.get(loc_text, timeout=6, headers=headers)
               if sub_res.status_code == 200:
                 sub_root = ET.fromstring(sub_res.content)
                 for sub_elem in sub_root.iter():
@@ -564,7 +560,7 @@ def fetch_domain_authority_metrics(
           "https://api.ahrefs.com/v3/site-explorer/domain-rating?"
           f"target={clean_dom}&date={today_date}"
       )
-      res_dr = requests.get(dr_url, headers=ah_headers, timeout=20)
+      res_dr = requests.get(dr_url, headers=ah_headers, timeout=10)
       if res_dr.status_code == 200:
         dr_data = res_dr.json().get("domain_rating") or {}
         raw_dr = dr_data.get("domain_rating", 0)
@@ -579,7 +575,7 @@ def fetch_domain_authority_metrics(
           "https://api.ahrefs.com/v3/site-explorer/backlinks-stats?"
           f"target={clean_dom}&mode=subdomains&date={today_date}"
       )
-      res_bl = requests.get(bl_url, headers=ah_headers, timeout=20)
+      res_bl = requests.get(bl_url, headers=ah_headers, timeout=10)
       if res_bl.status_code == 200:
         bl_metrics = res_bl.json().get("metrics") or {}
         raw_ref = bl_metrics.get("live_refdomains", bl_metrics.get("refdomains"))
@@ -590,7 +586,7 @@ def fetch_domain_authority_metrics(
           "https://api.ahrefs.com/v3/site-explorer/metrics?"
           f"target={clean_dom}&mode=subdomains&date={today_date}"
       )
-      res_met = requests.get(metrics_url, headers=ah_headers, timeout=20)
+      res_met = requests.get(metrics_url, headers=ah_headers, timeout=10)
       if res_met.status_code == 200:
         met_data = res_met.json().get("metrics") or {}
         raw_tr = met_data.get("org_traffic")
@@ -617,7 +613,7 @@ def fetch_domain_authority_metrics(
           "https://api.semrush.com/?type=domain_ranks"
           f"&key={semrush_k.strip()}&export_columns=Dn,Rk,Or,Ot,Oc&domain={clean_dom}&database=us"
       )
-      res = requests.get(sem_url, timeout=20)
+      res = requests.get(sem_url, timeout=10)
       if res.status_code == 200 and "ERROR" not in res.text:
         lines = res.text.strip().split("\n")
         if len(lines) > 1:
@@ -685,7 +681,7 @@ def run_live_technical_audit(url_str, psi_key="", ahrefs_k="", semrush_k=""):
   try:
     res = requests.get(
         target,
-        timeout=15,
+        timeout=10,
         headers={"User-Agent": "Mozilla/5.0 (compatible; ClarivaSEOBot/2.0)"},
     )
     report["status_code"] = f"{res.status_code} OK"
@@ -694,13 +690,13 @@ def run_live_technical_audit(url_str, psi_key="", ahrefs_k="", semrush_k=""):
     report["response_time_ms"] = elapsed_ms
 
     base_domain = "/".join(target.split("/")[:3])
-    r_robots = requests.get(f"{base_domain}/robots.txt", timeout=8)
+    r_robots = requests.get(f"{base_domain}/robots.txt", timeout=5)
     report["robots_txt_found"] = r_robots.status_code == 200
 
-    r_sitemap = requests.get(f"{base_domain}/sitemap.xml", timeout=8)
+    r_sitemap = requests.get(f"{base_domain}/sitemap.xml", timeout=5)
     report["sitemap_found"] = r_sitemap.status_code == 200
 
-    # Live Google PageSpeed Insights API Call with Extended Timeout (30s)
+    # Live Google PageSpeed Insights API Call with standard timeout (12s)
     psi_success = False
     if psi_key and psi_key.strip():
       try:
@@ -708,7 +704,7 @@ def run_live_technical_audit(url_str, psi_key="", ahrefs_k="", semrush_k=""):
             "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?"
             f"url={urllib.parse.quote(target)}&strategy=mobile&key={psi_key.strip()}"
         )
-        psi_res = requests.get(psi_url, timeout=30)
+        psi_res = requests.get(psi_url, timeout=12)
         if psi_res.status_code == 200:
           psi_data = psi_res.json()
           cats = psi_data.get("lighthouseResult", {}).get("categories", {})
@@ -761,7 +757,7 @@ def clean_json_string(raw_text):
 
 
 def call_ai_engine(provider_name, api_key_val, model_name, prompt_text):
-  # Extended timeout to 300 seconds (5 minutes) for heavy enterprise requests
+  # Standard stable timeout (60 seconds)
   if provider_name == "Google Gemini":
     url = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
     headers = {
@@ -783,7 +779,7 @@ def call_ai_engine(provider_name, api_key_val, model_name, prompt_text):
         "response_format": {"type": "json_object"},
         "temperature": 0.85,
     }
-    response = requests.post(url, headers=headers, json=payload, timeout=300)
+    response = requests.post(url, headers=headers, json=payload, timeout=60)
 
     if response.status_code != 200:
       direct_url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={api_key_val}"
@@ -798,7 +794,7 @@ def call_ai_engine(provider_name, api_key_val, model_name, prompt_text):
           direct_url,
           headers={"Content-Type": "application/json"},
           json=direct_payload,
-          timeout=300,
+          timeout=60,
       )
       if res_direct.status_code != 200:
         raise Exception(f"Gemini API Error: {res_direct.text}")
@@ -829,7 +825,7 @@ def call_ai_engine(provider_name, api_key_val, model_name, prompt_text):
         "response_format": {"type": "json_object"},
         "temperature": 0.85,
     }
-    response = requests.post(url, headers=headers, json=payload, timeout=300)
+    response = requests.post(url, headers=headers, json=payload, timeout=60)
     if response.status_code != 200:
       raise Exception(
           f"OpenAI API Error ({response.status_code}): {response.text}"
@@ -854,7 +850,7 @@ def call_ai_engine(provider_name, api_key_val, model_name, prompt_text):
         ),
         "messages": [{"role": "user", "content": prompt_text}],
     }
-    response = requests.post(url, headers=headers, json=payload, timeout=300)
+    response = requests.post(url, headers=headers, json=payload, timeout=60)
     if response.status_code != 200:
       raise Exception(
           f"Claude API Error ({response.status_code}): {response.text}"
@@ -896,7 +892,7 @@ def fetch_keyword_metrics(
 
         ah_kw_url = "https://api.ahrefs.com/v3/keywords-explorer/overview"
         res_ah = requests.get(
-            ah_kw_url, headers=ah_headers, params=params_array, timeout=25
+            ah_kw_url, headers=ah_headers, params=params_array, timeout=12
         )
 
         if res_ah.status_code != 200:
@@ -906,7 +902,7 @@ def fetch_keyword_metrics(
           alt_url = (
               f"{ah_kw_url}?country={target_country}&select=keyword,volume,difficulty,cpc&keywords={kw_encoded}"
           )
-          res_ah = requests.get(alt_url, headers=ah_headers, timeout=25)
+          res_ah = requests.get(alt_url, headers=ah_headers, timeout=12)
 
         if res_ah.status_code == 200:
           data_json = res_ah.json()
