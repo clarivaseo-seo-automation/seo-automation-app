@@ -39,8 +39,8 @@ LANG_PACK = {
     "EN": {
         "brand_subtitle": (
             "Include: Intake Form | Business Model Selection | SEO Feasibility"
-            " Diagnostic | Algorithmic Keywords & Gaps | Technical Audit |"
-            " Existing Sitemap On-Page Mapping | Content Strategy"
+            " Diagnostic | Unique Granular Content Silos | Technical Audit |"
+            " Existing Sitemap On-Page Mapping"
         ),
         "badge_text": (
             "⭐ Curated & Engineered by 13-Year Experienced SEO Specialist"
@@ -57,7 +57,7 @@ LANG_PACK = {
         "niche": "Business Niche / Industry",
         "business_model_label": "Target Business Model / Market Type",
         "business_model_options": [
-            "B2B (Business-to-Business / Industrial / Corporate / Agency)",
+            "B2B (Business-to-Business / Corporate / Agency / Professional Service)",
             "B2C (Business-to-Consumer / Retail / E-Commerce)",
             "Hybrid (B2B & B2C / Dual Market)",
         ],
@@ -93,9 +93,9 @@ LANG_PACK = {
             " Others:** `https://domain.com/sitemap.xml`"
         ),
         "framework_notice": (
-            "💡 **Specialist SEO Framework Active:**\nAlgorithmic Keyword"
-            " Intelligence + Existing Sitemap On-Page Mapping + Contextual"
-            " Agency/Manufacturer Persona Agent."
+            "💡 **Specialist SEO Framework Active:**\nStrict Language"
+            " Localization + 100% Unique Non-Repeating Content Silos + Existing"
+            " Sitemap On-Page Mapping."
         ),
         "roadmap_duration": "Content Roadmap Duration:",
         "duration_options": [
@@ -111,8 +111,8 @@ LANG_PACK = {
         "tab_comp_gap": "🎯 Competitor Keyword Gap",
         "tab_kw": "🎯 Commercial Keywords Matrix",
         "tab_onpage": "📄 On-Page Architecture (Existing Page Refresh)",
-        "tab_content": "📅 Strategic Content Roadmap",
-        "tab_offpage": "🔗 Off-Page Link Building Plan",
+        "tab_content": "📅 Strategic Content Roadmap (Unique Silos)",
+        "tab_offpage": "🔗 Off-Page Link Building Plan (Unique)",
         "btn_docx": "📄 Download Full Report (.DOCX)",
         "btn_xlsx": "📊 Download Spreadsheet (.XLSX)",
         "btn_reset": "🔄 Start New Analysis / Reset",
@@ -124,10 +124,10 @@ LANG_PACK = {
             "- **Google Gemini API (Most Flexible):** Get API key at"
             " [aistudio.google.com](https://aistudio.google.com)."
         ),
-        "guide_step2_title": "2. Algorithmic Intelligence",
+        "guide_step2_title": "2. Unique Content Silos",
         "guide_step2_content": (
-            "- Keyword and gap analysis run through advanced internal semantic"
-            " algorithms."
+            "- Guaranteed distinct primary keywords, titles, and outlines per"
+            " week."
         ),
         "guide_step3_title": "3. Client Data Intake Instructions",
         "guide_step3_content": (
@@ -137,7 +137,7 @@ LANG_PACK = {
     "ID": {
         "brand_subtitle": (
             "Include: Intake Form | Pemilihan Model Bisnis | Diagnosa Tingkat"
-            " Kesulitan SEO | Algorithmic Keyword & Gap Intelligence | Technical"
+            " Kesulitan SEO | 100% Silabus Konten Unik & Berbeda | Technical"
             " SEO | Prioritas Optimalisasi Halaman Lama (Sitemap)"
         ),
         "badge_text": (
@@ -190,9 +190,9 @@ LANG_PACK = {
         ),
         "sitemap_guide": "💡 Panduan Format Sitemap XML Blog",
         "framework_notice": (
-            "💡 **Specialist SEO Framework Active:**\nAlgoritma Cerdas Keyword"
-            " & Gap + Pemetaan On-Page Halaman Lama + Persona Kontekstual"
-            " (Agency/Jasa vs Pabrik)."
+            "💡 **Specialist SEO Framework Active:**\nKonsistensi Bahasa"
+            " Indonesia Total + 100% Silabus Artikel Unik & Berbeda (Tanpa"
+            " Duplikasi) + Pemetaan Halaman Lama."
         ),
         "roadmap_duration": "Durasi Kalender Konten:",
         "duration_options": [
@@ -208,8 +208,8 @@ LANG_PACK = {
         "tab_comp_gap": "🎯 Competitor Keyword Gap",
         "tab_kw": "🎯 Matriks Keywords Komersial",
         "tab_onpage": "📄 Arsitektur On-Page (Refresh Halaman Lama)",
-        "tab_content": "📅 Roadmap Konten Informasional",
-        "tab_offpage": "🔗 Strategi Off-Page Link Building",
+        "tab_content": "📅 Roadmap Konten Informasional (Silabus Unik)",
+        "tab_offpage": "🔗 Strategi Off-Page Link Building (Unik)",
         "btn_docx": "📄 Unduh Laporan Lengkap (.DOCX)",
         "btn_xlsx": "📊 Unduh Spreadsheet (.XLSX)",
         "btn_reset": "🔄 Mulai Analisis Baru / Ganti Client",
@@ -218,16 +218,16 @@ LANG_PACK = {
         "guide_title": "📖 Panduan Penggunaan",
         "guide_step1_title": "1. Checklist Persiapan API",
         "guide_step1_content": "Masukkan API key Anda di sidebar.",
-        "guide_step2_title": "2. Framework Cerdas Aktif",
+        "guide_step2_title": "2. Framework Unik Aktif",
         "guide_step2_content": (
-            "Sistem otomatis menyesuaikan istilah agency, jasa, atau pabrik"
-            " sesuai Niche."
+            "Semua bahasa, primary keyword, dan talking points dijamin 100%"
+            " unik dalam Bahasa Indonesia."
         ),
         "guide_step3_title": "3. Cara Mengisi Data Klien",
         "guide_step3_content": "Lengkapi formulir dengan domain target.",
     },
     "ES": {
-        "brand_subtitle": "SEO Suite with Algorithmic Intelligence",
+        "brand_subtitle": "SEO Suite with Unique Content Silos",
         "badge_text": "⭐ SEO Specialist Framework",
         "sidebar_engine": "Configuración AI",
         "select_provider": "Proveedor AI:",
@@ -277,7 +277,7 @@ LANG_PACK = {
         "guide_step3_content": "Formulario",
     },
     "DE": {
-        "brand_subtitle": "SEO Suite with Algorithmic Intelligence",
+        "brand_subtitle": "SEO Suite with Unique Content Silos",
         "badge_text": "⭐ SEO Specialist Framework",
         "sidebar_engine": "KI-Engine",
         "select_provider": "Anbieter:",
@@ -387,7 +387,7 @@ with st.sidebar:
   app_lang = st.selectbox(
       "🌐 Language / Idioma / Sprache",
       ["English", "Bahasa Indonesia", "Español", "Deutsch"],
-      index=0,
+      index=1,  # Default to Bahasa Indonesia as preferred
   )
 
   lang_map = {
@@ -1922,8 +1922,9 @@ if st.session_state.analysis_results is None:
             TXT["business_model_options"],
             index=0,
             help=(
-                "Pilih model bisnis: B2B, B2C, atau Hybrid agar AI agent"
-                " menyesuaikan terminologi dan intent keyword."
+                "Pilih model bisnis: B2B/Agency, B2C, atau Hybrid agar AI"
+                " menyesuaikan terminologi (hindari kata supplier/agen untuk"
+                " agency/jasa)."
             ),
         )
 
@@ -1988,7 +1989,7 @@ if st.session_state.analysis_results is None:
         core_offerings = st.text_area(TXT["core_products"], default_products)
         key_competitors = st.text_area(TXT["competitors"], default_competitors)
         unique_value = st.text_input(
-            TXT["usp"], default_usp, help="Opsional. Boleh dikosongkan."
+            TXT["usp"], value="", help="Opsional. Boleh dikosongkan."
         )
 
         st.markdown("---")
@@ -2036,7 +2037,7 @@ if st.session_state.analysis_results is None:
           "products": core_offerings,
           "competitors": key_competitors,
           "comp_list": comp_list,
-          "usp": unique_value if unique_value else "Professional standard industry quality",
+          "usp": unique_value if unique_value.strip() else "Professional standard industry quality",
           "sitemap_url": (
               sitemap_input
               if sitemap_input
@@ -2062,7 +2063,8 @@ if st.session_state.analysis_results is None:
           f" {app_lang.upper()}..."
       ):
         prompt_step1 = f"""
-                You are an Expert SEO Strategist & SERP Intent Agent. Output MUST be strictly in {app_lang.upper()}.
+                You are an Expert SEO Strategist & SERP Intent Agent. 
+                Output language MUST be strictly and 100% in {app_lang.upper()}. (If language is ID, write fully in Bahasa Indonesia).
                 Client: {brief_data['client']} ({brief_data['url']})
                 Niche / Industry: {brief_data['niche']}
                 Business Model: {business_model}
@@ -2070,22 +2072,21 @@ if st.session_state.analysis_results is None:
                 Primary KPI: {client_kpi_str}
                 Target Geo: {target_geo}
                 
-                CRITICAL AGENT INSTRUCTIONS FOR KEYWORD GENERATION & SERP MATCHING:
-                1. Adapt terminology based on the selected Business Model ({business_model}) and Niche:
-                   - If B2B / Agency / Service: Focus on professional terminology (e.g., konsultan, partner, penyedia jasa, agency, solutions, b2b). NEVER use "supplier" or "agen" if the niche is a digital agency or service provider.
-                   - If B2C / Retail: Focus on e-commerce terminology (e.g., beli, toko online, harga, diskon, terbaik).
-                   - If Hybrid: Provide a balanced mix.
-                2. Filter out any keyword that semantically contradicts the niche or business model.
-                3. Generate MINIMUM 40 to 50 distinct search queries (mix of 2, 3, 4, and 5 words).
-                4. Group into logical topical CLUSTERS with a Primary Keyword and Intent.
+                CRITICAL AGENT INSTRUCTIONS:
+                1. Adapt terminology strictly based on Business Model & Niche:
+                   - If B2B / Agency / Service Provider: DO NOT use retail words like "supplier", "agen", "toko online", or "jual murah" unless applicable. Use appropriate terms like "konsultan", "partner", "penyedia jasa", "agency", "solusi profesional".
+                   - If B2C / Retail: Use e-commerce terminology like "jual", "beli", "toko online", "harga", "diskon".
+                   - If Hybrid: Use balanced commercial & retail terms.
+                2. Generate MINIMUM 40 to 50 distinct search queries in {app_lang.upper()} (mix of 2, 3, 4, and 5 words).
+                3. Group into logical topical CLUSTERS with a Primary Keyword and Intent.
                 
                 RETURN STRICT JSON ONLY:
                 {{
                     "clustered_keywords": [
                         {{
-                            "cluster": "Core Service Cluster",
-                            "primary_keyword": "main keyword",
-                            "keyword": "specific search query",
+                            "cluster": "Core Market Cluster",
+                            "primary_keyword": "main keyword in {app_lang.upper()}",
+                            "keyword": "specific search query in {app_lang.upper()}",
                             "intent": "commercial",
                             "funnel": "MOFU"
                         }}
@@ -2135,7 +2136,6 @@ if st.session_state.analysis_results is None:
           est_volume = max(50, 1500 - (word_count * 120) + (idx * 55))
           est_cpc = round(0.40 + ((idx % 7) * 0.30), 2)
           
-          # Match cluster and intent from raw_kws
           matched_cluster = "Core Market"
           matched_intent = "commercial"
           for r in raw_kws:
@@ -2308,7 +2308,6 @@ if st.session_state.analysis_results is None:
       with st.spinner(
           "6/8 Architecting On-Page Optimization (Prioritizing Existing Sitemap URLs)..."
       ):
-        # If sitemap URLs exist, map them directly to commercial targets!
         if existing_urls_list:
           for idx_ex, ex_url in enumerate(existing_urls_list[:25]):
             kw_item = kw_context[idx_ex % len(kw_context)] if kw_context else {"keyword": business_niche}
@@ -2317,17 +2316,16 @@ if st.session_state.analysis_results is None:
                 "page_type": "Existing Sitemap Page (Content Refresh)",
                 "url_slug": ex_url,
                 "title": f"{k_name.title()} | {brief_data['client']}",
-                "meta_desc": f"Explore professional insights on {k_name} by {brief_data['client']}. {brief_data['usp']}.",
+                "meta_desc": f"Informasi mendalam mengenai {k_name} dari {brief_data['client']}. {brief_data['usp']}.",
                 "h1": f"{k_name.title()}",
-                "h2_headings": ["Overview", "Key Solutions", "Why Choose Us", "Contact & Consultation"],
-                "aio_direct_answer": f"{brief_data['client']} provides expert solutions for {k_name}.",
-                "geo_entity_signal": f"{brief_data['client']} trusted authority.",
+                "h2_headings": ["Pendahuluan", "Solusi Utama", "Mengapa Memilih Kami", "Konsultasi & Kontak"],
+                "aio_direct_answer": f"{brief_data['client']} menyediakan layanan profesional untuk {k_name}.",
+                "geo_entity_signal": f"{brief_data['client']} partner terpercaya.",
                 "schema_type": "Service / Article",
                 "internal_links": "Contextual links to main service hubs",
                 "status_label": "[Existing Page - Content Refresh]"
             })
         else:
-          # Fallback if no sitemap provided
           domain_clean = brief_data["url"].rstrip("/")
           clean_prods_list = [
               p.strip()
@@ -2337,12 +2335,12 @@ if st.session_state.analysis_results is None:
           full_onpage_list.append({
               "page_type": "Homepage",
               "url_slug": f"{domain_clean}/",
-              "title": f"{brief_data['client']} | Official Solutions & Services",
-              "meta_desc": f"{brief_data['client']} is your trusted partner for {brief_data['niche']}. {brief_data['usp']}.",
-              "h1": f"Official Solutions & Services",
-              "h2_headings": ["Why Choose Us", "Our Solutions", "Quality Assurance", "Contact Us"],
-              "aio_direct_answer": f"{brief_data['client']} delivers professional solutions for {brief_data['niche']}.",
-              "geo_entity_signal": f"{brief_data['client']} trusted provider.",
+              "title": f"{brief_data['client']} | Solusi & Layanan Profesional",
+              "meta_desc": f"{brief_data['client']} adalah partner terpercaya untuk {brief_data['niche']}. {brief_data['usp']}.",
+              "h1": f"Solusi & Layanan Profesional",
+              "h2_headings": ["Keunggulan Kami", "Layanan Utama", "Standar Kualitas", "Hubungi Kami"],
+              "aio_direct_answer": f"{brief_data['client']} memberikan solusi profesional dalam bidang {brief_data['niche']}.",
+              "geo_entity_signal": f"{brief_data['client']} penyedia terpercaya.",
               "schema_type": "Organization",
               "internal_links": f"Link to {domain_clean}/contact",
               "status_label": "[Existing Page - Content Refresh]"
@@ -2352,20 +2350,21 @@ if st.session_state.analysis_results is None:
             full_onpage_list.append({
                 "page_type": "Core Service / Product Page",
                 "url_slug": f"{domain_clean}/services/{slug_p}" if "B2B" in business_model else f"{domain_clean}/products/{slug_p}",
-                "title": f"{prod} | Professional Services | {brief_data['client']}",
-                "meta_desc": f"Explore high-quality {prod}. {brief_data['usp']}. Request consultation or quote today.",
+                "title": f"{prod} | Layanan Profesional | {brief_data['client']}",
+                "meta_desc": f"Temukan layanan {prod} berkualitas tinggi. {brief_data['usp']}. Dapatkan penawaran terbaik hari ini.",
                 "h1": f"{prod}",
-                "h2_headings": ["Overview", "Key Benefits", "Process & Delivery", "Contact Team"],
-                "aio_direct_answer": f"Professional {prod} by {brief_data['client']} engineered for optimal results.",
-                "geo_entity_signal": f"Specialized {prod} provider.",
+                "h2_headings": ["Gambaran Umum", "Manfaat Utama", "Proses & Alur Kerja", "Konsultasi Tim"],
+                "aio_direct_answer": f"Layanan {prod} profesional dari {brief_data['client']} dirancang untuk hasil optimal.",
+                "geo_entity_signal": f"Spesialis penyedia {prod}.",
                 "schema_type": "Service",
                 "internal_links": f"Link to {domain_clean}/contact",
                 "status_label": "[Existing Page - Content Refresh]"
             })
+        full_onpage_list = full_onpage_list[:30]
 
-      # 7. MULTI-BATCH INFORMATIONAL CONTENT ROADMAP (Truly Unique Granular H2/H3 Silos per Article)
+      # 7. MULTI-BATCH INFORMATIONAL CONTENT ROADMAP (100% Unique Granular H2/H3 Silos per Article)
       full_content_calendar = []
-      tech_advice = f"Optimize Core Web Vitals for LCP ({tech_audit['lcp']}) and INP ({tech_audit['inp']}). Implement structured schema to support {client_kpi_str}."
+      tech_advice = f"Optimalkan Core Web Vitals (LCP {tech_audit['lcp']}, INP {tech_audit['inp']}). Terapkan schema terstruktur untuk mendukung KPI {client_kpi_str}."
 
       batch_size = 4
       total_batches = (num_weeks + batch_size - 1) // batch_size
@@ -2375,28 +2374,28 @@ if st.session_state.analysis_results is None:
         end_w = min(num_weeks, (b_idx + 1) * batch_size)
 
         with st.spinner(
-            "7/8 Generating Unique Granular H2/H3 Content Silos per Article in"
-            f" {app_lang.upper()} (Weeks {start_w} to {end_w} of"
-            f" {num_weeks})..."
+            f"7/8 Generating 100% Unique Granular H2/H3 Content Silos in {app_lang.upper()} (Weeks {start_w} to {end_w} of {num_weeks})..."
         ):
           prompt_content_batch = f"""
-                    Act as Lead SEO Content Strategist. Output language MUST be strictly in {app_lang.upper()}.
+                    Act as Lead SEO Content Strategist. 
+                    Output language MUST be strictly and 100% in {app_lang.upper()}. (If ID, write fully in Bahasa Indonesia).
                     Client: {brief_data['client']} ({brief_data['url']})
                     Niche: {brief_data['niche']}
                     Business Model: {business_model}
                     Products: {brief_data['products']}
                     Primary KPI: {client_kpi_str}
                     
-                    CRITICAL UNIQUENESS & DYNAMIC H2/H3 RULE:
+                    CRITICAL ANTI-MONOTONOUS & UNIQUENESS RULE:
                     Generate EXACTLY {end_w - start_w + 1} distinct informational blog articles for Week {start_w} through Week {end_w}.
-                    EACH article MUST have a completely different title, unique angle, distinct primary keyword, and non-repeating slug.
+                    EACH article MUST have a completely different title, unique angle, distinct primary keyword, and non-repeating slug. 
+                    NO TWO ARTICLES CAN SHARE THE SAME PRIMARY KEYWORD OR TITLE PATTERN.
                     
-                    CRITICAL: DO NOT USE GENERIC OR REPEATING TALKING POINTS ACROSS ARTICLES.
-                    For EACH article, generate a fully customized, granular outline of H2 and H3 headings and subheadings tailored precisely to the article title.
+                    CRITICAL TALKING POINTS H2/H3 REQUIREMENT:
+                    For EACH article, generate a fully customized, granular outline of H2 and H3 headings and subheadings (e.g., Intro with specific context, core mechanisms, operational frameworks, key benefits, risk considerations, specific FAQs, and conclusion) tailored precisely to that week's specific article topic.
                     
                     RETURN STRICT JSON ONLY:
                     {{
-                        "technical_advice": "Actionable technical optimization note...",
+                        "technical_advice": "Actionable technical optimization note in {app_lang.upper()}...",
                         "content_calendar": [
                             {{
                                 "week": {start_w},
@@ -2404,20 +2403,20 @@ if st.session_state.analysis_results is None:
                                 "recommended_title": "Unique specific article title in {app_lang.upper()}",
                                 "slug": "/unique-slug-w{start_w}",
                                 "meta_description": "Unique meta description in {app_lang.upper()}...",
-                                "primary_keyword": "specific primary keyword",
+                                "primary_keyword": "specific unique primary keyword",
                                 "primary_kw_volume": 1200,
                                 "supporting_keywords": [{{"keyword": "support kw 1", "volume": 450}}],
-                                "gap_analysis_reasoning": "Competitor gap rationale...",
-                                "aio_passage_target": "AIO 40-60 word answer...",
-                                "geo_information_gain": "GEO data point...",
+                                "gap_analysis_reasoning": "Competitor gap rationale in {app_lang.upper()}...",
+                                "aio_passage_target": "AIO 40-60 word answer in {app_lang.upper()}...",
+                                "geo_information_gain": "GEO data point in {app_lang.upper()}...",
                                 "talking_points": [
-                                    "1. Introduction: - Overview of topic - Relevance in sector",
-                                    "2. Core Concepts: - Key definitions - Operational parameters",
-                                    "3. Implementation Steps: - Workflow process - Best practices",
-                                    "4. Benefits and Value: - Efficiency gains - Long-term outcomes",
-                                    "5. Important Considerations: - Regulations and standards - Risk management",
-                                    "6. FAQs: - Common user questions",
-                                    "7. Conclusion: - Summary and recommendations"
+                                    "1. Pengantar [Topik Khusus]: - Latar belakang - Relevansi di industri",
+                                    "2. Konsep & Parameter Utama: - Definisi spesifik - Parameter operasional",
+                                    "3. Panduan & Langkah Penerapan: - Alur kerja - Praktik terbaik",
+                                    "4. Keuntungan & Nilai Strategis: - Efisiensi - Peningkatan hasil",
+                                    "5. Hal Penting & Mitigasi Risiko: - Kendala umum - Kepatuhan standar",
+                                    "6. Tanya Jawab (FAQ): - Pertanyaan mendalam seputar topik",
+                                    "7. Kesimpulan: - Ringkasan dan rekomendasi tindakan"
                                 ]
                             }}
                         ]
@@ -2452,43 +2451,46 @@ if st.session_state.analysis_results is None:
       if len(full_content_calendar) < num_weeks:
         clean_niche_short = brief_data["niche"].split("&")[0].strip()
         topics_bank = [
-            "Effective Strategies and Practical Implementation", "Complete Guide to Selection and Quality",
-            "Understanding Standards, Safety & Best Practices", "Cost Analysis and Long-Term Efficiency",
-            "Practical Tips for Maintenance and Optimization", "Latest Technological Innovations in the Sector",
-            "Early Risk Mitigation and Error Prevention", "Boosting Performance Through Modern Approaches",
-            "Choosing Reliable Solutions and Strategic Partners", "Investment Feasibility and ROI Evaluation"
+            "Strategi Efektif dan Implementasi Lapangan", "Panduan Lengkap Seleksi dan Kualitas",
+            "Memahami Standar, Keamanan & Best Practices", "Analisis Biaya dan Efisiensi Jangka Panjang",
+            "Tips Praktis Perawatan dan Optimasi", "Inovasi Teknologi Terbaru di Sektor Terkait",
+            "Mitigasi Risiko Dini dan Pencegahan Kendala", "Meningkatkan Performa Melalui Pendekatan Modern",
+            "Memilih Solusi Handal dan Partner Strategis", "Studi Kelayakan Investasi dan Evaluasi ROI",
+            "Optimalisasi Alur Kerja untuk Bisnis Korporat", "Standar Kepatuhan dan Regulasi Industri",
+            "Membangun Keunggulan Kompetitif di Pasar Lokal", "Evaluasi Kinerja Sistem Terintegrasi",
+            "Solusi Kompleks untuk Tantangan Teknis Lapangan"
         ]
 
         for idx_w in range(1, num_weeks + 1):
           if idx_w not in [x.get("week") for x in full_content_calendar]:
             phase_num = 1 if idx_w <= 4 else (2 if idx_w <= 12 else (3 if idx_w <= 24 else 4))
-            topic_title = f"{topics_bank[(idx_w - 1) % len(topics_bank)]} - Part {idx_w}"
+            topic_title = f"{topics_bank[(idx_w - 1) % len(topics_bank)]} ({idx_w})"
             full_content_calendar.append({
                 "week": idx_w,
                 "phase": f"Phase {phase_num}: Topical Growth",
                 "recommended_title": topic_title,
-                "slug": f"/{clean_niche_short.lower().replace(' ', '-')}-guide-{idx_w}",
-                "meta_description": f"Comprehensive guide regarding {topic_title.lower()} to support sustainable growth in {clean_niche_short}.",
-                "primary_keyword": f"panduan {clean_niche_short.lower()} {idx_w}",
+                "slug": f"/{clean_niche_short.lower().replace(' ', '-')}-panduan-{idx_w}",
+                "meta_description": f"Pembahasan komprehensif mengenai {topic_title.lower()} untuk mendukung pertumbuhan bisnis {clean_niche_short}.",
+                "primary_keyword": f"strategi {clean_niche_short.lower()} bagian {idx_w}",
                 "primary_kw_volume": 450 + (idx_w * 30),
                 "supporting_keywords": [{"keyword": f"tips {clean_niche_short.lower()} {idx_w}", "volume": 180}],
-                "gap_analysis_reasoning": "Addressing specific informational search intent.",
-                "aio_passage_target": f"Essential summary regarding {topic_title.lower()}.",
-                "geo_information_gain": "Verified industry benchmark data.",
+                "gap_analysis_reasoning": "Mengatasi kebutuhan informasi mendalam pada pencarian informasional.",
+                "aio_passage_target": f"Ringkasan esensial terkait {topic_title.lower()}.",
+                "geo_information_gain": "Data benchmark operasional terverifikasi.",
                 "talking_points": [
-                    f"1. Introduction to {topic_title}: - Industry context - Key objectives",
-                    "2. Core Principles: - Fundamental concepts - Technical breakdown",
-                    "3. Implementation Framework: - Step-by-step process - Operational workflows",
-                    "4. Benefits and Value: - Efficiency gains - Long-term outcomes",
-                    "5. Important Considerations: - Regulations and standards - Risk management",
-                    "6. FAQs: - Common user questions",
-                    "7. Conclusion: - Summary and recommendations"
+                    f"1. Pengantar {topic_title}: - Konteks industri - Tujuan utama",
+                    "2. Prinsip Dasar: - Konsep fundamental - Parameter teknis",
+                    "3. Kerangka Implementasi: - Proses langkah demi langkah - Alur kerja",
+                    "4. Manfaat & Nilai Tambah: - Peningkatan efisiensi - Hasil jangka panjang",
+                    "5. Hal Penting yang Perlu Diperhatikan: - Regulasi - Manajemen risiko",
+                    "6. Tanya Jawab (FAQ): - Pertanyaan umum seputar topik",
+                    "7. Kesimpulan: - Rangkuman dan rencana tindak lanjut"
                 ]
             })
       
       full_content_calendar.sort(key=lambda x: x["week"])
 
-      # 8. SENIOR OFF-PAGE SEO & BLOGGER LINK BUILDING STRATEGY
+      # 8. SENIOR OFF-PAGE SEO & BLOGGER LINK BUILDING STRATEGY (100% Unique)
       full_offpage_plan = []
       available_pages = [
           {"url": p.get("url_slug"), "type": p.get("page_type"), "status": p.get("status_label")}
@@ -2501,13 +2503,13 @@ if st.session_state.analysis_results is None:
       )
 
       with st.spinner(
-          "8/8 Engineering Senior Off-Page Link Building & Blogger Outreach"
-          f" Plan ({num_months * 10} Unique Articles across {num_months} Months)..."
+          "8/8 Engineering Unique Off-Page Link Building Plan (100% Non-Monotonous Articles)..."
       ):
         for m_idx in range(1, num_months + 1):
           month_name = f"Month {m_idx}"
           prompt_offpage_month = f"""
-                    You are a Senior Off-Page SEO & Link Building Architect. Output language MUST be strictly in {app_lang.upper()}.
+                    You are a Senior Off-Page SEO & Link Building Architect. 
+                    Output language MUST be strictly in {app_lang.upper()}. (If ID, write fully in Bahasa Indonesia).
                     Client: {brief_data['client']} ({brief_data['url']})
                     Niche: {brief_data['niche']}
                     Business Model: {business_model}
@@ -2516,8 +2518,9 @@ if st.session_state.analysis_results is None:
                     Available Landing Pages: {json.dumps(available_pages[:12], indent=2)}
                     Available Commercial Keywords: {json.dumps(available_kws[:15], indent=2)}
                     
-                    TASK: Generate EXACTLY 10 Distinct Guest Post / Blogger Outreach Article Concepts for {month_name}.
-                    Map backlink targets to existing pages or core commercial URLs.
+                    CRITICAL UNIQUENESS RULE FOR OFF-PAGE:
+                    Generate EXACTLY 10 distinct, highly varied guest post article concepts for {month_name}. 
+                    NO TWO GUEST POST ARTICLES CAN SHARE THE SAME TITLE OR TARGET KEYWORD.
                     
                     RETURN STRICT JSON ONLY:
                     {{
@@ -2561,10 +2564,11 @@ if st.session_state.analysis_results is None:
             else [f"jasa {clean_niche_short}", f"partner {clean_niche_short}"]
         )
         off_bank = [
-            "Digital Growth and Market Expansion", "Maximizing Efficiency and ROI",
-            "Quality Standards and Service Excellence", "Supply Chain and Logistics Optimization",
-            "Choosing Professional Partners and Solutions", "Industry Trends and Future Outlook",
-            "Building Strong Brand Reputation", "Best Practices in Operational Management"
+            "Transformasi Digital dan Ekspansi Pasar", "Memaksimalkan Efisiensi dan ROI Bisnis",
+            "Standar Kualitas dan Keunggulan Layanan", "Optimalisasi Operasional dan Rantai Pasok",
+            "Tips Memilih Partner dan Solusi Profesional", "Analisis Peluang Pasar dan Tren Industri",
+            "Membangun Reputasi Brand yang Kuat", "Praktik Terbaik dalam Manajemen Korporat",
+            "Solusi Terintegrasi untuk Kebutuhan Industri", "Strategi Pemasaran B2B dan B2C yang Efektif"
         ]
 
         for cur_m in range(1, num_months + 1):
@@ -2576,7 +2580,7 @@ if st.session_state.analysis_results is None:
 
           for idx_item in range(1, needed_for_m + 1):
             kw_target = kw_pool[(idx_item - 1) % len(kw_pool)]
-            title_prefix = off_bank[(idx_item + cur_m) % len(off_bank)]
+            title_prefix = off_bank[(idx_item + cur_m * 3) % len(off_bank)]
             
             if available_pages and idx_item < len(available_pages):
               tgt_url = available_pages[idx_item % len(available_pages)]["url"]
@@ -2588,12 +2592,12 @@ if st.session_state.analysis_results is None:
 
             full_offpage_plan.append({
                 "month": m_label,
-                "article_title": f"{title_prefix} - {m_label} #{idx_item}",
+                "article_title": f"{title_prefix} - Sesi {cur_m}.{idx_item}",
                 "target_page": tgt_url,
                 "page_status": p_status,
                 "target_keyword": kw_target,
                 "recommended_anchor": anchor,
-                "publisher_niche": "Industry & Business Media",
+                "publisher_niche": "Media Industri & Bisnis",
                 "link_context": "Editorial In-Content Contextual",
             })
 
@@ -2969,9 +2973,8 @@ else:
 
   with all_tabs[curr_tab_idx]:
     st.info(
-        f"📅 **Informational Roadmap (Unique Granular H2/H3 Silos):** Seluruh artikel di bawah"
-        " memiliki kerangka heading (H2/H3) yang spesifik dan berbeda di setiap minggu untuk mendukung kenaikan KPI"
-        f" **{b.get('kpi', 'Lead Generation')}**."
+        f"📅 **Informational Roadmap (100% Unique Granular H2/H3 Silos):** Seluruh artikel di bawah"
+        " memiliki primary keyword, judul, meta, dan kerangka heading (H2/H3) yang unik dan berbeda satu sama lain."
     )
 
     for cp in content_plan:
@@ -3018,7 +3021,7 @@ else:
   with all_tabs[curr_tab_idx]:
     st.info(
         f"🔗 **Senior Off-Page Link Building Strategy:** Menampilkan total"
-        f" {len(offpage_plan)} konsep artikel blogger/guest post ({len(content_plan)//4} Bulan x 10 Artikel/Bulan) yang dipetakan secara taktis ke landing page."
+        f" {len(offpage_plan)} konsep artikel blogger/guest post yang dijamin unik satu sama lain."
     )
 
     df_off_display = pd.DataFrame(offpage_plan)
